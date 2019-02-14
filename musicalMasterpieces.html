@@ -45,12 +45,12 @@
 
             function home() {
                 hideTabs();
-                document.getElementById("homeTabs").hidden = false;
+                document.getElementById("homeTab").hidden = false;
             }
 
             function juke() {
                 hideTabs();
-                document.getElementById("jukeboxTabs").hidden = false;
+                document.getElementById("jukeboxTab").hidden = false;
             }
 
             function social() {
@@ -75,8 +75,8 @@
 
             function hideTabs() {
                 document.getElementById("audioControls").hidden = true;
-                document.getElementById("homeTabs").hidden = true;
-                document.getElementById("jukeboxTabs").hidden = true;
+                document.getElementById("homeTab").hidden = true;
+                document.getElementById("jukeboxTab").hidden = true;
                 document.getElementById("wwiInfo").hidden = true;
                 document.getElementById("roaringInfo").hidden = true;
                 document.getElementById("greatInfo").hidden = true;
@@ -120,7 +120,7 @@
                 height: 8vh;
                 text-align: center;
             }
-            #jukeboxTabs {
+            #jukeboxTab {
                 background: #e9faff;
                 position: absolute;
                 left: 0;
@@ -168,7 +168,7 @@
                 margin-left: 10vw;
                 margin-right: 10vw;
             }
-            #jukeboxTabs button {
+            #jukeboxTab button {
                 background: #e8faff;
                 margin-left: 0;
                 margin-top: 0;
@@ -176,7 +176,7 @@
                 height: 42.5vh;
                 font-size: 50px;
             }
-            #jukeboxTabs button:hover {
+            #jukeboxTab button:hover {
                 background: #0e495b;
                 color: white;
                 font-size: 55px;
@@ -235,7 +235,7 @@
             <p class="subtitle">By Mathew Seng</p>
         </div>
         
-        <div id="jukeboxTabs">
+        <div id="jukeboxTab">
             <image id="jukebox" src="https://matheweon.github.io/jukebox.png"></image>
             <button onclick="wwi()">WWI</button>
             <button onclick="roaring()">Roaring 20's</button><br>
