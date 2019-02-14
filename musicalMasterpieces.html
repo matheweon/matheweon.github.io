@@ -6,7 +6,7 @@
         <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
         <script type="text/javascript">
             window.onload = function () {
-                juke();
+                home();
             }
             function wwi() {
                 document.getElementById("audioSample").src = "http://matheweon.github.io/Tiger Rag - The Original Dixieland Jazz Band (1917).mp3";
@@ -43,6 +43,16 @@
 
             //BELOW ARE THE NAV BUTTON FUNCTIONS
 
+            function home() {
+                hideTabs();
+                document.getElementById("homeTabs").hidden = false;
+            }
+
+            function juke() {
+                hideTabs();
+                document.getElementById("jukeboxTabs").hidden = false;
+            }
+
             function social() {
                 hideTabs();
                 document.getElementById("socialTab").hidden = false;
@@ -61,11 +71,6 @@
             function hightstown() {
                 hideTabs();
                 document.getElementById("htownTab").hidden = false;
-            }
-
-            function juke() {
-                hideTabs();
-                document.getElementById("jukeboxTabs").hidden = false;
             }
 
             function hideTabs() {
@@ -100,7 +105,7 @@
                 left: 0;
                 top: 0;
                 width: 100vw;
-                height: 10vh;
+                height: 12vh;
                 z-index: 11;
                 text-align: center;
             }
@@ -111,7 +116,7 @@
                 top: 10vh;
                 width: 100vw;
                 z-index: 12;
-                height: 5vh;
+                height: 8vh;
                 text-align: center;
             }
             #jukeboxTabs {
@@ -212,15 +217,23 @@
     <body>
         <div class="navBar">
             <h1>Musical Masterpieces of the Early 1900's in America</h1>
-            <h2>Mathew Seng</h2>
         </div>
+        
         <div class="navBar2">
+            <button onclick="home()">Home</button>
             <button onclick="juke()">Jukebox</button>
             <button onclick="social()">Social</button>
             <button onclick="political()">Political</button>
             <button onclick="technological()">Technological</button>
             <button onclick="hightstown()">Hightstown</button>
         </div>
+        
+        <div class="blurbs" id="homeTab">
+            <p class="title">Musical Masterpieces of the Early 1900s in America</p>
+            <p class="text">Between 1914 to 1945, social, political, and technological changes within America’s cultural environment influenced popular music, which is reflected in Hightstown’s history</p>
+            <p class="subtitle">By Mathew Seng</p>
+        </div>
+        
         <div id="jukeboxTabs">
             <image id="jukebox" src="https://matheweon.github.io/jukebox.png"></image>
             <button onclick="wwi()">WWI</button>
