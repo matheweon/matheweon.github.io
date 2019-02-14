@@ -3,23 +3,192 @@
     <head>
         <meta charset="utf-8">
         <title></title>
+        <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
         <script type="text/javascript">
+            window.onload = function () {
+                juke();
+            }
+            function wwi() {
+                document.getElementById("audioControls").hidden = false;
+                //Replace below link with mp3 on github
+                document.getElementById("audioSample").src = "";
+            }
+            function roaring() {
+                document.getElementById("audioControls").hidden = false;
+                //Replace below link with mp3 on github
+                document.getElementById("audioSample").src = "";
+            }
+            function great() {
+                document.getElementById("audioControls").hidden = false;
+                //Replace below link with mp3 on github
+                document.getElementById("audioSample").src = "";
+            }
+            function wwii() {
+                document.getElementById("audioControls").hidden = false;
+                //Replace below link with mp3 on github
+                document.getElementById("audioSample").src = "";
+            }
+
+            //BELOW ARE THE NAV BUTTON FUNCTIONS
+
             function social() {
-                
+                hideTabs();
+                document.getElementById("socialTab").hidden = false;
+            }
+
+            function political() {
+                hideTabs();
+                document.getElementById("politicalTab").hidden = false;
+            }
+
+            function technological() {
+                hideTabs();
+                document.getElementById("techTab").hidden = false;
+            }
+
+            function hightstown() {
+                hideTabs();
+                document.getElementById("htownTab").hidden = false;
+            }
+
+            function juke() {
+                hideTabs();
+                document.getElementById("jukeboxTabs").hidden = false;
+            }
+
+            function hideTabs() {
+                document.getElementById("audioControls").hidden = true;
+                document.getElementById("jukeboxTabs").hidden = true;
+                document.getElementById("socialTab").hidden = true;
+                document.getElementById("politicalTab").hidden = true;
+                document.getElementById("techTab").hidden = true;
+                document.getElementById("htownTab").hidden = true;
             }
         </script>
+        <style>
+            .navBar {
+                background: #84cadd;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100vw;
+                height: 10vh;
+                z-index: 11;
+                text-align: center;
+            }
+            .navBar2 {
+                background: #bee0e9;
+                position: absolute;
+                left: 0;
+                top: 10vh;
+                width: 100vw;
+                z-index: 12;
+                height: 5vh;
+                text-align: center;
+            }
+            #jukeboxTabs {
+                background: #e9faff;
+                position: absolute;
+                left: 0;
+                top: 15vh;
+                width: 100vw;
+                height: 85vh;
+                /* text-align: center; */
+            }
+            .blurbs {
+                text-align: center;
+                top: 25vh;
+                height: 75vh;
+                position: absolute;
+                width: 100vw;
+                vertical-align: center;
+                font-family: Staatliches;
+                font-size: 20px;
+            }
+            .title {
+                font-size: 40px;
+            }
+            #jukeboxTabs button {
+                background: #e8faff;
+                /* position: ; */
+                margin-left: 0;
+                /* margin-right: 0; */
+                margin-top: 0;
+                width: 50vw;
+                height: 42.5vh;
+                font-size: 50px;
+            }
+            #jukeboxTabs button:hover {
+                background: #0e495b;
+                color: white;
+                font-size: 55px;
+            }
+            button {
+                height: 5vh;
+                margin-right: -2px;
+                font-family: Staatliches;
+                background: #bee0e9;
+                border: none;
+                font-size: 20px;
+                transition: background 0.4s, font-size 0.4s;
+            }
+            button:hover {
+                background: #ebfbff;
+            }
+            h1 {
+                font-family: Staatliches;
+            }
+            audio {
+                position: fixed;
+                z-index: 10;
+                width: 30vw;
+                left: 35vw;
+                height: 10vh;
+                top: 50%;
+            }
+        </style>
     </head>
     <body>
-        <h1>Musical Masterpieces of the Early 1900's in America</h1>
-        <button onclick="social()">Social</button>
-        <button onclick="political()">Political</button>
-        <button onclick="technological()">Technological</button>
-        <button onclick="wwi()">WWI</button>
-        <button onclick="roaring()">Roaring 20's</button>
-        <button onclick="great()">Great Depression</button>
-        <button onclick="wwii()">WWII</button>
-        <audio id="audioSample" src="">
+        <div class="navBar">
+            <h1>Musical Masterpieces of the Early 1900's in America</h1>
+        </div>
+        <div class="navBar2">
+            <button onclick="juke()">Jukebox</button>
+            <button onclick="social()">Social</button>
+            <button onclick="political()">Political</button>
+            <button onclick="technological()">Technological</button>
+            <button onclick="hightstown()">Hightstown</button>
+        </div>
+        <div id="jukeboxTabs">
+            <button onclick="wwi()">WWI</button>
+            <button onclick="roaring()">Roaring 20's</button><br>
+            <button onclick="great()">Great Depression</button>
+            <button onclick="wwii()">WWII</button>
+        </div>
 
+        <div class="blurbs" id="socialTab">
+            <p class="title">Social</p>
+            <p>Blurb about Social tab.</p>
+        </div>
+
+        <div class="blurbs" id="politicalTab">
+            <p class="title">Political</p>
+            <p>Blurb about Political tab.</p>
+        </div>
+
+        <div class="blurbs" id="techTab">
+            <p class="title">Technological</p>
+            <p>Blurb about Technological tab.</p>
+        </div>
+
+        <div class="blurbs" id="htownTab">
+            <p class="title">Hightstown</p>
+            <p>Blurb about Hightstown tab.</p>
+        </div>
+
+        <br>
+        <audio id="audioControls" controls hidden>
+          <source id="audioSample" src="" type="audio/mpeg">
         </audio>
         <p id="blurb"></p>
     </body>
