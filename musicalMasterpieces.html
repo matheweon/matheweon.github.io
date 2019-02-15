@@ -105,17 +105,20 @@
             
             var timer = setInterval(tick, 10);
             var scrollCounter = 0;
+            var scrollOpacity = 0;
             
             function tick() {
                 if (scrollCounter > 0 && scrollCounter <= 10) {
-                    document.getElementById("scroll").style.opacity += 0.1;
+                    scrollOpacity += 0.1;
+                    document.getElementById("scroll").style.opacity = scrollOpacity;
                     scrollCounter++;
                 }
                 if (scrollCounter > 10 && scrollCounter <= 100) {
-                    scrollCounter++
+                    scrollCounter++;
                 }
                 if (scrollCounter > 100 && scrollCounter <= 120) {
-                    document.getElementById("scroll").style.opacity -= 0.05;
+                    scrollOpacity -= 0.05;
+                    document.getElementById("scroll").style.opacity = scrollOpacity;
                     scrollCounter++;
                 }
                 if (scrollCounter > 120) {
