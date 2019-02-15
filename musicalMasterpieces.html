@@ -109,23 +109,25 @@
             
             function tick() {
                 if (scrollCounter === 0) {
+                    document.getElementById("scroll").hidden = false;
+                    document.getElementById("scroll").style.opacity = 0;
                     scrollOpacity = 0;
                     scrollCounter++;
                 }
-                if (scrollCounter > 0 && scrollCounter <= 20) {
+                if (scrollCounter > 0 && scrollCounter <= 40) {
                     scrollOpacity += 0.1;
                     document.getElementById("scroll").style.opacity = scrollOpacity;
                     scrollCounter++;
                 }
-                if (scrollCounter > 20 && scrollCounter <= 200) {
+                if (scrollCounter > 40 && scrollCounter <= 200) {
                     scrollCounter++;
                 }
-                if (scrollCounter > 200 && scrollCounter <= 240) {
+                if (scrollCounter > 200 && scrollCounter <= 280) {
                     scrollOpacity -= 0.05;
                     document.getElementById("scroll").style.opacity = scrollOpacity;
                     scrollCounter++;
                 }
-                if (scrollCounter > 240) {
+                if (scrollCounter > 280) {
                     document.getElementById("scroll").hidden = true;
                     scrollCounter = -1;
                     scrollOpacity = 0;
@@ -133,8 +135,6 @@
             }
             
             function scrollAppear() {
-                document.getElementById("scroll").hidden = false;
-                document.getElementById("scroll").style.opacity = 0;
                 scrollCounter = 0;
             }
         </script>
