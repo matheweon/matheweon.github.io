@@ -15,6 +15,7 @@
                 document.getElementById("audioControls").play();
                 hideInfo();
                 document.getElementById("wwiInfo").hidden = false;
+                scrollAppear();
             }
             function roaring() {
                 document.getElementById("audioSample").src = "http://matheweon.github.io/James P Johnson The Charleston 1925.mp3";
@@ -23,6 +24,7 @@
                 document.getElementById("audioControls").play();
                 hideInfo();
                 document.getElementById("roaringInfo").hidden = false;
+                scrollAppear();
             }
             function great() {
                 document.getElementById("audioSample").src = "http://matheweon.github.io/Judy Garland - Over The Rainbow (Subtitiles).mp3";
@@ -31,6 +33,7 @@
                 document.getElementById("audioControls").play();
                 hideInfo();
                 document.getElementById("greatInfo").hidden = false;
+                scrollAppear();
             }
             function wwii() {
                 document.getElementById("audioSample").src = "http://matheweon.github.io/Bing Crosby - White Christmas (1942) Original Version.mp3";
@@ -39,6 +42,7 @@
                 document.getElementById("audioControls").play();
                 hideInfo();
                 document.getElementById("wwiiInfo").hidden = false;
+                scrollAppear();
             }
 
             //BELOW ARE THE NAV BUTTON FUNCTIONS
@@ -97,6 +101,10 @@
                 document.getElementById("roaringInfo").hidden = true;
                 document.getElementById("greatInfo").hidden = true;
                 document.getElementById("wwiiInfo").hidden = true;
+            }
+            
+            function scrollAppear() {
+                document.getElementById("scroll").hidden = false;
             }
         </script>
         <style>
@@ -226,7 +234,7 @@
     <body>
         <div class="navBar">
             <h1>Musical Masterpieces of the Early 1900's in America</h1>
-            <h2 id="scroll">Scroll Down!</h2>
+            <h2 id="scroll" hidden>Scroll Down!</h2>
         </div>
         
         <div class="navBar2">
