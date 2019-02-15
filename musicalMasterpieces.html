@@ -112,20 +112,20 @@
                     scrollOpacity = 0;
                     scrollCounter++;
                 }
-                if (scrollCounter > 0 && scrollCounter <= 10) {
+                if (scrollCounter > 0 && scrollCounter <= 20) {
                     scrollOpacity += 0.1;
                     document.getElementById("scroll").style.opacity = scrollOpacity;
                     scrollCounter++;
                 }
-                if (scrollCounter > 10 && scrollCounter <= 200) {
+                if (scrollCounter > 20 && scrollCounter <= 200) {
                     scrollCounter++;
                 }
-                if (scrollCounter > 200 && scrollCounter <= 220) {
+                if (scrollCounter > 200 && scrollCounter <= 240) {
                     scrollOpacity -= 0.05;
                     document.getElementById("scroll").style.opacity = scrollOpacity;
                     scrollCounter++;
                 }
-                if (scrollCounter > 220) {
+                if (scrollCounter > 240) {
                     document.getElementById("scroll").hidden = true;
                     scrollCounter = 0;
                     scrollOpacity = 0;
