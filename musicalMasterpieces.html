@@ -104,33 +104,38 @@
             }
             
             var timer = setInterval(tick, 10);
-            var scrollCounter = 0;
+            var scrollCounter = -1;
             var scrollOpacity = 0;
             
             function tick() {
+                if (scrollCounter === 0) {
+                    scrollOpacity = 0;
+                    scrollCounter++;
+                }
                 if (scrollCounter > 0 && scrollCounter <= 10) {
                     scrollOpacity += 0.1;
                     document.getElementById("scroll").style.opacity = scrollOpacity;
                     scrollCounter++;
                 }
-                if (scrollCounter > 10 && scrollCounter <= 100) {
+                if (scrollCounter > 10 && scrollCounter <= 200) {
                     scrollCounter++;
                 }
-                if (scrollCounter > 100 && scrollCounter <= 120) {
+                if (scrollCounter > 200 && scrollCounter <= 220) {
                     scrollOpacity -= 0.05;
                     document.getElementById("scroll").style.opacity = scrollOpacity;
                     scrollCounter++;
                 }
-                if (scrollCounter > 120) {
+                if (scrollCounter > 220) {
                     document.getElementById("scroll").hidden = true;
                     scrollCounter = 0;
+                    scrollOpacity = 0;
                 }
             }
             
             function scrollAppear() {
                 document.getElementById("scroll").hidden = false;
                 document.getElementById("scroll").style.opacity = 0;
-                scrollCounter = 1;
+                scrollCounter = 0;
             }
         </script>
         <style>
