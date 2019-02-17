@@ -236,10 +236,10 @@
             .navBar2 button {
                 z-index: 1001;
             }
-            .info button {
-                width: 40vh !important;
-                height: 20vh !important;
-                background: #f44b42 !important;
+            #stopButton {
+                width: 40vh/* !important*/;
+                height: 20vh/* !important*/;
+                background: #f44b42/* !important*/;
             }
             h1 {
                 font-family: Staatliches;
@@ -290,7 +290,7 @@
             <button onclick="great()">Great Depression</button>
             <button onclick="wwii()">WWII</button>
             <div class="info" id="wwiInfo" hidden>
-                <button onclick="stopMusic()">Stop Music</button>
+                <button id="stopButton" onclick="stopMusic()">Stop Music</button>
                 <p class="title">Song: Tiger Rag</p>
                 <p class="text">- During WWI, Dixieland jazz was on the rise</p>
                 <p class="text">- Songs such as Tiger Rag by the Original Dixieland Jass Band were popular</p>
