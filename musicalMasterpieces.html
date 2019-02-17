@@ -208,7 +208,7 @@
                 margin-left: 10vw;
                 margin-right: 10vw;
             }
-            #jukeboxTab button {
+            .jukeboxButton {
                 background: #e8faff;
                 margin-left: 0;
                 margin-top: 0;
@@ -216,7 +216,7 @@
                 height: 42.5vh;
                 font-size: 50px;
             }
-            #jukeboxTab button:hover {
+            .jukeboxButton:hover {
                 background: #0e495b;
                 color: white;
                 font-size: 55px;
@@ -236,10 +236,10 @@
             .navBar2 button {
                 z-index: 1001;
             }
-            #stopButton {
-                width: 40vh/* !important*/;
-                height: 20vh/* !important*/;
-                background: #f44b42/* !important*/;
+            .stopButton {
+                width: 40vh;
+                height: 20vh;
+                background: #f44b42;
             }
             h1 {
                 font-family: Staatliches;
@@ -285,12 +285,12 @@
         
         <div id="jukeboxTab">
             <image id="jukebox" src="https://matheweon.github.io/jukebox.png"></image>
-            <button onclick="wwi()">WWI</button>
-            <button onclick="roaring()">Roaring 20's</button><br>
-            <button onclick="great()">Great Depression</button>
-            <button onclick="wwii()">WWII</button>
+            <button class="jukeboxButton" onclick="wwi()">WWI</button>
+            <button class="jukeboxButton" onclick="roaring()">Roaring 20's</button><br>
+            <button class="jukeboxButton" onclick="great()">Great Depression</button>
+            <button class="jukeboxButton" onclick="wwii()">WWII</button>
             <div class="info" id="wwiInfo" hidden>
-                <button id="stopButton" onclick="stopMusic()">Stop Music</button>
+                <button class="stopButton" onclick="stopMusic()">Stop Music</button>
                 <p class="title">Song: Tiger Rag</p>
                 <p class="text">- During WWI, Dixieland jazz was on the rise</p>
                 <p class="text">- Songs such as Tiger Rag by the Original Dixieland Jass Band were popular</p>
