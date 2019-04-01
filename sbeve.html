@@ -140,11 +140,12 @@
 					if (length < shortestLength) {
 						shortestLength = length;
 						shortestElements = phraseElementsArray[i];
+						console.log(shortestElements);
 					}
 				}
 
 				//start and end the passage with a full word
-				console.log(shortestElements);
+				//console.log(shortestElements);
 				var startPoint = shortestElements[0][0];
 				while (true) {
 					if (dataset.charAt(startPoint) === " " || dataset.charAt(startPoint) === dataset.charAt(0)) {//dataset.charAt(0) is the return key
