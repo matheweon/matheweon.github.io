@@ -41,14 +41,27 @@
 				}
 			}
 
+			//define all variables outside for debugging
+			var phrase = "";
+			var charsInPhrase = [];
+			var tempDatasetElements = [];
+			var newtempDatasetElements = [];
+			var startingIndexes = [];
+			var tempStartingIndex = 0;
+			var phraseElementsArray = [];
+			var shortestLength = 0;
+			var shortestElements = [];
+			var startPoint = 0;
+			var endPoint = 0;
+			var passage = [];
 			function find() {
-				var phrase = document.getElementById("input").value;
+				phrase = document.getElementById("input").value;
 				if (phrase.length < 2) {
 					document.getElementById("output").innerHTML = "The phrase must be at least 2 characters long";
 					return;
 				}
 				//puts all the characters in the phrase into an array in the form of [index, char]
-				var charsInPhrase = [];
+				charsInPhrase = [];
 				for (var i = 0; i < phrase.length; i++) {
 					var alreadyInList = false;
 					for (var j = 0; j < charsInPhrase.length; j++) {
@@ -63,8 +76,8 @@
 				}
 
 				//curates the dataset so it only contains the characters in the phrase
-				var tempDatasetElements = datasetElements.slice();
-				var newtempDatasetElements = [];
+				tempDatasetElements = datasetElements.slice();
+				newtempDatasetElements = [];
 				for (var i = 0; i < tempDatasetElements.length; i++) {
 					var matchesChar = false;
 					for (var j = 0; j < charsInPhrase.length; j++) {
@@ -80,8 +93,8 @@
 				tempDatasetElements = newtempDatasetElements;
 
 				//finds the indexes of the first character of the phrase in tempDatasetElements
-				var startingIndexes = [];
-				var tempStartingIndex = 0;
+				startingIndexes = [];
+				tempStartingIndex = 0;
 				while (true) {
 					var firstIndex = -1;
 					for (var i = tempStartingIndex; i < tempDatasetElements.length; i++) {
@@ -113,7 +126,7 @@
 				}
 
 				//finds all the characters of the phrase in order
-				var phraseElementsArray = [];
+				phraseElementsArray = [];
 				for (var i = 0; i < startingIndexes.length; i++) {
 					var phraseElements = [];
 					var startIndex = startingIndexes[i][2];
@@ -133,21 +146,18 @@
 				}
 
 				//find the shortest passage with the phrase in it
-				var shortestLength = /*dataset.length*/ 100000;
-				var shortestElements = [];
+				shortestLength = dataset.length;
+				shortestElements = [];
 				for (var i = 0; i < phraseElementsArray.length; i++) {
 					var length = phraseElementsArray[i][phrase.length - 1][0] - phraseElementsArray[i][0][0];
-					console.log(length);
 					if (length < shortestLength) {
 						shortestLength = length;
 						shortestElements = phraseElementsArray[i];
-						console.log(shortestElements);
 					}
 				}
 
 				//start and end the passage with a full word
-				//console.log(shortestElements);
-				var startPoint = shortestElements[0][0];
+				startPoint = shortestElements[0][0];
 				while (true) {
 					if (dataset.charAt(startPoint) === " " || dataset.charAt(startPoint) === dataset.charAt(0)) {//dataset.charAt(0) is the return key
 						startPoint++;
@@ -155,14 +165,14 @@
 					}
 					startPoint--;
 				}
-				var endPoint = shortestElements[phrase.length - 1][0];
+				endPoint = shortestElements[phrase.length - 1][0];
 				while (true) {
 					if (dataset.charAt(endPoint) === " " || dataset.charAt(endPoint) === dataset.charAt(0)) {
 						break;
 					}
 					endPoint++;
 				}
-				var passage = dataset.substring(startPoint, endPoint);
+				passage = dataset.substring(startPoint, endPoint);
 				for (var i = 0; i < phrase.length; i++) {
 					var index = shortestElements[i][0] - startPoint + i * 2;
 					passage = passage.slice(0, index) + "[" + shortestElements[i][1] + "]" + passage.slice(index + 1);
