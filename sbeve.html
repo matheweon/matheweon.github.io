@@ -12,7 +12,6 @@
 		<input id="input" type="text"></input>
 		<button id="find" onclick="find()">Find</button>
 		<p id="output"></p>
-		<script src="http://d3js.org/d3.v3.min.js"></script>
 		<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 		<script type="text/javascript">
 			//focus on text box and press enter to click the find button
@@ -40,7 +39,6 @@
 				for (var i = 0; i < dataset.length; i++) {
 					datasetElements.push([i, dataset.charAt(i).toLowerCase()]);
 				}
-				console.log(datasetElements);
 			}
 
 			function find() {
@@ -144,8 +142,6 @@
 						shortestElements = phraseElementsArray[i];
 					}
 				}
-				console.log(shortestLength);
-				console.log(shortestElements);
 
 				//start and end the passage with a full word
 				var startPoint = shortestElements[0][0];
@@ -161,8 +157,6 @@
 					if (dataset.charAt(endPoint) === " " || dataset.charAt(endPoint) === dataset.charAt(0)) {
 						break;
 					}
-					console.log(dataset.charAt(endPoint));
-					console.log(dataset.charAt(endPoint) === " ");
 					endPoint++;
 				}
 				var passage = dataset.substring(startPoint, endPoint);
