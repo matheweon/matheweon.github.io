@@ -133,10 +133,11 @@
 				}
 
 				//find the shortest passage with the phrase in it
-				var shortestLength = dataset.length;
+				var shortestLength = /*dataset.length*/ 100000;
 				var shortestElements = [];
 				for (var i = 0; i < phraseElementsArray.length; i++) {
 					var length = phraseElementsArray[i][phrase.length - 1][0] - phraseElementsArray[i][0][0];
+					console.log(length);
 					if (length < shortestLength) {
 						shortestLength = length;
 						shortestElements = phraseElementsArray[i];
