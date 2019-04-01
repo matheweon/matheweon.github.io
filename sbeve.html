@@ -32,10 +32,11 @@
 			    clearInterval(everythingLoaded);
 			    init(); // this is the function that gets called when everything is loaded
 			  }
-			}, 100);
+			}, 1000);
 
 			var datasetElements = [];
 			function init() {
+				console.log("loaded");
 				for (var i = 0; i < dataset.length; i++) {
 					datasetElements.push([i, dataset.charAt(i).toLowerCase()]);
 				}
