@@ -178,7 +178,7 @@
 				passage = dataset.substring(startPoint, endPoint);
 				for (var i = 0; i < phrase.length; i++) {
 					var index = shortestElements[i][0] - startPoint + i * 2;
-					passage = passage.slice(0, index) + "[" + shortestElements[i][1] + "]" + passage.slice(index + 1);
+					passage = passage.slice(0, index) + "[" + dataset.charAt(shortestElements[i][0]) + "]" + passage.slice(index + 1);
 				}
 				passage = passage.replace(/\]\[/g, "");
 
