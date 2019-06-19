@@ -149,9 +149,9 @@
 		]
 		
 		function convertFingeringToBoolArray(fInt) {
-			String f = String(fInt);
-			boolean boolArray[];
-			for (int i = 0; i < 13; i++) {
+			var f = String(fInt);
+			var boolArray[];
+			for (var i = 0; i < 13; i++) {
 				boolArray[i] = f.charAt(0);
 				f.substring(1);
 			}
