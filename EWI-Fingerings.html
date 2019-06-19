@@ -12,6 +12,23 @@
 			font-family: Verdana;
 			font-size: 20px;
 		}
+		.stop-left {
+			stop-color: #3f51b5;  /* Indigo */
+		    }
+
+		    .stop-right {
+			stop-color: #009688;  /* Teal */
+		    }
+
+		    .filled {
+			fill: url(#mainGradient);
+		    }
+
+		    .outlined {
+			fill:   none;
+			stroke: url(#mainGradient);
+			stroke-width: 4;
+		    }
 	</style>
 </head>
 
@@ -23,6 +40,38 @@
 		var svg = d3.select("body").append("svg")
 			.attr("width", 1000)
 			.attr("height", 1000);
+		
+		// Create the svg:defs element and the main gradient definition.
+		    var svgDefs = svg.append('defs');
+
+		    var mainGradient = svgDefs.append('linearGradient')
+			.attr('id', 'mainGradient');
+
+		    // Create the stops of the main gradient. Each stop will be assigned
+		    // a class to style the stop using CSS.
+		    mainGradient.append('stop')
+			.attr('class', 'stop-left')
+			.attr('offset', '0');
+
+		    mainGradient.append('stop')
+			.attr('class', 'stop-right')
+			.attr('offset', '1');
+
+		    // Use the gradient to set the shape fill, via CSS.
+		    svg.append('rect')
+			.classed('filled', true)
+			.attr('x', padding)
+			.attr('y', padding)
+			.attr('width', (width / 2) - 1.5 * padding)
+			.attr('height', height - 2 * padding);
+
+		    // Use the gradient to set the shape stroke, via CSS.
+		    svg.append('rect')
+			.classed('outlined', true)
+			.attr('x', width / 2 + padding / 2)
+			.attr('y', padding)
+			.attr('width', (width / 2) - 1.5 * padding)
+			.attr('height', height - 2 * padding);
 		
 		//there are 17 notes because it goes from Bb to D an octave above
 		//there are 13 keys and its formated in binary for ease of input to the array
