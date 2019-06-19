@@ -152,8 +152,11 @@
 			var f = String(fInt);
 			var boolArray = [];
 			for (var i = 0; i < 13; i++) {
-				boolArray[i] = f.charAt(0);
-				f.substring(1);
+				if (f.charAt(0) === "0")
+					boolArray[i] = false;
+				else
+					boolArray[i] = true;
+				f = f.substring(1);
 			}
 			return boolArray;
 		}
