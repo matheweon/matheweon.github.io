@@ -147,6 +147,16 @@
 				0000100000000
 			]
 		]
+		
+		function convertFingeringToBoolArray(int fInt) 
+			String f = String(fInt);
+			boolean boolArray[];
+			for (int i = 0; i < 13; i++) {
+				boolArray[i] = f.charAt(0);
+				f.substring(1);
+			}
+			return boolArray;
+		}
 	</script>
 </body>
 
