@@ -393,6 +393,30 @@ var chordIntervals = [
 433532,//Altered #9, #11, b13
 43434343434343434//Super Ultra Hyper Mega Meta Lydian
 ];
+
+function displayScale(scaleInt, n) {
+  var scale = String(scaleIntervals[scaleInt]);
+  var note = n;
+  for (var i = 0; i <= scale.length(); i++) {
+    displayKey(commonKeys(n);
+    if (i < scale.length())
+      n -= scale.charAt(scale.length() - 1 - i);
+    if (n < 0)
+      n += 12;
+  }
+}
+
+function displayChord(chordInt, n) {
+  var chord = String(chordIntervals[chordInt]);
+  var note = n;
+  for (var i = 0; i <= chord.length(); i++) {
+    displayKey(commonKeys(n);
+    if (i < chord.length())
+      n -= chord.charAt(chord.length() - 1 - i);
+    if (n < 0)
+      n += 12;
+  }
+}
 	</script>
 </body>
 
