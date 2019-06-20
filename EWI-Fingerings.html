@@ -6,8 +6,6 @@
 	<style>
 		body {
 			margin: 0;
-		}
-		scg {
 			overflow: hidden;
 		}
 		.text {
@@ -88,6 +86,99 @@
 		// 	.attr('y', padding)
 		// 	.attr('width', (width / 2) - 1.5 * padding)
 		// 	.attr('height', height - 2 * padding);
+
+		var scale = 0.5,
+				xOffset = 50,
+				yOffset = 50;
+
+		var keyImages = [
+			"https://matheweon.github.io/Circle%20Key.png",
+			"https://matheweon.github.io/Left%20Index%20Key.png",
+			"https://matheweon.github.io/Circle%20Key.png",
+			"https://matheweon.github.io/Circle%20Key.png",
+			"https://matheweon.github.io/Left%20Pinky%20Key%201.png",
+			"https://matheweon.github.io/Left%20Pinky%20Key%202.png",
+			"https://matheweon.github.io/Right%20Index%20Key.png",
+			"https://matheweon.github.io/Circle%20Key.png",
+			"https://matheweon.github.io/Circle%20Key.png",
+			"https://matheweon.github.io/Circle%20Key.png",
+			"https://matheweon.github.io/Right%20Pinky%20Key%201.png",
+			"https://matheweon.github.io/Right%20Pinky%20Key%202.png",
+			"https://matheweon.github.io/Right%20Pinky%20Key%203.png"
+		]
+
+		var keyImagesOn = [
+			"https://matheweon.github.io/Circle%20Key%20On.png",
+			"https://matheweon.github.io/Left%20Index%20Key%20On.png",
+			"https://matheweon.github.io/Circle%20Key%20On.png",
+			"https://matheweon.github.io/Circle%20Key%20On.png",
+			"https://matheweon.github.io/Left%20Pinky%20Key%201%20On.png",
+			"https://matheweon.github.io/Left%20Pinky%20Key%202%20On.png",
+			"https://matheweon.github.io/Right%20Index%20Key%20On.png",
+			"https://matheweon.github.io/Circle%20Key%20On.png",
+			"https://matheweon.github.io/Circle%20Key%20On.png",
+			"https://matheweon.github.io/Circle%20Key%20On.png",
+			"https://matheweon.github.io/Right%20Pinky%20Key%201%20On.png",
+			"https://matheweon.github.io/Right%20Pinky%20Key%202%20On.png",
+			"https://matheweon.github.io/Right%20Pinky%20Key%203%20On.png"
+		]
+
+		var imgs = svg.selectAll("image").data([0]);
+
+		makeKey(0 * scale + xOffset, 125 * scale + yOffset, 99 * scale, keyImages[0]);
+		makeKey(60 * scale + xOffset, 121 * scale + yOffset, 107 * scale, keyImages[1]);
+		makeKey(140 * scale + xOffset, 125 * scale + yOffset, 99 * scale, keyImages[2]);
+		makeKey(280 * scale + xOffset, 125 * scale + yOffset, 99 * scale, keyImages[3]);
+		makeKey(350 * scale + xOffset, 50 * scale + yOffset, 175 * scale, keyImages[4]);
+		makeKey(400 * scale + xOffset, 0 * scale + yOffset, 225 * scale, keyImages[5]);
+		makeKey(520 * scale + xOffset, 125 * scale + yOffset, 175 * scale, keyImages[6]);
+		makeKey(680 * scale + xOffset, 125 * scale + yOffset, 99 * scale, keyImages[7]);
+		makeKey(820 * scale + xOffset, 125 * scale + yOffset, 99 * scale, keyImages[8]);
+		makeKey(960 * scale + xOffset, 125 * scale + yOffset, 99 * scale, keyImages[9]);
+		makeKey(1040 * scale + xOffset, 125 * scale + yOffset, 161 * scale, keyImages[10]);
+		makeKey(1100 * scale + xOffset, 125 * scale + yOffset, 208 * scale, keyImages[11]);
+		makeKey(1145 * scale + xOffset, 125 * scale + yOffset, 275 * scale, keyImages[12]);
+
+		yOffset = 400 * scale;
+
+		makeKey(0 * scale + xOffset, 125 * scale + yOffset, 99 * scale, keyImagesOn[0]);
+		makeKey(60 * scale + xOffset, 121 * scale + yOffset, 107 * scale, keyImagesOn[1]);
+		makeKey(140 * scale + xOffset, 125 * scale + yOffset, 99 * scale, keyImagesOn[2]);
+		makeKey(280 * scale + xOffset, 125 * scale + yOffset, 99 * scale, keyImagesOn[3]);
+		makeKey(350 * scale + xOffset, 50 * scale + yOffset, 175 * scale, keyImagesOn[4]);
+		makeKey(400 * scale + xOffset, 0 * scale + yOffset, 225 * scale, keyImagesOn[5]);
+		makeKey(520 * scale + xOffset, 125 * scale + yOffset, 175 * scale, keyImagesOn[6]);
+		makeKey(680 * scale + xOffset, 125 * scale + yOffset, 99 * scale, keyImagesOn[7]);
+		makeKey(820 * scale + xOffset, 125 * scale + yOffset, 99 * scale, keyImagesOn[8]);
+		makeKey(960 * scale + xOffset, 125 * scale + yOffset, 99 * scale, keyImagesOn[9]);
+		makeKey(1040 * scale + xOffset, 125 * scale + yOffset, 161 * scale, keyImagesOn[10]);
+		makeKey(1100 * scale + xOffset, 125 * scale + yOffset, 208 * scale, keyImagesOn[11]);
+		makeKey(1145 * scale + xOffset, 125 * scale + yOffset, 275 * scale, keyImagesOn[12]);
+
+    /*imgs.enter()
+      .append("svg:image")
+      .attr("xlink:href", "https://matheweon.github.io/Circle%20Key.png")
+      .attr("x", "60")
+      .attr("y", "60")
+      .attr("width", "100")
+      .attr("height", "100");
+		imgs.enter()
+      .append("svg:image")
+      .attr("xlink:href", "https://matheweon.github.io/Left%20Index%20Key.png")
+      .attr("x", "130")
+      .attr("y", "60")
+      .attr("width", "100")
+      .attr("height", "100");*/
+
+		function makeKey(x, y, h, link) {
+			imgs.enter()
+	      .append("svg:image")
+	      .attr("xlink:href", link)
+	      .attr("x", x)
+	      .attr("y", y)
+	      .attr("width", h)
+	      .attr("height", h);
+		}
 
 		//there are 17 notes because it goes from Bb to D an octave above
 		//there are 13 keys and its formated in binary for ease of input to the array
