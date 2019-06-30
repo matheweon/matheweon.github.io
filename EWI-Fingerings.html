@@ -46,7 +46,10 @@
 				xOffset = 0,
 				yOffset = 0;
 
-		var spellUpwards = true;
+		var flats = true,
+				spellUpwards = true;
+
+		var toolbarHeight = height * 0.1;
 
 		// Create svg
 		var svg = d3.select("body").append("svg")
@@ -86,7 +89,7 @@
 			.attr("x", padding)
 			.attr("y", padding)
 			.attr("width", width - 2 * padding)
-			.attr("height", height * 0.1);
+			.attr("height", toolbarHeight);
 
     // Use the gradient to set the shape fill, via CSS.
     // svg.append("rect")
@@ -336,6 +339,9 @@
 			[13, 0]//B
 		];
 
+		var notesFlat = ["C", "Db", "D", "Eb", "E", "F", "Gb", "G", "Ab", "A", "Bb", "B"];
+		var noteSharp = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+
 		var scaleIntervals = [
 			2221221,//Lydian
 			2212221,//Ionian
@@ -411,6 +417,20 @@
 		}
 
 		function displayFingering(note, fingering) {
+			//idk why this shit aint working
+			var realNote = note - 2;
+			if (realNote <= 0)
+				realNote += 12;
+			if (flats) {
+				svg.append("p")
+					.attr("class", "text")
+					.html(notesFlat[realNote]);
+			} else {
+				svg.append("p")
+					.attr("class", "text")
+					.html(notesSharp[realNote]);
+			}
+
 			var isOn = convertFingeringToBoolArray(fingerings[note][fingering]);
 			for (var i = 0; i < 13; i++) {
 				if (isOn[i])
@@ -424,13 +444,14 @@
 
 		function rescale(h) {
 			if ($(window).height() / h < $(window).width() / 1650)
-				scale = $(window).height() / h;
+				scale = $(window).height() / h * 0.8;//test out numbers here
 			else
 				scale = $(window).width() / 1650;
 		}
 
 		function clearKeys() {
-			yOffset = 50 + height * 0.1;
+			toolbarHeight = height * 0.1;
+			yOffset = 50 + toolbarHeight;
 			xOffset = 50;
 			svg.selectAll("image").remove();
 		}
@@ -492,7 +513,7 @@
 		  }
 		}
 
-		//displayChord(24, 0);
+		displayChord(24, 0);
 	</script>
 </body>
 
