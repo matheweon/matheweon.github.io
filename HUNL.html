@@ -1,34 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html id="html">
 
 <head>
     <title>Heads Up No Limit Preflop</title>
     <style type="text/css">
         * {
             font-family: Verdana;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
 
         body {
             margin: 1.35em !important;
         }
+
+        html {
+            background-color: #33cc78;
+        }
+
+        .black {
+            background-color: black;
+        }
+
+        .white {
+            color: white;
+        }
     </style>
 </head>
 
 <body>
-    <h1>Heads Up No Limit Preflop</h1>
-    <p>Open: 2.5 BB, 3-Bet: 10 BB, 4-Bet: 22 BB, 5-Bet: All In</p>
-    <p>Button is not opening J4o-84o, Q3o-63o, and Q2o-32o</p>
-    <a target="_blank" href="https://poker-coaching.s3.amazonaws.com/tools/preflop-charts/100bb-hunl-cash-game-charts.pdf">Link to ranges</a><br><br><br>
-    <p>Select action and enter your hand (Ex: AA, AKs, 27o)</p>
-    <p>Capitalization and order of cards does not matter</p>
-    <p>Press Enter to roll</p>
-    <label for="rfi"><input type="radio" name="action" id="rfi" value="rfi">Button Raise First In</label><br>
-    <label for="open"><input type="radio" name="action" id="open" value="open" checked>BB Facing Open</label><br>
-    <label for="3bet"><input type="radio" name="action" id="3bet" value="3bet">Button Facing 3-Bet</label><br>
-    <label for="4bet"><input type="radio" name="action" id="4bet" value="4bet">BB Facing 4-Bet</label><br><br>
+    <h1 class="text">Heads Up No Limit Preflop</h1>
+
+    <p class="text">Open: 2.5 BB, 3-Bet: 10 BB, 4-Bet: 22 BB, 5-Bet: All In</p>
+    <p class="text">Button is not opening J4o-84o, Q3o-63o, and Q2o-32o</p>
+    <label for="darkMode" class="text"><input type="checkbox" id="darkMode" onclick="darkMode()">Dark Mode</label>
+    <a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</a>
+    <a target="_blank" href="https://poker-coaching.s3.amazonaws.com/tools/preflop-charts/100bb-hunl-cash-game-charts.pdf" class="text">Link to ranges</a>
+
+    <br><br><br>
+
+    <p class="text">Select action and enter your hand (Ex: AA, AKs, 27o)</p>
+    <p class="text">Capitalization and order of cards does not matter</p>
+    <p class="text">Press Enter to roll</p>
+
+    <label for="rfi" class="text"><input type="radio" name="action" id="rfi" value="rfi">Button Raise First In</label><br>
+    <label for="open" class="text"><input type="radio" name="action" id="open" value="open" checked>BB Facing Open</label><br>
+    <label for="3bet" class="text"><input type="radio" name="action" id="3bet" value="3bet">Button Facing 3-Bet</label><br>
+    <label for="4bet" class="text"><input type="radio" name="action" id="4bet" value="4bet">BB Facing 4-Bet</label><br><br>
+
     <input id="input" type="text"></input>
     <button id="roll" onclick="roll()">Roll</button>
-    <p id="output"></p>
+
+    <p id="output" class="text"></p>
+
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script type="text/javascript">
         //focus on text box and press enter to click the roll button
@@ -241,23 +269,33 @@
                 }
             } else if (action === "3bet") {
                 if (random >= 100 - sb_4bet[hand_id]) {
-                    output = "Roll: " + random + " = 4-Bet<br><br>4-Bet: " + sb_4bet[hand_id] + "%<br>Call Open: " + sb_call_3bet[hand_id] + "%";
+                    output = "Roll: " + random + " = 4-Bet<br><br>4-Bet: " + sb_4bet[hand_id] + "%<br>Call 3-Bet: " + sb_call_3bet[hand_id] + "%";
                 } else if (random >= 100 - sb_4bet[hand_id] - sb_call_3bet[hand_id]) {
-                    output = "Roll: " + random + " = Call 3-Bet<br><br>4-Bet: " + sb_4bet[hand_id] + "%<br>Call Open: " + sb_call_3bet[hand_id] + "%";
+                    output = "Roll: " + random + " = Call 3-Bet<br><br>4-Bet: " + sb_4bet[hand_id] + "%<br>Call 3-Bet: " + sb_call_3bet[hand_id] + "%";
                 } else {
-                    output = "Roll: " + random + " = Fold<br><br>4-Bet: " + sb_4bet[hand_id] + "%<br>Call Open: " + sb_call_3bet[hand_id] + "%";
+                    output = "Roll: " + random + " = Fold<br><br>4-Bet: " + sb_4bet[hand_id] + "%<br>Call 3-Bet: " + sb_call_3bet[hand_id] + "%";
                 }
             } else {
                 if (random >= 100 - bb_5bet[hand_id]) {
-                    output = "Roll: " + random + " = 5-Bet<br><br>3-Bet: " + bb_5bet[hand_id] + "%<br>Call Open: " + bb_call_4bet[hand_id] + "%";
+                    output = "Roll: " + random + " = 5-Bet<br><br>5-Bet: " + bb_5bet[hand_id] + "%<br>Call 4-Bet: " + bb_call_4bet[hand_id] + "%";
                 } else if (random >= 100 - bb_5bet[hand_id] - bb_call_4bet[hand_id]) {
-                    output = "Roll: " + random + " = Call 4-Bet<br><br>3-Bet: " + bb_5bet[hand_id] + "%<br>Call Open: " + bb_call_4bet[hand_id] + "%";
+                    output = "Roll: " + random + " = Call 4-Bet<br><br>5-Bet: " + bb_5bet[hand_id] + "%<br>Call 4-Bet: " + bb_call_4bet[hand_id] + "%";
                 } else {
-                    output = "Roll: " + random + " = Fold<br><br>3-Bet: " + bb_5bet[hand_id] + "%<br>Call Open: " + bb_call_4bet[hand_id] + "%";
+                    output = "Roll: " + random + " = Fold<br><br>5-Bet: " + bb_5bet[hand_id] + "%<br>Call 4-Bet: " + bb_call_4bet[hand_id] + "%";
                 }
             }
 
             document.getElementById("output").innerHTML = output;
+        }
+
+        function darkMode() {
+            if (document.getElementById("html").classList.contains("black")) {
+                document.getElementById("html").classList.remove("black");
+                $(".text").removeClass("white");
+            } else {
+                document.getElementById("html").classList.add("black");
+                $(".text").addClass("white");
+            }
         }
     </script>
 </body>
