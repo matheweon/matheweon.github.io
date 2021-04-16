@@ -16,14 +16,16 @@
 
 <body>
     <h1>Heads Up No Limit Preflop</h1>
-    <a target="_blank" href="https://poker-coaching.s3.amazonaws.com/tools/preflop-charts/100bb-hunl-cash-game-charts.pdf">Link to ranges</a>
+    <p>Open: 2.5 BB, 3-Bet: 10 BB, 4-Bet: 22 BB, 5-Bet: All In</p>
+    <p>Button is not opening J4o-84o, Q3o-63o, and Q2o-32o</p>
+    <a target="_blank" href="https://poker-coaching.s3.amazonaws.com/tools/preflop-charts/100bb-hunl-cash-game-charts.pdf">Link to ranges</a><br><br><br>
     <p>Select action and enter your hand (Ex: AA, AKs, 27o)</p>
     <p>Capitalization and order of cards does not matter</p>
     <p>Press Enter to roll</p>
-    <label for="noAction"><input type="radio" name="action" id="noAction" value="noAction">No Action</label><br>
-    <label for="open"><input type="radio" name="action" id="open" value="open" checked>Facing Open</label><br>
-    <label for="3bet"><input type="radio" name="action" id="3bet" value="3bet">Facing 3-Bet</label><br>
-    <label for="4bet"><input type="radio" name="action" id="4bet" value="4bet">Facing 4-Bet</label><br><br>
+    <label for="rfi"><input type="radio" name="action" id="rfi" value="rfi">Button Raise First In</label><br>
+    <label for="open"><input type="radio" name="action" id="open" value="open" checked>BB Facing Open</label><br>
+    <label for="3bet"><input type="radio" name="action" id="3bet" value="3bet">Button Facing 3-Bet</label><br>
+    <label for="4bet"><input type="radio" name="action" id="4bet" value="4bet">BB Facing 4-Bet</label><br><br>
     <input id="input" type="text"></input>
     <button id="roll" onclick="roll()">Roll</button>
     <p id="output"></p>
@@ -175,6 +177,13 @@
           /*2*/   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,  20
         ];
 
+        // Fix numbers not adding up to 100 in sb_4bet and sb_call_3bet
+        for (var i = 0; i < 13*13; i++) {
+            if (sb_4bet[i] + sb_call_3bet[i] > 100) {
+                sb_call_3bet[i] = 100 - sb_4bet[i];
+            }
+        }
+
         function roll() {
             var input = document.getElementById("input").value.toUpperCase();
             var hand_id = 0;
@@ -204,8 +213,8 @@
             }
 
             var action = "";
-            if (document.getElementById("noAction").checked) {
-                action = "noAction";
+            if (document.getElementById("rfi").checked) {
+                action = "rfi";
             } else if (document.getElementById("open").checked) {
                 action = "open";
             } else if (document.getElementById("3bet").checked) {
@@ -216,7 +225,7 @@
 
             var output;
             var random = Math.floor(Math.random() * 100); // Random number from 0 to 99
-            if (action === "noAction") {
+            if (action === "rfi") {
                 if (sb_open[hand_id] === 100) {
                     output = "Open";
                 } else {
@@ -224,27 +233,27 @@
                 }
             } else if (action === "open") {
                 if (random >= 100 - bb_3bet[hand_id]) {
-                    output = "Roll: " + random + " = 3-Bet";
+                    output = "Roll: " + random + " = 3-Bet<br><br>3-Bet: " + bb_3bet[hand_id] + "%<br>Call Open: " + bb_call_open[hand_id] + "%";
                 } else if (random >= 100 - bb_3bet[hand_id] - bb_call_open[hand_id]) {
-                    output = "Roll: " + random + " = Call Open";
+                    output = "Roll: " + random + " = Call Open<br><br>3-Bet: " + bb_3bet[hand_id] + "%<br>Call Open: " + bb_call_open[hand_id] + "%";
                 } else {
-                    output = "Roll: " + random + " = Fold";
+                    output = "Roll: " + random + " = Fold<br><br>3-Bet: " + bb_3bet[hand_id] + "%<br>Call Open: " + bb_call_open[hand_id] + "%";
                 }
             } else if (action === "3bet") {
                 if (random >= 100 - sb_4bet[hand_id]) {
-                    output = "Roll: " + random + " = 4-Bet";
+                    output = "Roll: " + random + " = 4-Bet<br><br>4-Bet: " + sb_4bet[hand_id] + "%<br>Call Open: " + sb_call_3bet[hand_id] + "%";
                 } else if (random >= 100 - sb_4bet[hand_id] - sb_call_3bet[hand_id]) {
-                    output = "Roll: " + random + " = Call 3-Bet";
+                    output = "Roll: " + random + " = Call 3-Bet<br><br>4-Bet: " + sb_4bet[hand_id] + "%<br>Call Open: " + sb_call_3bet[hand_id] + "%";
                 } else {
-                    output = "Roll: " + random + " = Fold";
+                    output = "Roll: " + random + " = Fold<br><br>4-Bet: " + sb_4bet[hand_id] + "%<br>Call Open: " + sb_call_3bet[hand_id] + "%";
                 }
             } else {
                 if (random >= 100 - bb_5bet[hand_id]) {
-                    output = "Roll: " + random + " = 5-Bet";
+                    output = "Roll: " + random + " = 5-Bet<br><br>3-Bet: " + bb_5bet[hand_id] + "%<br>Call Open: " + bb_call_4bet[hand_id] + "%";
                 } else if (random >= 100 - bb_5bet[hand_id] - bb_call_4bet[hand_id]) {
-                    output = "Roll: " + random + " = Call 4-Bet";
+                    output = "Roll: " + random + " = Call 4-Bet<br><br>3-Bet: " + bb_5bet[hand_id] + "%<br>Call Open: " + bb_call_4bet[hand_id] + "%";
                 } else {
-                    output = "Roll: " + random + " = Fold";
+                    output = "Roll: " + random + " = Fold<br><br>3-Bet: " + bb_5bet[hand_id] + "%<br>Call Open: " + bb_call_4bet[hand_id] + "%";
                 }
             }
 
