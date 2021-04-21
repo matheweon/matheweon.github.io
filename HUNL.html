@@ -212,9 +212,9 @@
           /*7*/ 100, 100, 100, 100, 100, 100,  90,  50,   0,  25,  50,  80, 100,
           /*6*/ 100, 100, 100, 100, 100, 100, 100,  90,  50,   0,  25,  50, 100,
           /*5*/ 100, 100,  75,  50,  35,  35,  35, 100,  90,  50,   0,  25, 100,
-          /*4*/ 100,  90,  50,   0,   0,   0,   0,   0,  50,  90,  50,  50, 100,
-          /*3*/ 100,  90,  50,   0,   0,   0,   0,   0,   0,  25,  25, 100, 100,
-          /*2*/ 100,  90,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0, 100
+          /*4*/ 100,  90,  50,   0,   0,   0,   0,   0,  50,  90,  50,  50,  80,
+          /*3*/ 100,  90,  50,   0,   0,   0,   0,   0,   0,  25,  25,  80,  80,
+          /*2*/ 100,  90,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,  80
         ];
 
         sb_4bet = [
@@ -348,7 +348,7 @@
                         $("#" + handIdPair[0]).addClass("fold");
                     } else if (bb_3bet[handIdPair[1]] === 100) {
                         $("#" + handIdPair[0]).addClass("raise");
-                    }
+                    } // Mix colors here
                 });
             } else if (document.getElementById("3bet").checked) {
                 action = "3bet";
@@ -444,6 +444,10 @@
             $("#" + action + "Text").addClass("selectedAction");
             roll();
         }
+
+        //for (var i = 0; i < 13*13; i++) {if (bb_3bet[i] + bb_call_open[i] > 100) {console.log(cards[~~(i/13)] + cards[i % 13] + " Total: " + (bb_3bet[i] + bb_call_open[i]))}}
+        //for (var i = 0; i < 13*13; i++) {if (sb_4bet[i] + sb_call_3bet[i] > 100) {console.log(cards[~~(i/13)] + cards[i % 13] + " Total: " + (sb_4bet[i] + sb_call_3bet[i]))}}
+        //for (var i = 0; i < 13*13; i++) {if (bb_5bet[i] + bb_call_4bet[i] > 100) {console.log(cards[~~(i/13)] + cards[i % 13] + " Total: " + (bb_5bet[i] + bb_call_4bet[i]))}}
     </script>
 </body>
 
