@@ -10,7 +10,10 @@
 
         html {
             background-color: #33cc78;
-            zoom: 150%;
+        }
+
+        h1 {
+            font-size: 1.875em;
         }
 
         .black {
@@ -49,6 +52,22 @@
         .offsuit {
             background-color: #dbecff;
         }
+
+        .selected {
+            background-color: #2b9ef0;
+        }
+
+        .selectedAction {
+            font-weight: bold;
+        }
+
+        .fold {
+            background-color: #777777;
+        }
+
+        .raise {
+            background-color: yellow;
+        }
     </style>
 </head>
 
@@ -66,7 +85,7 @@
 
     <br class="text info"><br class="text info">
 
-    <label class="text info" for="darkMode"><input type="checkbox" id="darkMode" onclick="darkMode()">Dark Mode</label>
+    <label class="text info" for="darkMode"><input class="text info" type="checkbox" id="darkMode" onclick="darkMode()">Dark Mode</label>
     <a class="text info">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</a>
     <a class="text info" target="_blank" href="https://poker-coaching.s3.amazonaws.com/tools/preflop-charts/100bb-hunl-cash-game-charts.pdf">Link to ranges</a>
 
@@ -74,15 +93,15 @@
 
     <br class="text"><br class="text">
 
-    <label for="rfi" class="text"><input type="radio" name="action" id="rfi" value="rfi">Button Raise First In</label><br>
-    <label for="open" class="text"><input type="radio" name="action" id="open" value="open" checked>BB Facing Open</label><br>
-    <label for="3bet" class="text"><input type="radio" name="action" id="3bet" value="3bet">Button Facing 3-Bet</label><br>
-    <label for="4bet" class="text"><input type="radio" name="action" id="4bet" value="4bet">BB Facing 4-Bet</label><br><br>
+    <label for="rfi" class="text" id="rfiText"><input type="radio" name="action" id="rfi" value="rfi" onclick="selectAction('rfi')">Button Raise First In</label><br class="text">
+    <label for="open" class="text selectedAction" id="openText"><input type="radio" name="action" id="open" value="open" onclick="selectAction('open')" checked>BB Facing Open</label><br class="text">
+    <label for="3bet" class="text" id="3betText"><input type="radio" name="action" id="3bet" value="3bet" onclick="selectAction('3bet')">Button Facing 3-Bet</label><br class="text">
+    <label for="4bet" class="text" id="4betText"><input type="radio" name="action" id="4bet" value="4bet" onclick="selectAction('4bet')">BB Facing 4-Bet</label><br class="text"><br class="text">
 
     <input id="input" type="text" value="JKo"></input>
     <button id="roll" onclick="roll()">Roll</button>
 
-    <br><br>
+    <br class="text"><br class="text">
 
     <div id="hands"></div>
 
@@ -90,7 +109,12 @@
 
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script type="text/javascript">
-        //focus on text box and press enter to click the roll button
+        // $("#output").html("Width: " + window.innerWidth + "<br>Height: " + window.innerHeight);
+        // Project is approx 500 px wide by 666 px tall
+        let zoom = Math.min(window.innerWidth, window.innerHeight * 0.75) / 5;
+        $("html").css({"zoom": zoom + "%"});
+
+        // Focus on text box and press enter to click the roll button
         document.getElementById("input").focus();
         $("#input").keyup(function(event) {
             if (event.keyCode === 13) {
@@ -101,6 +125,8 @@
         cards = ["A", "K", "Q", "J", "T", "9", "8", "7", "6", "5", "4", "3", "2"];
 
         handsDiv = $("#hands");
+        // Array of array of [hand, id] for each of the 169 buttons
+        handButtons = [];
 
         // Fills div with 13x13 grid of buttons for each hand
         for (let i = 0; i < 13; i++) {
@@ -118,6 +144,7 @@
                     handType = "pocketPair";
                 }
                 handsDiv.html(handsDiv.html() + "<button class='text hand " + handType + "' id='" + hand + "' onclick='roll(\"" + hand + "\")''>" + hand + "</button>");
+                handButtons.push([hand, i * 13 + j]);
             }
             handsDiv.html(handsDiv.html() + "<br>");
         }
@@ -267,10 +294,13 @@
 
         function roll(hand) {
             let input;
+            // If hand button is clicked
             if (hand != null) {
                 document.getElementById("input").value = hand;
                 input = hand.toUpperCase();
-            } else {
+                $(".selected").removeClass("selected");
+                $("#" + hand).addClass("selected");
+            } else { // If roll button is clicked
                 input = document.getElementById("input").value.toUpperCase();
             }
             let hand_id = 0;
@@ -302,12 +332,46 @@
             let action = "";
             if (document.getElementById("rfi").checked) {
                 action = "rfi";
+                $(".fold").removeClass("fold");
+                $(".raise").removeClass("raise");
+                handButtons.forEach(function(handIdPair) {
+                    if (sb_open[handIdPair[1]] === 0) {
+                        $("#" + handIdPair[0]).addClass("fold");
+                    }
+                });
             } else if (document.getElementById("open").checked) {
                 action = "open";
+                $(".fold").removeClass("fold");
+                $(".raise").removeClass("raise");
+                handButtons.forEach(function(handIdPair) {
+                    if (bb_call_open[handIdPair[1]] === 0 && bb_3bet[handIdPair[1]] === 0) {
+                        $("#" + handIdPair[0]).addClass("fold");
+                    } else if (bb_3bet[handIdPair[1]] === 100) {
+                        $("#" + handIdPair[0]).addClass("raise");
+                    }
+                });
             } else if (document.getElementById("3bet").checked) {
                 action = "3bet";
+                $(".fold").removeClass("fold");
+                $(".raise").removeClass("raise");
+                handButtons.forEach(function(handIdPair) {
+                    if (sb_call_3bet[handIdPair[1]] === 0 && sb_4bet[handIdPair[1]] === 0) {
+                        $("#" + handIdPair[0]).addClass("fold");
+                    } else if (sb_4bet[handIdPair[1]] === 100) {
+                        $("#" + handIdPair[0]).addClass("raise");
+                    }
+                });
             } else if (document.getElementById("4bet").checked) {
                 action = "4bet";
+                $(".fold").removeClass("fold");
+                $(".raise").removeClass("raise");
+                handButtons.forEach(function(handIdPair) {
+                    if (bb_call_4bet[handIdPair[1]] === 0 && bb_5bet[handIdPair[1]] === 0) {
+                        $("#" + handIdPair[0]).addClass("fold");
+                    } else if (bb_5bet[handIdPair[1]] === 100) {
+                        $("#" + handIdPair[0]).addClass("raise");
+                    }
+                });
             }
 
             let output;
@@ -370,6 +434,15 @@
                 $("#info").html("Show Info");
                 info_hidden = true;
             }
+        }
+
+        // Meme
+        $("#KJo").click();
+        $("#input").val("JKo");
+        function selectAction(action) {
+            $(".selectedAction").removeClass("selectedAction");
+            $("#" + action + "Text").addClass("selectedAction");
+            roll();
         }
     </script>
 </body>
