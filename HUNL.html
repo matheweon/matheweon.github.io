@@ -10,6 +10,7 @@
 
         html {
             background-color: #33cc78;
+            zoom: 150%;
         }
 
         .black {
@@ -28,6 +29,25 @@
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
+        }
+
+        .hand {
+            width: 2.5em;
+            padding: 1px 1px;
+            margin: 0.325px 0.325px;
+            color: black !important;
+        }
+
+        .pocketPair {
+            background-color: #b8deb9;
+        }
+
+        .suited {
+            background-color: #faeab9;
+        }
+
+        .offsuit {
+            background-color: #dbecff;
         }
     </style>
 </head>
@@ -48,7 +68,7 @@
 
     <br class="text info"><br class="text info">
 
-    <label class="text info" for="darkMode" ><input type="checkbox" id="darkMode" onclick="darkMode()">Dark Mode</label>
+    <label class="text info" for="darkMode"><input type="checkbox" id="darkMode" onclick="darkMode()">Dark Mode</label>
     <a class="text info">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</a>
     <a class="text info" target="_blank" href="https://poker-coaching.s3.amazonaws.com/tools/preflop-charts/100bb-hunl-cash-game-charts.pdf">Link to ranges</a>
 
@@ -64,6 +84,10 @@
     <input id="input" type="text" value="JKo"></input>
     <button id="roll" onclick="roll()">Roll</button>
 
+    <br><br>
+
+    <div id="hands"></div>
+
     <p id="output" class="text"></p>
 
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
@@ -77,6 +101,28 @@
         });
 
         cards = ["A", "K", "Q", "J", "T", "9", "8", "7", "6", "5", "4", "3", "2"];
+
+        handsDiv = $("#hands");
+
+        // Fills div with 13x13 grid of buttons for each hand
+        for (let i = 0; i < 13; i++) {
+            for (let j = 0; j < 13; j++) {
+                let handType;
+                let hand = cards[i] + cards[j];
+                if (i < j) { // Suited
+                    hand += "s";
+                    handType = "suited";
+                } else if (i > j) { // Offsuit
+                    hand = hand[1] + hand[0];
+                    hand += "o";
+                    handType = "offsuit";
+                } else {
+                    handType = "pocketPair";
+                }
+                handsDiv.html(handsDiv.html() + "<button class='text hand " + handType + "' id='" + hand + "' onclick='roll(\"" + hand + "\")''>" + hand + "</button>");
+            }
+            handsDiv.html(handsDiv.html() + "<br>");
+        }
 
         template = [
           //     A    K    Q    J    T    9    8    7    6    5    4    3    2
@@ -215,15 +261,21 @@
         ];
 
         // Fix numbers not adding up to 100 in sb_4bet and sb_call_3bet
-        for (var i = 0; i < 13*13; i++) {
+        for (let i = 0; i < 13*13; i++) {
             if (sb_4bet[i] + sb_call_3bet[i] > 100) {
                 sb_call_3bet[i] = 100 - sb_4bet[i];
             }
         }
 
-        function roll() {
-            var input = document.getElementById("input").value.toUpperCase();
-            var hand_id = 0;
+        function roll(hand) {
+            let input;
+            if (hand != null) {
+                document.getElementById("input").value = hand;
+                input = hand.toUpperCase();
+            } else {
+                input = document.getElementById("input").value.toUpperCase();
+            }
+            let hand_id = 0;
             if (input.length < 2 || input.length > 3) {
                 document.getElementById("output").innerHTML = "Hand must be 2 or 3 characters long";
                 return;
@@ -249,7 +301,7 @@
                 }
             }
 
-            var action = "";
+            let action = "";
             if (document.getElementById("rfi").checked) {
                 action = "rfi";
             } else if (document.getElementById("open").checked) {
@@ -260,8 +312,8 @@
                 action = "4bet";
             }
 
-            var output;
-            var random = Math.floor(Math.random() * 100); // Random number from 0 to 99
+            let output;
+            let random = Math.floor(Math.random() * 100); // Random number from 0 to 99
             if (action === "rfi") {
                 if (sb_open[hand_id] === 100) {
                     output = "Open";
@@ -297,13 +349,14 @@
             document.getElementById("output").innerHTML = output;
         }
 
+        $("#darkMode").click();
         function darkMode() {
-            if (document.getElementById("html").classList.contains("black")) {
-                document.getElementById("html").classList.remove("black");
-                $(".text").removeClass("white");
-            } else {
+            if (document.getElementById("darkMode").checked) {
                 document.getElementById("html").classList.add("black");
                 $(".text").addClass("white");
+            } else {
+                document.getElementById("html").classList.remove("black");
+                $(".text").removeClass("white");
             }
         }
 
