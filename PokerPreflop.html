@@ -170,6 +170,7 @@
         <label for="co" class="text" id="coText"><input type="radio" name="mainSelection" id="co" onclick="selectAction('co')">Cutoff</label><br class="text">
         <label for="hj" class="text" id="hjText"><input type="radio" name="mainSelection" id="hj" onclick="selectAction('hj')">Hijack</label><br class="text">
         <label for="lj" class="text" id="ljText"><input type="radio" name="mainSelection" id="lj" onclick="selectAction('lj')">Lojack</label><br class="text">
+        <label for="cold4bet" class="text" id="cold4betText"><input type="radio" name="mainSelection" id="cold4bet" onclick="selectAction('cold4bet')">Cold 4-Bet</label><br class="text">
         <label for="headsUp" class="text" id="headsUpText"><input type="radio" name="mainSelection" id="headsUp" onclick="selectAction('headsUp')">Heads Up</label><br class="text">
     </fieldset>
 
@@ -735,7 +736,7 @@
         $("#rfi").click();
         function selectAction(action) {
             // If selected action is in the main selection
-            if (["rfi", "bb", "sb", "btn", "co", "hj", "lj", "headsUp"].includes(action)) {
+            if (["rfi", "bb", "sb", "btn", "co", "hj", "lj", "cold4bet", "headsUp"].includes(action)) {
                 $(".subSelection").hide();
                 switch (action) {
                     case "rfi": $("#rfiSelection").show(); break;
@@ -745,6 +746,7 @@
                     case "co": $("#coSelection").show(); break;
                     case "hj": $("#hjSelection").show(); break;
                     case "lj": $("#ljSelection").show(); break;
+                    case "cold4bet": $("#cold4betSelection").show(); break;
                     case "headsUp": $("#headsUpSelection").show(); break;
                 }
             }
