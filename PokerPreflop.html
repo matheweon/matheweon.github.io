@@ -164,7 +164,7 @@
         <label for="co" class="text" id="coText"><input type="radio" name="mainSelection" id="co" onclick="selectAction('co')">Cutoff</label><br class="text">
         <label for="hj" class="text" id="hjText"><input type="radio" name="mainSelection" id="hj" onclick="selectAction('hj')">Hijack</label><br class="text">
         <label for="lj" class="text" id="ljText"><input type="radio" name="mainSelection" id="lj" onclick="selectAction('lj')">Lojack</label><br class="text">
-        <!--<label for="headsUp" class="text" id="headsUpText"><input type="radio" name="mainSelection" id="headsUp" onclick="selectAction('headsUp')">Heads Up</label><br class="text">!-->
+        <label for="headsUp" class="text" id="headsUpText"><input type="radio" name="mainSelection" id="headsUp" onclick="selectAction('headsUp')">Heads Up</label><br class="text">
     </fieldset>
 
     <fieldset id="rfiSelection" class="subSelection">
@@ -452,7 +452,8 @@
             "37": "lightBlue",
             "20": "veryLightBlue",
             "0": "white",
-            "48": "gray"
+            "48": "gray",
+            "100": "red" // For heads up opening chart
         }
 
         raiseFold = {
@@ -684,37 +685,11 @@
                 let action = 99 - random - raisePercent < 0 ? "Raise" : 99 - random - raisePercent - callPercent < 0 ? "Call" : "Fold";
                 output = "Roll: " + random + " = " + action + "<br><br>Raise: " + raisePercent + "%<br>Call: " + callPercent + "%<br>Fold: " + foldPercent + "%";
             } else if (chartType === "headsUp") {
-                /*if (action === "rfi") {
-                    if (sb_open[hand_id] === 100) {
-                        output = "Open";
-                    } else {
-                        output = "Fold";
-                    }
-                } else if (action === "open") {
-                    if (random >= 100 - bb_3bet[hand_id]) {
-                        output = "Roll: " + random + " = 3-Bet<br><br>3-Bet: " + bb_3bet[hand_id] + "%<br>Call Open: " + bb_call_open[hand_id] + "%";
-                    } else if (random >= 100 - bb_3bet[hand_id] - bb_call_open[hand_id]) {
-                        output = "Roll: " + random + " = Call Open<br><br>3-Bet: " + bb_3bet[hand_id] + "%<br>Call Open: " + bb_call_open[hand_id] + "%";
-                    } else {
-                        output = "Roll: " + random + " = Fold<br><br>3-Bet: " + bb_3bet[hand_id] + "%<br>Call Open: " + bb_call_open[hand_id] + "%";
-                    }
-                } else if (action === "3bet") {
-                    if (random >= 100 - sb_4bet[hand_id]) {
-                        output = "Roll: " + random + " = 4-Bet<br><br>4-Bet: " + sb_4bet[hand_id] + "%<br>Call 3-Bet: " + sb_call_3bet[hand_id] + "%";
-                    } else if (random >= 100 - sb_4bet[hand_id] - sb_call_3bet[hand_id]) {
-                        output = "Roll: " + random + " = Call 3-Bet<br><br>4-Bet: " + sb_4bet[hand_id] + "%<br>Call 3-Bet: " + sb_call_3bet[hand_id] + "%";
-                    } else {
-                        output = "Roll: " + random + " = Fold<br><br>4-Bet: " + sb_4bet[hand_id] + "%<br>Call 3-Bet: " + sb_call_3bet[hand_id] + "%";
-                    }
-                } else {
-                    if (random >= 100 - bb_5bet[hand_id]) {
-                        output = "Roll: " + random + " = 5-Bet<br><br>5-Bet: " + bb_5bet[hand_id] + "%<br>Call 4-Bet: " + bb_call_4bet[hand_id] + "%";
-                    } else if (random >= 100 - bb_5bet[hand_id] - bb_call_4bet[hand_id]) {
-                        output = "Roll: " + random + " = Call 4-Bet<br><br>5-Bet: " + bb_5bet[hand_id] + "%<br>Call 4-Bet: " + bb_call_4bet[hand_id] + "%";
-                    } else {
-                        output = "Roll: " + random + " = Fold<br><br>5-Bet: " + bb_5bet[hand_id] + "%<br>Call 4-Bet: " + bb_call_4bet[hand_id] + "%";
-                    }
-                }*/
+                let raisePercent = chart[hand_id][0];
+                let callPercent = chart[hand_id][1];
+                let foldPercent = chart[hand_id][2];
+                let action = 99 - random - raisePercent < 0 ? "Raise" : 99 - random - raisePercent - callPercent < 0 ? "Call" : "Fold";
+                output = "Roll: " + random + " = " + action + "<br><br>Raise: " + raisePercent + "%<br>Call: " + callPercent + "%<br>Fold: " + foldPercent + "%";
             }
 
             document.getElementById("output").innerHTML = output;
@@ -843,9 +818,15 @@
                 case "cold_4bet_55": chart = cold_4bet_55; chartType = "raiseFold"; break;
                 case "cold_4bet_70": chart = cold_4bet_70; chartType = "raiseFold"; break;
 
+                // Heads up opening is raise/fold, but the others are much more complicated
+                // Generates an triplet of [raisePercent, callPercent, FoldPercent] for each hand and puts it in chart
                 case "hu_rfi": chart = sb_open; chartType = "raiseFold"; break;
+                case "hu_open": chart = []; for (let i = 0; i < 169; i++) {chart[i] = [bb_3bet[i], bb_call_open[i], 100 - bb_3bet[i] - bb_call_open[i]]}; chartType = "headsUp"; break;
+                case "hu_3bet": chart = []; for (let i = 0; i < 169; i++) {chart[i] = [sb_4bet[i], sb_call_3bet[i], 100 - sb_4bet[i] - sb_call_3bet[i]]}; chartType = "headsUp"; break;
+                case "hu_4bet": chart = []; for (let i = 0; i < 169; i++) {chart[i] = [bb_5bet[i], bb_call_4bet[i], 100 - bb_5bet[i] - bb_call_4bet[i]]}; chartType = "headsUp"; break;
             }
             // Set color code of each hand
+            $(".hand").css("background-color", "");
             $(".red").removeClass("red");
             $(".orange").removeClass("orange");
             $(".green").removeClass("green");
@@ -859,9 +840,28 @@
             $(".veryLightBlue").removeClass("veryLightBlue");
             $(".white").removeClass("white");
             $(".gray").removeClass("gray");
-            handButtons.forEach(function(handIdPair) {
-                $("#" + handIdPair[0]).addClass(colorCodes[chart[handIdPair[1]].toString()]);
-            });
+            if (chartType === "headsUp") {
+                handButtons.forEach(function(handIdPair) {
+                    let raise = chart[handIdPair[1]][0];
+                    raise = Math.cbrt(raise) * 100 / Math.cbrt(100);
+                    let call = chart[handIdPair[1]][1];
+                    call = Math.cbrt(call) * 100 / Math.cbrt(100);
+                    let fold = chart[handIdPair[1]][2];
+                    let scalar = Math.max(raise, call) / 100 / 0.6;
+                    let hue = 0;
+                    if (scalar !== 0) {
+                        hue = Math.round(60 - raise / scalar + call / scalar);
+                    }
+                    let saturation = 100;
+                    let light = Math.round(50 + fold / 2);
+
+                    $("#" + handIdPair[0]).css("background-color", "hsl(" + hue + ", " + saturation + "%, " + light + "%)");
+                });
+            } else {
+                handButtons.forEach(function(handIdPair) {
+                    $("#" + handIdPair[0]).addClass(colorCodes[chart[handIdPair[1]].toString()]);
+                });
+            }
         }
 
         //for (var i = 0; i < 13*13; i++) {if (bb_3bet[i] + bb_call_open[i] > 100) {console.log(cards[~~(i/13)] + cards[i % 13] + " Total: " + (bb_3bet[i] + bb_call_open[i]))}}
