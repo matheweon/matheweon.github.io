@@ -842,11 +842,13 @@
             $(".gray").removeClass("gray");
             if (chartType === "headsUp") {
                 handButtons.forEach(function(handIdPair) {
+                    // Mix colors
                     let raise = chart[handIdPair[1]][0];
-                    raise = Math.cbrt(raise) * 100 / Math.cbrt(100);
+                    raise = Math.pow(raise, 1/4) * 100 / Math.pow(100, 1/4);
                     let call = chart[handIdPair[1]][1];
-                    call = Math.cbrt(call) * 100 / Math.cbrt(100);
+                    call = Math.pow(call, 1/4) * 100 / Math.pow(100, 1/4);
                     let fold = chart[handIdPair[1]][2];
+                    fold = Math.sqrt(fold) * 10;
                     let scalar = Math.max(raise, call) / 100 / 0.6;
                     let hue = 0;
                     if (scalar !== 0) {
