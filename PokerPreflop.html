@@ -16,6 +16,10 @@
             font-size: 1.875em;
         }
 
+        h2 {
+            font-size: 3em;
+        }
+
         .black {
             background-color: black;
         }
@@ -80,8 +84,10 @@
             float: left;
         }
 
-        #bottomDiv {
-            float: none;
+        #rolledAction {
+            display: inline-block;
+            margin: 0em 0em 0em 1em;
+            text-align: center;
         }
 
         .red {
@@ -253,6 +259,7 @@
 
         <input id="input" type="text" value="JKo"></input>
         <button id="roll" onclick="roll()">Roll</button>
+        <h2 id="rolledAction" class="text"></h2>
 
         <br class="text"><br class="text">
 
@@ -264,8 +271,8 @@
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script type="text/javascript">
         // $("#output").html("Width: " + window.innerWidth + "<br>Height: " + window.innerHeight);
-        // Project is approx 500 px wide by 666 px tall
-        let zoom = Math.min(window.innerWidth, window.innerHeight * 0.75) / 5 * 0.825;
+        // Project is approx 3:5 ratio
+        let zoom = Math.min(window.innerWidth, window.innerHeight * 0.6) / 5;
         $("html").css({"zoom": zoom + "%"});
 
         // Focus on text box and press enter to click the roll button
@@ -668,6 +675,7 @@
                 }
             }
 
+            let action;
             let output;
             let random = Math.floor(Math.random() * 100); // Random number from 0 to 99
 
@@ -675,23 +683,24 @@
                 let color = colorCodes[chart[hand_id].toString()];
                 let raisePercent = raiseFold[color];
                 let foldPercent = 100 - raisePercent;
-                let action = 99 - random - raisePercent < 0 ? "Raise" : "Fold";
+                action = 99 - random - raisePercent < 0 ? "Raise" : "Fold";
                 output = "Roll: " + random + " = " + action + "<br><br>Raise: " + raisePercent + "%<br>Fold: " + foldPercent + "%";
             } else if (chartType === "raiseCallFold") {
                 let color = colorCodes[chart[hand_id].toString()];
                 let raisePercent = raiseCallFold[color][0];
                 let callPercent = raiseCallFold[color][1];
                 let foldPercent = raiseCallFold[color][2];
-                let action = 99 - random - raisePercent < 0 ? "Raise" : 99 - random - raisePercent - callPercent < 0 ? "Call" : "Fold";
+                action = 99 - random - raisePercent < 0 ? "Raise" : 99 - random - raisePercent - callPercent < 0 ? "Call" : "Fold";
                 output = "Roll: " + random + " = " + action + "<br><br>Raise: " + raisePercent + "%<br>Call: " + callPercent + "%<br>Fold: " + foldPercent + "%";
             } else if (chartType === "headsUp") {
                 let raisePercent = chart[hand_id][0];
                 let callPercent = chart[hand_id][1];
                 let foldPercent = chart[hand_id][2];
-                let action = 99 - random - raisePercent < 0 ? "Raise" : 99 - random - raisePercent - callPercent < 0 ? "Call" : "Fold";
+                action = 99 - random - raisePercent < 0 ? "Raise" : 99 - random - raisePercent - callPercent < 0 ? "Call" : "Fold";
                 output = "Roll: " + random + " = " + action + "<br><br>Raise: " + raisePercent + "%<br>Call: " + callPercent + "%<br>Fold: " + foldPercent + "%";
             }
 
+            document.getElementById("rolledAction").innerHTML = action;
             document.getElementById("output").innerHTML = output;
         }
 
