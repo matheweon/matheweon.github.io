@@ -271,18 +271,26 @@
 
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script type="text/javascript">
-        // $("#output").html("Width: " + window.innerWidth + "<br>Height: " + window.innerHeight);
-        // Project is approx 3:5 ratio
-        let zoom = Math.min(window.innerWidth, window.innerHeight * 0.6) / 5;
-        $("html").css({"zoom": zoom + "%"});
+        window.onload = function () {
+            // $("#output").html("Width: " + window.innerWidth + "<br>Height: " + window.innerHeight);
+            // Project is approx 3:5 ratio
+            let zoom = Math.min(window.innerWidth, window.innerHeight * 0.6) / 5;
+            $("html").css({"zoom": zoom + "%"});
+            // Setup
+            $("#darkMode").click();
+            $("#KJo").click();
+            $("#input").val("JKo");
+            $("#rfi").click();
+            // Focus on text box and press enter to click the roll button
+            document.getElementById("input").focus();
+            $("#input").keyup(function(event) {
+                if (event.keyCode === 13) {
+                    $("#roll").click();
+                }
+            });
+        }
 
-        // Focus on text box and press enter to click the roll button
-        document.getElementById("input").focus();
-        $("#input").keyup(function(event) {
-            if (event.keyCode === 13) {
-                $("#roll").click();
-            }
-        });
+
 
         cards = ["A", "K", "Q", "J", "T", "9", "8", "7", "6", "5", "4", "3", "2"];
 
@@ -705,7 +713,6 @@
             document.getElementById("output").innerHTML = output;
         }
 
-        $("#darkMode").click();
         function darkMode() {
             if (document.getElementById("darkMode").checked) {
                 document.getElementById("html").classList.add("black");
@@ -730,10 +737,6 @@
             }
         }
 
-        // Meme
-        $("#KJo").click();
-        $("#input").val("JKo");
-        $("#rfi").click();
         function selectAction(action) {
             // If selected action is in the main selection
             if (["rfi", "bb", "sb", "btn", "co", "hj", "lj", "cold4bet", "headsUp"].includes(action)) {
