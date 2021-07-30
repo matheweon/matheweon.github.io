@@ -1,6 +1,6 @@
 # matheweon.github.io
 
-Heads Up No Limit Preflop Randomizer: https://matheweon.github.io/HUNL.html
+Poker Preflop Randomizer: https://matheweon.github.io/PokerPreflop.html
 
 Mandelbrot Set: https://matheweon.github.io/mandelbrotSet.html
 
