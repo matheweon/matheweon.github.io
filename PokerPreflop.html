@@ -144,7 +144,7 @@
     </style>
 </head>
 
-<body>
+<body onclick="roll()">
     <h1 class="text">Poker Preflop</h1>
 
     <button id="info" onclick="info()">Show Info</button>
@@ -154,7 +154,7 @@
 
     <br class="text info"><br class="text info">
 
-    <label class="text info" for="darkMode"><input class="text info" type="checkbox" id="darkMode" onclick="darkMode()">Dark Mode</label>
+    <label class="text info" for="darkMode"><input class="text info" type="checkbox" id="darkMode" onclick="darkMode()" checked>Dark Mode</label>
     <a class="text info">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</a>
     <a class="text info" target="_blank" href="https://poker-coaching.s3.amazonaws.com/tools/preflop-charts/100bb-hunl-cash-game-charts.pdf">Link to Heads Up Ranges</a>
 
@@ -277,7 +277,8 @@
             let zoom = Math.min(window.innerWidth, window.innerHeight * 0.6) / 5;
             $("html").css({"zoom": zoom + "%"});
             // Setup
-            $("#darkMode").click();
+            //$("#darkMode").click();
+            darkMode();
             $("#KJo").click();
             $("#input").val("JKo");
             $("#rfi").click();
