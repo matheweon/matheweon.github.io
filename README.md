@@ -1,6 +1,6 @@
 # matheweon.github.io
 
-Poker Preflop Randomizer: https://matheweon.github.io/Poker/PokerPreflop.html
+Poker Preflop Randomizer: https://matheweon.github.io/PokerPreflop.html
 
 Mandelbrot Set: https://matheweon.github.io/Random/mandelbrotSet.html
 
