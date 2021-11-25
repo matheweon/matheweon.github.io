@@ -105,8 +105,7 @@
         }
 
         function playNote() {
-            //note = parseInt(Math.random() * 12 + 48);
-            note += parseInt(Math.random() * 24 - 12);
+            note += Math.floor(Math.random() * 12 + 1) * (parseInt(Math.random() * 2) * 2 - 1);
             Tone.loaded().then(() => {
                 sampler.triggerAttackRelease(indexToNote(note), 1);
             });
