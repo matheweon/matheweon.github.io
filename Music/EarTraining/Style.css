@@ -57,3 +57,11 @@ button {
 #tabs {
     display: flex;
 }
+
+#keyLegend {
+    float: left;
+    text-align: left;
+    position: absolute;
+    top: 90vh;
+    left: 1vw;
+}

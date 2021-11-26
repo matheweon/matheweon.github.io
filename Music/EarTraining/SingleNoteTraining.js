@@ -133,18 +133,18 @@ function drawPiano() {
     drawKey("Ab", keyWidth * 113/24, 0, keyWidth * 14/24, keyWidth * 3, getColor("Ab", true));
     drawKey("Bb", keyWidth * 141/24, 0, keyWidth * 14/24, keyWidth * 3, getColor("Bb", true));
     if (displayKeyboardKeys) {
-        drawKeyText(keyWidth * 0.5, keyWidth * 4.5, "A");
-        drawKeyText(keyWidth * 1.5, keyWidth * 4.5, "S");
-        drawKeyText(keyWidth * 2.5, keyWidth * 4.5, "D");
-        drawKeyText(keyWidth * 3.5, keyWidth * 4.5, "F");
-        drawKeyText(keyWidth * 4.5, keyWidth * 4.5, "G");
-        drawKeyText(keyWidth * 5.5, keyWidth * 4.5, "H");
-        drawKeyText(keyWidth * 6.5, keyWidth * 4.5, "J");
-        drawKeyText(keyWidth * 22/24, keyWidth * 2.8, "W", true);
-        drawKeyText(keyWidth * 50/24, keyWidth * 2.8, "E", true);
-        drawKeyText(keyWidth * 92/24, keyWidth * 2.8, "T", true);
-        drawKeyText(keyWidth * 120/24, keyWidth * 2.8, "Y", true);
-        drawKeyText(keyWidth * 148/24, keyWidth * 2.8, "U", true);
+        drawKeyText(keyWidth * 0.5, keyWidth * 4.5, noteKeys[0]);
+        drawKeyText(keyWidth * 1.5, keyWidth * 4.5, noteKeys[2]);
+        drawKeyText(keyWidth * 2.5, keyWidth * 4.5, noteKeys[4]);
+        drawKeyText(keyWidth * 3.5, keyWidth * 4.5, noteKeys[5]);
+        drawKeyText(keyWidth * 4.5, keyWidth * 4.5, noteKeys[7]);
+        drawKeyText(keyWidth * 5.5, keyWidth * 4.5, noteKeys[9]);
+        drawKeyText(keyWidth * 6.5, keyWidth * 4.5, noteKeys[11]);
+        drawKeyText(keyWidth * 22/24, keyWidth * 2.8, noteKeys[1], true);
+        drawKeyText(keyWidth * 50/24, keyWidth * 2.8, noteKeys[3], true);
+        drawKeyText(keyWidth * 92/24, keyWidth * 2.8, noteKeys[6], true);
+        drawKeyText(keyWidth * 120/24, keyWidth * 2.8, noteKeys[8], true);
+        drawKeyText(keyWidth * 148/24, keyWidth * 2.8, noteKeys[10], true);
     }
 }
 

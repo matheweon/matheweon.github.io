@@ -10,6 +10,8 @@ const tabs = ["singleNoteTraining", "intervalTraining", "melodyTraining"];
 var selectedTab = 0;
 $("#intervalTraining").hide();
 $("#melodyTraining").hide();
+const slideDistance = window.innerWidth * 2
+const slideSpeed = 750;
 
 const sampler = new Tone.Sampler({
     urls: {
@@ -59,8 +61,6 @@ function truncateNote(note) {
     return note.slice(0, -1);
 }
 
-const slideDistance = window.innerWidth * 2;
-
 function selectTab(direction) {
     if (direction === "left") {
         selectedTab--;
@@ -69,9 +69,9 @@ function selectTab(direction) {
         }
         for (let i = 0; i < tabs.length; i++) {
             if (selectedTab === i) {
-                $("#" + tabs[i]).show("slide", {direction: "left", distance: slideDistance}, 1000);
+                $("#" + tabs[i]).show("slide", {direction: "left", distance: slideDistance}, slideSpeed);
             } else {
-                $("#" + tabs[i]).hide("slide", {direction: "right", distance: slideDistance}, 1000);
+                $("#" + tabs[i]).hide("slide", {direction: "right", distance: slideDistance}, slideSpeed);
             }
         }
     } else {
@@ -81,9 +81,9 @@ function selectTab(direction) {
         }
         for (let i = 0; i < tabs.length; i++) {
             if (selectedTab === i) {
-                $("#" + tabs[i]).show("slide", {direction: "right", distance: slideDistance}, 1000);
+                $("#" + tabs[i]).show("slide", {direction: "right", distance: slideDistance}, slideSpeed);
             } else {
-                $("#" + tabs[i]).hide("slide", {direction: "left", distance: slideDistance}, 1000);
+                $("#" + tabs[i]).hide("slide", {direction: "left", distance: slideDistance}, slideSpeed);
             }
         }
     }
