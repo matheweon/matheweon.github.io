@@ -18,7 +18,7 @@
             overflow: hidden;
         }
 
-        body, h1, button, p {
+        body, h1, button, p, svg {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             -webkit-touch-callout: none;
             -webkit-user-select: none;
@@ -26,6 +26,9 @@
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
         }
 
         h1, p {
@@ -91,7 +94,7 @@
         const middleNote = 54;
         var currentNote = -1;
         var selectedNotes = {};
-        const keyWidth = 24 * 3;
+        const keyWidth = 24 * 4;
 
         const sampler = new Tone.Sampler({
             urls: {
