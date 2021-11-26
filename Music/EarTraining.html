@@ -12,8 +12,8 @@
             background-color: black;
         }
 
-        h1, button, p {
-            font-family: Verdana;
+        body, h1, button, p {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
             -webkit-touch-callout: none;
             -webkit-user-select: none;
             -khtml-user-select: none;
@@ -30,38 +30,56 @@
             display: inline;
         }
 
-        .selected {
+        button {
+            width: 2.5em;
+            height: 2.5em;
+        }
+
+        .correctlySelected {
+            background-color: green;
+        }
+
+        .correct {
             background-color: greenyellow;
+        }
+
+        .incorrect {
+            background-color: red;
         }
     </style>
 </head>
 
 <body>
     <h1>Ear Training</h1>
-    <button id="playNote" onclick="playNote()">Play Note</button>
-    <button id="revealNote" onclick="revealNote()">Reveal Note</button>
+    <p>Press Space to play a note</p>
+    <br>
     <p id="noteText"></p>
     <br>
     <div id="noteSelector">
-        <button id="C" onclick="selectNote(0)">C</button>
-        <button id="Db" onclick="selectNote(1)">Db</button>
-        <button id="D" onclick="selectNote(2)">D</button>
-        <button id="Eb" onclick="selectNote(3)">Eb</button>
-        <button id="E" onclick="selectNote(4)">E</button>
-        <button id="F" onclick="selectNote(5)">F</button>
-        <button id="Gb" onclick="selectNote(6)">Gb</button>
-        <button id="G" onclick="selectNote(7)">G</button>
-        <button id="Ab" onclick="selectNote(8)">Ab</button>
-        <button id="A" onclick="selectNote(9)">A</button>
-        <button id="Bb" onclick="selectNote(10)">Bb</button>
-        <button id="B" onclick="selectNote(11)">B</button>
+        <button id="C" onclick="selectNote('C')">C</button>
+        <button id="Db" onclick="selectNote('Db')">Db</button>
+        <button id="D" onclick="selectNote('D')">D</button>
+        <button id="Eb" onclick="selectNote('Eb')">Eb</button>
+        <button id="E" onclick="selectNote('E')">E</button>
+        <button id="F" onclick="selectNote('F')">F</button>
+        <button id="Gb" onclick="selectNote('Gb')">Gb</button>
+        <button id="G" onclick="selectNote('G')">G</button>
+        <button id="Ab" onclick="selectNote('Ab')">Ab</button>
+        <button id="A" onclick="selectNote('A')">A</button>
+        <button id="Bb" onclick="selectNote('Bb')">Bb</button>
+        <button id="B" onclick="selectNote('B')">B</button>
     </div>
+    <br>
 
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="https://tonejs.github.io/build/Tone.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <script type="text/javascript">
         const notes = ["C", "Db", "D", "Eb", "E", "F", "Gb", "G", "Ab", "A", "Bb", "B"];
-        var note = 60;
+        const noteKeys = ["A", "W", "S", "E", "D", "F", "T", "G", "Y", "H", "U", "J"];
+        const middleNote = 54;
+        var currentNote = middleNote;
+        const keyWidth = 24 * 3;
 
         const sampler = new Tone.Sampler({
             urls: {
@@ -100,38 +118,145 @@
             baseUrl: "https://tonejs.github.io/audio/salamander/",
         }).toDestination();
 
-        function indexToNote(index) {
+        function indexToNote(index, truncate) {
+            if (truncate) {
+                return truncateNote(notes[index % 12] + parseInt(index / 12));
+            }
             return notes[index % 12] + parseInt(index / 12);
         }
 
+        function truncateNote(note) {
+            return note.slice(0, -1);
+        }
+
         function playNote() {
-            note += Math.floor(Math.random() * 12 + 1) * (parseInt(Math.random() * 2) * 2 - 1);
+            let oldNote = currentNote;
+            while (currentNote === oldNote) {
+                currentNote += Math.floor(Math.random() * 25 - 12);
+                if (currentNote <= middleNote - 18) {
+                    currentNote += 12;
+                } else if (currentNote >= middleNote + 18) {
+                    currentNote -= 12;
+                }
+            }
             Tone.loaded().then(() => {
-                sampler.triggerAttackRelease(indexToNote(note), 1);
+                sampler.triggerAttackRelease(indexToNote(currentNote), 1);
             });
-            hideNote();
-            deselectNotes();
+            //hideNote();
+            //deselectNotes();
         }
 
         function revealNote() {
-            document.getElementById("noteText").innerHTML = indexToNote(note);
+            document.getElementById("noteText").innerHTML = indexToNote(currentNote);
         }
 
         function hideNote() {
             document.getElementById("noteText").innerHTML = "";
         }
 
-        function selectNote(index) {
-            deselectNotes();
-            document.getElementById(indexToNote(index % 12 + 12).slice(0, -1)).classList.add("selected");
+        function selectNote(note) {
             revealNote();
+            deselectNotes();
+            guessNote(note);
+        }
+
+        function guessNote(note) {
+            if (note === indexToNote(currentNote, true)) {
+                document.getElementById(note).classList.add("correctlySelected");
+            } else {
+                document.getElementById(note).classList.add("incorrect");
+                document.getElementById(indexToNote(currentNote, true)).classList.add("correct");
+            }
+            drawPiano();
         }
 
         function deselectNotes() {
             for (let i = 0; i < 12; i++) {
-                document.getElementById(indexToNote(i + 12).slice(0, -1)).classList.remove("selected");
+                document.getElementById(indexToNote(i + 12).slice(0, -1)).classList.remove("correct");
+                document.getElementById(indexToNote(i + 12).slice(0, -1)).classList.remove("incorrect");
+                document.getElementById(indexToNote(i + 12).slice(0, -1)).classList.remove("correctlySelected");
             }
         }
+
+        function holdingShift(shift) {
+            if (shift) {
+                notes.forEach(function(currentValue, index) {document.getElementById(currentValue).innerHTML = noteKeys[index]});
+            } else {
+                notes.forEach(function(currentValue, index) {document.getElementById(currentValue).innerHTML = notes[index]});
+            }
+        }
+
+        document.addEventListener("keydown", function(event) {
+            switch (event.keyCode) {
+                case 32: playNote(); break;
+                case 16: holdingShift(true); break;
+                case 65: selectNote("C"); break;
+                case 87: selectNote("Db"); break;
+                case 83: selectNote("D"); break;
+                case 69: selectNote("Eb"); break;
+                case 68: selectNote("E"); break;
+                case 70: selectNote("F"); break;
+                case 84: selectNote("Gb"); break;
+                case 71: selectNote("G"); break;
+                case 89: selectNote("Ab"); break;
+                case 72: selectNote("A"); break;
+                case 85: selectNote("Bb"); break;
+                case 74: selectNote("B"); break;
+            }
+        });
+
+        document.addEventListener("keyup", function(event) {
+            if (event.keyCode === 16) {
+                holdingShift(false);
+            }
+        });
+
+        function drawKey(x, y, width, height, fill) {
+            svg.append("rect")
+                .attr("x", x)
+                .attr("y", y)
+                .attr("width", width)
+                .attr("height", height)
+                .attr("fill", fill)
+                .attr("stroke", "black")
+                .attr("stroke-width", keyWidth / 18);
+        }
+
+        var svg = d3.select("body")
+            .append("svg")
+            .attr("width", keyWidth * 7)
+            .attr("height", keyWidth * 5);
+        
+        function drawPiano() {
+            drawKey(0, 0, keyWidth, keyWidth * 5, getColor("C"));
+            drawKey(keyWidth, 0, keyWidth, keyWidth * 5, getColor("D"));
+            drawKey(keyWidth * 2, 0, keyWidth, keyWidth * 5, getColor("E"));
+            drawKey(keyWidth * 3, 0, keyWidth, keyWidth * 5, getColor("F"));
+            drawKey(keyWidth * 4, 0, keyWidth, keyWidth * 5, getColor("G"));
+            drawKey(keyWidth * 5, 0, keyWidth, keyWidth * 5, getColor("A"));
+            drawKey(keyWidth * 6, 0, keyWidth, keyWidth * 5, getColor("B"));
+            drawKey(keyWidth * 15/24, 0, keyWidth * 14/24, keyWidth * 3, getColor("Db", true));
+            drawKey(keyWidth * 43/24, 0, keyWidth * 14/24, keyWidth * 3, getColor("Eb", true));
+            drawKey(keyWidth * 85/24, 0, keyWidth * 14/24, keyWidth * 3, getColor("Gb", true));
+            drawKey(keyWidth * 113/24, 0, keyWidth * 14/24, keyWidth * 3, getColor("Ab", true));
+            drawKey(keyWidth * 141/24, 0, keyWidth * 14/24, keyWidth * 3, getColor("Bb", true));
+        }
+
+        function getColor(note, blackKey) {
+            if (document.getElementById(note).classList.contains("correctlySelected")) {
+                return "green";
+            } else if (document.getElementById(note).classList.contains("correct")) {
+                return "yellowgreen";
+            } else if (document.getElementById(note).classList.contains("incorrect")) {
+                return "red";
+            } else if (blackKey) {
+                return "#131313";
+            } else {
+                return "white";
+            }
+        }
+        
+        drawPiano();
     </script>
 </body>
 
