@@ -94,15 +94,19 @@ document.addEventListener("keydown", (event) => {
     }
 });
 
-function drawKey(x, y, width, height, fill) {
+function drawKey(note, x, y, width, height, fill) {
     svg.append("rect")
+        .attr("note", note)
         .attr("x", x)
         .attr("y", y)
         .attr("width", width)
         .attr("height", height)
         .attr("fill", fill)
         .attr("stroke", "black")
-        .attr("stroke-width", keyWidth / 18);
+        .attr("stroke-width", keyWidth / 18)
+        .on("click", element => {
+            selectNote(element.srcElement.getAttribute("note"));
+        });
 }
 
 function drawKeyText(x, y, text, blackKey) {
@@ -116,18 +120,18 @@ function drawKeyText(x, y, text, blackKey) {
 }
 
 function drawPiano() {
-    drawKey(0, 0, keyWidth, keyWidth * 5, getColor("C"));
-    drawKey(keyWidth, 0, keyWidth, keyWidth * 5, getColor("D"));
-    drawKey(keyWidth * 2, 0, keyWidth, keyWidth * 5, getColor("E"));
-    drawKey(keyWidth * 3, 0, keyWidth, keyWidth * 5, getColor("F"));
-    drawKey(keyWidth * 4, 0, keyWidth, keyWidth * 5, getColor("G"));
-    drawKey(keyWidth * 5, 0, keyWidth, keyWidth * 5, getColor("A"));
-    drawKey(keyWidth * 6, 0, keyWidth, keyWidth * 5, getColor("B"));
-    drawKey(keyWidth * 15/24, 0, keyWidth * 14/24, keyWidth * 3, getColor("Db", true));
-    drawKey(keyWidth * 43/24, 0, keyWidth * 14/24, keyWidth * 3, getColor("Eb", true));
-    drawKey(keyWidth * 85/24, 0, keyWidth * 14/24, keyWidth * 3, getColor("Gb", true));
-    drawKey(keyWidth * 113/24, 0, keyWidth * 14/24, keyWidth * 3, getColor("Ab", true));
-    drawKey(keyWidth * 141/24, 0, keyWidth * 14/24, keyWidth * 3, getColor("Bb", true));
+    drawKey("C", 0, 0, keyWidth, keyWidth * 5, getColor("C"));
+    drawKey("D", keyWidth, 0, keyWidth, keyWidth * 5, getColor("D"));
+    drawKey("E", keyWidth * 2, 0, keyWidth, keyWidth * 5, getColor("E"));
+    drawKey("F", keyWidth * 3, 0, keyWidth, keyWidth * 5, getColor("F"));
+    drawKey("G", keyWidth * 4, 0, keyWidth, keyWidth * 5, getColor("G"));
+    drawKey("A", keyWidth * 5, 0, keyWidth, keyWidth * 5, getColor("A"));
+    drawKey("B", keyWidth * 6, 0, keyWidth, keyWidth * 5, getColor("B"));
+    drawKey("Db", keyWidth * 15/24, 0, keyWidth * 14/24, keyWidth * 3, getColor("Db", true));
+    drawKey("Eb", keyWidth * 43/24, 0, keyWidth * 14/24, keyWidth * 3, getColor("Eb", true));
+    drawKey("Gb", keyWidth * 85/24, 0, keyWidth * 14/24, keyWidth * 3, getColor("Gb", true));
+    drawKey("Ab", keyWidth * 113/24, 0, keyWidth * 14/24, keyWidth * 3, getColor("Ab", true));
+    drawKey("Bb", keyWidth * 141/24, 0, keyWidth * 14/24, keyWidth * 3, getColor("Bb", true));
     if (displayKeyboardKeys) {
         drawKeyText(keyWidth * 0.5, keyWidth * 4.5, "A");
         drawKeyText(keyWidth * 1.5, keyWidth * 4.5, "S");
