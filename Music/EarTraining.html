@@ -56,30 +56,33 @@
 </head>
 
 <body scroll="no">
-    <h1>Ear Training</h1>
-    <p>Press Space to play a note</p>
-    <br>
-    <p id="noteText"></p>
-    <br>
-    <!--
-    <div id="noteSelector">
-        <button id="C" onclick="selectNote('C')">C</button>
-        <button id="Db" onclick="selectNote('Db')">Db</button>
-        <button id="D" onclick="selectNote('D')">D</button>
-        <button id="Eb" onclick="selectNote('Eb')">Eb</button>
-        <button id="E" onclick="selectNote('E')">E</button>
-        <button id="F" onclick="selectNote('F')">F</button>
-        <button id="Gb" onclick="selectNote('Gb')">Gb</button>
-        <button id="G" onclick="selectNote('G')">G</button>
-        <button id="Ab" onclick="selectNote('Ab')">Ab</button>
-        <button id="A" onclick="selectNote('A')">A</button>
-        <button id="Bb" onclick="selectNote('Bb')">Bb</button>
-        <button id="B" onclick="selectNote('B')">B</button>
+    <div id="singleNoteTraining">
+        <h1>Single Note Training</h1>
+        <p>Press Space to play a note</p>
+        <br>
+        <p id="noteText"></p>
+        <br>
+        <!--
+        <div id="noteSelector">
+            <button id="C" onclick="selectNote('C')">C</button>
+            <button id="Db" onclick="selectNote('Db')">Db</button>
+            <button id="D" onclick="selectNote('D')">D</button>
+            <button id="Eb" onclick="selectNote('Eb')">Eb</button>
+            <button id="E" onclick="selectNote('E')">E</button>
+            <button id="F" onclick="selectNote('F')">F</button>
+            <button id="Gb" onclick="selectNote('Gb')">Gb</button>
+            <button id="G" onclick="selectNote('G')">G</button>
+            <button id="Ab" onclick="selectNote('Ab')">Ab</button>
+            <button id="A" onclick="selectNote('A')">A</button>
+            <button id="Bb" onclick="selectNote('Bb')">Bb</button>
+            <button id="B" onclick="selectNote('B')">B</button>
+        </div>
+        -->
+        <br>
     </div>
-    -->
-    <br>
 
-    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
     <script src="https://tonejs.github.io/build/Tone.js"></script>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script type="text/javascript">
@@ -214,6 +217,8 @@
                 case 72: selectNote("A"); break;
                 case 85: selectNote("Bb"); break;
                 case 74: selectNote("B"); break;
+                case 49: selectPage("singleNoteTraining"); break;
+                case 50: selectPage("intervalTraining"); break;
             }
         });
 
@@ -243,7 +248,7 @@
                 .text(text);
         }
 
-        var svg = d3.select("body")
+        var svg = d3.select("#singleNoteTraining")
             .append("svg")
             .attr("width", keyWidth * 7)
             .attr("height", keyWidth * 5);
@@ -290,6 +295,10 @@
         }
         
         drawPiano();
+
+        function selectPage(page) {
+            $("#singleNoteTraining").toggle("slide");
+        }
     </script>
 </body>
 
