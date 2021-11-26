@@ -49,3 +49,11 @@ button {
 .incorrect {
     background-color: red;
 }
+
+.tab {
+    min-width: 100%;
+}
+
+#tabs {
+    display: flex;
+}

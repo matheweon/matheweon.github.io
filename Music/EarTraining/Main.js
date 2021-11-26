@@ -6,6 +6,10 @@ var firstNote = true;
 var selectedNotes = {};
 const keyWidth = 24 * 4;
 var displayKeyboardKeys = true;
+const tabs = ["singleNoteTraining", "intervalTraining", "melodyTraining"];
+var selectedTab = 0;
+$("#intervalTraining").hide();
+$("#melodyTraining").hide();
 
 const sampler = new Tone.Sampler({
     urls: {
@@ -55,6 +59,32 @@ function truncateNote(note) {
     return note.slice(0, -1);
 }
 
-function selectPage(page) {
-    $("#singleNoteTraining").toggle("slide");
+const slideDistance = window.innerWidth * 2;
+
+function selectTab(direction) {
+    if (direction === "left") {
+        selectedTab--;
+        if (selectedTab < 0) {
+            selectedTab = tabs.length - 1;
+        }
+        for (let i = 0; i < tabs.length; i++) {
+            if (selectedTab === i) {
+                $("#" + tabs[i]).show("slide", {direction: "left", distance: slideDistance}, 1000);
+            } else {
+                $("#" + tabs[i]).hide("slide", {direction: "right", distance: slideDistance}, 1000);
+            }
+        }
+    } else {
+        selectedTab++;
+        if (selectedTab >= tabs.length) {
+            selectedTab = 0;
+        }
+        for (let i = 0; i < tabs.length; i++) {
+            if (selectedTab === i) {
+                $("#" + tabs[i]).show("slide", {direction: "right", distance: slideDistance}, 1000);
+            } else {
+                $("#" + tabs[i]).hide("slide", {direction: "left", distance: slideDistance}, 1000);
+            }
+        }
+    }
 }

@@ -85,10 +85,10 @@ document.addEventListener("keydown", (event) => {
         case 72: selectNote("A"); break;
         case 85: selectNote("Bb"); break;
         case 74: selectNote("B"); break;
-        // "1"
-        case 49: selectPage("singleNoteTraining"); break;
-        // "2"
-        case 50: selectPage("intervalTraining"); break;
+        // "LEFT ARROW"
+        case 37: selectTab("left"); break;
+        // "RIGHT ARROW"
+        case 39: selectTab("right"); break;
         // "R"
         case 82: firstNote = true; playNote(); break;
     }
