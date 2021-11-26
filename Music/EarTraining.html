@@ -1,3 +1,13 @@
+<!--
+    TO-DO:
+    1. "P" to repeat previous and current
+    2. Add functionality for clicking piano keys
+        2a. Add toggle button for displaying keyboard keys on piano keys
+    3. Add key legend
+    4. Change keyboard layout
+    5. Use arrow keys to switch between tabs
+-->
+
 <!DOCTYPE html>
 <html id="html">
 
@@ -92,7 +102,8 @@
         const notes = ["C", "Db", "D", "Eb", "E", "F", "Gb", "G", "Ab", "A", "Bb", "B"];
         const noteKeys = ["A", "W", "S", "E", "D", "F", "T", "G", "Y", "H", "U", "J"];
         const middleNote = 54;
-        var currentNote = -1;
+        var currentNote = middleNote;
+        var firstNote = true;
         var selectedNotes = {};
         const keyWidth = 24 * 4;
 
@@ -145,10 +156,6 @@
         }
 
         function playNote() {
-            let firstNote = currentNote === -1;
-            if (firstNote) {
-                currentNote = middleNote;
-            }
             let oldNote = currentNote;
             while (currentNote === oldNote) {
                 currentNote += Math.floor(Math.random() * 25 - 12);
@@ -158,11 +165,13 @@
                     currentNote -= 12;
                 }
             }
-            Tone.loaded().then(() => {
-                sampler.triggerAttackRelease(indexToNote(currentNote), 1);
-            });
             if (firstNote) {
-                selectNote(indexToNote(currentNote));
+                firstNote = false;
+                selectNote(indexToNote(currentNote, true));
+            } else {
+                Tone.loaded().then(() => {
+                    sampler.triggerAttackRelease(indexToNote(currentNote), 1);
+                });
             }
         }
 
@@ -175,9 +184,18 @@
         }
 
         function selectNote(note) {
-            revealNote();
-            deselectNotes();
-            guessNote(note);
+            if (!firstNote) {
+                revealNote();
+                deselectKeys();
+                guessNote(note);
+                Tone.loaded().then(() => {
+                    let noteMIDI = notes.indexOf(note);
+                    while (Math.abs(currentNote - noteMIDI) > 6) {
+                        noteMIDI += 12;
+                    }
+                    sampler.triggerAttackRelease(indexToNote(noteMIDI), 1);
+                });
+            }
         }
 
         function guessNote(note) {
@@ -190,7 +208,7 @@
             drawPiano();
         }
 
-        function deselectNotes() {
+        function deselectKeys() {
             for (let i = 0; i < 12; i++) {
                 selectedNotes[notes[i]] = "";
             }
@@ -204,9 +222,11 @@
             }
         }*/
 
-        document.addEventListener("keydown", function(event) {
+        document.addEventListener("keydown", (event) => {
             switch (event.keyCode) {
+                // "SPACE"
                 case 32: playNote(); event.preventDefault(); break;
+                // "SHIFT"
                 case 16: holdingShift(true); break;
                 case 65: selectNote("C"); break;
                 case 87: selectNote("Db"); break;
@@ -220,12 +240,16 @@
                 case 72: selectNote("A"); break;
                 case 85: selectNote("Bb"); break;
                 case 74: selectNote("B"); break;
+                // "1"
                 case 49: selectPage("singleNoteTraining"); break;
+                // "2"
                 case 50: selectPage("intervalTraining"); break;
+                // "R"
+                case 82: firstNote = true; playNote(); break;
             }
         });
 
-        document.addEventListener("keyup", function(event) {
+        document.addEventListener("keyup", (event) => {
             if (event.keyCode === 16) {
                 holdingShift(false);
             }
