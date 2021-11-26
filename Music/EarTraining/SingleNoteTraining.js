@@ -62,20 +62,17 @@ function deselectKeys() {
     }
 }
 
-/*function holdingShift(shift) {
-    if (shift) {
-        notes.forEach(function(currentValue, index) {document.getElementById(currentValue).innerHTML = noteKeys[index]});
-    } else {
-        notes.forEach(function(currentValue, index) {document.getElementById(currentValue).innerHTML = notes[index]});
-    }
-}*/
+function toggleKeyboardDisplay() {
+    displayKeyboardKeys = !displayKeyboardKeys;
+    drawPiano();
+}
 
 document.addEventListener("keydown", (event) => {
     switch (event.keyCode) {
         // "SPACE"
         case 32: playNote(); event.preventDefault(); break;
         // "SHIFT"
-        case 16: holdingShift(true); break;
+        case 16: toggleKeyboardDisplay(); break;
         case 65: selectNote("C"); break;
         case 87: selectNote("Db"); break;
         case 83: selectNote("D"); break;
@@ -94,12 +91,6 @@ document.addEventListener("keydown", (event) => {
         case 50: selectPage("intervalTraining"); break;
         // "R"
         case 82: firstNote = true; playNote(); break;
-    }
-});
-
-document.addEventListener("keyup", (event) => {
-    if (event.keyCode === 16) {
-        holdingShift(false);
     }
 });
 
@@ -137,18 +128,20 @@ function drawPiano() {
     drawKey(keyWidth * 85/24, 0, keyWidth * 14/24, keyWidth * 3, getColor("Gb", true));
     drawKey(keyWidth * 113/24, 0, keyWidth * 14/24, keyWidth * 3, getColor("Ab", true));
     drawKey(keyWidth * 141/24, 0, keyWidth * 14/24, keyWidth * 3, getColor("Bb", true));
-    drawKeyText(keyWidth * 0.5, keyWidth * 4.5, "A");
-    drawKeyText(keyWidth * 1.5, keyWidth * 4.5, "S");
-    drawKeyText(keyWidth * 2.5, keyWidth * 4.5, "D");
-    drawKeyText(keyWidth * 3.5, keyWidth * 4.5, "F");
-    drawKeyText(keyWidth * 4.5, keyWidth * 4.5, "G");
-    drawKeyText(keyWidth * 5.5, keyWidth * 4.5, "H");
-    drawKeyText(keyWidth * 6.5, keyWidth * 4.5, "J");
-    drawKeyText(keyWidth * 22/24, keyWidth * 2.8, "W", true);
-    drawKeyText(keyWidth * 50/24, keyWidth * 2.8, "E", true);
-    drawKeyText(keyWidth * 92/24, keyWidth * 2.8, "T", true);
-    drawKeyText(keyWidth * 120/24, keyWidth * 2.8, "Y", true);
-    drawKeyText(keyWidth * 148/24, keyWidth * 2.8, "U", true);
+    if (displayKeyboardKeys) {
+        drawKeyText(keyWidth * 0.5, keyWidth * 4.5, "A");
+        drawKeyText(keyWidth * 1.5, keyWidth * 4.5, "S");
+        drawKeyText(keyWidth * 2.5, keyWidth * 4.5, "D");
+        drawKeyText(keyWidth * 3.5, keyWidth * 4.5, "F");
+        drawKeyText(keyWidth * 4.5, keyWidth * 4.5, "G");
+        drawKeyText(keyWidth * 5.5, keyWidth * 4.5, "H");
+        drawKeyText(keyWidth * 6.5, keyWidth * 4.5, "J");
+        drawKeyText(keyWidth * 22/24, keyWidth * 2.8, "W", true);
+        drawKeyText(keyWidth * 50/24, keyWidth * 2.8, "E", true);
+        drawKeyText(keyWidth * 92/24, keyWidth * 2.8, "T", true);
+        drawKeyText(keyWidth * 120/24, keyWidth * 2.8, "Y", true);
+        drawKeyText(keyWidth * 148/24, keyWidth * 2.8, "U", true);
+    }
 }
 
 function getColor(note, blackKey) {

@@ -5,6 +5,7 @@ var currentNote = middleNote;
 var firstNote = true;
 var selectedNotes = {};
 const keyWidth = 24 * 4;
+var displayKeyboardKeys = true;
 
 const sampler = new Tone.Sampler({
     urls: {
