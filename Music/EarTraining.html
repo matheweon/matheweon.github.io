@@ -227,6 +227,19 @@
                 .attr("stroke-width", keyWidth / 18);
         }
 
+        function drawKeyText(x, y, text, blackKey) {
+            let color = "black";
+            if (blackKey) {
+                color = "white";
+            }
+            svg.append("text")
+                .attr("x", x)
+                .attr("y", y)
+                .style("font-size", keyWidth * 0.4)
+                .style("fill", color)
+                .text(text);
+        }
+
         var svg = d3.select("body")
             .append("svg")
             .attr("width", keyWidth * 7)
@@ -245,6 +258,18 @@
             drawKey(keyWidth * 85/24, 0, keyWidth * 14/24, keyWidth * 3, getColor("Gb", true));
             drawKey(keyWidth * 113/24, 0, keyWidth * 14/24, keyWidth * 3, getColor("Ab", true));
             drawKey(keyWidth * 141/24, 0, keyWidth * 14/24, keyWidth * 3, getColor("Bb", true));
+            drawKeyText(keyWidth * 0.35, keyWidth * 4.5, "A", false);
+            drawKeyText(keyWidth * 1.35, keyWidth * 4.5, "S", false);
+            drawKeyText(keyWidth * 2.35, keyWidth * 4.5, "D", false);
+            drawKeyText(keyWidth * 3.35, keyWidth * 4.5, "F", false);
+            drawKeyText(keyWidth * 4.35, keyWidth * 4.5, "G", false);
+            drawKeyText(keyWidth * 5.35, keyWidth * 4.5, "H", false);
+            drawKeyText(keyWidth * 6.4, keyWidth * 4.5, "J", false);
+            drawKeyText(keyWidth * 0.725, keyWidth * 2.8, "W", true);
+            drawKeyText(keyWidth * 1.95, keyWidth * 2.8, "E", true);
+            drawKeyText(keyWidth * 3.7, keyWidth * 2.8, "R", true);
+            drawKeyText(keyWidth * 4.875, keyWidth * 2.8, "T", true);
+            drawKeyText(keyWidth * 6.025, keyWidth * 2.8, "Y", true);
         }
 
         function getColor(note, blackKey) {
