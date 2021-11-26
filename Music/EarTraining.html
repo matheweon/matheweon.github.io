@@ -245,6 +245,7 @@
                 .attr("y", y)
                 .style("font-size", keyWidth * 0.4)
                 .style("fill", blackKey ? "white" : "black")
+                .style("text-anchor", "middle")
                 .text(text);
         }
 
@@ -266,18 +267,18 @@
             drawKey(keyWidth * 85/24, 0, keyWidth * 14/24, keyWidth * 3, getColor("Gb", true));
             drawKey(keyWidth * 113/24, 0, keyWidth * 14/24, keyWidth * 3, getColor("Ab", true));
             drawKey(keyWidth * 141/24, 0, keyWidth * 14/24, keyWidth * 3, getColor("Bb", true));
-            drawKeyText(keyWidth * 0.35, keyWidth * 4.5, "A", false);
-            drawKeyText(keyWidth * 1.35, keyWidth * 4.5, "S", false);
-            drawKeyText(keyWidth * 2.35, keyWidth * 4.5, "D", false);
-            drawKeyText(keyWidth * 3.35, keyWidth * 4.5, "F", false);
-            drawKeyText(keyWidth * 4.35, keyWidth * 4.5, "G", false);
-            drawKeyText(keyWidth * 5.35, keyWidth * 4.5, "H", false);
-            drawKeyText(keyWidth * 6.4, keyWidth * 4.5, "J", false);
-            drawKeyText(keyWidth * 0.725, keyWidth * 2.8, "W", true);
-            drawKeyText(keyWidth * 1.95, keyWidth * 2.8, "E", true);
-            drawKeyText(keyWidth * 3.7, keyWidth * 2.8, "T", true);
-            drawKeyText(keyWidth * 4.875, keyWidth * 2.8, "Y", true);
-            drawKeyText(keyWidth * 6.025, keyWidth * 2.8, "U", true);
+            drawKeyText(keyWidth * 0.5, keyWidth * 4.5, "A");
+            drawKeyText(keyWidth * 1.5, keyWidth * 4.5, "S");
+            drawKeyText(keyWidth * 2.5, keyWidth * 4.5, "D");
+            drawKeyText(keyWidth * 3.5, keyWidth * 4.5, "F");
+            drawKeyText(keyWidth * 4.5, keyWidth * 4.5, "G");
+            drawKeyText(keyWidth * 5.5, keyWidth * 4.5, "H");
+            drawKeyText(keyWidth * 6.5, keyWidth * 4.5, "J");
+            drawKeyText(keyWidth * 22/24, keyWidth * 2.8, "W", true);
+            drawKeyText(keyWidth * 50/24, keyWidth * 2.8, "E", true);
+            drawKeyText(keyWidth * 92/24, keyWidth * 2.8, "T", true);
+            drawKeyText(keyWidth * 120/24, keyWidth * 2.8, "Y", true);
+            drawKeyText(keyWidth * 148/24, keyWidth * 2.8, "U", true);
         }
 
         function getColor(note, blackKey) {
