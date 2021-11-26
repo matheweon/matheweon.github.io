@@ -86,7 +86,7 @@
         const notes = ["C", "Db", "D", "Eb", "E", "F", "Gb", "G", "Ab", "A", "Bb", "B"];
         const noteKeys = ["A", "W", "S", "E", "D", "F", "T", "G", "Y", "H", "U", "J"];
         const middleNote = 54;
-        var currentNote = middleNote;
+        var currentNote = -1;
         var selectedNotes = {};
         const keyWidth = 24 * 3;
 
@@ -139,6 +139,10 @@
         }
 
         function playNote() {
+            let firstNote = currentNote === -1;
+            if (firstNote) {
+                currentNote = middleNote;
+            }
             let oldNote = currentNote;
             while (currentNote === oldNote) {
                 currentNote += Math.floor(Math.random() * 25 - 12);
@@ -151,6 +155,9 @@
             Tone.loaded().then(() => {
                 sampler.triggerAttackRelease(indexToNote(currentNote), 1);
             });
+            if (firstNote) {
+                selectNote(indexToNote(currentNote));
+            }
         }
 
         function revealNote() {
@@ -228,15 +235,11 @@
         }
 
         function drawKeyText(x, y, text, blackKey) {
-            let color = "black";
-            if (blackKey) {
-                color = "white";
-            }
             svg.append("text")
                 .attr("x", x)
                 .attr("y", y)
                 .style("font-size", keyWidth * 0.4)
-                .style("fill", color)
+                .style("fill", blackKey ? "white" : "black")
                 .text(text);
         }
 
@@ -267,9 +270,9 @@
             drawKeyText(keyWidth * 6.4, keyWidth * 4.5, "J", false);
             drawKeyText(keyWidth * 0.725, keyWidth * 2.8, "W", true);
             drawKeyText(keyWidth * 1.95, keyWidth * 2.8, "E", true);
-            drawKeyText(keyWidth * 3.7, keyWidth * 2.8, "R", true);
-            drawKeyText(keyWidth * 4.875, keyWidth * 2.8, "T", true);
-            drawKeyText(keyWidth * 6.025, keyWidth * 2.8, "Y", true);
+            drawKeyText(keyWidth * 3.7, keyWidth * 2.8, "T", true);
+            drawKeyText(keyWidth * 4.875, keyWidth * 2.8, "Y", true);
+            drawKeyText(keyWidth * 6.025, keyWidth * 2.8, "U", true);
         }
 
         function getColor(note, blackKey) {
