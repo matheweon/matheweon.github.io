@@ -3,9 +3,10 @@ var svg = d3.select("#singleNoteTraining")
     .attr("width", keyWidth * 7)
     .attr("height", keyWidth * 5);
 
-function playNote() {
-    let oldNote = currentNote;
-    while (currentNote === oldNote) {
+function playNextNote() {
+    noteCounter++;
+    previousNote = currentNote;
+    while (currentNote === previousNote) {
         currentNote += Math.floor(Math.random() * 25 - 12);
         if (currentNote <= middleNote - 18) {
             currentNote += 12;
@@ -13,18 +14,17 @@ function playNote() {
             currentNote -= 12;
         }
     }
-    if (firstNote) {
-        firstNote = false;
-        selectNote(indexToNote(currentNote, true));
+    if (noteCounter === 1) {
+        selectNote(MIDIToNote(currentNote, true));
     } else {
         Tone.loaded().then(() => {
-            sampler.triggerAttackRelease(indexToNote(currentNote), 1);
+            sampler.triggerAttackRelease(MIDIToNote(currentNote), 1);
         });
     }
 }
 
 function revealNote() {
-    document.getElementById("noteText").innerHTML = indexToNote(currentNote);
+    document.getElementById("noteText").innerHTML = MIDIToNote(currentNote);
 }
 
 function hideNote() {
@@ -32,8 +32,8 @@ function hideNote() {
 }
 
 function selectNote(note) {
-    if (!firstNote) {
-        if(typeof(note) === "number") {
+    if (noteCounter !== 0) {
+        if (typeof(note) === "number") {
             note = notes[note % 12];
         }
         revealNote();
@@ -44,17 +44,17 @@ function selectNote(note) {
             while (Math.abs(currentNote - noteMIDI) > 6) {
                 noteMIDI += 12;
             }
-            sampler.triggerAttackRelease(indexToNote(noteMIDI), 1);
+            sampler.triggerAttackRelease(MIDIToNote(noteMIDI), 1);
         });
     }
 }
 
 function guessNote(note) {
-    if (note === indexToNote(currentNote, true)) {
+    if (note === MIDIToNote(currentNote, true)) {
         selectedNotes[note] = "correctlySelected";
     } else {
         selectedNotes[note] = "incorrect";
-        selectedNotes[indexToNote(currentNote, true)] = "correct";
+        selectedNotes[MIDIToNote(currentNote, true)] = "correct";
     }
     drawPiano();
 }
@@ -73,7 +73,7 @@ function toggleKeyboardDisplay() {
 document.addEventListener("keydown", (event) => {
     switch (event.keyCode) {
         // "SPACE"
-        case 32: playNote(); event.preventDefault(); break;
+        case 32: playNextNote(); event.preventDefault(); break;
         // "SHIFT"
         case 16: toggleKeyboardDisplay(); break;
         // "LEFT ARROW"
@@ -81,7 +81,9 @@ document.addEventListener("keydown", (event) => {
         // "RIGHT ARROW"
         case 39: selectTab("right"); break;
         // "R"
-        case 82: firstNote = true; playNote(); break;
+        case 82: noteCounter = 0; playNextNote(); break;
+        // "P"
+        case 80: playBothNotes(); break;
         // Piano keys
         case noteKeyCodes[0]: selectNote(0); break;
         case noteKeyCodes[1]: selectNote(1); break;
@@ -163,6 +165,14 @@ function getColor(note, blackKey) {
         return "#131313";
     } else {
         return "white";
+    }
+}
+
+function playBothNotes() {
+    if (noteCounter >= 2) {
+        const now = Tone.now();
+        sampler.triggerAttackRelease(MIDIToNote(previousNote), 1, now);
+        sampler.triggerAttackRelease(MIDIToNote(currentNote), 1, now + 1);
     }
 }
 

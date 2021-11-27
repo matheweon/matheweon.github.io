@@ -3,7 +3,8 @@ const noteKeys = ["A", "W", "S", "E", "D", "F", "T", "G", "Y", "H", "U", "J"];
 const noteKeyCodes = [65, 87, 83, 69, 68, 70, 84, 71, 89, 72, 85, 74];
 const middleNote = 54;
 var currentNote = middleNote;
-var firstNote = true;
+var previousNote = currentNote;
+var noteCounter = 0;
 var selectedNotes = {};
 const keyWidth = 24 * 4;
 var displayKeyboardKeys = true;
@@ -51,7 +52,7 @@ const sampler = new Tone.Sampler({
     baseUrl: "https://tonejs.github.io/audio/salamander/",
 }).toDestination();
 
-function indexToNote(index, truncate) {
+function MIDIToNote(index, truncate) {
     if (truncate) {
         return truncateNote(notes[index % 12] + parseInt(index / 12));
     }
