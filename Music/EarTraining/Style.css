@@ -65,3 +65,7 @@ button {
     top: 88vh;
     left: 1vw;
 }
+
+#noteText {
+    font-size: 2em;
+}
