@@ -33,6 +33,9 @@ function hideNote() {
 
 function selectNote(note) {
     if (!firstNote) {
+        if(typeof(note) === "number") {
+            note = notes[note % 12];
+        }
         revealNote();
         deselectKeys();
         guessNote(note);
@@ -80,18 +83,18 @@ document.addEventListener("keydown", (event) => {
         // "R"
         case 82: firstNote = true; playNote(); break;
         // Piano keys
-        case noteKeyCodes[0]: selectNote(notes[0]); break;
-        case noteKeyCodes[1]: selectNote(notes[1]); break;
-        case noteKeyCodes[2]: selectNote(notes[2]); break;
-        case noteKeyCodes[3]: selectNote(notes[3]); break;
-        case noteKeyCodes[4]: selectNote(notes[4]); break;
-        case noteKeyCodes[5]: selectNote(notes[5]); break;
-        case noteKeyCodes[6]: selectNote(notes[6]); break;
-        case noteKeyCodes[7]: selectNote(notes[7]); break;
-        case noteKeyCodes[8]: selectNote(notes[8]); break;
-        case noteKeyCodes[9]: selectNote(notes[9]); break;
-        case noteKeyCodes[10]: selectNote(notes[10]); break;
-        case noteKeyCodes[11]: selectNote(notes[11]); break;
+        case noteKeyCodes[0]: selectNote(0); break;
+        case noteKeyCodes[1]: selectNote(1); break;
+        case noteKeyCodes[2]: selectNote(2); break;
+        case noteKeyCodes[3]: selectNote(3); break;
+        case noteKeyCodes[4]: selectNote(4); break;
+        case noteKeyCodes[5]: selectNote(5); break;
+        case noteKeyCodes[6]: selectNote(6); break;
+        case noteKeyCodes[7]: selectNote(7); break;
+        case noteKeyCodes[8]: selectNote(8); break;
+        case noteKeyCodes[9]: selectNote(9); break;
+        case noteKeyCodes[10]: selectNote(10); break;
+        case noteKeyCodes[11]: selectNote(11); break;
     }
 });
 
