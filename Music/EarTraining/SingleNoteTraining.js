@@ -73,24 +73,25 @@ document.addEventListener("keydown", (event) => {
         case 32: playNote(); event.preventDefault(); break;
         // "SHIFT"
         case 16: toggleKeyboardDisplay(); break;
-        case 65: selectNote("C"); break;
-        case 87: selectNote("Db"); break;
-        case 83: selectNote("D"); break;
-        case 69: selectNote("Eb"); break;
-        case 68: selectNote("E"); break;
-        case 70: selectNote("F"); break;
-        case 84: selectNote("Gb"); break;
-        case 71: selectNote("G"); break;
-        case 89: selectNote("Ab"); break;
-        case 72: selectNote("A"); break;
-        case 85: selectNote("Bb"); break;
-        case 74: selectNote("B"); break;
         // "LEFT ARROW"
         case 37: selectTab("left"); break;
         // "RIGHT ARROW"
         case 39: selectTab("right"); break;
         // "R"
         case 82: firstNote = true; playNote(); break;
+        // Piano keys
+        case noteKeyCodes[0]: selectNote(notes[0]); break;
+        case noteKeyCodes[1]: selectNote(notes[1]); break;
+        case noteKeyCodes[2]: selectNote(notes[2]); break;
+        case noteKeyCodes[3]: selectNote(notes[3]); break;
+        case noteKeyCodes[4]: selectNote(notes[4]); break;
+        case noteKeyCodes[5]: selectNote(notes[5]); break;
+        case noteKeyCodes[6]: selectNote(notes[6]); break;
+        case noteKeyCodes[7]: selectNote(notes[7]); break;
+        case noteKeyCodes[8]: selectNote(notes[8]); break;
+        case noteKeyCodes[9]: selectNote(notes[9]); break;
+        case noteKeyCodes[10]: selectNote(notes[10]); break;
+        case noteKeyCodes[11]: selectNote(notes[11]); break;
     }
 });
 
