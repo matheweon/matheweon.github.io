@@ -1,6 +1,6 @@
 const notes = ["C", "Db", "D", "Eb", "E", "F", "Gb", "G", "Ab", "A", "Bb", "B"];
-const noteKeys = ["A", "W", "S", "E", "D", "F", "T", "G", "Y", "H", "U", "J"];
-const noteKeyCodes = [65, 87, 83, 69, 68, 70, 84, 71, 89, 72, 85, 74];
+const noteKeys = ["Q", "2", "W", "3", "E", "R", "5", "T", "6", "Y", "7", "U"];
+const noteKeyCodes = [81, 50, 87, 51, 69, 82, 53, 84, 54, 89, 55, 85];
 const middleNote = 54;
 var currentNote = middleNote;
 var previousNote = currentNote;

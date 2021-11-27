@@ -80,8 +80,8 @@ document.addEventListener("keydown", (event) => {
         case 37: selectTab("left"); break;
         // "RIGHT ARROW"
         case 39: selectTab("right"); break;
-        // "R"
-        case 82: noteCounter = 0; playNextNote(); break;
+        // "O"
+        case 79: noteCounter = 0; playNextNote(); break;
         // "P"
         case 80: playBothNotes(); break;
         // Piano keys
