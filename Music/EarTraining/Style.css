@@ -34,8 +34,9 @@ p {
 }
 
 button {
-    width: 2.5em;
-    height: 2.5em;
+    width: 2em;
+    height: 2em;
+    font-size: 2em;
 }
 
 .correctlySelected {
@@ -68,4 +69,16 @@ button {
 
 #noteText {
     font-size: 2em;
+}
+
+#firstTopIntervals, #secondTopIntervals {
+    margin-bottom: 0.2em;
+}
+
+#i3, #i15 {
+    margin-right: 2.2em;
+}
+
+#i10, #i22 {
+    margin-right: 2.2em;
 }
