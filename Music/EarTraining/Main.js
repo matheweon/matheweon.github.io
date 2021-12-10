@@ -10,6 +10,8 @@ $("#intervalTraining").hide();
 $("#melodyTraining").hide();
 const slideDistance = window.innerWidth * 2
 const slideSpeed = 750;
+var scores = [0, 0, 0];
+var highScores = [0, 0, 0];
 
 const sampler = new Tone.Sampler({
     urls: {
@@ -91,12 +93,12 @@ function toggleKeyboardDisplay() {
 document.addEventListener("keydown", (event) => {
     switch (event.keyCode) {
         // "SPACE"
-        case 32: if (selectedTab === 0) {
-            playNextSingleNote(); event.preventDefault();
-        } else if (selectedTab === 1) {
-            playNextInterval(); event.preventDefault();
-        }
-            
+        case 32:
+            if (selectedTab === 0) {
+                playNextSingleNote(); event.preventDefault();
+            } else if (selectedTab === 1) {
+                playNextInterval(); event.preventDefault();
+            }   
             break;
         // "SHIFT"
         case 16: toggleKeyboardDisplay(); break;
@@ -107,7 +109,12 @@ document.addEventListener("keydown", (event) => {
         // "RIGHT ARROW"
         case 39: selectTab("right"); break;
         // "O"
-        case 79: singleNoteCounter = 0; playNextSingleNote(); break;
+        case 79:
+            singleNoteCounter = 0;
+            playNextSingleNote(); 
+            scores[0] = 0;
+            updateScores(0);
+            break;
         // "P"
         case 80: replayBothNotes(); break;
         // Piano keys
@@ -192,4 +199,13 @@ function drawPiano() {
         drawKeyText(keyWidth * 120/24, keyWidth * 2.8, noteKeys[8], true);
         drawKeyText(keyWidth * 148/24, keyWidth * 2.8, noteKeys[10], true);
     }
+}
+
+function updateScores() {
+    for (let i = 0; i < scores.length; i++) {
+        if (scores[i] > highScores[i]) {
+            highScores[i] = scores[i];
+        }
+    }
+    d3.select("#scoreText").html("<b>Score</b>: " + scores[selectedTab] + "<br><b>High Score</b>: " + highScores[selectedTab]);
 }

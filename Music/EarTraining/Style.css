@@ -63,8 +63,16 @@ button {
     float: left;
     text-align: left;
     position: absolute;
-    top: 84vh;
+    top: 83.5vh;
     left: 1vw;
+}
+
+#scoreText {
+    float: right;
+    text-align: right;
+    position: absolute;
+    top: 91.5vh;
+    right: 1vw;
 }
 
 #noteText {

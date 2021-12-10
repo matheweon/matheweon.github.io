@@ -10,8 +10,10 @@ var svgSingleNote = d3.select("#singleNoteTraining")
 function revealCorrectNoteText() {
     document.getElementById("noteText").innerHTML = MIDIToNote(currentSingleNote);
 }
+var firstGuess = true;
 
 function playNextSingleNote() {
+    firstGuess = true;
     singleNoteCounter++;
     previousSingleNote = currentSingleNote;
     while (currentSingleNote === previousSingleNote) {
@@ -58,9 +60,17 @@ function deselectSingleKeys() {
 function guessSingleNote(note) {
     if (note === MIDIToNote(currentSingleNote, true)) {
         selectedSingleNotes[note] = "correctlySelected";
+        if (firstGuess && singleNoteCounter !== 1) {
+            scores[0]++;
+            updateScores();
+            firstGuess = false;
+        }
     } else {
         selectedSingleNotes[note] = "incorrect";
         selectedSingleNotes[MIDIToNote(currentSingleNote, true)] = "correct";
+        scores[0] = 0;
+        updateScores();
+        firstGuess = false;
     }
     drawPiano();
 }
