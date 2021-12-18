@@ -63,7 +63,7 @@ function truncateNote(note) {
 
 function selectTab(direction) {
     if (direction === "left") {
-        selectedTab--;
+        selectedTab += tabNamesArray.length - 1;
         selectedTab %= tabNamesArray.length;
         for (let i = 0; i < tabNamesArray.length; i++) {
             if (selectedTab === i) {
