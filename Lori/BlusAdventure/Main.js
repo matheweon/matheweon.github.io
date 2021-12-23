@@ -8,7 +8,7 @@ var bluY = 400;
 var bluSize = 250;
 var bluRX = bluSize;
 var bluRY = bluSize;
-var bounceFrame = 0;
+var bounceDuration = 1000;
 
 var svg = d3.select("body")
     .append("svg")
@@ -179,14 +179,73 @@ function drawBlu() {
         .attr("ry", bluRY / 40);
 }
 
-function bounce() {
-    bluRX = bluSize * (1 + Math.sin(bounceFrame * 2 * Math.PI) / 8);
-    bluRY = bluSize * (1 - Math.sin(bounceFrame * 2 * Math.PI) / 8);
+function bounceAnimation(elapsed) {
+    let progress = elapsed / bounceDuration;
+    let scalingFunction = -Math.cos(17.3 * Math.pow(progress, 3)) / (300 * Math.pow(progress, 3) + 1) + 1;
+    bluRX = bluSize * (1 + Math.sin(scalingFunction * 2 * Math.PI) / 8);
+    bluRY = bluSize * (1 - Math.sin(scalingFunction * 2 * Math.PI) / 8);
     drawBlu();
-    bounceFrame = Math.round(bounceFrame * 100 + 1) / 100;
-    bounceFrame %= 1;
 }
 
-//setInterval(bounce, 50);
+const element = document.getElementById('some-element-you-want-to-animate');
+let start, previousTimeStamp;
+
+function bounce(timestamp) {
+    if (start === undefined)
+        start = timestamp;
+    const elapsed = timestamp - start;
+
+    if (previousTimeStamp !== timestamp) {
+        bounceAnimation(elapsed);
+    }
+
+    if (elapsed < bounceDuration) { // Stop the animation after 0.5 seconds
+        previousTimeStamp = timestamp
+        window.requestAnimationFrame(bounce);
+    }
+}
+
+// Make this not delete and create every element each frame
+// setInterval(bounceAnimation, 50);
 
 drawBlu();
+
+window.addEventListener("keydown", function (event) {
+    if (event.defaultPrevented) {
+        return; // Do nothing if the event was already processed
+    }
+  
+    switch (event.key) {
+        case "Down": // IE/Edge specific value
+        case "ArrowDown":
+            console.log("down");
+            break;
+        case "Up": // IE/Edge specific value
+        case "ArrowUp":
+            console.log("up");
+            break;
+        case "Left": // IE/Edge specific value
+        case "ArrowLeft":
+            console.log("left");
+            break;
+        case "Right": // IE/Edge specific value
+        case "ArrowRight":
+            console.log("right");
+            break;
+        case "Enter":
+            console.log("enter");
+            break;
+        case "Esc": // IE/Edge specific value
+        case "Escape":
+            console.log("escape");
+            break;
+        case " ":
+            console.log("space");
+            start = undefined;
+            window.requestAnimationFrame(bounce);
+        default:
+            return; // Quit when this doesn't handle the key event.
+    }
+    // Cancel the default action to avoid it being handled twice
+    event.preventDefault();
+}, true);
