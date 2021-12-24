@@ -6,13 +6,14 @@ var friction = 0.9;
 
 let bluMotionStart, bluMotionPreviousTimeStamp;
 
+// Current timestamp is passed in by window.requestAnimationFrame()
 function bluMotion(timestamp) {
     if (bluMotionStart === undefined)
         bluMotionStart = timestamp;
     const elapsed = timestamp - bluMotionStart;
     const frameTime = timestamp - bluMotionPreviousTimeStamp;
 
-    if (bluMotionPreviousTimeStamp !== undefined && bluMotionPreviousTimeStamp !== timestamp) {
+    if (bluMotionPreviousTimeStamp !== undefined) {
         bluGravity(frameTime);
         bluActions(frameTime);
         updateBluPosition(frameTime);
@@ -28,8 +29,8 @@ function bluGravity(frameTime) {
 
 function bluActions(frameTime) {
     if (space && onGround) {
-        bounceStart = undefined;
         bluVY = 360;
+        bounceStart = undefined;
         window.requestAnimationFrame(bounce);
     }
     if (left) {
@@ -38,10 +39,14 @@ function bluActions(frameTime) {
     if (right) {
         bluVX = 300;
     }
+    if (shift) {
+        bounceStart = undefined;
+        window.requestAnimationFrame(bounce);
+    }
 }
 
 function updateBluPosition(frameTime) {
-    // bluRX and bluRY should be more directly related to bluVX and blu VY
+    // TODO: bluRX and bluRY should be more directly related to bluVX and blu VY
     let fallingFactor = 5 / (1 + Math.pow(Math.E, 1.735 - bluVY / 250)) - 0.75;
     bluRX -= fallingFactor;
     bluRY += fallingFactor;

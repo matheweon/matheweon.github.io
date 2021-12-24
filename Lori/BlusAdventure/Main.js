@@ -4,16 +4,20 @@ var bluX = bluSize;
 var bluY = bluSize * 1.5;
 var bluRX = bluRadius;
 var bluRY = bluRadius;
+var space = false;
 var up = false;
 var down = false;
 var left = false;
 var right = false;
-var space = false;
+var shift = false;
+var enter = false;
+var esc = false;
 
 function flipY(y) {
     return window.innerHeight - y;
 }
 
+// Create floor and walls
 var svg = d3.select("body")
     .append("svg")
     .attr("width", window.innerWidth)
@@ -67,6 +71,7 @@ var block5 = svg.append("rect")
     .attr("x", bluSize * 10)
     .attr("y", flipY(bluSize * 6));
 
+// Key Event listeners
 window.addEventListener("keydown", function (event) {
     if (event.defaultPrevented) {
         return; // Do nothing if the event was already processed
@@ -101,12 +106,18 @@ window.addEventListener("keydown", function (event) {
             console.log("right");
             right = true;
             break;
+        case "Shift":
+            console.log("shift");
+            shift = true;
+            break;
         case "Enter":
             console.log("enter");
+            enter = true;
             break;
         case "Esc": // IE/Edge specific value
         case "Escape":
             console.log("escape");
+            esc = true;
             break;
         default:
             return; // Quit when this doesn't handle the key event.
@@ -149,12 +160,18 @@ window.addEventListener("keyup", function (event) {
             console.log("right");
             right = false;
             break;
+        case "Shift":
+            console.log("shift");
+            shift = false;
+            break;
         case "Enter":
             console.log("enter");
+            enter = false;
             break;
         case "Esc": // IE/Edge specific value
         case "Escape":
             console.log("escape");
+            esc = false;
             break;
         default:
             return; // Quit when this doesn't handle the key event.
