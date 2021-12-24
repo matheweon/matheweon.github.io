@@ -1,19 +1,25 @@
-var bluBlue = "#3af";
-var bluGreen = "#af3";
-var bluGreenLine = "#99e62e";
-var bluOrange = "#f28c28";
-var black = "#000"
 var bluX = 400;
 var bluY = 400;
 var bluSize = 50;
 var bluRX = bluSize;
 var bluRY = bluSize;
-var bounceDuration = 850;
+
+function flipY(y) {
+    return window.innerHeight - y;
+}
 
 var svg = d3.select("body")
     .append("svg")
     .attr("width", window.innerWidth)
     .attr("height", window.innerHeight);
+
+var ground = svg.append("rect")
+    .attr("class", "wall")
+    .style("fill", "black")
+    .attr("width", window.innerWidth)
+    .attr("height", 200)
+    .attr("x", 0)
+    .attr("y", flipY(200));
 
 window.addEventListener("keydown", function (event) {
     if (event.defaultPrevented) {

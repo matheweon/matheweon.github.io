@@ -1,3 +1,5 @@
+var bounceDuration = 850;
+
 function bounceAnimation(elapsed) {
     let progress = elapsed / bounceDuration;
     let scalingFunction = -Math.cos(14.14 * Math.pow(progress, 3)) / (117.2 * Math.pow(progress + 0.15, 6) + 1) + 1;
