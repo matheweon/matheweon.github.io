@@ -29,7 +29,7 @@ function bluGravity(frameTime) {
 function bluActions(frameTime) {
     if (space && onGround) {
         bounceStart = undefined;
-        bluVY = 450;
+        bluVY = 360;
         window.requestAnimationFrame(bounce);
     }
     if (left) {
@@ -45,8 +45,8 @@ function updateBluPosition(frameTime) {
     let fallingFactor = 5 / (1 + Math.pow(Math.E, 1.735 - bluVY / 250)) - 0.75;
     bluRX -= fallingFactor;
     bluRY += fallingFactor;
-    bluRX -= 0.05 * (bluRX - bluSize);
-    bluRY -= 0.05 * (bluRY - bluSize);
+    bluRX -= 0.05 * (bluRX - bluRadius);
+    bluRY -= 0.05 * (bluRY - bluRadius);
     bluVX *= friction;
     nextBluX = bluX + bluVX * frameTime / 1000;
     nextBluY = bluY + bluVY * frameTime / 1000;

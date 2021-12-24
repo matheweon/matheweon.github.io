@@ -2,6 +2,8 @@ var bluBlue = "#3af";
 var bluGreen = "#af3";
 var bluGreenLine = "#99e62e";
 var bluOrange = "#f28c28";
+var bluOutline = "#4dc1ff";
+var bluInnerOutline = "#38b3ff";
 var black = "#000";
 var bluYFlipped = flipY(bluY);
 
@@ -222,6 +224,158 @@ function drawBlu() {
         .attr("cy", bluYFlipped + bluRY * (-1/3 + 9/40 * Math.sqrt(2) / 2))
         .attr("rx", bluRX / 40)
         .attr("ry", bluRY / 40);
+    
+    // Blu Outline
+    (d3.select("#bluOutlineTop").node()
+        ? d3.select("#bluOutlineTop")
+        : svg.append("path"))
+        .attr("id", "bluOutlineTop")
+        .attr("class", "blu")
+        .style("fill", bluOutline)
+        .attr("transform", "translate(" + bluX + ", " + bluYFlipped + ") scale(" + 1 + "," + (bluRY / bluRX) + ")")
+        .attr("d", d3.arc()
+            .innerRadius(bluRX * 15/16)
+            .outerRadius(bluRX)
+            .startAngle(-Math.PI / 2)
+            .endAngle(Math.PI / 2)
+        );
+    
+    (d3.select("#bluOutlineLeft").node()
+        ? d3.select("#bluOutlineLeft")
+        : svg.append("rect"))
+        .attr("id", "bluOutlineLeft")
+        .attr("class", "blu")
+        .style("fill", bluOutline)
+        .attr("x", bluX - bluRX)
+        .attr("y", bluYFlipped)
+        .attr("width", bluRX / 16)
+        .attr("height", bluRY / 2);
+
+    (d3.select("#bluOutlineRight").node()
+        ? d3.select("#bluOutlineRight")
+        : svg.append("rect"))
+        .attr("id", "bluOutlineRight")
+        .attr("class", "blu")
+        .style("fill", bluOutline)
+        .attr("x", bluX + bluRX * 15/16)
+        .attr("y", bluYFlipped)
+        .attr("width", bluRX / 16)
+        .attr("height", bluRY / 2);
+    
+    (d3.select("#bluOutlineBottomLeft").node()
+        ? d3.select("#bluOutlineBottomLeft")
+        : svg.append("path"))
+        .attr("id", "bluOutlineBottomLeft")
+        .attr("class", "blu")
+        .style("fill", bluOutline)
+        .attr("transform", "translate(" + (bluX - bluRX / 2) + ", " + (bluYFlipped + bluRY / 2) + ") scale(" + 1 + "," + (bluRY / bluRX) + ")")
+        .attr("d", d3.arc()
+            .innerRadius(bluRX * 7/16)
+            .outerRadius(bluRX / 2)
+            .startAngle(Math.PI)
+            .endAngle(Math.PI * 3/2)
+        );
+
+    (d3.select("#bluOutlineBottomRight").node()
+        ? d3.select("#bluOutlineBottomRight")
+        : svg.append("path"))
+        .attr("id", "bluOutlineBottomRight")
+        .attr("class", "blu")
+        .style("fill", bluOutline)
+        .attr("transform", "translate(" + (bluX + bluRX / 2) + ", " + (bluYFlipped + bluRY / 2) + ") scale(" + 1 + "," + (bluRY / bluRX) + ")")
+        .attr("d", d3.arc()
+            .innerRadius(bluRX * 7/16)
+            .outerRadius(bluRX / 2)
+            .startAngle(Math.PI / 2)
+            .endAngle(Math.PI)
+        );
+
+    (d3.select("#bluOutlineBottom").node()
+        ? d3.select("#bluOutlineBottom")
+        : svg.append("rect"))
+        .attr("id", "bluOutlineBottom")
+        .attr("class", "blu")
+        .style("fill", bluOutline)
+        .attr("x", bluX - bluRX / 2)
+        .attr("y", bluYFlipped + bluRY * 15/16)
+        .attr("width", bluRX)
+        .attr("height", bluRY / 16);
+
+    // Blu Inner Outline
+        (d3.select("#bluInnerOutlineTop").node()
+        ? d3.select("#bluInnerOutlineTop")
+        : svg.append("path"))
+        .attr("id", "bluInnerOutlineTop")
+        .attr("class", "blu")
+        .style("fill", bluInnerOutline)
+        .attr("transform", "translate(" + bluX + ", " + bluYFlipped + ") scale(" + 1 + "," + (bluRY / bluRX) + ")")
+        .attr("d", d3.arc()
+            .innerRadius(bluRX * 14/16)
+            .outerRadius(bluRX * 15/16)
+            .startAngle(-Math.PI / 2)
+            .endAngle(Math.PI / 2)
+        );
+    
+    (d3.select("#bluInnerOutlineLeft").node()
+        ? d3.select("#bluInnerOutlineLeft")
+        : svg.append("rect"))
+        .attr("id", "bluInnerOutlineLeft")
+        .attr("class", "blu")
+        .style("fill", bluInnerOutline)
+        .attr("x", bluX - bluRX * 15/16)
+        .attr("y", bluYFlipped)
+        .attr("width", bluRX / 16)
+        .attr("height", bluRY / 2);
+
+    (d3.select("#bluInnerOutlineRight").node()
+        ? d3.select("#bluInnerOutlineRight")
+        : svg.append("rect"))
+        .attr("id", "bluInnerOutlineRight")
+        .attr("class", "blu")
+        .style("fill", bluInnerOutline)
+        .attr("x", bluX + bluRX * 14/16)
+        .attr("y", bluYFlipped)
+        .attr("width", bluRX / 16)
+        .attr("height", bluRY / 2);
+    
+    (d3.select("#bluInnerOutlineBottomLeft").node()
+        ? d3.select("#bluInnerOutlineBottomLeft")
+        : svg.append("path"))
+        .attr("id", "bluInnerOutlineBottomLeft")
+        .attr("class", "blu")
+        .style("fill", bluInnerOutline)
+        .attr("transform", "translate(" + (bluX - bluRX / 2) + ", " + (bluYFlipped + bluRY / 2) + ") scale(" + 1 + "," + (bluRY / bluRX) + ")")
+        .attr("d", d3.arc()
+            .innerRadius(bluRX * 6/16)
+            .outerRadius(bluRX * 7/16)
+            .startAngle(Math.PI)
+            .endAngle(Math.PI * 3/2)
+        );
+
+    (d3.select("#bluInnerOutlineBottomRight").node()
+        ? d3.select("#bluInnerOutlineBottomRight")
+        : svg.append("path"))
+        .attr("id", "bluInnerOutlineBottomRight")
+        .attr("class", "blu")
+        .style("fill", bluInnerOutline)
+        .attr("transform", "translate(" + (bluX + bluRX / 2) + ", " + (bluYFlipped + bluRY / 2) + ") scale(" + 1 + "," + (bluRY / bluRX) + ")")
+        .attr("d", d3.arc()
+            .innerRadius(bluRX * 6/16)
+            .outerRadius(bluRX * 7/16)
+            .startAngle(Math.PI / 2)
+            .endAngle(Math.PI)
+        );
+
+    (d3.select("#bluInnerOutlineBottom").node()
+        ? d3.select("#bluInnerOutlineBottom")
+        : svg.append("rect"))
+        .attr("id", "bluInnerOutlineBottom")
+        .attr("class", "blu")
+        .style("fill", bluInnerOutline)
+        .attr("x", bluX - bluRX / 2)
+        .attr("y", bluYFlipped + bluRY * 14/16)
+        .attr("width", bluRX)
+        .attr("height", bluRY / 16);
 }
 
 drawBlu();
