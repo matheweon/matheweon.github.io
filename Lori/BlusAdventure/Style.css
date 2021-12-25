@@ -40,15 +40,3 @@ html, body {
 .bluInnerOutline {
     fill: #38b3ff;
 }
-
-.dirtLight {
-    fill: #9b6200;
-}
-
-.dirtDark {
-    fill: #623f00;
-}
-
-.grass {
-    fill: url(#grassGradient);
-}

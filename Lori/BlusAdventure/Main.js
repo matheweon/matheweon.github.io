@@ -1,5 +1,7 @@
 var bluRad = 32;
 var bluSize = 2 * bluRad;
+var gameWidth = window.innerWidth;
+var gameHeight = window.innerHeight;
 var bluX = bluSize;
 var bluY = bluSize * 1.5;
 var bluRX = bluRad;
@@ -14,13 +16,13 @@ var enter = false;
 var esc = false;
 
 function flipY(y) {
-    return window.innerHeight - y;
+    return gameHeight - y;
 }
 
 var svg = d3.select("body")
     .append("svg")
-    .attr("width", window.innerWidth)
-    .attr("height", window.innerHeight);
+    .attr("width", gameWidth)
+    .attr("height", gameHeight);
 
 // Key Event listeners
 window.addEventListener("keydown", function (event) {

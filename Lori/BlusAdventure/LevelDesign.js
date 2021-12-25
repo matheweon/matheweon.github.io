@@ -1,26 +1,65 @@
+var dirtPixelation = 4;
 var grass = "#31ab1f";
-var grassGradient = svg.append("defs").append("linearGradient")
-    .attr("id", "grassGradient")
-    .attr("x1", "0%")
-    .attr("x2", "0%")
-    .attr("y1", "0%")
-    .attr("y2", "100%"); // Vertical linear gradient
-grassGradient.append("stop")
-    .attr("offset", "0%")
-    .style("stop-color", grass)
-    .style("stop-opacity", 1);
-grassGradient.append("stop")
-    .attr("offset", "50%")
-    .style("stop-color", grass)
-    .style("stop-opacity", 1);
-grassGradient.append("stop")
-    .attr("offset", "100%")
-    .style("stop-color", grass)
-    .style("stop-opacity", 0);
+var grassVariation = 16;
+var dirtDark = "#623f00";
+var dirtLight = "#9b6200";
+var dirtVariation = 6;
+
+var level = svg.append("g").attr("id", "level");
 
 function tileToCoord(tile, isY) {
     if (isY) return flipY((tile + 1) * bluRad);
     return tile * bluRad;
+}
+
+function componentToHex(c) {
+    var hex = c.toString(16);
+    return hex.length == 1 ? "0" + hex : hex;
+}
+
+function RGBToHex(r, g, b) {
+    return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+}
+
+function hexToRGB(hex) {
+    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result ? {
+      r: parseInt(result[1], 16),
+      g: parseInt(result[2], 16),
+      b: parseInt(result[3], 16)
+    } : null;
+}
+function randomizeComponent(comp, variation) {
+    return Math.min(Math.max(comp + Math.round(Math.random() * variation * 2 - variation), 0), 255);
+}
+
+function varyColor(hex, variation) {
+    let newR = randomizeComponent(hexToRGB(hex).r, variation);
+    let newG = randomizeComponent(hexToRGB(hex).g, variation);
+    let newB = randomizeComponent(hexToRGB(hex).b, variation);
+    return RGBToHex(newR, newG, newB);
+}
+
+for (let i = 0; i < 100; i++) {
+    let newGrass = varyColor(grass, grassVariation);
+    let grassGradient = svg.append("defs").append("linearGradient")
+        .attr("id", "grassGradient" + i)
+        .attr("x1", "0%")
+        .attr("x2", "0%")
+        .attr("y1", "0%")
+        .attr("y2", "100%"); // Vertical linear gradient
+    grassGradient.append("stop")
+        .attr("offset", "0%")
+        .style("stop-color", newGrass)
+        .style("stop-opacity", 1);
+    grassGradient.append("stop")
+        .attr("offset", "25%")
+        .style("stop-color", newGrass)
+        .style("stop-opacity", 1);
+    grassGradient.append("stop")
+        .attr("offset", "100%")
+        .style("stop-color", newGrass)
+        .style("stop-opacity", 0);
 }
 
 d3.selection.prototype.moveToFront = function() {
@@ -33,24 +72,24 @@ var levelEditorGrid = svg.append("g").attr("id", "levelEditorGrid").attr("class"
 function drawLevelEditorGrid(keyDown) {
     if (levelEditorGridState === 0 && keyDown) {
         levelEditorGrid.moveToFront();
-        for (let i = 0; i < window.innerWidth; i += bluRad) {
+        for (let i = 0; i < gameWidth; i += bluRad) {
             levelEditorGrid.append("rect")
                 .attr("class", "levelEditorGrid")
                 .attr("x", i)
                 .attr("y", 0)
                 .attr("width", 1)
-                .attr("height", window.innerHeight);
+                .attr("height", gameHeight);
         }
-        for (let i = 0; i < window.innerHeight; i += bluRad) {
+        for (let i = 0; i < gameHeight; i += bluRad) {
             levelEditorGrid.append("rect")
                 .attr("class", "levelEditorGrid")
                 .attr("x", 0)
                 .attr("y", flipY(i))
-                .attr("width", window.innerWidth)
+                .attr("width", gameWidth)
                 .attr("height", 1);
         }
-        for (let i = 0; i < window.innerWidth / bluRad; i++) {
-            for (let j = 0; j < window.innerHeight / bluRad; j++) {
+        for (let i = 0; i < gameWidth / bluRad; i++) {
+            for (let j = 0; j < gameHeight / bluRad; j++) {
                 levelEditorGrid.append("text")
                     .attr("class", "levelEditorGrid")
                     .attr("x", i * bluRad + 1)
@@ -79,29 +118,35 @@ function createDirtBlock(x, y) {
     x = tileToCoord(x);
     y = tileToCoord(y, true);
 
-    let block = svg.append("g")
+    let block = level.append("g")
         .attr("class", "block")
         .attr("width", bluRad)
         .attr("height", bluRad)
         .attr("x", x)
         .attr("y", y);
     
-    block.append("rect")
-        .attr("class", "dirtLight")
-        .attr("width", bluRad)
-        .attr("height", bluRad)
-        .attr("x", x)
-        .attr("y", y);
-
-    for (let i = 0; i < 4; i++) {
-        for (let j = 0; j < 4; j++) {
+    for (let i = 0; i < dirtPixelation; i++) {
+        for (let j = 0; j < dirtPixelation; j++) {
             if ((i + j) % 2 === 0) {
                 block.append("rect")
-                    .attr("class", "dirtDark")
-                    .attr("width", bluRad / 4)
-                    .attr("height", bluRad / 4)
-                    .attr("x", x + bluRad / 4 * i)
-                    .attr("y", y + bluRad / 4 * j);
+                    .attr("fill", varyColor(dirtLight, dirtVariation))
+                    .attr("width", bluRad / dirtPixelation)
+                    .attr("height", bluRad / dirtPixelation)
+                    .attr("x", x + bluRad / dirtPixelation * i)
+                    .attr("y", y + bluRad / dirtPixelation * j);
+            }
+        }
+    }
+
+    for (let i = 0; i < dirtPixelation; i++) {
+        for (let j = 0; j < dirtPixelation; j++) {
+            if ((i + j) % 2 === 1) {
+                block.append("rect")
+                    .attr("fill", varyColor(dirtDark, dirtVariation))
+                    .attr("width", bluRad / dirtPixelation)
+                    .attr("height", bluRad / dirtPixelation)
+                    .attr("x", x + bluRad / dirtPixelation * i)
+                    .attr("y", y + bluRad / dirtPixelation * j);
             }
         }
     }
@@ -110,42 +155,18 @@ function createDirtBlock(x, y) {
 }
 
 function createGrassBlock(x, y) {
+    let block = createDirtBlock(x, y);
     x = tileToCoord(x);
     y = tileToCoord(y, true);
 
-    let block = svg.append("g")
-        .attr("class", "block")
-        .attr("width", bluRad)
-        .attr("height", bluRad)
-        .attr("x", x)
-        .attr("y", y);
-    
-    block.append("rect")
-        .attr("class", "dirtLight")
-        .attr("width", bluRad)
-        .attr("height", bluRad)
-        .attr("x", x)
-        .attr("y", y);
-
-    for (let i = 0; i < 4; i++) {
-        for (let j = 0; j < 4; j++) {
-            if ((i + j) % 2 === 0) {
-                block.append("rect")
-                    .attr("class", "dirtDark")
-                    .attr("width", bluRad / 4)
-                    .attr("height", bluRad / 4)
-                    .attr("x", x + bluRad / 4 * i)
-                    .attr("y", y + bluRad / 4 * j);
-            }
-        }
+    for (let i = 0; i < dirtPixelation; i++) {
+        block.append("rect")
+            .style("fill", "url(#grassGradient" + Math.floor(Math.random() * 100) + ")")
+            .attr("width", bluRad / 4)
+            .attr("height", bluRad * 3/4)
+            .attr("x", x + i / 4 * bluRad)
+            .attr("y", y);
     }
-
-    block.append("rect")
-        .attr("class", "grass")
-        .attr("width", bluRad)
-        .attr("height", bluRad / 2)
-        .attr("x", x)
-        .attr("y", y);
 
     return block;
 }
@@ -171,7 +192,7 @@ function replaceBlock(x, y, createBlockFunction) {
 function createLevel(level) {
     switch (level) {
         case 1:
-            for (let i = 0; i < window.innerWidth / bluRad; i++) {
+            for (let i = 0; i < gameWidth / bluRad; i++) {
                 createGrassBlock(i, 1);
                 createDirtBlock(i, 0);
             }
