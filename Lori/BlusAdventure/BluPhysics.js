@@ -1,11 +1,11 @@
 var bluVX = 0;
 var bluVY = 0;
-var gravity = 1;
+var gravity = ratio;
 var onGround = false;
 var groundFriction = 0.9;
 var airFriction = 0.925;
-var bluJumpPower = 360;
-var bluSpeed = 30;
+var bluJumpPower = 360 * ratio;
+var bluSpeed = 30 * ratio;
 
 let bluMotionStart, bluMotionPreviousTimeStamp;
 

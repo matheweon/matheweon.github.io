@@ -1,4 +1,5 @@
-var bluRad = 32;
+var ratio = 2;
+var bluRad = 32 * ratio;
 var bluSize = 2 * bluRad;
 var gameWidth = window.innerWidth;
 var gameHeight = window.innerHeight;
