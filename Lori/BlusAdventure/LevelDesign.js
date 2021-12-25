@@ -1,3 +1,5 @@
+var gameTileWidth = Math.ceil(gameWidth / bluRad);
+var gameTileHeight = Math.ceil(gameWidth / bluRad);
 var dirtPixelation = 4;
 var grass = "#31ab1f";
 var grassVariation = 16;
@@ -88,8 +90,8 @@ function drawLevelEditorGrid(keyDown) {
                 .attr("width", gameWidth)
                 .attr("height", 1);
         }
-        for (let i = 0; i < gameWidth / bluRad; i++) {
-            for (let j = 0; j < gameHeight / bluRad; j++) {
+        for (let i = 0; i < gameTileWidth; i++) {
+            for (let j = 0; j < gameTileHeight; j++) {
                 levelEditorGrid.append("text")
                     .attr("class", "levelEditorGrid")
                     .attr("x", i * bluRad + 1)
@@ -192,15 +194,17 @@ function replaceBlock(x, y, createBlockFunction) {
 function createLevel(level) {
     switch (level) {
         case 1:
-            for (let i = 0; i < gameWidth / bluRad; i++) {
+            for (let i = 0; i < gameTileWidth; i++) {
                 createGrassBlock(i, 1);
                 createDirtBlock(i, 0);
             }
-            create2x2GrassBlock(4, 3);
-            create2x2GrassBlock(8, 5);
-            create2x2GrassBlock(12, 7);
-            create2x2GrassBlock(16, 9);
-            create2x2GrassBlock(20, 11);
+            let x = 4;
+            let y = 3;
+            while (x < gameTileWidth && y < gameTileHeight) {
+                create2x2GrassBlock(x, y);
+                x += 4;
+                y += 2;
+            }
             replaceBlock(4, 1, createDirtBlock);
             replaceBlock(5, 1, createDirtBlock);
             break;
