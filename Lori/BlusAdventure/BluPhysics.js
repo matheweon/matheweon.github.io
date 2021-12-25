@@ -2,7 +2,10 @@ var bluVX = 0;
 var bluVY = 0;
 var gravity = 1;
 var onGround = false;
-var friction = 0.9;
+var groundFriction = 0.9;
+var airFriction = 0.925;
+var bluJumpPower = 360;
+var bluSpeed = 30;
 
 let bluMotionStart, bluMotionPreviousTimeStamp;
 
@@ -29,15 +32,15 @@ function bluGravity(frameTime) {
 
 function bluActions(frameTime) {
     if (space && onGround) {
-        bluVY = 360;
+        bluVY = bluJumpPower;
         bounceStart = undefined;
         window.requestAnimationFrame(bounce);
     }
     if (left) {
-        bluVX = -300;
+        bluVX -= bluSpeed;
     }
     if (right) {
-        bluVX = 300;
+        bluVX += bluSpeed;
     }
     if (shift) {
         bounceStart = undefined;
@@ -52,7 +55,11 @@ function updateBluPosition(frameTime) {
     bluRY += fallingFactor;
     bluRX -= 0.05 * (bluRX - bluRadius);
     bluRY -= 0.05 * (bluRY - bluRadius);
-    bluVX *= friction;
+    if (onGround) {
+        bluVX *= groundFriction;
+    } else {
+        bluVX *= airFriction;
+    }
     nextBluX = bluX + bluVX * frameTime / 1000;
     nextBluY = bluY + bluVY * frameTime / 1000;
     checkBluFloorCollision();
