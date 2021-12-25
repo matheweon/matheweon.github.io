@@ -4,8 +4,8 @@ function bounceAnimation(elapsed) {
     let progress = elapsed / bounceDuration;
     let scalingFunction = -2 * Math.cos(14.14 * Math.pow(progress, 3)) / (8.5 * Math.pow(progress + 0.7, 6) + 1) + 1;
     let bounceDeformation = Math.sin(scalingFunction * 2 * Math.PI) / 8;
-    bluRX = bluRadius * (1 + bounceDeformation);
-    bluRY = bluRadius * (1 - bounceDeformation);
+    bluRX = bluRad * (1 + bounceDeformation);
+    bluRY = bluRad * (1 - bounceDeformation);
     drawBlu();
 }
 

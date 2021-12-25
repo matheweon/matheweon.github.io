@@ -1,9 +1,9 @@
-var bluRadius = 32;
-var bluSize = 2 * bluRadius;
+var bluRad = 32;
+var bluSize = 2 * bluRad;
 var bluX = bluSize;
 var bluY = bluSize * 1.5;
-var bluRX = bluRadius;
-var bluRY = bluRadius;
+var bluRX = bluRad;
+var bluRY = bluRad;
 var space = false;
 var up = false;
 var down = false;
@@ -17,59 +17,10 @@ function flipY(y) {
     return window.innerHeight - y;
 }
 
-// Create floor and walls
 var svg = d3.select("body")
     .append("svg")
     .attr("width", window.innerWidth)
     .attr("height", window.innerHeight);
-
-var ground = svg.append("rect")
-    .attr("class", "wall")
-    .style("fill", "black")
-    .attr("width", window.innerWidth)
-    .attr("height", bluSize)
-    .attr("x", 0)
-    .attr("y", flipY(bluSize));
-
-var block1 = svg.append("rect")
-    .attr("class", "wall")
-    .style("fill", "black")
-    .attr("width", bluSize)
-    .attr("height", bluSize)
-    .attr("x", bluSize * 2)
-    .attr("y", flipY(bluSize * 2));
-
-var block2 = svg.append("rect")
-    .attr("class", "wall")
-    .style("fill", "black")
-    .attr("width", bluSize)
-    .attr("height", bluSize)
-    .attr("x", bluSize * 4)
-    .attr("y", flipY(bluSize * 3));
-    
-var block3 = svg.append("rect")
-    .attr("class", "wall")
-    .style("fill", "black")
-    .attr("width", bluSize)
-    .attr("height", bluSize)
-    .attr("x", bluSize * 6)
-    .attr("y", flipY(bluSize * 4));
-    
-var block4 = svg.append("rect")
-    .attr("class", "wall")
-    .style("fill", "black")
-    .attr("width", bluSize)
-    .attr("height", bluSize)
-    .attr("x", bluSize * 8)
-    .attr("y", flipY(bluSize * 5));
-
-var block5 = svg.append("rect")
-    .attr("class", "wall")
-    .style("fill", "black")
-    .attr("width", bluSize)
-    .attr("height", bluSize)
-    .attr("x", bluSize * 10)
-    .attr("y", flipY(bluSize * 6));
 
 // Key Event listeners
 window.addEventListener("keydown", function (event) {
@@ -118,6 +69,7 @@ window.addEventListener("keydown", function (event) {
         case "Escape":
             console.log("escape");
             esc = true;
+            drawLevelEditorGrid(true);
             break;
         default:
             return; // Quit when this doesn't handle the key event.
@@ -172,6 +124,7 @@ window.addEventListener("keyup", function (event) {
         case "Escape":
             console.log("escape");
             esc = false;
+            drawLevelEditorGrid(false);
             break;
         default:
             return; // Quit when this doesn't handle the key event.

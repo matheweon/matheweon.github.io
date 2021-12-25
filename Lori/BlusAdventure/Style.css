@@ -3,3 +3,52 @@ html, body {
     height: 100%;
     overflow: hidden;
 }
+
+.levelEditorGrid {
+    fill: #f00;
+    font-size: 10px;
+    font-family: Courier;
+    font-weight: bold;
+    z-index: -1;
+    position: relative;
+}
+
+.black {
+    fill: black;
+}
+
+.bluBlue {
+    fill: #3af;
+}
+
+.bluGreen {
+    fill: #af3;
+}
+
+.bluGreenLine {
+    fill: #99e62e;
+}
+
+.bluOrange {
+    fill: #f28c28;
+}
+
+.bluOutline {
+    fill: #4dc1ff;
+}
+
+.bluInnerOutline {
+    fill: #38b3ff;
+}
+
+.dirtLight {
+    fill: #9b6200;
+}
+
+.dirtDark {
+    fill: #623f00;
+}
+
+.grass {
+    fill: url(#grassGradient);
+}

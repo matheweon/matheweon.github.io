@@ -53,8 +53,8 @@ function updateBluPosition(frameTime) {
     let fallingFactor = 5 / (1 + Math.pow(Math.E, 1.735 - bluVY / 250)) - 0.75;
     bluRX -= fallingFactor;
     bluRY += fallingFactor;
-    bluRX -= 0.05 * (bluRX - bluRadius);
-    bluRY -= 0.05 * (bluRY - bluRadius);
+    bluRX -= 0.05 * (bluRX - bluRad);
+    bluRY -= 0.05 * (bluRY - bluRad);
     if (onGround) {
         bluVX *= groundFriction;
     } else {
@@ -69,21 +69,21 @@ function updateBluPosition(frameTime) {
 
 function checkBluFloorCollision() {
     onGround = false;
-    d3.selectAll(".wall").each(function(d) {
-        let wallX = d3.select(this).attr("x");
-        let wallY = flipY(d3.select(this).attr("y"));
-        let wallWidth = d3.select(this).attr("width");
-        if (wallX < nextBluX + bluRX && wallX > nextBluX - bluRX - wallWidth) {
-            if (wallY > nextBluY - bluRY && wallY < nextBluY) {
+    d3.selectAll(".block").each(function(d) {
+        let blockX = d3.select(this).attr("x");
+        let blockY = flipY(d3.select(this).attr("y"));
+        let blockWidth = d3.select(this).attr("width");
+        if (blockX < nextBluX + bluRX && blockX > nextBluX - bluRX - blockWidth) {
+            if (blockY > nextBluY - bluRY && blockY < nextBluY) {
                 if (bluVY < -25) {
                     bluVY *= -0.5;
                 } else if (bluVY < 0) {
-                    nextBluY += wallY - (nextBluY - bluRY);
+                    nextBluY += blockY - (nextBluY - bluRY);
                     bluVY = 0;
                 }
                 onGround = true;
             }
-            if (wallY > nextBluY - bluRY - 1 && wallY < nextBluY) {
+            if (blockY > nextBluY - bluRY - 1 && blockY < nextBluY) {
                 onGround = true;
             }
         }
