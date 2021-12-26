@@ -175,7 +175,7 @@ window.addEventListener("keyup", function (event) {
     event.preventDefault();
 }, true);
 
-$("html").mousedown(function() {
+function mobileClick() {
     click = true;
     if (!deviceOrientationGranted) {
         DeviceMotionEvent.requestPermission().then(response => {
@@ -191,4 +191,6 @@ $("html").mousedown(function() {
             }
         });
     }
-});
+}
+
+document.getElementById("html").addEventListener("touchstart", mobileClick);
