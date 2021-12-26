@@ -1,5 +1,8 @@
-var ratio = 0.5;
-var bluRad = 32 * ratio;
+var startingZoom = 4;
+var finalZoom = 0.5;
+var zoom = startingZoom;
+var introZoomProgress = -1;
+var bluRad = 32 * zoom;
 var bluSize = 2 * bluRad;
 var gameWidth = window.innerWidth;
 var gameHeight = window.innerHeight;
@@ -15,9 +18,41 @@ var right = false;
 var shift = false;
 var enter = false;
 var esc = false;
+var click = false;
+var levelNum = 1;
+var gameStarted = false;
 
 function flipY(y) {
     return gameHeight - y;
+}
+
+function updateZoom(z) {
+    let ratio = z / zoom;
+    zoom = z;
+    bluRad = 32 * zoom;
+    bluSize = 2 * bluRad;
+    bluX *= ratio;
+    bluY *= ratio;
+    bluRX *= ratio;
+    bluRY *= ratio;
+    bluJumpPower = bluJumpPowerDefault * zoom;
+    bluSpeed = bluSpeedDefault * zoom;
+    gravity = zoom;
+    createLevel(levelNum);
+}
+
+function introZoom(frameTime) {
+    let zoomDuration = 5;
+    if (introZoomProgress < zoomDuration) {
+        introZoomProgress += frameTime / 1000;
+        if (introZoomProgress > 0) {
+            updateZoom(startingZoom + (finalZoom - startingZoom) * (-2 * Math.cos(14.14 * Math.pow(introZoomProgress / zoomDuration, 3)) / (8.5 * Math.pow(introZoomProgress / zoomDuration + 0.7, 6) + 1) + 1));
+        }
+    } else if (introZoomProgress < zoomDuration + 100) {
+        updateZoom(finalZoom);
+        gameStarted = true;
+        introZoomProgress = zoomDuration + 100;
+    }
 }
 
 var svg = d3.select("body")
@@ -135,3 +170,23 @@ window.addEventListener("keyup", function (event) {
     // Cancel the default action to avoid it being handled twice
     event.preventDefault();
 }, true);
+
+$("html").click(function() {
+    click = true;
+})
+
+DeviceMotionEvent.requestPermission().then(response => {
+    if (response == "granted") {
+        // Add a listener to get smartphone orientation in the alpha-beta-gamma axes (units in degrees)
+        window.addEventListener("deviceorientation", (event) => {
+            // Expose each orientation angle in a more readable way
+            rotation_degrees = event.alpha;
+            frontToBack_degrees = event.beta;
+            leftToRight_degrees = event.gamma;
+            d3.select("#test").remove();
+            svg.append("text").attr("id", "test").text("rotation_degrees: " + rotation_degrees + "\nfrontToBack_degrees: " + frontToBack_degrees + "\nleftToRight_degrees: " + leftToRight_degrees);
+        });
+    } else {
+        console.log("Device Orientation Permission Denied");
+    }
+});

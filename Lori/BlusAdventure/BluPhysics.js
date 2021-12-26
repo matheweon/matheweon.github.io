@@ -1,11 +1,13 @@
 var bluVX = 0;
 var bluVY = 0;
-var gravity = ratio;
-var onGround = false;
+var gravity = zoom;
+var onGround = true;
 var groundFriction = 0.9;
 var airFriction = 0.925;
-var bluJumpPower = 360 * ratio;
-var bluSpeed = 30 * ratio;
+var bluJumpPowerDefault = 360;
+var bluSpeedDefault = 30;
+var bluJumpPower = bluJumpPowerDefault * zoom;
+var bluSpeed = bluSpeedDefault * zoom;
 
 let bluMotionStart, bluMotionPreviousTimeStamp;
 
@@ -17,9 +19,12 @@ function bluMotion(timestamp) {
     const frameTime = timestamp - bluMotionPreviousTimeStamp;
 
     if (bluMotionPreviousTimeStamp !== undefined) {
-        bluGravity(frameTime);
-        bluActions(frameTime);
-        updateBluPosition(frameTime);
+        introZoom(frameTime);
+        if (gameStarted) {
+            bluGravity(frameTime);
+            bluActions(frameTime);
+            updateBluPosition(frameTime);
+        }
         drawBlu();
     }
     bluMotionPreviousTimeStamp = timestamp;
@@ -31,10 +36,11 @@ function bluGravity(frameTime) {
 }
 
 function bluActions(frameTime) {
-    if (space && onGround) {
+    if ((space || click) && onGround) {
         bluVY = bluJumpPower;
         bounceStart = undefined;
         window.requestAnimationFrame(bounce);
+        click = false;
     }
     if (left) {
         bluVX -= bluSpeed;
@@ -83,7 +89,7 @@ function checkBluFloorCollision() {
                 }
                 onGround = true;
             }
-            if (blockY > nextBluY - bluRY - 1 && blockY < nextBluY) {
+            if (blockY > nextBluY - bluRY - 1 && blockY < nextBluY || blockY > bluY - bluRY - 1 && blockY < bluY) {
                 onGround = true;
             }
         }
