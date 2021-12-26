@@ -22,6 +22,9 @@ var click = false;
 var deviceOrientationGranted = false;
 var levelNum = 1;
 var gameStarted = false;
+var alpha = 0;
+var beta = 0;
+var gamma = 0;
 
 function flipY(y) {
     return gameHeight - y;
@@ -172,10 +175,6 @@ window.addEventListener("keyup", function (event) {
     event.preventDefault();
 }, true);
 
-svg.append("text").attr("id", "test")
-    .attr("x", 0)
-    .attr("y", 15)
-    .text("alpha:  / beta:  / gamma:");
 $("html").mousedown(function() {
     click = true;
     if (!deviceOrientationGranted) {
@@ -184,19 +183,12 @@ $("html").mousedown(function() {
                 // Add a listener to get smartphone orientation in the alpha-beta-gamma axes (units in degrees)
                 window.addEventListener("deviceorientation", (event) => {
                     // Expose each orientation angle in a more readable way
-                    rotation_degrees = event.alpha;
-                    frontToBack_degrees = event.beta;
-                    leftToRight_degrees = event.gamma;
-                    d3.select("#test")
-                        .text("alpha: " + rotation_degrees + " / beta: " + frontToBack_degrees + " / gamma: " + leftToRight_degrees);
+                    alpha = event.alpha;
+                    beta = event.beta;
+                    gamma = event.gamma;
                 });
                 deviceOrientationGranted = true;
-            } else {
-                d3.select("#test")
-                    .text("Device Orientation Permission Denied");
             }
         });
-        d3.select("#test")
-            .text("Device Orientation Permission Denied");
     }
 });

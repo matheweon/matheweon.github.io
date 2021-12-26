@@ -36,7 +36,7 @@ function bluGravity(frameTime) {
 }
 
 function bluActions(frameTime) {
-    if ((space || click) && onGround) {
+    if ((space || up || click) && onGround) {
         bluVY = bluJumpPower;
         bounceStart = undefined;
         window.requestAnimationFrame(bounce);
@@ -50,6 +50,7 @@ function bluActions(frameTime) {
     if (right) {
         bluVX += bluSpeed;
     }
+    bluVX += (2 / (1 + Math.pow(Math.E, -gamma / 5)) - 1) * bluSpeed;
     if (shift) {
         bounceStart = undefined;
         window.requestAnimationFrame(bounce);
