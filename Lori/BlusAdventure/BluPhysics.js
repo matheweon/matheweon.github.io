@@ -40,6 +40,8 @@ function bluActions(frameTime) {
         bluVY = bluJumpPower;
         bounceStart = undefined;
         window.requestAnimationFrame(bounce);
+    }
+    if (click) {
         click = false;
     }
     if (left) {

@@ -174,7 +174,7 @@ window.addEventListener("keyup", function (event) {
 
 $("html").mousedown(function() {
     click = true;
-    if (!deviceOrientationGranted) {
+    /*if (!deviceOrientationGranted) {
         DeviceMotionEvent.requestPermission().then(response => {
             if (response == "granted") {
                 // Add a listener to get smartphone orientation in the alpha-beta-gamma axes (units in degrees)
@@ -198,5 +198,17 @@ $("html").mousedown(function() {
                     .text("Device Orientation Permission Denied");
             }
         });
-    }
+    }*/
+});
+
+window.addEventListener("deviceorientation", (event) => {
+    // Expose each orientation angle in a more readable way
+    rotation_degrees = event.alpha;
+    frontToBack_degrees = event.beta;
+    leftToRight_degrees = event.gamma;
+    d3.select("#test").remove();
+    svg.append("text").attr("id", "test")
+        .attr("x", 0)
+        .attr("y", 50)
+        .text("rotation_degrees: " + rotation_degrees + "\nfrontToBack_degrees: " + frontToBack_degrees + "\nleftToRight_degrees: " + leftToRight_degrees);
 });
