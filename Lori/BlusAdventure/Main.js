@@ -1,4 +1,4 @@
-var startingZoom = 4;
+var startingZoom = 5;
 var finalZoom = 0.5;
 var zoom = startingZoom;
 var introZoomProgress = -1;
@@ -42,21 +42,35 @@ function updateZoom(z) {
     bluJumpPower = bluJumpPowerDefault * zoom;
     bluSpeed = bluSpeedDefault * zoom;
     gravity = zoom;
-    createLevel(levelNum);
 }
 
 function introZoom(frameTime) {
-    let zoomDuration = 5;
+    let zoomDuration = 3;
+    let fadeDuration = 1.5;
     if (introZoomProgress < zoomDuration) {
         introZoomProgress += frameTime / 1000;
         if (introZoomProgress > 0) {
-            updateZoom(startingZoom + (finalZoom - startingZoom) * (-2 * Math.cos(14.14 * Math.pow(introZoomProgress / zoomDuration, 3)) / (8.5 * Math.pow(introZoomProgress / zoomDuration + 0.7, 6) + 1) + 1));
+            updateZoom(startingZoom + (finalZoom - startingZoom) * 1.0135673 * (1 / (1 + Math.pow(Math.E, -10 * (introZoomProgress / zoomDuration - 0.5))) - 0.00669285));
         }
-    } else if (introZoomProgress < zoomDuration + 100) {
+    } else if (introZoomProgress < zoomDuration + 1) {
         updateZoom(finalZoom);
+        createLevel(levelNum);
         gameStarted = true;
-        introZoomProgress = zoomDuration + 100;
+        introZoomProgress = zoomDuration + 1;
+    } else if (introZoomProgress < zoomDuration + fadeDuration + 1) {
+        introZoomProgress += frameTime / 1000;
+        updateLevelOpacity((introZoomProgress - zoomDuration - 1) / fadeDuration);
+    } else {
+        updateLevelOpacity(1);
     }
+}
+
+if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(navigator.userAgent) || /Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(navigator.userAgent)) {
+    d3.select("body")
+        .append("button")
+        .attr("id", "deviceOrientationButton")
+        .attr("onclick", "mobileClick()")
+        .html("Access Device Orientation");
 }
 
 var svg = d3.select("body")
@@ -188,6 +202,7 @@ function mobileClick() {
                     gamma = event.gamma;
                 });
                 deviceOrientationGranted = true;
+                d3.select("#deviceOrientationButton").remove();
             }
         });
     }

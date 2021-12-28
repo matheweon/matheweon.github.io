@@ -1,5 +1,6 @@
 var gameTileWidth = Math.ceil(gameWidth / bluRad * startingZoom / finalZoom);
 var gameTileHeight = Math.ceil(gameWidth / bluRad * startingZoom / finalZoom);
+var levelOpacity = 0;
 var dirtPixelation = 4;
 var grass = "#31ab1f";
 var grassVariation = 16;
@@ -124,6 +125,12 @@ function drawLevelEditorGrid(keyDown) {
     }
 }
 
+function updateLevelOpacity(opacity) {
+    levelOpacity = opacity;
+    d3.selectAll(".levelDisplay")
+        .style("opacity", opacity);
+}
+
 function createBlock(x, y) {
     let block = (d3.select(".block[xTile='" + x + "'][yTile='" + y + "']").node()
         ? d3.select(".block[xTile='" + x + "'][yTile='" + y + "']")
@@ -149,7 +156,9 @@ function createDirtBlock(x, y) {
                 (block.select("#dirt" + i + "-" + j).node()
                     ? block.select("#dirt" + i + "-" + j)
                     : block.append("rect"))
+                        .attr("class", "levelDisplay")
                         .attr("id", "dirt" + i + "-" + j)
+                        .style("opacity", levelOpacity)
                         .attr("fill", dirtLightVariations[(x + y + i * dirtPixelation + j) % colorVariations])
                         .attr("width", Math.ceil(bluRad / dirtPixelation))
                         .attr("height", Math.ceil(bluRad / dirtPixelation))
@@ -165,7 +174,9 @@ function createDirtBlock(x, y) {
                 (block.select("#dirt" + i + "-" + j).node()
                     ? block.select("#dirt" + i + "-" + j)
                     : block.append("rect"))
+                        .attr("class", "levelDisplay")
                         .attr("id", "dirt" + i + "-" + j)
+                        .style("opacity", levelOpacity)
                         .attr("fill", dirtDarkVariations[(x + y + i * dirtPixelation + j) % colorVariations])
                         .attr("width", Math.ceil(bluRad / dirtPixelation))
                         .attr("height", Math.ceil(bluRad / dirtPixelation))
@@ -188,7 +199,9 @@ function createGrassBlock(x, y) {
         (block.select("#grass" + i).node()
             ? block.select("#grass" + i)
             : block.append("rect"))
+                .attr("class", "levelDisplay")
                 .style("fill", "url(#grassGradient" + ((tileX * dirtPixelation + i) % colorVariations) + ")")
+                .style("opacity", levelOpacity)
                 .attr("width", Math.ceil(bluRad / dirtPixelation))
                 .attr("height", Math.ceil(bluRad * 3/4))
                 .attr("x", x + i / 4 * bluRad)
@@ -236,5 +249,3 @@ function createLevel(level) {
             break;
     }
 }
-
-createLevel(levelNum);
