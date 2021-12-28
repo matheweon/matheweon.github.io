@@ -50,10 +50,22 @@ function bluActions(frameTime) {
     if (right) {
         bluVX += bluSpeed;
     }
-    bluVX += (2 / (1 + Math.pow(Math.E, -gamma / 5)) - 1) * bluSpeed;
+    // Device orientation for mobile controls left/right
+    bluVX += (1 / (1 + Math.pow(Math.E, -(gamma - 15) / 3)) + 1 / (1 + Math.pow(Math.E, - (gamma + 15) / 3)) - 1) * bluSpeed;
     if (shift) {
         bounceStart = undefined;
         window.requestAnimationFrame(bounce);
+    }
+    if (z) {
+        if (zoom > 0.5) {
+            updateZoom(zoom / 2);
+        }
+        z = false;
+    }
+    if (x) {
+        if (zoom < 4) {
+            updateZoom(zoom * 2);
+        }
     }
 }
 
@@ -74,6 +86,14 @@ function updateBluPosition(frameTime) {
     checkBluFloorCollision();
     bluX = nextBluX;
     bluY = nextBluY;
+    if (bluY < 0) {
+        bluX = bluStartingX;
+        bluY = bluStartingY;
+        bluVX = 0;
+        bluVY = 0;
+        bluRX = bluRad;
+        bluRY = bluRad;
+    }
 }
 
 function checkBluFloorCollision() {

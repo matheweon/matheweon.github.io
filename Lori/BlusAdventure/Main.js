@@ -6,8 +6,10 @@ var bluRad = 32 * zoom;
 var bluSize = 2 * bluRad;
 var gameWidth = window.innerWidth;
 var gameHeight = window.innerHeight;
-var bluX = bluSize;
-var bluY = bluSize * 1.5;
+var bluStartingX = bluSize;
+var bluStartingY = bluSize * 1.5;
+var bluX = bluStartingX;
+var bluY = bluStartingY;
 var bluRX = bluRad;
 var bluRY = bluRad;
 var space = false;
@@ -18,6 +20,8 @@ var right = false;
 var shift = false;
 var enter = false;
 var esc = false;
+var z = false;
+var x = false;
 var click = false;
 var deviceOrientationGranted = false;
 var levelNum = 1;
@@ -30,11 +34,13 @@ function flipY(y) {
     return gameHeight - y;
 }
 
-function updateZoom(z) {
+function updateZoom(z, level = true) {
     let ratio = z / zoom;
     zoom = z;
     bluRad = 32 * zoom;
     bluSize = 2 * bluRad;
+    bluStartingX *= ratio;
+    bluStartingY *= ratio;
     bluX *= ratio;
     bluY *= ratio;
     bluRX *= ratio;
@@ -42,24 +48,25 @@ function updateZoom(z) {
     bluJumpPower = bluJumpPowerDefault * zoom;
     bluSpeed = bluSpeedDefault * zoom;
     gravity = zoom;
+    if (level) createLevel(levelNum);
 }
 
 function introZoom(frameTime) {
     let zoomDuration = 3;
+    let buffer = 999;
     let fadeDuration = 1.5;
     if (introZoomProgress < zoomDuration) {
         introZoomProgress += frameTime / 1000;
         if (introZoomProgress > 0) {
-            updateZoom(startingZoom + (finalZoom - startingZoom) * 1.0135673 * (1 / (1 + Math.pow(Math.E, -10 * (introZoomProgress / zoomDuration - 0.5))) - 0.00669285));
+            updateZoom(startingZoom + (finalZoom - startingZoom) * 1.0135673 * (1 / (1 + Math.pow(Math.E, -10 * (introZoomProgress / zoomDuration - 0.5))) - 0.00669285), false);
         }
-    } else if (introZoomProgress < zoomDuration + 1) {
+    } else if (introZoomProgress < zoomDuration + buffer) {
         updateZoom(finalZoom);
-        createLevel(levelNum);
         gameStarted = true;
-        introZoomProgress = zoomDuration + 1;
-    } else if (introZoomProgress < zoomDuration + fadeDuration + 1) {
+        introZoomProgress = zoomDuration + buffer;
+    } else if (introZoomProgress < zoomDuration + buffer + fadeDuration) {
         introZoomProgress += frameTime / 1000;
-        updateLevelOpacity((introZoomProgress - zoomDuration - 1) / fadeDuration);
+        updateLevelOpacity((introZoomProgress - zoomDuration - buffer) / fadeDuration);
     } else {
         updateLevelOpacity(1);
     }
@@ -117,15 +124,19 @@ window.addEventListener("keydown", function (event) {
             console.log("shift");
             shift = true;
             break;
-        case "Enter":
-            console.log("enter");
-            enter = true;
-            break;
         case "Esc": // IE/Edge specific value
         case "Escape":
             console.log("escape");
             esc = true;
             drawLevelEditorGrid(true);
+            break;
+        case "z":
+            console.log("z");
+            z = true;
+            break;
+        case "x":
+            console.log("x");
+            x = true;
             break;
         default:
             return; // Quit when this doesn't handle the key event.
@@ -141,46 +152,41 @@ window.addEventListener("keyup", function (event) {
   
     switch (event.key) {
         case " ":
-            console.log("space");
             space = false;
             break;
         case "Down": // IE/Edge specific value
         case "ArrowDown":
         case "s":
-            console.log("down");
             down = false;
             break;
         case "Up": // IE/Edge specific value
         case "ArrowUp":
         case "w":
-            console.log("up");
             up = false;
             break;
         case "Left": // IE/Edge specific value
         case "ArrowLeft":
         case "a":
-            console.log("left");
             left = false;
             break;
         case "Right": // IE/Edge specific value
         case "ArrowRight":
         case "d":
-            console.log("right");
             right = false;
             break;
         case "Shift":
-            console.log("shift");
             shift = false;
-            break;
-        case "Enter":
-            console.log("enter");
-            enter = false;
             break;
         case "Esc": // IE/Edge specific value
         case "Escape":
-            console.log("escape");
             esc = false;
             drawLevelEditorGrid(false);
+            break;
+        case "z":
+            z = false;
+            break;
+        case "x":
+            x = false;
             break;
         default:
             return; // Quit when this doesn't handle the key event.
@@ -189,7 +195,8 @@ window.addEventListener("keyup", function (event) {
     event.preventDefault();
 }, true);
 
-function mobileClick() {
+var latestTap;
+function mobileTap() {
     click = true;
     if (!deviceOrientationGranted) {
         DeviceMotionEvent.requestPermission().then(response => {
@@ -206,6 +213,17 @@ function mobileClick() {
             }
         });
     }
+    // Test for double tap
+    var now = new Date().getTime();
+    var timeSince = now - latestTap;
+    if ((timeSince < 300) && (timeSince > 0)) {
+        zoom *= 2;
+        if (zoom > 4) {
+            zoom = 0.5;
+        }
+        updateZoom(zoom);
+    }
+    latestTap = new Date().getTime();
 }
 
-document.getElementById("html").addEventListener("touchstart", mobileClick);
+document.getElementById("html").addEventListener("touchstart", mobileTap);
