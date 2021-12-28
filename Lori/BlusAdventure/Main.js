@@ -217,11 +217,11 @@ function mobileTap() {
     var now = new Date().getTime();
     var timeSince = now - latestTap;
     if ((timeSince < 300) && (timeSince > 0)) {
-        zoom *= 2;
-        if (zoom > 4) {
-            zoom = 0.5;
+        if (zoom < 4) {
+            updateZoom(zoom * 2);
+        } else {
+            updateZoom(0.5);
         }
-        updateZoom(zoom);
     }
     latestTap = new Date().getTime();
 }
