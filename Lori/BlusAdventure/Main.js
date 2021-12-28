@@ -30,11 +30,17 @@ var alpha = 0;
 var beta = 0;
 var gamma = 0;
 
+var svg = d3.select("body")
+    .append("svg")
+    .attr("width", gameWidth)
+    .attr("height", gameHeight);
+
 if (window.innerWidth / gameWidth < window.innerHeight / gameHeight) {
-    document.body.style.zoom = window.innerWidth / gameWidth;
+    svg.style("transform", "scale(" + window.innerWidth / gameWidth + ")");
 } else {
-    document.body.style.zoom = window.innerHeight / gameHeight;
+    svg.style("transform", "scale(" + window.innerHeight / gameHeight+ ")");
 }
+svg.style("transform-origin", "0 0");
 
 function flipY(y) {
     return gameHeight - y;
@@ -85,11 +91,6 @@ if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(navigator.userAgent)
         .attr("onclick", "mobileClick()")
         .html("Access Device Orientation");
 }
-
-var svg = d3.select("body")
-    .append("svg")
-    .attr("width", gameWidth)
-    .attr("height", gameHeight);
 
 // Key Event listeners
 window.addEventListener("keydown", function (event) {
