@@ -4,8 +4,8 @@ var zoom = startingZoom;
 var introZoomProgress = -1;
 var bluRad = 32 * zoom;
 var bluSize = 2 * bluRad;
-var gameWidth = window.innerWidth;
-var gameHeight = window.innerHeight;
+var gameWidth = 1024;
+var gameHeight = gameWidth * 1.5;
 var bluStartingX = bluSize;
 var bluStartingY = bluSize * 1.5;
 var bluX = bluStartingX;
@@ -29,6 +29,12 @@ var gameStarted = false;
 var alpha = 0;
 var beta = 0;
 var gamma = 0;
+
+if (window.innerWidth / gameWidth < window.innerHeight / gameHeight) {
+    document.body.style.zoom = window.innerWidth / gameWidth;
+} else {
+    document.body.style.zoom = window.innerHeight / gameHeight;
+}
 
 function flipY(y) {
     return gameHeight - y;
