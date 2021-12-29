@@ -4,8 +4,8 @@ var zoom = startingZoom;
 var introZoomProgress = -1;
 var bluRad = 32 * zoom;
 var bluSize = 2 * bluRad;
-var gameWidth = 1024;
-var gameHeight = gameWidth * 1.5;
+var gameWidth = 32 * 40;
+var gameHeight = 32 * 22;
 var bluStartingX = bluSize;
 var bluStartingY = bluSize * 1.5;
 var bluX = bluStartingX;
@@ -33,14 +33,26 @@ var gamma = 0;
 var svg = d3.select("body")
     .append("svg")
     .attr("width", gameWidth)
-    .attr("height", gameHeight);
+    .attr("height", gameHeight)
+    .style("position", "absolute");
 
 if (window.innerWidth / gameWidth < window.innerHeight / gameHeight) {
     svg.style("transform", "scale(" + window.innerWidth / gameWidth + ")");
 } else {
     svg.style("transform", "scale(" + window.innerHeight / gameHeight+ ")");
 }
-svg.style("transform-origin", "0 0");
+svg.style("transform-origin", "top left");
+
+var mobile = /(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(navigator.userAgent) || /Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(navigator.userAgent);
+if (mobile) {
+    d3.select("body")
+        .append("button")
+        .attr("id", "deviceOrientationButton")
+        .attr("onclick", "requestDeviceOrientation()")
+        .html("Access Device Orientation")
+        .style("float", "left")
+        .style("position", "absolute");
+}
 
 function flipY(y) {
     return gameHeight - y;
@@ -82,14 +94,6 @@ function introZoom(frameTime) {
     } else {
         updateLevelOpacity(1);
     }
-}
-
-if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(navigator.userAgent) || /Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(navigator.userAgent)) {
-    d3.select("body")
-        .append("button")
-        .attr("id", "deviceOrientationButton")
-        .attr("onclick", "mobileClick()")
-        .html("Access Device Orientation");
 }
 
 // Key Event listeners
@@ -205,6 +209,22 @@ window.addEventListener("keyup", function (event) {
 var latestTap;
 function mobileTap() {
     click = true;
+    // Test for double tap
+    var now = new Date().getTime();
+    var timeSince = now - latestTap;
+    if ((timeSince < 300) && (timeSince > 0)) {
+        if (zoom < 4) {
+            updateZoom(zoom * 2);
+        } else {
+            updateZoom(0.5);
+        }
+    }
+    latestTap = new Date().getTime();
+}
+
+document.getElementById("html").addEventListener("touchstart", mobileTap);
+
+function requestDeviceOrientation() {
     if (!deviceOrientationGranted) {
         DeviceMotionEvent.requestPermission().then(response => {
             if (response == "granted") {
@@ -220,17 +240,4 @@ function mobileTap() {
             }
         });
     }
-    // Test for double tap
-    var now = new Date().getTime();
-    var timeSince = now - latestTap;
-    if ((timeSince < 300) && (timeSince > 0)) {
-        if (zoom < 4) {
-            updateZoom(zoom * 2);
-        } else {
-            updateZoom(0.5);
-        }
-    }
-    latestTap = new Date().getTime();
 }
-
-document.getElementById("html").addEventListener("touchstart", mobileTap);
