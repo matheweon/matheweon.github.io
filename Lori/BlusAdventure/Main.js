@@ -241,19 +241,17 @@ function mobileTap() {
 document.getElementById("html").addEventListener("touchstart", mobileTap);
 
 function requestDeviceOrientation() {
-    if (!deviceOrientationGranted) {
-        DeviceMotionEvent.requestPermission().then(response => {
-            if (response == "granted") {
-                // Add a listener to get smartphone orientation in the alpha-beta-gamma axes (units in degrees)
-                window.addEventListener("deviceorientation", (event) => {
-                    // Expose each orientation angle in a more readable way
-                    alpha = event.alpha;
-                    beta = event.beta;
-                    gamma = event.gamma;
-                });
-                deviceOrientationGranted = true;
-                d3.select("#deviceOrientationButton").remove();
-            }
-        });
-    }
+    DeviceMotionEvent.requestPermission().then(response => {
+        if (response == "granted") {
+            // Add a listener to get smartphone orientation in the alpha-beta-gamma axes (units in degrees)
+            window.addEventListener("deviceorientation", (event) => {
+                // Expose each orientation angle in a more readable way
+                alpha = event.alpha;
+                beta = event.beta;
+                gamma = event.gamma;
+            });
+            deviceOrientationGranted = true;
+            d3.select("#deviceOrientationButton").remove();
+        }
+    });
 }
