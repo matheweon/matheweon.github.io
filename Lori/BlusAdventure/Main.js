@@ -39,6 +39,9 @@ var svg = d3.select("body")
 var mobile = /(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(navigator.userAgent) || /Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(navigator.userAgent);
 if (typeof(DeviceMotionEvent) !== "undefined" && typeof(DeviceMotionEvent.requestPermission) === "function") {
     deviceOrientationGranted = DeviceMotionEvent.requestPermission().then(response => {return response == "granted";});
+    if (deviceOrientationGranted) {
+        requestDeviceOrientation();
+    }
 }
 if (mobile && !deviceOrientationGranted) {
     d3.select("body")
