@@ -48,10 +48,12 @@ if (mobile) {
 }
 
 if (mobile) {
-    if (window.innerHeight / gameWidth < window.innerWidth / gameHeight) {
-        svg.style("transform", "scale(" + window.innerHeight / gameWidth + ")");
+    let mobileWidth = window.innerWidth;
+    let mobileHeight = window.innerWidth * (window.innerWidth / window.innerHeight);
+    if (mobileWidth / gameWidth < mobileHeight / gameHeight) {
+        svg.style("transform", "scale(" + mobileWidth / gameWidth + ")");
     } else {
-        svg.style("transform", "scale(" + window.innerWidth / gameHeight + ")");
+        svg.style("transform", "scale(" + mobileHeight / gameHeight + ")");
     }
 } else {
     if (window.innerWidth / gameWidth < window.innerHeight / gameHeight) {
@@ -215,17 +217,12 @@ window.addEventListener("keyup", function (event) {
 }, true);
 
 var latestTap;
-var latestDoubleTap;
 function mobileTap() {
     click = true;
-    // Test for triple tap
+    // Test for double tap
     var now = new Date().getTime();
     var timeSince = now - latestTap;
-    if ((timeSince < 300) && (timeSince > 100)) {
-        latestDoubleTap = now;
-    }
-    timeSince = now - latestDoubleTap;
-    if ((timeSince < 300) && (timeSince > 100)) {
+    if ((timeSince < 400) && (timeSince > 200)) {
         if (zoom < 4) {
             updateZoom(zoom * 2);
         } else {
