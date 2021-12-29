@@ -37,7 +37,10 @@ var svg = d3.select("body")
     .style("position", "absolute");
 
 var mobile = /(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(navigator.userAgent) || /Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(navigator.userAgent);
-if (mobile) {
+if (typeof(DeviceMotionEvent) !== "undefined" && typeof(DeviceMotionEvent.requestPermission) === "function") {
+    deviceOrientationGranted = DeviceMotionEvent.requestPermission().then(response => {return response == "granted";});
+}
+if (mobile && !deviceOrientationGranted) {
     d3.select("body")
         .append("button")
         .attr("id", "deviceOrientationButton")
