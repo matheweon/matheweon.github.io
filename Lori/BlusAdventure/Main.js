@@ -1,7 +1,9 @@
+var scale = 1;
 var startingZoom = 5;
 var finalZoom = 0.5;
 var zoom = startingZoom;
-var introZoomProgress = -1;
+var startingIntroZoomProgress = -3;
+var introZoomProgress = startingIntroZoomProgress;
 var bluRad = 32 * zoom;
 var bluSize = 2 * bluRad;
 var gameWidth = 32 * 40;
@@ -60,18 +62,32 @@ if (mobile) {
     let mobileWidth = window.innerWidth;
     let mobileHeight = window.innerWidth * (window.innerWidth / window.innerHeight);
     if (mobileWidth / gameWidth < mobileHeight / gameHeight) {
-        svg.style("transform", "scale(" + mobileWidth / gameWidth + ")");
+        scale = mobileWidth / gameWidth;
     } else {
-        svg.style("transform", "scale(" + mobileHeight / gameHeight + ")");
+        scale = mobileHeight / gameHeight;
     }
 } else {
     if (window.innerWidth / gameWidth < window.innerHeight / gameHeight) {
-        svg.style("transform", "scale(" + window.innerWidth / gameWidth + ")");
+        scale = window.innerWidth / gameWidth;
     } else {
-        svg.style("transform", "scale(" + window.innerHeight / gameHeight + ")");
+        scale = window.innerHeight / gameHeight;
     }
 }
+svg.style("transform", "scale(" + scale + ")");
 svg.style("transform-origin", "top left");
+
+svg.append("text")
+    .attr("class", "introText")
+    .attr("x", 100)
+    .attr("y", 500)
+    .style("font-size", 200)
+    .text("Blu's");
+svg.append("text")
+    .attr("class", "introText")
+    .attr("x", 100)
+    .attr("y", 650)
+    .style("font-size", 200)
+    .text("Adventure");
 
 function flipY(y) {
     return gameHeight - y;
@@ -95,16 +111,25 @@ function updateZoom(z, level = true) {
 }
 
 function introZoom(frameTime) {
+    //updateZoom(finalZoom);
+    //updateZoom(startingZoom, false);
     let zoomDuration = 3;
     let buffer = 999;
     let fadeDuration = 1.5;
+    if (introZoomProgress === startingIntroZoomProgress) {
+        bluRad = 32 * finalZoom;
+        createLevel(levelNum);
+    }
     if (introZoomProgress < zoomDuration) {
         introZoomProgress += frameTime / 1000;
         if (introZoomProgress > 0) {
             updateZoom(startingZoom + (finalZoom - startingZoom) * 1.0135673 * (1 / (1 + Math.pow(Math.E, -10 * (introZoomProgress / zoomDuration - 0.5))) - 0.00669285), false);
+            d3.selectAll(".introText")
+                .style("opacity", (zoomDuration - introZoomProgress) / zoomDuration);
         }
     } else if (introZoomProgress < zoomDuration + buffer) {
-        updateZoom(finalZoom);
+        updateZoom(finalZoom, false);
+        d3.selectAll(".introText").remove();
         gameStarted = true;
         introZoomProgress = zoomDuration + buffer;
     } else if (introZoomProgress < zoomDuration + buffer + fadeDuration) {

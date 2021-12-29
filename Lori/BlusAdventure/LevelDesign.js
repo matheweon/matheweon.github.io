@@ -203,7 +203,7 @@ function createGrassBlock(x, y) {
                 .style("fill", "url(#grassGradient" + ((tileX * dirtPixelation + i) % colorVariations) + ")")
                 .style("opacity", levelOpacity)
                 .attr("width", Math.ceil(bluRad / dirtPixelation))
-                .attr("height", Math.ceil(bluRad * 3/4))
+                .attr("height", Math.ceil(bluRad))
                 .attr("x", x + i / 4 * bluRad)
                 .attr("y", y);
     }

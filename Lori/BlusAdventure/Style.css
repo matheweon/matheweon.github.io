@@ -4,6 +4,12 @@ html, body {
     overflow: hidden;
 }
 
+.introText {
+    font-family: American Typewriter, serif;
+    font-weight: bold;
+    fill: #3af;
+}
+
 .levelEditorGrid {
     fill: #f00;
     font-size: 8px;
