@@ -51,8 +51,8 @@ function bluActions(frameTime) {
         bluVX += bluSpeed;
     }
     // Device orientation for mobile controls left/right
-    let betaPortrait = alpha < 180 ? beta : -beta;
-    bluVX += (1 / (1 + Math.pow(Math.E, -(betaPortrait - 15) / 3)) + 1 / (1 + Math.pow(Math.E, - (betaPortrait + 15) / 3)) - 1) * bluSpeed;
+    let orientation = gravityX < 0 ? beta : -beta;
+    bluVX += (1 / (1 + Math.pow(Math.E, -(orientation - 10) / 2)) + 1 / (1 + Math.pow(Math.E, - (orientation + 10) / 2)) - 1) * bluSpeed;
     if (shift) {
         bounceStart = undefined;
         window.requestAnimationFrame(bounce);
