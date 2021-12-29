@@ -5,7 +5,7 @@ var introZoomProgress = -1;
 var bluRad = 32 * zoom;
 var bluSize = 2 * bluRad;
 var gameWidth = 32 * 40;
-var gameHeight = 32 * 22;
+var gameHeight = 32 * 21;
 var bluStartingX = bluSize;
 var bluStartingY = bluSize * 1.5;
 var bluX = bluStartingX;
@@ -222,7 +222,7 @@ function mobileTap() {
     // Test for double tap
     var now = new Date().getTime();
     var timeSince = now - latestTap;
-    if ((timeSince < 400) && (timeSince > 200)) {
+    if ((timeSince < 250) && (timeSince > 50)) {
         if (zoom < 4) {
             updateZoom(zoom * 2);
         } else {
