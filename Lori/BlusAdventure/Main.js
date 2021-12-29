@@ -47,18 +47,17 @@ if (mobile) {
         .style("position", "absolute");
 }
 
-
 if (mobile) {
     if (window.innerHeight / gameWidth < window.innerWidth / gameHeight) {
         svg.style("transform", "scale(" + window.innerHeight / gameWidth + ")");
     } else {
-        svg.style("transform", "scale(" + window.innerWidth / gameHeight+ ")");
+        svg.style("transform", "scale(" + window.innerWidth / gameHeight + ")");
     }
 } else {
     if (window.innerWidth / gameWidth < window.innerHeight / gameHeight) {
         svg.style("transform", "scale(" + window.innerWidth / gameWidth + ")");
     } else {
-        svg.style("transform", "scale(" + window.innerHeight / gameHeight+ ")");
+        svg.style("transform", "scale(" + window.innerHeight / gameHeight + ")");
     }
 }
 svg.style("transform-origin", "top left");
@@ -216,11 +215,16 @@ window.addEventListener("keyup", function (event) {
 }, true);
 
 var latestTap;
+var latestDoubleTap;
 function mobileTap() {
     click = true;
-    // Test for double tap
+    // Test for triple tap
     var now = new Date().getTime();
     var timeSince = now - latestTap;
+    if ((timeSince < 300) && (timeSince > 100)) {
+        latestDoubleTap = now;
+    }
+    timeSince = now - latestDoubleTap;
     if ((timeSince < 300) && (timeSince > 100)) {
         if (zoom < 4) {
             updateZoom(zoom * 2);
