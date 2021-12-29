@@ -36,13 +36,6 @@ var svg = d3.select("body")
     .attr("height", gameHeight)
     .style("position", "absolute");
 
-if (window.innerWidth / gameWidth < window.innerHeight / gameHeight) {
-    svg.style("transform", "scale(" + window.innerWidth / gameWidth + ")");
-} else {
-    svg.style("transform", "scale(" + window.innerHeight / gameHeight+ ")");
-}
-svg.style("transform-origin", "top left");
-
 var mobile = /(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(navigator.userAgent) || /Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(navigator.userAgent);
 if (mobile) {
     d3.select("body")
@@ -53,6 +46,22 @@ if (mobile) {
         .style("float", "left")
         .style("position", "absolute");
 }
+
+
+if (mobile) {
+    if (window.innerHeight / gameWidth < window.innerWidth / gameHeight) {
+        svg.style("transform", "scale(" + window.innerHeight / gameWidth + ")");
+    } else {
+        svg.style("transform", "scale(" + window.innerWidth / gameHeight+ ")");
+    }
+} else {
+    if (window.innerWidth / gameWidth < window.innerHeight / gameHeight) {
+        svg.style("transform", "scale(" + window.innerWidth / gameWidth + ")");
+    } else {
+        svg.style("transform", "scale(" + window.innerHeight / gameHeight+ ")");
+    }
+}
+svg.style("transform-origin", "top left");
 
 function flipY(y) {
     return gameHeight - y;
@@ -212,7 +221,7 @@ function mobileTap() {
     // Test for double tap
     var now = new Date().getTime();
     var timeSince = now - latestTap;
-    if ((timeSince < 300) && (timeSince > 0)) {
+    if ((timeSince < 300) && (timeSince > 100)) {
         if (zoom < 4) {
             updateZoom(zoom * 2);
         } else {
