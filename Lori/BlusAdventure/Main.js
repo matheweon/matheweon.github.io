@@ -151,7 +151,7 @@ function introZoom(frameTime) {
         createLevel(levelNum);
         introZoomProgress = 0;
     } else if (introZoomProgress === 0) {
-        if (fps === 60) {
+        if (fps >= 30) {
             introZoomProgress += frameTime / 1000;
         }
     } else if (introZoomProgress < zoomDuration) {
