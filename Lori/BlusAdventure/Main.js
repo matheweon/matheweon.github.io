@@ -1,9 +1,12 @@
+var fps = 0;
+var msLastFrame = 0;
+var frames = 0;
+var framesInLastSecond = [];
 var scale = 1;
 var startingZoom = 5;
 var finalZoom = 0.5;
 var zoom = startingZoom;
-var startingIntroZoomProgress = -3;
-var introZoomProgress = startingIntroZoomProgress;
+var introZoomProgress = -1;
 var bluRad = 32 * zoom;
 var bluSize = 2 * bluRad;
 var gameWidth = 32 * 40;
@@ -77,17 +80,46 @@ svg.style("transform", "scale(" + scale + ")");
 svg.style("transform-origin", "top left");
 
 svg.append("text")
-    .attr("class", "introText")
+    .attr("class", "text introText")
     .attr("x", 100)
     .attr("y", 500)
     .style("font-size", 200)
     .text("Blu's");
 svg.append("text")
-    .attr("class", "introText")
+    .attr("class", "text introText")
     .attr("x", 100)
     .attr("y", 650)
     .style("font-size", 200)
     .text("Adventure");
+
+svg.append("text")
+    .attr("id", "msLastFrameText")
+    .attr("class", "text")
+    .attr("x", 2)
+    .attr("y", 14)
+    .text("Last Frame: " + msLastFrame + " ms");
+svg.append("text")
+    .attr("id", "fpsText")
+    .attr("class", "text")
+    .attr("x", 2)
+    .attr("y", 28)
+    .text("FPS: " + fps);
+
+function updateFPS(elapsed, frameTime) {
+    frames++;
+    for (let i = 0; i < framesInLastSecond.length; i++) {
+        framesInLastSecond[i] += frameTime;
+        if (framesInLastSecond[i] > 1000) {
+            framesInLastSecond.splice(i, 1);
+            i--;
+        }
+    }
+    framesInLastSecond.push(0);
+    msLastFrame = Math.round(frameTime);
+    fps = elapsed < 1 ? frames / elapsed : framesInLastSecond.length;
+    d3.select("#msLastFrameText").text("Last Frame: " + msLastFrame + " ms");
+    d3.select("#fpsText").text("FPS: " + fps);
+}
 
 function flipY(y) {
     return gameHeight - y;
@@ -111,16 +143,18 @@ function updateZoom(z, level = true) {
 }
 
 function introZoom(frameTime) {
-    //updateZoom(finalZoom);
-    //updateZoom(startingZoom, false);
     let zoomDuration = 3;
     let buffer = 999;
     let fadeDuration = 1.5;
-    if (introZoomProgress === startingIntroZoomProgress) {
+    if (introZoomProgress === -1) {
         bluRad = 32 * finalZoom;
         createLevel(levelNum);
-    }
-    if (introZoomProgress < zoomDuration) {
+        introZoomProgress = 0;
+    } else if (introZoomProgress === 0) {
+        if (fps === 60) {
+            introZoomProgress += frameTime / 1000;
+        }
+    } else if (introZoomProgress < zoomDuration) {
         introZoomProgress += frameTime / 1000;
         if (introZoomProgress > 0) {
             updateZoom(startingZoom + (finalZoom - startingZoom) * 1.0135673 * (1 / (1 + Math.pow(Math.E, -10 * (introZoomProgress / zoomDuration - 0.5))) - 0.00669285), false);

@@ -26,6 +26,7 @@ function bluMotion(timestamp) {
             updateBluPosition(frameTime);
         }
         drawBlu();
+        updateFPS(elapsed, frameTime);
     }
     bluMotionPreviousTimeStamp = timestamp;
     window.requestAnimationFrame(bluMotion);
