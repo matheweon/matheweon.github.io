@@ -4,7 +4,7 @@ const noteKeyCodes = [81, 50, 87, 51, 69, 82, 53, 84, 54, 89, 55, 85];
 const middleNote = 54;
 const keyWidth = 24 * 4;
 var displayKeyboardKeys = true;
-const tabNamesArray = ["singleNoteTraining", "intervalTraining", "melodyTraining"];
+const tabNamesArray = ["singleNoteTraining", "intervalTraining", "melodyTraining", "rhythmTraining"];
 var selectedTab = 0;
 $("#intervalTraining").hide();
 $("#melodyTraining").hide();
@@ -98,7 +98,9 @@ document.addEventListener("keydown", (event) => {
                 playNextSingleNote(); event.preventDefault();
             } else if (selectedTab === 1) {
                 playNextInterval(); event.preventDefault();
-            }   
+            } else if (selectedTab === 3) {
+                rhythmStart();
+            }
             break;
         // "SHIFT"
         case 16: toggleKeyboardDisplay(); break;

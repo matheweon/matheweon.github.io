@@ -14,6 +14,8 @@
         5a. Implement high score for each training exercise
     6. Implement timed trials
         6a. How many you can do in 15 seconds, 30 seconds, and 60 seconds
+    Bugs:
+    - Rhythm Training tab does not slide first time.
 -->
 
 <!DOCTYPE html>
@@ -96,11 +98,15 @@
         <div id="melodyTraining" class="tab">
             <h1>Melody Training</h1>
         </div>
+        <div id="rhythmTraining" class="tab">
+            <h1>Rhythm Training</h1>
+        </div>
     </div>
     <script src="Main.js"></script>
     <script src="SingleNoteTraining.js"></script>
     <script src="IntervalTraining.js"></script>
     <script src="MelodyTraining.js"></script>
+    <script src="RhythmTraining.js"></script>
     <script type="text/javascript">
         // Import from matheweon.github.io if the local file cannot be found
         function appendScript(localPath, filepath) {
@@ -129,6 +135,7 @@
         appendScript("SingleNoteTraining.js", "https://matheweon.github.io/Music/EarTraining/SingleNoteTraining.js");
         appendScript("IntervalTraining.js", "https://matheweon.github.io/Music/EarTraining/IntervalTraining.js");
         appendScript("MelodyTraining.js", "https://matheweon.github.io/Music/EarTraining/MelodyTraining.js");
+        appendScript("RhythmTraining.js", "https://matheweon.github.io/Music/EarTraining/RhythmTraining.js");
     </script>
 </body>
 
