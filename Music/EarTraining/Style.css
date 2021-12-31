@@ -90,3 +90,10 @@ button {
 #i10, #i22 {
     margin-right: 2.2em;
 }
+
+#rhythmTrainingBeatOffsetText {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    font-weight: bold;
+}

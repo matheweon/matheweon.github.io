@@ -6,8 +6,11 @@ const keyWidth = 24 * 4;
 var displayKeyboardKeys = true;
 const tabNamesArray = ["singleNoteTraining", "intervalTraining", "melodyTraining", "rhythmTraining"];
 var selectedTab = 0;
-$("#intervalTraining").hide();
-$("#melodyTraining").hide();
+for (tab of tabNamesArray) {
+    if (tab !== tabNamesArray[0]) {
+        $("#" + tab).hide();
+    }
+}
 const slideDistance = window.innerWidth * 2
 const slideSpeed = 750;
 var scores = [0, 0, 0];
@@ -99,7 +102,7 @@ document.addEventListener("keydown", (event) => {
             } else if (selectedTab === 1) {
                 playNextInterval(); event.preventDefault();
             } else if (selectedTab === 3) {
-                rhythmStart();
+                rhythmStartEndChoice();
             }
             break;
         // "SHIFT"
