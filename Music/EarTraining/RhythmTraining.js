@@ -1,4 +1,4 @@
-var rhythmTempo = 120;
+var rhythmTempo = 720;
 var rhythmBeatGap = 4;
 var rhythmBeatsPerMeasure = 4;
 var rhythmSpacebarBoolean = true;

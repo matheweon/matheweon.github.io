@@ -65,6 +65,7 @@ function truncateNote(note) {
 }
 
 function selectTab(direction) {
+    document.body.style.backgroundColor = "black";
     if (direction === "left") {
         selectedTab += tabNamesArray.length - 1;
         selectedTab %= tabNamesArray.length;

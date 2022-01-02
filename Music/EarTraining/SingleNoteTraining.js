@@ -69,7 +69,7 @@ function guessSingleNote(note) {
         selectedSingleNotes[note] = "incorrect";
         selectedSingleNotes[MIDIToNote(currentSingleNote, true)] = "correct";
         scores[0] = 0;
-        updateScores();
+        //updateScores();
         firstGuess = false;
     }
     drawPiano();
