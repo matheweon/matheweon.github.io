@@ -237,15 +237,18 @@ function createLevel(level) {
                 createGrassBlock(i, 1);
                 createDirtBlock(i, 0);
             }
-            let x = 4;
-            let y = 3;
+            let x = 8;
+            let y = 5;
             while (x < gameTileWidth && y < gameTileHeight) {
                 create2x2GrassBlock(x, y);
-                x += 4;
-                y += 2;
+                x += 8;
+                y += 4;
             }
-            replaceBlock(4, 1, createDirtBlock);
-            replaceBlock(5, 1, createDirtBlock);
+            for (let i = 2; i < 11; i++) {
+                createDirtBlock(32, i);
+            }
+            createGrassBlock(32, 11);
+            replaceBlock(32, 1, createDirtBlock);
             break;
     }
 }

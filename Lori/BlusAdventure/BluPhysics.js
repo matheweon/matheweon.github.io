@@ -104,7 +104,10 @@ function checkBluFloorCollision() {
         let blockX = d3.select(this).attr("x");
         let blockY = flipY(d3.select(this).attr("y"));
         let blockWidth = d3.select(this).attr("width");
+        let blockHeight = d3.select(this).attr("height");
+        // If about to collide by moving in x direction
         if (blockX < nextBluX + bluRX && blockX > nextBluX - bluRX - blockWidth) {
+            // If about to collide from top
             if (blockY > nextBluY - bluRY && blockY < nextBluY) {
                 if (bluVY < -25) {
                     bluVY *= -0.5;
@@ -114,14 +117,13 @@ function checkBluFloorCollision() {
                 }
                 onGround = true;
             }
+            // If 1 px above block
             if (blockY > nextBluY - bluRY - 1 && blockY < nextBluY || blockY > bluY - bluRY - 1 && blockY < bluY) {
                 onGround = true;
             }
         }
     })
 }
-
-
 
 
 window.requestAnimationFrame(bluMotion);
