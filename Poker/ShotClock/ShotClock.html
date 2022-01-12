@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html id="html">
+
+<head>
+    <title>Poker Shot Clock</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="icon" type="image/x-icon" href="PPChip.png">
+</head>
+
+<body onclick="reset()">
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://tonejs.github.io/build/Tone.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="Main.js"></script>
+    <script type="text/javascript">
+        // Import from matheweon.github.io if the local file cannot be found
+        function appendScript(localPath, filepath) {
+            if ($('body script[src="' + localPath + '"]').length > 0)
+                return;
+
+            var ele = document.createElement('script');
+            ele.setAttribute("type", "text/javascript");
+            ele.setAttribute("src", filepath);
+            $('body').append(ele);
+        }
+
+        function appendStyle(localPath, filepath) {
+            if ($('head link[href="' + localPath + '"]').length > 0)
+                return;
+
+            var ele = document.createElement('link');
+            ele.setAttribute("type", "text/css");
+            ele.setAttribute("rel", "Stylesheet");
+            ele.setAttribute("href", filepath);
+            $('head').append(ele);
+        }
+
+        appendStyle("Style.css", "https://matheweon.github.io/Poker/ShotClock/Style.css");
+        appendScript("Main.js", "https://matheweon.github.io/Poker/ShotClock/Main.js");
+    </script>
+</body>
+
+</html>
