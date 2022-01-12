@@ -32,10 +32,10 @@ function buildButton(s, text, bWidth, bHeight, x, y) {
     d3.select("body").append("input")
         .attr("id", id)
         .attr("class", "input")
-        .style("width", (bWidth - 8) + "px")
+        .style("width", bWidth + "px")
         .style("height", unit + "px")
         .style("margin-left", unit + "px")
-        .style("text-align", "center")
+        .style("font-size", unit + "px")
         .attr("value", streetTimes[s]);
     document.getElementById(id).addEventListener("input", (e) => {streetTimes[s] = parseFloat(e.target.value);});
     svg.append("rect")
