@@ -22,6 +22,10 @@ html, body {
     fill: #333;
 }
 
+.input {
+    border-radius: 0;
+}
+
 #TimeBank {
     transform: translateY(-5px)
 }

@@ -29,7 +29,7 @@ function clickButton(s) {
 
 function buildButton(s, text, bWidth, bHeight, x, y) {
     var id = text.replace(/ /g, "");
-    var input = d3.select("body").append("input")
+    d3.select("body").append("input")
         .attr("id", id)
         .attr("class", "input")
         .style("width", (bWidth - 8) + "px")
