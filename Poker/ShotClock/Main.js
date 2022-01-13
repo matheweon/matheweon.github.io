@@ -70,14 +70,23 @@ var mainText = svg.append("text")
     .attr("font-size", width > height * 5/3 ? width / 4 : width / 3)
     .text("Start")
 
+
+var latestTap;
 document.getElementById("html").addEventListener("touchstart", reset);
 function reset() {
     started = true;
+    // Test for double tap
+    var now = new Date().getTime();
+    var timeSince = now - latestTap;
+    if ((timeSince < 300)) {
+        timeLeft = 0;
+        started = false;
+    }
+    latestTap = new Date().getTime();
     if (!timeBankPressed) {
         timeLeft = streetTimes[street];
     }
     timeBankPressed = false;
-    updateText();
     Tone.loaded().then(() => {
         const now = Tone.now()
         sampler.triggerAttackRelease("C4", 0, now, 0);
@@ -113,8 +122,8 @@ function timer(timestamp) {
 
     if (timerPreviousTimeStamp !== undefined && started) {
         if (timeLeft > 0) {
-            timeLeft -= frameTime / 1000;
             updateText();
+            timeLeft -= frameTime / 1000;
         } else {
             timeLeft = 0;
             updateText();
@@ -128,6 +137,10 @@ function timer(timestamp) {
             }
         }
         prevTimeLeft = timeLeft;
+    }
+    if (!started) {
+        d3.select("body").style("background", "black");
+        mainText.text("Start");
     }
     timerPreviousTimeStamp = timestamp;
     window.requestAnimationFrame(timer);
