@@ -22,6 +22,10 @@ html, body {
     fill: #333;
 }
 
+#PreflopButton {
+    fill: #666;
+}
+
 .input {
     border: 0px;
     padding: 0px;

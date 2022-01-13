@@ -8,6 +8,7 @@ var timeLeft = 0;
 var prevTimeLeft = 0;
 var street = 0;
 var timeBankPressed = false;
+var timeBanksUsed = 0;
 
 var unit = width / 37;
 var bWidth = unit * 8;
@@ -19,13 +20,18 @@ var svg = d3.select("body").append("svg")
     .attr("height", height - unit * 2 - 16)
     .attr("y", unit)
 
-function clickButton(s) {
+function clickButton(s, id) {
     if (s === 4) {
+        timeBanksUsed++;
         timeLeft += streetTimes[s];
         timeBankPressed = true;
+        let color = timeBanksUsed === 1 ? "#666" : timeBanksUsed === 2 ? "#999" : timeBanksUsed === 3 ? "#ccc" : "#fff"; 
+        d3.select("#" + id + "Button").style("fill", color);
     } else {
         street = s;
         timeBankPressed = false;
+        d3.selectAll(".button").style("fill", "#333");
+        d3.select("#" + id + "Button").style("fill", "#666");
     }
 }
 
@@ -41,19 +47,20 @@ function buildButton(s, text, bWidth, bHeight, x, y) {
         .attr("value", streetTimes[s]);
     document.getElementById(id).addEventListener("input", (e) => {streetTimes[s] = parseFloat(e.target.value);});
     svg.append("rect")
+        .attr("id", id + "Button")
         .attr("class", "button")
         .attr("width", bWidth)
         .attr("height", bHeight)
         .attr("x", x)
         .attr("y", y)
-        .on("click", () => clickButton(s));
+        .on("click", () => clickButton(s, id));
     svg.append("text")
         .attr("class", "text")
         .attr("x", x + bWidth / 2)
         .attr("y", y + bHeight / 2 + textSize / 3)
         .attr("font-size", textSize)
         .text(text)
-        .on("click", () => clickButton(s));
+        .on("click", () => clickButton(s, id));
 }
 buildButton(0, "Preflop", bWidth, bHeight, unit, 0);
 buildButton(1, "Flop", bWidth, bHeight, unit * 10, 0);
@@ -85,6 +92,8 @@ function reset() {
     latestTap = new Date().getTime();
     if (!timeBankPressed) {
         timeLeft = streetTimes[street];
+        timeBanksUsed = 0;
+        d3.select("#TimeBankButton").style("fill", "#333");
     }
     timeBankPressed = false;
     Tone.loaded().then(() => {
@@ -128,7 +137,7 @@ function timer(timestamp) {
             timeLeft = 0;
             updateText();
         }
-        d3.select("body").style("background", "hsl(" + 120 * timeLeft / streetTimes[street] + ", 100%, 50%)");
+        d3.select("body").style("background", "hsl(" + 120 * timeLeft / streetTimes[street] + ", 100%, 33%)");
         for (let i = 0; i <= 3; i++) {
             if (prevTimeLeft > i && timeLeft <= i) {
                 Tone.loaded().then(() => {
