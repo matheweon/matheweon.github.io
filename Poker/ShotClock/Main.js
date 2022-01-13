@@ -1,3 +1,4 @@
+const mobile = /(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(navigator.userAgent) || /Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(navigator.userAgent);
 const width = window.innerWidth;
 const height = window.innerHeight;
 var started = false;
@@ -54,13 +55,16 @@ function buildButton(s, text, bWidth, bHeight, x, y) {
         .attr("x", x)
         .attr("y", y)
         .on("click", () => clickButton(s, id));
+    document.getElementById(id + "Button").addEventListener("touchstart", () => {clickButton(s, id)});
     svg.append("text")
+        .attr("id", id + "Text")
         .attr("class", "text")
         .attr("x", x + bWidth / 2)
         .attr("y", y + bHeight / 2 + textSize / 3)
         .attr("font-size", textSize)
         .text(text)
         .on("click", () => clickButton(s, id));
+    document.getElementById(id + "Text").addEventListener("touchstart", () => {clickButton(s, id)});
 }
 buildButton(0, "Preflop", bWidth, bHeight, unit, 0);
 buildButton(1, "Flop", bWidth, bHeight, unit * 10, 0);
@@ -75,21 +79,49 @@ var mainText = svg.append("text")
     .attr("x", width / 2)
     .attr("y", height / 2 + width / 16)
     .attr("font-size", width > height * 5/3 ? width / 4 : width / 3)
-    .text("Start")
-
+    .text("Start");
 
 var latestTap;
+var startTouchX;
+var startTouchY;
 document.getElementById("html").addEventListener("touchstart", reset);
-function reset() {
+document.getElementById("html").addEventListener("touchmove", swipe);
+function getTouches(evt) {
+    return evt.touches ||          // browser API
+        evt.originalEvent.touches; // jQuery
+}                
+function swipe(evt) {
+    if (!xDown || !yDown) {
+        return;
+    }
+    if (Math.sqrt(Math.pow(startTouchX - evt.touches[0].clientX, 2) + Math.pow(startTouchY - evt.touches[0].clientY, 2)) > 400) {
+        restart();
+    }
+    startTouchX = null;
+    startTouchY = null;
+}
+
+function restart() {
+    timeLeft = 0;
+    started = false;
+}
+
+function reset(evt=null) {
+    if (evt) {
+        const firstTouch = getTouches(evt)[0];                                      
+        startTouchX = firstTouch.clientX;                                      
+        startTouchY = firstTouch.clientY;
+    }
     started = true;
     // Test for double tap
-    var now = new Date().getTime();
-    var timeSince = now - latestTap;
-    if ((timeSince < 300)) {
-        timeLeft = 0;
-        started = false;
+    if (!mobile) {
+        var now = new Date().getTime();
+        var timeSince = now - latestTap;
+        if (timeSince < 300) {
+            restart();
+        }
+        latestTap = new Date().getTime();
     }
-    latestTap = new Date().getTime();
     if (!timeBankPressed) {
         timeLeft = streetTimes[street];
         timeBanksUsed = 0;
@@ -133,11 +165,12 @@ function timer(timestamp) {
         if (timeLeft > 0) {
             updateText();
             timeLeft -= frameTime / 1000;
+            d3.select("body").style("background", "hsl(" + 120 * timeLeft / streetTimes[street] + ", 100%, 33%)");
         } else {
             timeLeft = 0;
             updateText();
+            d3.select("body").style("background", "black");
         }
-        d3.select("body").style("background", "hsl(" + 120 * timeLeft / streetTimes[street] + ", 100%, 33%)");
         for (let i = 0; i <= 3; i++) {
             if (prevTimeLeft > i && timeLeft <= i) {
                 Tone.loaded().then(() => {
