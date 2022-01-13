@@ -1,6 +1,8 @@
 const width = window.innerWidth;
 const height = window.innerHeight;
 var started = false;
+var muted = true;
+
 var streetTimes = [10, 15, 20, 25, 30];
 var timeLeft = 0;
 var prevTimeLeft = 0;
@@ -35,7 +37,7 @@ function buildButton(s, text, bWidth, bHeight, x, y) {
         .style("width", bWidth + "px")
         .style("height", unit + "px")
         .style("margin-left", unit + "px")
-        .style("font-size", unit + "px")
+        .style("font-size", (unit * 0.9) + "px")
         .attr("value", streetTimes[s]);
     document.getElementById(id).addEventListener("input", (e) => {streetTimes[s] = parseFloat(e.target.value);});
     svg.append("rect")
@@ -68,6 +70,7 @@ var mainText = svg.append("text")
     .attr("font-size", width > height * 5/3 ? width / 4 : width / 3)
     .text("Start")
 
+document.getElementById("html").addEventListener("touchstart", reset);
 function reset() {
     started = true;
     if (!timeBankPressed) {
@@ -75,6 +78,25 @@ function reset() {
     }
     timeBankPressed = false;
     updateText();
+    Tone.loaded().then(() => {
+        const now = Tone.now()
+        sampler.triggerAttackRelease("C4", 0, now, 0);
+        Tone.context.resume();
+        console.log(Tone.context.state);
+        // For devices/browsers that start the audiocontext in suspended mode, this prompts the user to unmute sound.
+        if (Tone.context.state !== "running" && muted) {
+            d3.select("unmute")
+                .attr("width", width)
+                .attr("height", height)
+            $("#unmute").show();
+            document.querySelector("#unmute").addEventListener("click", function() {
+                Tone.context.resume().then(() => {
+                    $("#unmute").hide();
+                    muted = false;
+                });
+            });
+        }
+    });
 }
 
 function updateText() {
