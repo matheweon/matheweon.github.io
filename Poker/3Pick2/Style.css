@@ -1,0 +1,19 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    background: black;
+}
+
+.text {
+    font-family: Helvetica;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    fill: white;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    text-anchor: middle;
+}

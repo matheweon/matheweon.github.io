@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html id="html" onclick="reset()">
+
+<head>
+    <title>3 Pick 2</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="icon" type="image/x-icon" href="PPChip.png">
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="Init.js"></script>
+    <script src="phe/bin-bit-table.js"></script>
+    <script src="phe/dptables.js"></script>
+    <script src="phe/evaluator5.js"></script>
+    <script src="phe/evaluator6.js"></script>
+    <script src="phe/evaluator7.js"></script>
+    <script src="phe/hand-code.js"></script>
+    <script src="phe/hand-rank.js"></script>
+    <script src="phe/hash.js"></script>
+    <script src="phe/hashtable.js"></script>
+    <script src="phe/hashtable5.js"></script>
+    <script src="phe/hashtable6.js"></script>
+    <script src="phe/hashtable7.js"></script>
+    <script src="phe/phe.js"></script>
+    <script src="Main.js"></script>
+    <script type="text/javascript">
+        // Import from matheweon.github.io if the local file cannot be found
+        function appendScript(localPath, filepath) {
+            if ($('body script[src="' + localPath + '"]').length > 0)
+                return;
+
+            var ele = document.createElement('script');
+            ele.setAttribute("type", "text/javascript");
+            ele.setAttribute("src", filepath);
+            $('body').append(ele);
+        }
+
+        function appendStyle(localPath, filepath) {
+            if ($('head link[href="' + localPath + '"]').length > 0)
+                return;
+
+            var ele = document.createElement('link');
+            ele.setAttribute("type", "text/css");
+            ele.setAttribute("rel", "Stylesheet");
+            ele.setAttribute("href", filepath);
+            $('head').append(ele);
+        }
+
+        appendStyle("Style.css", "https://matheweon.github.io/Poker/3Pick2/Style.css");
+        for (file of ["bin-bit-table.js", "dptables.js", "evaluator5.js", "evaluator6.js", "evaluator7.js", "hand-code.js", "hand-rank.js", "hash.js", "hashtable.js", "hashtable5.js", "hashtable6.js", "hashtable7.js", "phe.js"]) {
+            appendScript(file, "https://matheweon.github.io/Poker/3Pick2/phe/" + file);
+        }
+        appendScript("Main.js", "https://matheweon.github.io/Poker/3Pick2/Main.js");
+    </script>
+</body>
+
+</html>
