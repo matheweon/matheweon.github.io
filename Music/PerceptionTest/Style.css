@@ -53,17 +53,17 @@ button span {
 }
 
 .correctlySelected {
-    background-color: green;
+    background-color: green !important;
     border-radius: 10% !important;
 }
 
 .correct {
-    background-color: greenyellow;
+    background-color: greenyellow !important;
     border-radius: 10% !important;
 }
 
 .incorrect {
-    background-color: red;
+    background-color: red !important;
     border-radius: 10% !important;
 }
 
