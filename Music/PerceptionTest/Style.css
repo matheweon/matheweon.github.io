@@ -46,24 +46,23 @@ button {
     border-radius: 10% !important;
 }
 
-button:active {
-    border-radius: 10% !important;
-}
-
 button span {
     font-size: 4vh
 }
 
 .correctlySelected {
     background-color: green;
+    border-radius: 10% !important;
 }
 
 .correct {
     background-color: greenyellow;
+    border-radius: 10% !important;
 }
 
 .incorrect {
     background-color: red;
+    border-radius: 10% !important;
 }
 
 .tab {
