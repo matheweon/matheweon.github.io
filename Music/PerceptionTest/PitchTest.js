@@ -55,7 +55,7 @@ function guessPitch(guess) {
         }
         newPitches()
     } else {
-        d3.select("#cents").html("Press space or click to listen")
+        d3.select("#cents").html("Press space or click anywhere that's not a button to listen")
     }
 }
 

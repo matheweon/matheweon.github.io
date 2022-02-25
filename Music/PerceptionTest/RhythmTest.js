@@ -79,7 +79,7 @@ function guessRhythm(guess) {
         }
         newRhythm()
     } else {
-        d3.select("#ms").html("Press space or click to listen")
+        d3.select("#ms").html("Press space or click anywhere that's not a button to listen")
     }
 }
 
