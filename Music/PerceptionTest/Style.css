@@ -26,7 +26,7 @@ body, h1, h2, button, p {
 }
 
 h1, h2, p, span {
-    color: white;
+    color: white !important;
 }
 
 h2 {
@@ -44,7 +44,7 @@ button {
     text-align: center;
     padding: 0px 0px !important;
     border-radius: 10% !important;
-    background-color: #777;
+    background-color: #777 !important;
 }
 
 button:focus {
