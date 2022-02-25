@@ -44,7 +44,7 @@ button {
     text-align: center;
     padding: 0px 0px !important;
     border-radius: 10% !important;
-    outline: none !important;
+    outline: 0 !important;
     background-color: #777;
 }
 
