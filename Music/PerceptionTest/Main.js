@@ -1,10 +1,4 @@
-const notes = ["C", "Db", "D", "Eb", "E", "F", "Gb", "G", "Ab", "A", "Bb", "B"];
-const noteKeys = ["Q", "2", "W", "3", "E", "R", "5", "T", "6", "Y", "7", "U"];
-const noteKeyCodes = [81, 50, 87, 51, 69, 82, 53, 84, 54, 89, 55, 85];
-const middleNote = 54;
-const keyWidth = 24 * 4;
-var displayKeyboardKeys = true;
-const tabNamesArray = ["singleNoteTraining", "intervalTraining", "melodyTraining", "rhythmTraining"];
+const tabNamesArray = ["pitchTest", "rhythmTest"];
 var selectedTab = 0;
 for (tab of tabNamesArray) {
     if (tab !== tabNamesArray[0]) {
@@ -13,8 +7,10 @@ for (tab of tabNamesArray) {
 }
 const slideDistance = window.innerWidth * 2
 const slideSpeed = 750;
-var scores = [0, 0, 0];
-var highScores = [0, 0, 0];
+var scores = [
+    [0, 0, 0, [0, 0], [0, 0], [0, 0], [0, 0]],
+    [0, 0, 0, [0, 0], [0, 0], [0, 0], [0, 0]]
+];
 
 const sampler = new Tone.Sampler({
     urls: {
@@ -53,17 +49,6 @@ const sampler = new Tone.Sampler({
     baseUrl: "https://tonejs.github.io/audio/salamander/",
 }).toDestination();
 
-function MIDIToNote(index, truncate) {
-    if (truncate) {
-        return truncateNote(notes[index % 12] + parseInt(index / 12));
-    }
-    return notes[index % 12] + parseInt(index / 12);
-}
-
-function truncateNote(note) {
-    return note.slice(0, -1);
-}
-
 function selectTab(direction) {
     document.body.style.backgroundColor = "black";
     if (direction === "left") {
@@ -89,129 +74,40 @@ function selectTab(direction) {
     }
 }
 
-function toggleKeyboardDisplay() {
-    displayKeyboardKeys = !displayKeyboardKeys;
-    drawPiano();
-}
-
 document.addEventListener("keydown", (event) => {
     switch (event.keyCode) {
         // "SPACE"
         case 32:
-            if (selectedTab === 0) {
-                playNextSingleNote(); event.preventDefault();
-            } else if (selectedTab === 1) {
-                playNextInterval(); event.preventDefault();
-            } else if (selectedTab === 3) {
-                rhythmStartEndChoice();
-            }
+            event.preventDefault();
+            play()
             break;
-        // "SHIFT"
-        case 16: toggleKeyboardDisplay(); break;
-        // "="
-        case 187: toggleExtendedRange(); break;
         // "LEFT ARROW"
         case 37: selectTab("left"); break;
         // "RIGHT ARROW"
         case 39: selectTab("right"); break;
-        // "O"
-        case 79:
-            singleNoteCounter = 0;
-            playNextSingleNote(); 
-            scores[0] = 0;
-            updateScores(0);
-            break;
-        // "P"
-        case 80: replayBothNotes(); break;
-        // Piano keys
-        case noteKeyCodes[0]: selectSingleNote(0); break;
-        case noteKeyCodes[1]: selectSingleNote(1); break;
-        case noteKeyCodes[2]: selectSingleNote(2); break;
-        case noteKeyCodes[3]: selectSingleNote(3); break;
-        case noteKeyCodes[4]: selectSingleNote(4); break;
-        case noteKeyCodes[5]: selectSingleNote(5); break;
-        case noteKeyCodes[6]: selectSingleNote(6); break;
-        case noteKeyCodes[7]: selectSingleNote(7); break;
-        case noteKeyCodes[8]: selectSingleNote(8); break;
-        case noteKeyCodes[9]: selectSingleNote(9); break;
-        case noteKeyCodes[10]: selectSingleNote(10); break;
-        case noteKeyCodes[11]: selectSingleNote(11); break;
     }
 });
 
-function drawKey(note, x, y, width, height, fill) {
-    svgSingleNote.append("rect")
-        .attr("note", note)
-        .attr("x", x)
-        .attr("y", y)
-        .attr("width", width)
-        .attr("height", height)
-        .attr("fill", fill)
-        .attr("stroke", "black")
-        .attr("stroke-width", keyWidth / 18)
-        .on("click", element => {
-            selectSingleNote(element.srcElement.getAttribute("note"));
-        });
-}
+$(document).on("click", function (event) {
+    play()
+});
+$("button").on("click", function (event) {
+    event.stopPropagation();
+});
 
-function drawKeyText(x, y, text, blackKey) {
-    svgSingleNote.append("text")
-        .attr("x", x)
-        .attr("y", y)
-        .style("font-size", keyWidth * 0.4)
-        .style("fill", blackKey ? "white" : "black")
-        .style("text-anchor", "middle")
-        .text(text);
-}
-
-function getColor(note, blackKey) {
-    if (selectedSingleNotes[note] === "correctlySelected") {
-        return "green";
-    } else if (selectedSingleNotes[note] === "correct") {
-        return "yellowgreen";
-    } else if (selectedSingleNotes[note] === "incorrect") {
-        return "red";
-    } else if (blackKey) {
-        return "#131313";
-    } else {
-        return "white";
-    }
-}
-
-function drawPiano() {
-    drawKey("C", 0, 0, keyWidth, keyWidth * 5, getColor("C"));
-    drawKey("D", keyWidth, 0, keyWidth, keyWidth * 5, getColor("D"));
-    drawKey("E", keyWidth * 2, 0, keyWidth, keyWidth * 5, getColor("E"));
-    drawKey("F", keyWidth * 3, 0, keyWidth, keyWidth * 5, getColor("F"));
-    drawKey("G", keyWidth * 4, 0, keyWidth, keyWidth * 5, getColor("G"));
-    drawKey("A", keyWidth * 5, 0, keyWidth, keyWidth * 5, getColor("A"));
-    drawKey("B", keyWidth * 6, 0, keyWidth, keyWidth * 5, getColor("B"));
-    drawKey("Db", keyWidth * 15/24, 0, keyWidth * 14/24, keyWidth * 3, getColor("Db", true));
-    drawKey("Eb", keyWidth * 43/24, 0, keyWidth * 14/24, keyWidth * 3, getColor("Eb", true));
-    drawKey("Gb", keyWidth * 85/24, 0, keyWidth * 14/24, keyWidth * 3, getColor("Gb", true));
-    drawKey("Ab", keyWidth * 113/24, 0, keyWidth * 14/24, keyWidth * 3, getColor("Ab", true));
-    drawKey("Bb", keyWidth * 141/24, 0, keyWidth * 14/24, keyWidth * 3, getColor("Bb", true));
-    if (displayKeyboardKeys) {
-        drawKeyText(keyWidth * 0.5, keyWidth * 4.5, noteKeys[0]);
-        drawKeyText(keyWidth * 1.5, keyWidth * 4.5, noteKeys[2]);
-        drawKeyText(keyWidth * 2.5, keyWidth * 4.5, noteKeys[4]);
-        drawKeyText(keyWidth * 3.5, keyWidth * 4.5, noteKeys[5]);
-        drawKeyText(keyWidth * 4.5, keyWidth * 4.5, noteKeys[7]);
-        drawKeyText(keyWidth * 5.5, keyWidth * 4.5, noteKeys[9]);
-        drawKeyText(keyWidth * 6.5, keyWidth * 4.5, noteKeys[11]);
-        drawKeyText(keyWidth * 22/24, keyWidth * 2.8, noteKeys[1], true);
-        drawKeyText(keyWidth * 50/24, keyWidth * 2.8, noteKeys[3], true);
-        drawKeyText(keyWidth * 92/24, keyWidth * 2.8, noteKeys[6], true);
-        drawKeyText(keyWidth * 120/24, keyWidth * 2.8, noteKeys[8], true);
-        drawKeyText(keyWidth * 148/24, keyWidth * 2.8, noteKeys[10], true);
+function play() {
+    if (selectedTab === 0) {
+        pitchTest();
+    } else if (selectedTab === 1) {
+        rhythmTest();
     }
 }
 
 function updateScores() {
     for (let i = 0; i < scores.length; i++) {
-        if (scores[i] > highScores[i]) {
-            highScores[i] = scores[i];
+        if (scores[i][1] > scores[i][2]) {
+            scores[i][2] = scores[i][1];
         }
     }
-    d3.select("#scoreText").html("<b>Score</b>: " + scores[selectedTab] + "<br><b>High Score</b>: " + highScores[selectedTab]);
+    d3.select("#scoreText").html("<b>Total</b>: " + scores[selectedTab][0] + "<br><b>Score</b>: " + scores[selectedTab][1] + "<br><b>High Score</b>: " + scores[selectedTab][2] + "<br><b>Difficulty 1</b>: " + scores[selectedTab][3][0] + " / " + scores[selectedTab][3][1] + "<br><b>Difficulty 2</b>: " + scores[selectedTab][4][0] + " / " + scores[selectedTab][4][1] + "<br><b>Difficulty 3</b>: " + scores[selectedTab][5][0] + " / " + scores[selectedTab][5][1] + "<br><b>Difficulty 4</b>: " + scores[selectedTab][6][0] + " / " + scores[selectedTab][6][1])
 }
