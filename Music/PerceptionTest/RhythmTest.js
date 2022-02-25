@@ -35,9 +35,27 @@ function newRhythm() {
     setDifficulty()
     rhythmOffset = rhythmOffsets[difficulty]
     rhythmDir = Math.floor(Math.random() * 3 - 1)
+    do {
+        for (let i = 1; i < 8; i++) {
+            rhythm[i] = Math.random() < 0.5
+        }
+    } while (!validRhythm())
+}
+
+function validRhythm() {
+    let valid = true
+    let silence = 0
     for (let i = 1; i < 8; i++) {
-        rhythm[i] = Math.random() < 0.5
+        if (rhythm[i]) {
+            silence = 0
+        } else {
+            silence++
+        }
+        if (silence >= 3) {
+            valid = false
+        }
     }
+    return valid
 }
 
 function guessRhythm(guess) {
