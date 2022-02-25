@@ -38,13 +38,15 @@ p {
 }
 
 button {
-    -webkit-appearance: none;
-    -webkit-border-fit:border !important;
     width: 14vh;
     height: 14vh;
-    font-size: 4vh;
+    font-size: 0;
     text-align: center;
     padding: none;
+}
+
+button span {
+    font-size: 4vh
 }
 
 .correctlySelected {
