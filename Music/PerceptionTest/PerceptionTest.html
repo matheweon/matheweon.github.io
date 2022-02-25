@@ -18,9 +18,10 @@
 <body id="body" scroll="no">
     <p id="keyLegend">
         <b>Space / Click</b>: Play / Replay<br>
-        <b>Left / Right</b>: Navigate Tabs
+        <b>Left / Right / Swipe</b>: Navigate Tabs
     </p>
     <p id="scoreText">
+        <b>Pitch</b><br>
         <b>Total</b>: 0<br>
         <b>Score</b>: 0<br>
         <b>High Score</b>: 0<br>
@@ -35,15 +36,14 @@
             <button id="pitch0" class="pitch" onclick="guessPitch(-1)">Flat</button>
             <button id="pitch1" class="pitch" onclick="guessPitch(0)">Same</button>
             <button id="pitch2" class="pitch" onclick="guessPitch(1)">Sharp</button>
-            <h2 id="cents"></h2>
+            <h2 id="cents">An interval is played, then the same interval is played flat, the same, or sharp</h2>
         </div>
         <div id="rhythmTest" class="tab">
             <h1>Rhythm Test</h1>
-            <p id="rhythmTrainingBeatOffsetText"></p>
-            <button id="rhythm0" class="rhythm" onclick="guessRhythm(-1)">Slow</button>
+            <button id="rhythm0" class="rhythm" onclick="guessRhythm(-1)">Early</button>
             <button id="rhythm1" class="rhythm" onclick="guessRhythm(0)">Same</button>
-            <button id="rhythm2" class="rhythm" onclick="guessRhythm(1)">Fast</button>
-            <h2 id="ms"></h2>
+            <button id="rhythm2" class="rhythm" onclick="guessRhythm(1)">Late</button>
+            <h2 id="ms">The second rhythm is played with the last note early, the same, or late</h2>
         </div>
     </div>
     <script src="Main.js"></script>
