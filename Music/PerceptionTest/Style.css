@@ -40,13 +40,10 @@ p {
 button {
     width: 14vh;
     height: 14vh;
-    font-size: 0;
+    font-size: 4vh;
     text-align: center;
     padding: 0px 0px !important;
-}
-
-button span {
-    font-size: 4vh;
+    border-radius: 10% !important;
 }
 
 .correctlySelected {
