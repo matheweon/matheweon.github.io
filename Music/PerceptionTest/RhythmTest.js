@@ -23,7 +23,7 @@ function rhythmTest() {
         for (let i = 0; i <= 8; i++) {
             if (rhythm[i]) {
                 metronomeSampler.triggerAttackRelease("A1", 1, now + 60 / rhythmTempo / 2 * i)
-                metronomeSampler.triggerAttackRelease("A1", 1, now + 60 / rhythmTempo / 2 * (i + 16) + (i === 8 ? -rhythmOffset * rhythmDir / 1000 : 0))
+                metronomeSampler.triggerAttackRelease("A1", 1, now + 60 / rhythmTempo / 2 * (i + 16) + (i === 8 ? rhythmOffset * rhythmDir / 1000 : 0))
             }
         }
     })

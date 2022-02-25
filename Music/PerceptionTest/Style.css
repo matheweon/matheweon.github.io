@@ -62,15 +62,17 @@ button {
 #keyLegend {
     float: left;
     text-align: left;
+    vertical-align: text-bottom;
     position: absolute;
-    top: 91vh;
+    bottom: -0.5em;
     left: 1vw;
 }
 
 #scoreText {
     float: right;
     text-align: right;
+    vertical-align: text-bottom;
     position: absolute;
-    top: 75.5vh;
+    bottom: -0.5em;
     right: 1vw;
 }
