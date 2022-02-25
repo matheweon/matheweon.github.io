@@ -40,7 +40,7 @@ function guessPitch(guess) {
         scores[0][difficulty + 3][1]++
         if (guess === pitchDir) {
             scores[0][1] += 1
-            d3.select("#pitch" + (pitchDir + 1)).attr("class", "pitch correct")
+            d3.select("#pitch" + (pitchDir + 1)).attr("class", "pitch correctlySelected")
             scores[0][difficulty + 3][0]++
         } else {
             scores[0][1] = 0

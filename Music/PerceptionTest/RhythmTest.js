@@ -46,7 +46,7 @@ function guessRhythm(guess) {
         scores[1][difficulty + 3][1]++
         if (guess === rhythmDir) {
             scores[1][1] += 1
-            d3.select("#rhythm" + (rhythmDir + 1)).attr("class", "rhythm correct")
+            d3.select("#rhythm" + (rhythmDir + 1)).attr("class", "rhythm correctlySelected")
             scores[1][difficulty + 3][0]++
         } else {
             scores[1][1] = 0

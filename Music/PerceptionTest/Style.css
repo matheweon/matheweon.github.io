@@ -12,7 +12,7 @@ html, body {
     overflow: hidden;
 }
 
-body, h1, button, p, svg {
+body, h1, h2, button, p {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -73,27 +73,4 @@ button {
     position: absolute;
     top: 75.5vh;
     right: 1vw;
-}
-
-#noteText {
-    font-size: 2em;
-}
-
-#firstTopIntervals, #secondTopIntervals {
-    margin-bottom: 0.2em;
-}
-
-#i3, #i15 {
-    margin-right: 2.2em;
-}
-
-#i10, #i22 {
-    margin-right: 2.2em;
-}
-
-#rhythmTrainingBeatOffsetText {
-    position: absolute;
-    width: 100%;
-    left: 0px;
-    font-weight: bold;
 }
