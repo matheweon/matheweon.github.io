@@ -37,6 +37,7 @@ button {
     width: 14vh;
     height: 14vh;
     font-size: 4vh;
+    text-align: center;
 }
 
 .correctlySelected {
