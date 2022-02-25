@@ -142,24 +142,21 @@ function getEquity(matchup) {
         let hand0 = evaluateCards([hand0c0, hand0c1].concat(board))
         let hand1 = evaluateCards([hand1c0, hand1c1].concat(board))
         let tie = hand0 === hand1
-        let winner = hand0 < hand1
+        let win = hand0 < hand1
         if (tie) {
             won += 0.5
         }
-        if (winner) {
+        if (win) {
             won++
         }
         total++
-        /*if (total % (iterations / 10) === 0) {
-            console.log(total)
-        }*/
     }
     return Math.round(won / total * 1000) / 1000
 }
 
 async function test() {
     console.log(matchups[848])
-    await sleep(3000)
+    await sleep(10000)
     for (let i = 0; i < 10; i++) {
         console.log(getEquity(matchups[848]) + " in " + (new Date() - startTime) + " ms")
     }

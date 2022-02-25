@@ -28,7 +28,7 @@
     <script type="text/javascript">
         // Import from matheweon.github.io if the local file cannot be found
         function appendScript(localPath, filepath) {
-            if ($('body script[src="' + localPath + '"]').length > 0)
+            if (d3.selectAll("body > script[src='" + localPath + "']").size() > 0)
                 return;
 
             var ele = document.createElement('script');
@@ -38,7 +38,7 @@
         }
 
         function appendStyle(localPath, filepath) {
-            if ($('head link[href="' + localPath + '"]').length > 0)
+            if (d3.selectAll("head > link[href='" + localPath + "']").size() > 0)
                 return;
 
             var ele = document.createElement('link');
