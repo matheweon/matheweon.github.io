@@ -29,6 +29,10 @@ h1, h2, p {
     color: white;
 }
 
+h2 {
+    font-size: 1.3em;
+}
+
 p {
     display: inline;
 }
