@@ -38,6 +38,7 @@ p {
 }
 
 button {
+    -webkit-appearance: none;
     width: 14vh;
     height: 14vh;
     font-size: 4vh;
