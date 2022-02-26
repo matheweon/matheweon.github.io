@@ -48,7 +48,7 @@ function guessPitch(guess) {
             d3.select("#pitch" + (pitchDir + 1)).attr("class", "pitch correct")
             d3.select("#pitch" + (guess + 1)).attr("class", "pitch incorrect")
         }
-        updateScores("|p" + difficulty + (guess + 1) + (pitchDir + 1))
+        updateScores("|p" + difficulty + (guess + 1) + (pitchDir + 1) + "," + Math.round(freq1) + "," + Math.round(freq2) + "," + interval)
         if (pitchDir === 0) {
             displayCents(false, true)
         } else {

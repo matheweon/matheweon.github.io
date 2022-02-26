@@ -72,7 +72,7 @@ function guessRhythm(guess) {
             d3.select("#rhythm" + (rhythmDir + 1)).attr("class", "rhythm correct")
             d3.select("#rhythm" + (guess + 1)).attr("class", "rhythm incorrect")
         }
-        updateScores("|r" + difficulty + (guess + 1) + (rhythmDir + 1))
+        updateScores("|r" + difficulty + (guess + 1) + (rhythmDir + 1) + "," + rhythmToString())
         if (rhythmDir === 0) {
             displayMs(false, true)
         } else {
@@ -92,4 +92,12 @@ function displayMs(hide = false, same = false) {
     } else {
         d3.select("#ms").html("ms: " + rhythmOffset)
     }
+}
+
+function rhythmToString() {
+    let s = ""
+    for (let i = 1; i < 8; i++) {
+        s += 0 + rhythm[i]
+    }
+    return s
 }
