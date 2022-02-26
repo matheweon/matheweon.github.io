@@ -6,6 +6,7 @@ var pitchDir = 0
 var freq1 = 440
 var freq2 = 440
 var interval = 0
+var intRatio = 1
 var pitchPlayed = false
 
 function pitchTest() {
@@ -17,9 +18,9 @@ function pitchTest() {
     Tone.loaded().then(() => {
         let now = Tone.now()
         sampler.triggerAttackRelease(freq1, 1)
-        sampler.triggerAttackRelease(freq1 * interval, 1, now + pitchTempo)
+        sampler.triggerAttackRelease(freq1 * intRatio, 1, now + pitchTempo)
         sampler.triggerAttackRelease(freq2, 1, now + pitchTempo * 3)
-        sampler.triggerAttackRelease(freq2 * interval * Math.pow(2, pitchOffset / 1200 * pitchDir), 1, now + pitchTempo * 4)
+        sampler.triggerAttackRelease(freq2 * intRatio * Math.pow(2, pitchOffset / 1200 * pitchDir), 1, now + pitchTempo * 4)
     })
     d3.selectAll(".pitch").attr("class", "pitch")
 }
@@ -31,7 +32,8 @@ function newPitches() {
     pitchDir = Math.floor(Math.random() * 3 - 1)
     freq1 = Math.pow(2, 1 + Math.random()) * a
     freq2 = Math.pow(2, 1 + Math.random()) * a
-    interval = Math.pow(2, 1 + Math.floor(Math.random() * 25 - 12) / 12)
+    interval = Math.floor(Math.random() * 25 - 12)
+    intRatio = Math.pow(2, 1 + interval / 12)
 }
 
 function guessPitch(guess) {
