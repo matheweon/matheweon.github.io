@@ -60,18 +60,19 @@ function validRhythm() {
 
 function guessRhythm(guess) {
     if (rhythmPlayed) {
-        scores[1][0]++
-        scores[1][difficulty + 3][1]++
+        scores[1][1]++
+        scores[1][difficulty + 4][1]++
         if (guess === rhythmDir) {
-            scores[1][1] += 1
+            scores[1][0]++
+            scores[1][2]++
             d3.select("#rhythm" + (rhythmDir + 1)).attr("class", "rhythm correctlySelected")
             scores[1][difficulty + 3][0]++
         } else {
-            scores[1][1] = 0
+            scores[1][2] = 0
             d3.select("#rhythm" + (rhythmDir + 1)).attr("class", "rhythm correct")
             d3.select("#rhythm" + (guess + 1)).attr("class", "rhythm incorrect")
         }
-        updateScores()
+        updateScores("|r" + difficulty + (guess + 1) + (rhythmDir + 1))
         if (rhythmDir === 0) {
             displayMs(false, true)
         } else {
@@ -79,7 +80,7 @@ function guessRhythm(guess) {
         }
         newRhythm()
     } else {
-        d3.select("#ms").html("Press space or click anywhere that's not a button to listen")
+        d3.select("#ms").html(instructionMessage)
     }
 }
 

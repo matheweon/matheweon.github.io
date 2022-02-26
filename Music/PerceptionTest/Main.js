@@ -9,10 +9,11 @@ for (tab of tabNamesArray) {
 const slideDistance = window.innerWidth * 2
 const slideSpeed = 750;
 var scores = [
-    [0, 0, 0, [0, 0], [0, 0], [0, 0], [0, 0]],
-    [0, 0, 0, [0, 0], [0, 0], [0, 0], [0, 0]]
+    [0, 0, 0, 0, [0, 0], [0, 0], [0, 0], [0, 0]],
+    [0, 0, 0, 0, [0, 0], [0, 0], [0, 0], [0, 0]]
 ];
-
+const instructionMessage = "Press space or click anywhere that's not a button to listen<br>Turn your volume to a comfortable level<br>Make sure your phone isn't on silent<br>Results are copied to clipboard after every test"
+var testsText = ""
 const sampler = new Tone.Sampler({
     urls: {
         "A0": "A0.mp3",
@@ -151,13 +152,15 @@ function play() {
     }
 }
 
-function updateScores() {
+function updateScores(t = "") {
     for (let i = 0; i < scores.length; i++) {
-        if (scores[i][1] > scores[i][2]) {
-            scores[i][2] = scores[i][1];
+        if (scores[i][2] > scores[i][3]) {
+            scores[i][3] = scores[i][2];
         }
     }
-    d3.select("#scoreText").html("<b>" + testNames[selectedTab] + "</b><br><b>Total</b>: " + scores[selectedTab][0] + "<br><b>Score</b>: " + scores[selectedTab][1] + "<br><b>High Score</b>: " + scores[selectedTab][2] + "<br><b>Difficulty 1</b>: " + scores[selectedTab][3][0] + " / " + scores[selectedTab][3][1] + "<br><b>Difficulty 2</b>: " + scores[selectedTab][4][0] + " / " + scores[selectedTab][4][1] + "<br><b>Difficulty 3</b>: " + scores[selectedTab][5][0] + " / " + scores[selectedTab][5][1] + "<br><b>Difficulty 4</b>: " + scores[selectedTab][6][0] + " / " + scores[selectedTab][6][1])
+    testsText += t
+    copyTextToClipboard("p" + scores[0][0] + "/" + scores[0][1] + "|r" + scores[1][0] + "/" + scores[1][1] + testsText)
+    d3.select("#scoreText").html("<b>" + testNames[selectedTab] + "</b><br><b>Total</b>: " + scores[selectedTab][0] + "/" + scores[selectedTab][1] + "<br><b>Score</b>: " + scores[selectedTab][2] + "<br><b>High Score</b>: " + scores[selectedTab][3] + "<br><b>Difficulty 1</b>: " + scores[selectedTab][4][0] + " / " + scores[selectedTab][4][1] + "<br><b>Difficulty 2</b>: " + scores[selectedTab][5][0] + " / " + scores[selectedTab][5][1] + "<br><b>Difficulty 3</b>: " + scores[selectedTab][6][0] + " / " + scores[selectedTab][6][1] + "<br><b>Difficulty 4</b>: " + scores[selectedTab][7][0] + " / " + scores[selectedTab][7][1])
 }
 
 
@@ -170,7 +173,7 @@ Array.prototype.min = function() {
 };
 
 function setDifficulty() {
-    let tests = [scores[selectedTab][3][1], scores[selectedTab][4][1], scores[selectedTab][5][1], scores[selectedTab][6][1]]
+    let tests = [scores[selectedTab][4][1], scores[selectedTab][5][1], scores[selectedTab][6][1], scores[selectedTab][7][1]]
     let choices = []
     for (let i = 0; i < 4; i++) {
         if (tests[i] === Math.min(tests[0], tests[1], tests[2], tests[3])) {
@@ -178,4 +181,39 @@ function setDifficulty() {
         }
     }
     difficulty = choices[Math.floor(Math.random() * choices.length)]
+}
+
+function fallbackCopyTextToClipboard(text) {
+    var textArea = document.createElement("textarea");
+    textArea.value = text;
+    
+    // Avoid scrolling to bottom
+    textArea.style.top = "0";
+    textArea.style.left = "0";
+    textArea.style.position = "fixed";
+  
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+  
+    try {
+      var successful = document.execCommand('copy');
+      var msg = successful ? 'successful' : 'unsuccessful';
+      console.log('Fallback: Copying text command was ' + msg);
+    } catch (err) {
+      console.error('Fallback: Oops, unable to copy', err);
+    }
+  
+    document.body.removeChild(textArea);
+}
+function copyTextToClipboard(text) {
+    if (!navigator.clipboard) {
+      fallbackCopyTextToClipboard(text);
+      return;
+    }
+    navigator.clipboard.writeText(text).then(function() {
+      console.log('Async: Copying to clipboard was successful!');
+    }, function(err) {
+      console.error('Async: Could not copy text: ', err);
+    });
 }

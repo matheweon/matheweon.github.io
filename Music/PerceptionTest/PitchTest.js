@@ -36,18 +36,19 @@ function newPitches() {
 
 function guessPitch(guess) {
     if (pitchPlayed) {
-        scores[0][0]++
-        scores[0][difficulty + 3][1]++
+        scores[0][1]++
+        scores[0][difficulty + 4][1]++
         if (guess === pitchDir) {
-            scores[0][1] += 1
+            scores[0][0]++
+            scores[0][2]++
             d3.select("#pitch" + (pitchDir + 1)).attr("class", "pitch correctlySelected")
-            scores[0][difficulty + 3][0]++
+            scores[0][difficulty + 4][0]++
         } else {
-            scores[0][1] = 0
+            scores[0][2] = 0
             d3.select("#pitch" + (pitchDir + 1)).attr("class", "pitch correct")
             d3.select("#pitch" + (guess + 1)).attr("class", "pitch incorrect")
         }
-        updateScores()
+        updateScores("|p" + difficulty + (guess + 1) + (pitchDir + 1))
         if (pitchDir === 0) {
             displayCents(false, true)
         } else {
@@ -55,7 +56,7 @@ function guessPitch(guess) {
         }
         newPitches()
     } else {
-        d3.select("#cents").html("Press space or click anywhere that's not a button to listen")
+        d3.select("#cents").html(instructionMessage)
     }
 }
 
