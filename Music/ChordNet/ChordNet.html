@@ -1,0 +1,80 @@
+<!--
+    TO-DO:
+-->
+
+<!DOCTYPE html>
+<html id="html">
+
+<head>
+    <title>Perception Test</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="icon" href="https://freepngimg.com/download/ear/11-2-ear-transparent.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+    <script src="https://tonejs.github.io/build/Tone.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body id="body" scroll="no">
+    <p id="keyLegend">
+        <b>Space / Click</b>: Play / Replay<br>
+        <b>Left / Right / Swipe</b>: Navigate Tabs
+    </p>
+    <p id="scoreText">
+        <b>Pitch</b><br>
+        <b>Total</b>: 0<br>
+        <b>Score</b>: 0<br>
+        <b>High Score</b>: 0<br>
+        <b>Difficulty 1</b>: 0 / 0<br>
+        <b>Difficulty 2</b>: 0 / 0<br>
+        <b>Difficulty 3</b>: 0 / 0<br>
+        <b>Difficulty 4</b>: 0 / 0
+    </p>
+    <div id="tabs">
+        <div id="chordEvaluator" class="tab">
+            <h1>Chord Evaluator</h1>
+            <h2>Bad/Good, Sad/Happy, Calm/Angry, etc., Rate 1-5</h2>
+        </div>
+        <div id="chordGenerator" class="tab">
+            <h1>Chord Generator</h1>
+            <button id="rhythm0" class="rhythm" onclick="guessRhythm(-1)"><span>Early</span></button>
+            <button id="rhythm1" class="rhythm" onclick="guessRhythm(0)"><span>Same</span></button>
+            <button id="rhythm2" class="rhythm" onclick="guessRhythm(1)"><span>Late</span></button>
+            <h2 id="ms">The second rhythm is played with the last note early, the same, or late</h2>
+        </div>
+    </div>
+    <script src="Main.js"></script>
+    <script src="PitchTest.js"></script>
+    <script src="RhythmTest.js"></script>
+    <script type="text/javascript">
+        // Import from matheweon.github.io if the local file cannot be found
+        function appendScript(localPath, filepath) {
+            if ($('body script[src="' + localPath + '"]').length > 0)
+                return;
+
+            var ele = document.createElement('script');
+            ele.setAttribute("type", "text/javascript");
+            ele.setAttribute("src", filepath);
+            $('body').append(ele);
+        }
+
+        function appendStyle(localPath, filepath) {
+            if ($('head link[href="' + localPath + '"]').length > 0)
+                return;
+
+            var ele = document.createElement('link');
+            ele.setAttribute("type", "text/css");
+            ele.setAttribute("rel", "Stylesheet");
+            ele.setAttribute("href", filepath);
+            $('head').append(ele);
+        }
+
+        appendStyle("Style.css", "https://matheweon.github.io/Music/ChordNet/Style.css");
+        appendScript("Main.js", "https://matheweon.github.io/Music/ChordNet/Main.js");
+        appendScript("ChordEvaluator.js", "https://matheweon.github.io/Music/ChordNet/ChordEvaluator.js");
+        appendScript("ChordGenerator.js", "https://matheweon.github.io/Music/ChordNet/ChordGenerator.js");
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</body>
+
+</html>
