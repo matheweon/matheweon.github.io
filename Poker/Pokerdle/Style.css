@@ -92,3 +92,17 @@ button span {
     bottom: -0.5em;
     right: 1vw;
 }
+
+
+
+text {
+    fill: white;
+    font-family: "Helvetica Neue";
+    font-size: 2em;
+    font-weight: 500;
+    text-anchor: middle;
+}
+
+.key {
+    fill: #666;
+}

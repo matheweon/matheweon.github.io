@@ -239,22 +239,34 @@ for (word of pokerWords) {
 
 const width = window.innerWidth
 const height = window.innerHeight
-const keyPadding = 0.25
-const keySize = width / (10 + 11 * keyPadding)
-//const keyHeight = keySize
-const keyboardHeight = keySize * (3 + 4 * keyPadding)
+const keyPaddingRatio = 1/6
+const keyWidth = width / (10 + 11 * keyPaddingRatio)
+const keyHeight = keyWidth * 1.5
+const keyPadding = keyWidth * keyPaddingRatio
+const keyboardHeight = keyHeight * 3 + keyPadding * 3
 const keyboardY = height - keyboardHeight
 const keyboard = d3.select("body").append("svg").attr("width", width).attr("height", height).attr("id", "keyboard")
 const letters = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "A", "S", "D", "F", "G", "H", "J", "K", "L", "Z", "X", "C", "V", "B", "N", "M"]
 const numLetters = [10, 9, 7]
-const lettersOffset = [keySize * keyPadding, keySize * (0.5 + keyPadding * 1.5), keySize * (1.5 + keyPadding * 2.5)]
+const lettersOffset = [keyPadding, keyWidth * 0.5 + keyPadding * 1.5, keyWidth * 1.5 + keyPadding * 2.5]
+var count = 0
 for (let r = 0; r < 3; r++) {
     for (let i = 0; i < numLetters[r]; i++) {
-        keyboard.append("rect")
-            .attr("width", keySize)
-            .attr("height", keySize)
-            .attr("x", lettersOffset[r] + (keySize * (1 + keyPadding)) * i)
-            .attr("y", keyboardY + keySize * (r + keyPadding * (1 + r)))
-            .attr("fill", "#aaa")
+        let x = lettersOffset[r] + (keyWidth + keyPadding) * i
+        let y = keyboardY + keyHeight * r + keyPadding * r
+        let key = keyboard.append("g")
+            .attr("transform", "translate(" + x + "," + y + ")")
+        
+        key.append("rect")
+            .attr("width", keyWidth)
+            .attr("height", keyHeight)
+            .attr("class", "key")
+        
+        key.append("text")
+            .attr("x", keyWidth / 2)
+            .attr("y", keyHeight * 0.7)
+            .text(letters[count])
+        
+        count++
     }
 }
