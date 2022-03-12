@@ -98,11 +98,27 @@ button span {
 text {
     fill: white;
     font-family: "Helvetica Neue";
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 500;
     text-anchor: middle;
 }
 
 .key {
-    fill: #666;
+    fill: #777;
+}
+
+.spade {
+    fill: #4f4f4f;
+}
+
+.heart {
+    fill: #8b0901;
+}
+
+.diamond {
+    fill: #283ac4;
+}
+
+.club {
+    fill: #52ac2a;
 }

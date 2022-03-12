@@ -1,12 +1,19 @@
 const pokerWords = [
+    "added",
+    "addon",
     "aggro",
     "allin",
     "angle",
     "antes",
+    "backs",
+    "balls",
     "banks",
     "beats",
+    "begin",
     "belly",
+    "bills",
     "binks",
+    "black",
     "blank",
     "blast",
     "bleed",
@@ -16,6 +23,7 @@ const pokerWords = [
     "board",
     "boats",
     "bombs",
+    "brain",
     "break",
     "brick",
     "bring",
@@ -25,46 +33,62 @@ const pokerWords = [
     "burns",
     "burnt",
     "busts",
+    "buyer",
     "buyin",
     "calls",
     "cards",
     "catch",
+    "cents",
     "chase",
     "cheat",
     "check",
     "chips",
     "chops",
+    "clean",
     "click",
     "climb",
     "clock",
     "clubs",
     "color",
     "combo",
+    "cools",
+    "count",
     "crabs",
     "crack",
     "deals",
     "dealt",
+    "degen",
     "delay",
+    "depth",
     "deuce",
     "dimes",
     "dirty",
+    "dnegs",
     "donks",
     "doyle",
     "drawn",
     "draws",
+    "drawy",
+    "drown",
     "ducks",
     "early",
     "eight",
+    "event",
+    "exits",
     "faced",
     "faces",
+    "favor",
     "felts",
     "field",
     "fifth",
+    "fifty",
+    "fight",
     "fills",
     "final",
     "first",
     "fishy",
     "fives",
+    "flake",
     "flash",
     "flats",
     "flips",
@@ -74,16 +98,25 @@ const pokerWords = [
     "folds",
     "force",
     "fours",
+    "front",
+    "funds",
     "games",
+    "greed",
+    "greek",
+    "green",
     "grind",
     "gypsy",
     "hands",
     "heads",
     "heart",
+    "heats",
+    "heavy",
     "hides",
+    "highs",
     "holes",
     "hooks",
     "horse",
+    "hosts",
     "house",
     "hunts",
     "idiot",
@@ -94,16 +127,22 @@ const pokerWords = [
     "kicks",
     "kings",
     "later",
+    "lasts",
     "leads",
     "leaks",
     "leave",
+    "legal",
     "level",
     "light",
     "limit",
     "limps",
+    "lines",
     "locks",
+    "lodge",
     "looks",
     "loose",
+    "loses",
+    "lower",
     "lucky",
     "lying",
     "match",
@@ -112,12 +151,15 @@ const pokerWords = [
     "minus",
     "mixed",
     "money",
+    "moves",
     "mucks",
     "multi",
+    "night",
     "nines",
     "nitty",
     "north",
     "nutty",
+    "ocean",
     "omaha",
     "opens",
     "orbit",
@@ -125,16 +167,20 @@ const pokerWords = [
     "overs",
     "paint",
     "pairs",
+    "payer",
     "penny",
     "plays",
     "poker",
     "polar",
     "posts",
+    "preys",
     "probe",
     "props",
+    "punts",
     "purse",
     "quads",
     "queen",
+    "quick",
     "quits",
     "races",
     "racks",
@@ -147,33 +193,43 @@ const pokerWords = [
     "ratio",
     "reads",
     "rebuy",
+    "repop",
+    "rhode",
     "rings",
     "river",
     "rocks",
     "rolls",
+    "rooms",
     "round",
     "royal",
+    "rules",
+    "saves",
     "scams",
     "scare",
     "scoop",
     "sells",
+    "sense",
     "setup",
     "seven",
     "shark",
     "shill",
-    "shoes",
     "short",
+    "shots",
     "shove",
     "shows",
     "sixes",
+    "sixty",
     "skill",
+    "sleep",
     "slick",
+    "slows",
     "small",
     "snaps",
     "solve",
     "south",
     "space",
     "spade",
+    "speed",
     "spike",
     "split",
     "stack",
@@ -181,6 +237,7 @@ const pokerWords = [
     "stand",
     "stare",
     "stars",
+    "start",
     "stays",
     "steal",
     "steam",
@@ -198,9 +255,12 @@ const pokerWords = [
     "swing",
     "table",
     "taint",
+    "takes",
     "tanks",
     "tells",
     "texas",
+    "think",
+    "thins",
     "third",
     "three",
     "tight",
@@ -212,10 +272,12 @@ const pokerWords = [
     "traps",
     "trash",
     "treys",
+    "trick",
     "trips",
     "turbo",
     "turns",
     "twice",
+    "twist",
     "under",
     "value",
     "vegas",
@@ -223,8 +285,11 @@ const pokerWords = [
     "verse",
     "wakes",
     "walks",
+    "waits",
+    "weeds",
     "whale",
     "wheel",
+    "white",
     "witty",
     "wraps",
     "yacht",
@@ -236,6 +301,11 @@ for (word of pokerWords) {
         console.log(word)
     }
 }
+let printStr = "Poker Words: " + pokerWords.length + "\n"
+for (word of pokerWords) {
+    printStr += word + " "
+}
+console.log(printStr)
 
 const width = window.innerWidth
 const height = window.innerHeight
@@ -246,27 +316,34 @@ const keyPadding = keyWidth * keyPaddingRatio
 const keyboardHeight = keyHeight * 3 + keyPadding * 3
 const keyboardY = height - keyboardHeight
 const keyboard = d3.select("body").append("svg").attr("width", width).attr("height", height).attr("id", "keyboard")
-const letters = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "A", "S", "D", "F", "G", "H", "J", "K", "L", "Z", "X", "C", "V", "B", "N", "M"]
-const numLetters = [10, 9, 7]
-const lettersOffset = [keyPadding, keyWidth * 0.5 + keyPadding * 1.5, keyWidth * 1.5 + keyPadding * 2.5]
+const enter = "\u21AA"
+const backspace = "\u232B"
+const letters = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "A", "S", "D", "F", "G", "H", "J", "K", "L", enter, "Z", "X", "C", "V", "B", "N", "M", backspace]
+const numLetters = [10, 9, 9]
+const lettersOffset = [keyPadding, keyWidth * 0.5 + keyPadding * 1.5, keyPadding]
 var count = 0
 for (let r = 0; r < 3; r++) {
+    let x = lettersOffset[r]
     for (let i = 0; i < numLetters[r]; i++) {
-        let x = lettersOffset[r] + (keyWidth + keyPadding) * i
         let y = keyboardY + keyHeight * r + keyPadding * r
+        let l = letters[count]
+        let keyStretch = l === enter || l === backspace ? 1.5 : 1
         let key = keyboard.append("g")
             .attr("transform", "translate(" + x + "," + y + ")")
         
         key.append("rect")
-            .attr("width", keyWidth)
+            .attr("width", keyWidth * keyStretch + keyPadding * (keyStretch - 1))
             .attr("height", keyHeight)
+            .attr("rx", keyWidth / 8)
+            .attr("ry", keyWidth / 8)
             .attr("class", "key")
         
         key.append("text")
-            .attr("x", keyWidth / 2)
-            .attr("y", keyHeight * 0.7)
-            .text(letters[count])
+            .attr("x", keyWidth / 2 * keyStretch)
+            .attr("y", keyHeight * 0.65 * (l === enter ? 1.1 : 1))
+            .text(l)
         
         count++
+        x += (keyWidth + keyPadding) * keyStretch
     }
 }
