@@ -236,6 +236,7 @@ const pokerWords = [
     "speed",
     "spike",
     "split",
+    "stabs",
     "stack",
     "stake",
     "stand",
@@ -300,19 +301,23 @@ const pokerWords = [
     "yacht",
     "zeros"
 ]
+let pokerWordsNotInList = "Poker Words Not In List: "
 for (word of pokerWords) {
     if (!allWords.includes(word)) {
         allWords += word
-        console.log(word)
+        pokerWordsNotInList += word + ", "
     }
 }
+console.log(pokerWordsNotInList.substring(0, pokerWordsNotInList.length - 2))
+
 let printStr = "Poker Words: " + pokerWords.length + "\n"
 for (word of pokerWords) {
     printStr += word + " "
 }
 console.log(printStr)
 
-const width = window.innerWidth
+const mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+const width = Math.min(window.innerWidth, 500)
 const height = window.innerHeight
 const svg = d3.select("body").append("svg")
     .attr("width", width)
@@ -324,8 +329,8 @@ const keyHeight = keyWidth * 1.5
 const keyPadding = keyWidth * keyPaddingRatio
 const keyboardHeight = keyHeight * 3 + keyPadding * 3
 const keyboardY = height - keyboardHeight
-const enter = "\u21AA"
-const backspace = "\u232B"
+const enter = "\u21AA\uFE0E"
+const backspace = "\u232B\uFE0E"
 const letters = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "A", "S", "D", "F", "G", "H", "J", "K", "L", enter, "Z", "X", "C", "V", "B", "N", "M", backspace]
 const numLetters = [10, 9, 9]
 const lettersOffset = [keyPadding, keyWidth * 0.5 + keyPadding * 1.5, keyPadding]
@@ -339,6 +344,7 @@ for (let r = 0; r < 3; r++) {
         let id = l === enter ? "enter" : l === backspace ? "backspace" : l
         let key = svg.append("g")
             .attr("transform", "translate(" + x + "," + y + ")")
+            .attr("id", "g" + id)
         
         key.append("rect")
             .attr("width", keyWidth * keyStretch + keyPadding * (keyStretch - 1))
@@ -349,6 +355,9 @@ for (let r = 0; r < 3; r++) {
             .attr("id", "key" + id)
             .on("mouseover", function() {
                 d3.select(this).classed("hover", true);
+                if (mobile) {
+                    setTimeout(() => {d3.select(this).classed("hover", false)}, 250);
+                }
             })
             .on("mouseout", function() {
                 d3.select(this).classed("hover", false);
@@ -358,7 +367,7 @@ for (let r = 0; r < 3; r++) {
             })
         
         key.append("text")
-            .attr("x", keyWidth / 2 * keyStretch)
+            .attr("x", keyWidth / 2 * keyStretch * (l === enter ? 1.03 : 1))
             .attr("y", keyHeight * 0.65 * (l === enter ? 1.1 : 1))
             .attr("id", "text" + id)
             .text(l)
@@ -379,15 +388,18 @@ for (let r = 0; r < 3; r++) {
     }
 }
 
-var currentWord = "raise"
+var currentWord = pokerWords[Math.floor(Math.random() * pokerWords.length)]
 var currentGuess = ""
-var wordSuits = [
+var guessNum = 0
+var guesses = ["", "", "", "", ""]
+/*var guessSuits = [
     [-1, -1, -1, -1, -1],
     [-1, -1, -1, -1, -1],
     [-1, -1, -1, -1, -1],
     [-1, -1, -1, -1, -1],
     [-1, -1, -1, -1, -1]
-]
+]*/
+var resetReady = false
 
 function typeKey(key) {
     if (key === "enter") {
@@ -397,12 +409,65 @@ function typeKey(key) {
     } else if (currentGuess.length < 5) {
         currentGuess += key
     }
-    console.log(currentGuess)
+    updateGuess()
+}
+
+function validGuess() {
+    return currentGuess.length === 5 && allWords.includes(currentGuess.toLowerCase()) && !guesses.includes(currentGuess)
 }
 
 function pressEnter() {
-    if (allWords.includes(currentGuess.toLowerCase())) {
+    if (resetReady) {
+        for (let row = 0; row < 5; row++) {
+            for (let col = 0; col < 5; col++) {
+                d3.select("#box" + row + col)
+                    .classed("club", false)
+                    .classed("diamond", false)
+                    .classed("heart", false)
+                    .classed("spade", false)
+                d3.select("#boxText" + row + col)
+                    .text("")
+            }
+        }
+        currentWord = pokerWords[Math.floor(Math.random() * pokerWords.length)]
         currentGuess = ""
+        guessNum = 0
+        guesses = ["", "", "", "", ""]
+        resetReady = false
+        return
+    }
+    if (validGuess()) {
+        let allCorrect = true
+        for (let col = 0; col < 5; col++) {
+            let guessLetter = currentGuess.toLowerCase().substring(col, col + 1)
+            let suit = "spade"
+            if (guessLetter === currentWord.substring(col, col + 1)) {
+                suit = "club"
+            } else {
+                allCorrect = false
+                if (currentWord.includes(guessLetter)) {
+                    suit = "diamond"
+                }
+            }
+            d3.select("#box" + guessNum + col)
+                .classed(suit, true)
+        }
+        if (allCorrect) {
+            for (let col = 0; col < 5; col++) {
+                d3.select("#box" + guessNum + col)
+                    .classed("club", false)
+                    .classed("heart", true)
+            }
+            resetReady = true
+            return
+        }
+        guesses[guessNum] = currentGuess
+        guessNum++
+        currentGuess = ""
+    }
+    if (guessNum === 5) {
+        resetReady = true
+        console.log("The word was " + currentWord)
     }
 }
 
@@ -412,15 +477,32 @@ function pressBackspace() {
     }
 }
 
-document.addEventListener("keydown", pressKey);
+document.addEventListener("keydown", keyDown);
+document.addEventListener("keyup", keyUp);
 
-function pressKey(e) {
+function keyDown(e) {
     let code = `${e.code}`
     if (code.substring(0, 3) === "Key") {
-        typeKey(code.substring(3))
+        code = code.substring(3)
     } else if (code === "Enter" || code === "Backspace") {
-        typeKey(code.toLowerCase())
+        code = code.toLowerCase()
+    } else {
+        return
     }
+    d3.select("#key" + code).classed("hover", true);
+    typeKey(code)
+}
+
+function keyUp(e) {
+    let code = `${e.code}`
+    if (code.substring(0, 3) === "Key") {
+        code = code.substring(3)
+    } else if (code === "Enter" || code === "Backspace") {
+        code = code.toLowerCase()
+    } else {
+        return
+    }
+    d3.select("#key" + code).classed("hover", false);
 }
 
 const boxPaddingRatio = 1/6
@@ -431,13 +513,37 @@ for (let row = 0; row < 5; row++) {
     for (let col = 0; col < 5; col++) {
         let boxX = boxS * col + boxP * (col + 1)
         let boxY = boxS * row + boxP * (row + 1)
-        svg.append("rect")
-            .attr("x", boxX)
-            .attr("y", boxY)
+
+        let box = svg.append("g")
+            .attr("transform", "translate(" + boxX + "," + boxY + ")")
+            .attr("id", "g" + row + col)
+        
+        box.append("rect")
             .attr("width", boxS)
             .attr("height", boxS)
+            .attr("rx", boxBorderW)
+            .attr("ry", boxBorderW)
             .attr("class", "box")
+            .attr("id", "box" + row + col)
             .attr("stroke", "#333")
             .attr("stroke-width", boxBorderW)
+        
+        box.append("text")
+            .attr("x", boxS / 2)
+            .attr("y", boxS * 0.72)
+            .attr("class", "gridText")
+            .attr("id", "boxText" + row + col)
+    }
+}
+
+function updateGuess() {
+    for (let col = 0; col < 5; col++) {
+        let text = ""
+        if (col < currentGuess.length) {
+            text = currentGuess.substring(col, col + 1)
+        }
+        d3.select("#boxText" + guessNum + col)
+            .classed("invalid", currentGuess.length === 5 && !validGuess())
+            .text(text)
     }
 }

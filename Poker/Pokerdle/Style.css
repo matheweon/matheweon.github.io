@@ -103,6 +103,10 @@ text {
     text-anchor: middle;
 }
 
+.gridText {
+    font-size: 3em;
+}
+
 .key {
     fill: #777;
 }
@@ -130,4 +134,8 @@ text.hover {
 
 .club {
     fill: #52ac2a;
+}
+
+.invalid {
+    fill: red;
 }
