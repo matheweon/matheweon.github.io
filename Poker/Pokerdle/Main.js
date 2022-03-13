@@ -32,18 +32,21 @@ const pokerWords = [
     "bully",
     "burns",
     "burnt",
+    "busto",
     "busts",
     "buyer",
     "buyin",
     "calls",
     "cards",
     "catch",
+    "cbets",
     "cents",
     "chase",
     "cheat",
     "check",
     "chips",
     "chops",
+    "chunk",
     "clean",
     "click",
     "climb",
@@ -195,6 +198,7 @@ const pokerWords = [
     "rebuy",
     "repop",
     "rhode",
+    "right",
     "rings",
     "river",
     "rocks",
@@ -251,6 +255,7 @@ const pokerWords = [
     "sucks",
     "suits",
     "super",
+    "sweat",
     "sweet",
     "swing",
     "table",
@@ -309,13 +314,16 @@ console.log(printStr)
 
 const width = window.innerWidth
 const height = window.innerHeight
+const svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height)
+
 const keyPaddingRatio = 1/6
 const keyWidth = width / (10 + 11 * keyPaddingRatio)
 const keyHeight = keyWidth * 1.5
 const keyPadding = keyWidth * keyPaddingRatio
 const keyboardHeight = keyHeight * 3 + keyPadding * 3
 const keyboardY = height - keyboardHeight
-const keyboard = d3.select("body").append("svg").attr("width", width).attr("height", height).attr("id", "keyboard")
 const enter = "\u21AA"
 const backspace = "\u232B"
 const letters = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "A", "S", "D", "F", "G", "H", "J", "K", "L", enter, "Z", "X", "C", "V", "B", "N", "M", backspace]
@@ -328,7 +336,8 @@ for (let r = 0; r < 3; r++) {
         let y = keyboardY + keyHeight * r + keyPadding * r
         let l = letters[count]
         let keyStretch = l === enter || l === backspace ? 1.5 : 1
-        let key = keyboard.append("g")
+        let id = l === enter ? "enter" : l === backspace ? "backspace" : l
+        let key = svg.append("g")
             .attr("transform", "translate(" + x + "," + y + ")")
         
         key.append("rect")
@@ -337,13 +346,98 @@ for (let r = 0; r < 3; r++) {
             .attr("rx", keyWidth / 8)
             .attr("ry", keyWidth / 8)
             .attr("class", "key")
+            .attr("id", "key" + id)
+            .on("mouseover", function() {
+                d3.select(this).classed("hover", true);
+            })
+            .on("mouseout", function() {
+                d3.select(this).classed("hover", false);
+            })
+            .on("click", function() {
+                typeKey(id)
+            })
         
         key.append("text")
             .attr("x", keyWidth / 2 * keyStretch)
             .attr("y", keyHeight * 0.65 * (l === enter ? 1.1 : 1))
+            .attr("id", "text" + id)
             .text(l)
+            .on("mouseover", function() {
+                d3.select(this).classed("hover", true);
+                d3.select(this.parentNode.children[0]).classed("hover", true);
+            })
+            .on("mouseout", function() {
+                d3.select(this).classed("hover", false);
+                d3.select(this.parentNode.children[0]).classed("hover", false);
+            })
+            .on("click", function() {
+                typeKey(id)
+            })
         
         count++
         x += (keyWidth + keyPadding) * keyStretch
+    }
+}
+
+var currentWord = "raise"
+var currentGuess = ""
+var wordSuits = [
+    [-1, -1, -1, -1, -1],
+    [-1, -1, -1, -1, -1],
+    [-1, -1, -1, -1, -1],
+    [-1, -1, -1, -1, -1],
+    [-1, -1, -1, -1, -1]
+]
+
+function typeKey(key) {
+    if (key === "enter") {
+        pressEnter()
+    } else if (key === "backspace") {
+        pressBackspace()
+    } else if (currentGuess.length < 5) {
+        currentGuess += key
+    }
+    console.log(currentGuess)
+}
+
+function pressEnter() {
+    if (allWords.includes(currentGuess.toLowerCase())) {
+        currentGuess = ""
+    }
+}
+
+function pressBackspace() {
+    if (currentGuess.length > 0) {
+        currentGuess = currentGuess.substring(0, currentGuess.length - 1)
+    }
+}
+
+document.addEventListener("keydown", pressKey);
+
+function pressKey(e) {
+    let code = `${e.code}`
+    if (code.substring(0, 3) === "Key") {
+        typeKey(code.substring(3))
+    } else if (code === "Enter" || code === "Backspace") {
+        typeKey(code.toLowerCase())
+    }
+}
+
+const boxPaddingRatio = 1/6
+const boxS = width / (5 + 6 * keyPaddingRatio)
+const boxP = boxS / 6
+const boxBorderW = boxP / 2
+for (let row = 0; row < 5; row++) {
+    for (let col = 0; col < 5; col++) {
+        let boxX = boxS * col + boxP * (col + 1)
+        let boxY = boxS * row + boxP * (row + 1)
+        svg.append("rect")
+            .attr("x", boxX)
+            .attr("y", boxY)
+            .attr("width", boxS)
+            .attr("height", boxS)
+            .attr("class", "box")
+            .attr("stroke", "#333")
+            .attr("stroke-width", boxBorderW)
     }
 }

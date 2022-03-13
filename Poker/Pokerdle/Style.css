@@ -107,6 +107,15 @@ text {
     fill: #777;
 }
 
+.key.hover {
+    fill: #555;
+    cursor: pointer;
+}
+
+text.hover {
+    cursor: pointer;
+}
+
 .spade {
     fill: #4f4f4f;
 }
