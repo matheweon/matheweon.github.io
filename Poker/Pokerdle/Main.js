@@ -1,3 +1,6 @@
+// TODO:
+// suit shapes
+
 const pokerWords = [
     "added",
     "addon",
@@ -7,10 +10,13 @@ const pokerWords = [
     "antes",
     "backs",
     "balls",
+    "bands",
     "banks",
     "beats",
     "begin",
     "belly",
+    "bends",
+    "benji",
     "bills",
     "binks",
     "black",
@@ -60,6 +66,7 @@ const pokerWords = [
     "crack",
     "deals",
     "dealt",
+    "death",
     "degen",
     "delay",
     "depth",
@@ -76,6 +83,8 @@ const pokerWords = [
     "ducks",
     "early",
     "eight",
+    "enter",
+    "error",
     "event",
     "exits",
     "faced",
@@ -88,6 +97,8 @@ const pokerWords = [
     "fight",
     "fills",
     "final",
+    "fired",
+    "fires",
     "first",
     "fishy",
     "fives",
@@ -104,6 +115,9 @@ const pokerWords = [
     "front",
     "funds",
     "games",
+    "giant",
+    "grabs",
+    "grand",
     "greed",
     "greek",
     "green",
@@ -121,6 +135,7 @@ const pokerWords = [
     "horse",
     "hosts",
     "house",
+    "hundo",
     "hunts",
     "idiot",
     "image",
@@ -128,11 +143,13 @@ const pokerWords = [
     "jacks",
     "joker",
     "kicks",
+    "kills",
     "kings",
-    "later",
     "lasts",
+    "later",
     "leads",
     "leaks",
+    "least",
     "leave",
     "legal",
     "level",
@@ -140,6 +157,7 @@ const pokerWords = [
     "limit",
     "limps",
     "lines",
+    "loads",
     "locks",
     "lodge",
     "looks",
@@ -176,9 +194,11 @@ const pokerWords = [
     "poker",
     "polar",
     "posts",
+    "prays",
     "preys",
     "probe",
     "props",
+    "pulls",
     "punts",
     "purse",
     "quads",
@@ -235,6 +255,7 @@ const pokerWords = [
     "spade",
     "speed",
     "spike",
+    "spins",
     "split",
     "stabs",
     "stack",
@@ -289,9 +310,9 @@ const pokerWords = [
     "vegas",
     "venmo",
     "verse",
+    "waits",
     "wakes",
     "walks",
-    "waits",
     "weeds",
     "whale",
     "wheel",
@@ -301,7 +322,25 @@ const pokerWords = [
     "yacht",
     "zeros"
 ]
-let pokerWordsNotInList = "Poker Words Not In List: "
+const findDuplicates = (arr) => {
+    let sorted_arr = arr.slice().sort();
+    let results = [];
+    for (let i = 0; i < sorted_arr.length - 1; i++) {
+        if (sorted_arr[i + 1] == sorted_arr[i]) {
+            results.push(sorted_arr[i]);
+        }
+    }
+    return results;
+}
+console.log("Duplicate Words: " + findDuplicates(pokerWords))
+
+let pokerWordsStr = ""
+for (word of pokerWords.sort()) {
+    pokerWordsStr += '"' + word + '",\n'
+}
+console.log(pokerWordsStr.substring(0, pokerWordsStr.length - 2))
+
+let pokerWordsNotInList = "Poker Words Not In Wordle List: "
 for (word of pokerWords) {
     if (!allWords.includes(word)) {
         allWords += word
@@ -355,15 +394,15 @@ for (let r = 0; r < 3; r++) {
             .attr("id", "key" + id)
             .on("mouseover", function() {
                 d3.select(this).classed("hover", true);
-                if (mobile) {
-                    setTimeout(() => {d3.select(this).classed("hover", false)}, 250);
-                }
             })
             .on("mouseout", function() {
                 d3.select(this).classed("hover", false);
             })
             .on("click", function() {
                 typeKey(id)
+                if (mobile) {
+                    setTimeout(() => {d3.select(this).classed("hover", false)}, 150);
+                }
             })
         
         key.append("text")
@@ -381,6 +420,9 @@ for (let r = 0; r < 3; r++) {
             })
             .on("click", function() {
                 typeKey(id)
+                if (mobile) {
+                    setTimeout(() => {d3.select(this.parentNode.children[0]).classed("hover", false)}, 150);
+                }
             })
         
         count++
@@ -392,13 +434,6 @@ var currentWord = pokerWords[Math.floor(Math.random() * pokerWords.length)]
 var currentGuess = ""
 var guessNum = 0
 var guesses = ["", "", "", "", ""]
-/*var guessSuits = [
-    [-1, -1, -1, -1, -1],
-    [-1, -1, -1, -1, -1],
-    [-1, -1, -1, -1, -1],
-    [-1, -1, -1, -1, -1],
-    [-1, -1, -1, -1, -1]
-]*/
 var resetReady = false
 
 function typeKey(key) {
@@ -418,57 +453,113 @@ function validGuess() {
 
 function pressEnter() {
     if (resetReady) {
-        for (let row = 0; row < 5; row++) {
-            for (let col = 0; col < 5; col++) {
-                d3.select("#box" + row + col)
-                    .classed("club", false)
-                    .classed("diamond", false)
-                    .classed("heart", false)
-                    .classed("spade", false)
-                d3.select("#boxText" + row + col)
-                    .text("")
-            }
-        }
-        currentWord = pokerWords[Math.floor(Math.random() * pokerWords.length)]
-        currentGuess = ""
-        guessNum = 0
-        guesses = ["", "", "", "", ""]
-        resetReady = false
+        reset()
         return
     }
     if (validGuess()) {
-        let allCorrect = true
-        for (let col = 0; col < 5; col++) {
-            let guessLetter = currentGuess.toLowerCase().substring(col, col + 1)
-            let suit = "spade"
-            if (guessLetter === currentWord.substring(col, col + 1)) {
-                suit = "club"
-            } else {
-                allCorrect = false
-                if (currentWord.includes(guessLetter)) {
-                    suit = "diamond"
-                }
-            }
-            d3.select("#box" + guessNum + col)
-                .classed(suit, true)
-        }
-        if (allCorrect) {
-            for (let col = 0; col < 5; col++) {
-                d3.select("#box" + guessNum + col)
-                    .classed("club", false)
-                    .classed("heart", true)
-            }
-            resetReady = true
-            return
-        }
-        guesses[guessNum] = currentGuess
-        guessNum++
-        currentGuess = ""
+        guess()
     }
     if (guessNum === 5) {
         resetReady = true
         console.log("The word was " + currentWord)
     }
+}
+
+function reset() {
+    for (let row = 0; row < 5; row++) {
+        for (let col = 0; col < 5; col++) {
+            d3.select("#box" + row + col)
+                .classed("club", false)
+                .classed("diamond", false)
+                .classed("heart", false)
+                .classed("spade", false)
+            d3.select("#boxText" + row + col)
+                .text("")
+        }
+    }
+    d3.selectAll(".key")
+        .classed("club", false)
+        .classed("diamond", false)
+        .classed("heart", false)
+        .classed("spade", false)
+    currentWord = pokerWords[Math.floor(Math.random() * pokerWords.length)]
+    currentGuess = ""
+    guessNum = 0
+    guesses = ["", "", "", "", ""]
+    resetReady = false
+}
+
+function guess() {
+    let allCorrect = true
+    let suits = [null, null, null, null, null]
+    for (let col = 0; col < 5; col++) {
+        let guessLetter = currentGuess.toLowerCase().substring(col, col + 1)
+        let suit = "spade"
+        if (guessLetter === currentWord.substring(col, col + 1)) {
+            suit = "club"
+        } else {
+            allCorrect = false
+            if (currentWord.includes(guessLetter)) {
+                suit = "diamond"
+            }
+        }
+        suits[col] = suit
+    }
+    // Double Letters
+    let guessLetters = {}
+    let wordLetters = {}
+    for (l of currentGuess) {
+        l = l.toLowerCase()
+        if (guessLetters[l] === undefined) {
+            guessLetters[l] = 1
+        } else {
+            guessLetters[l]++
+        }
+    }
+    for (l of currentWord) {
+        if (wordLetters[l] === undefined) {
+            wordLetters[l] = 1
+        } else {
+            wordLetters[l]++
+        }
+    }
+    for (key of Object.keys(guessLetters)) {
+        if (guessLetters[key] > wordLetters[key]) {
+            let extraLetters = guessLetters[key] - wordLetters[key]
+            for (let i = 4; i >= 0; i--) {
+                if (extraLetters > 0 && suits[i] === "diamond" && currentGuess.substring(i, i + 1).toLowerCase() === key) {
+                    suits[i] = "spade"
+                    extraLetters--
+                }
+            }
+        }
+    }
+    for (let col = 0; col < 5; col++) {
+        let key = d3.select("#key" + currentGuess.substring(col, col + 1))
+        key
+            .classed("club", false)
+            .classed("diamond", false)
+            .classed("heart", false)
+            .classed("spade", false)
+        if (allCorrect) {
+            resetReady = true
+            d3.select("#box" + guessNum + col)
+                .classed("heart", true)
+            key.classed("heart", true)
+        } else {
+            d3.select("#box" + guessNum + col)
+                .classed(suits[col], true)
+            let suit = key.attr("class").substring(4)
+            if (suit !== "club") {
+                if (!(suit === "diamond" && suits[col] === "spade")) {
+                    key.classed(suits[col], "true")
+                }
+            }
+        }
+    }
+    guesses[guessNum] = currentGuess
+    guessNum++
+    currentGuess = ""
 }
 
 function pressBackspace() {
