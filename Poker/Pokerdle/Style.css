@@ -97,7 +97,7 @@ button span {
 
 text {
     fill: white;
-    font-family: "Helvetica Neue";
+    font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
     font-size: 1.5em;
     font-weight: 500;
     text-anchor: middle;
@@ -122,7 +122,7 @@ text {
     cursor: pointer;
 }
 
-text.hover {
+text.hover, .suitShape.hover {
     cursor: pointer;
 }
 
