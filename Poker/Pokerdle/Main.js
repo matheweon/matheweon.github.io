@@ -644,7 +644,7 @@ function guess() {
             }
         }
     }
-    for (let col = 0; col < 5; col++) {
+    for (let col = 4; col >= 0; col--) {
         let l = currentGuess.substring(col, col + 1)
         let key = d3.select("#key" + l)
         key
