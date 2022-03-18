@@ -53,6 +53,7 @@ const pokerWords = [
     "catch",
     "cbets",
     "cents",
+    "champ",
     "chase",
     "cheat",
     "check",
@@ -115,13 +116,16 @@ const pokerWords = [
     "float",
     "flops",
     "flush",
+    "focus",
     "folds",
     "force",
     "fours",
+    "freer",
     "front",
     "funds",
     "games",
     "giant",
+    "gifts",
     "grabs",
     "grand",
     "greed",
@@ -168,6 +172,7 @@ const pokerWords = [
     "lodge",
     "looks",
     "loose",
+    "loser",
     "loses",
     "lower",
     "lucky",
@@ -197,11 +202,13 @@ const pokerWords = [
     "payer",
     "penny",
     "plays",
+    "plohi",
     "poker",
     "polar",
     "posts",
     "prays",
     "preys",
+    "prize",
     "probe",
     "props",
     "pulls",
@@ -259,10 +266,14 @@ const pokerWords = [
     "south",
     "space",
     "spade",
+    "speak",
     "speed",
+    "spend",
+    "spent",
     "spike",
     "spins",
     "split",
+    "sport",
     "stabs",
     "stack",
     "stake",
@@ -292,10 +303,12 @@ const pokerWords = [
     "tanks",
     "tells",
     "texas",
+    "thick",
     "think",
     "thins",
     "third",
     "three",
+    "throw",
     "tight",
     "tilts",
     "timer",
@@ -323,6 +336,7 @@ const pokerWords = [
     "whale",
     "wheel",
     "white",
+    "widen",
     "witty",
     "wraps",
     "yacht",
@@ -361,9 +375,10 @@ for (word of pokerWords) {
 }
 console.log(printStr)
 
+// Create keyboard and grid in svg
 const mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
-const width = Math.min(window.innerWidth, 500)
 const height = window.innerHeight
+const width = Math.min(window.innerWidth, height / 1.5)
 const svg = d3.select("body").append("svg")
     .attr("width", width)
     .attr("height", height)
@@ -466,12 +481,58 @@ for (let row = 0; row < 5; row++) {
     }
 }
 
+svg.append("text")
+    .attr("x", width / 2)
+    .attr("y", width + boxS / 4)
+    .attr("id", "answerText")
+
+// Key listeners
 var currentWord = pokerWords[Math.floor(Math.random() * pokerWords.length)]
 console.log(currentWord)
 var currentGuess = ""
 var guessNum = 0
 var guesses = ["", "", "", "", ""]
 var resetReady = false
+
+document.addEventListener("keydown", keyDown);
+document.addEventListener("keyup", keyUp);
+
+function keyDown(e) {
+    let code = `${e.code}`
+    if (code.substring(0, 3) === "Key") {
+        code = code.substring(3)
+    } else if (code === "Enter" || code === "Backspace") {
+        code = code.toLowerCase()
+    } else {
+        return
+    }
+    d3.select("#key" + code).classed("hover", true);
+    typeKey(code)
+}
+
+function keyUp(e) {
+    let code = `${e.code}`
+    if (code.substring(0, 3) === "Key") {
+        code = code.substring(3)
+    } else if (code === "Enter" || code === "Backspace") {
+        code = code.toLowerCase()
+    } else {
+        return
+    }
+    d3.select("#key" + code).classed("hover", false);
+}
+
+function updateGuess() {
+    for (let col = 0; col < 5; col++) {
+        let text = ""
+        if (col < currentGuess.length) {
+            text = currentGuess.substring(col, col + 1)
+        }
+        d3.select("#boxText" + guessNum + col)
+            .classed("invalid", currentGuess.length === 5 && !validGuess())
+            .text(text)
+    }
+}
 
 function typeKey(key) {
     if (key === "enter") {
@@ -484,8 +545,10 @@ function typeKey(key) {
     updateGuess()
 }
 
-function validGuess() {
-    return currentGuess.length === 5 && allWords.includes(currentGuess.toLowerCase()) && !guesses.includes(currentGuess)
+function pressBackspace() {
+    if (currentGuess.length > 0) {
+        currentGuess = currentGuess.substring(0, currentGuess.length - 1)
+    }
 }
 
 function pressEnter() {
@@ -493,13 +556,20 @@ function pressEnter() {
         reset()
         return
     }
+    let correct = false
     if (validGuess()) {
-        guess()
+        correct = guess()
     }
     if (guessNum === 5) {
         resetReady = true
-        console.log("The word was " + currentWord)
+        if (!correct) {
+            d3.select("#answerText").text(currentWord.toUpperCase())
+        }
     }
+}
+
+function validGuess() {
+    return currentGuess.length === 5 && allWords.includes(currentGuess.toLowerCase()) && !guesses.includes(currentGuess)
 }
 
 function reset() {
@@ -521,6 +591,7 @@ function reset() {
         .classed("spade", false)
     d3.selectAll(".suitShape")
         .remove()
+    d3.select("#answerText").text("")
     currentWord = pokerWords[Math.floor(Math.random() * pokerWords.length)]
     currentGuess = ""
     guessNum = 0
@@ -598,8 +669,10 @@ function guess() {
     guesses[guessNum] = currentGuess
     guessNum++
     currentGuess = ""
+    return allCorrect
 }
 
+// Draw suits
 const boxC = boxS / 2
 const keyCX = keyWidth / 2
 const keyCY = keyHeight / 2
@@ -736,51 +809,5 @@ function drawSuit(suit, row, col, key) {
             }
             drawStem(gBox, gKey, suit, key)
             break
-    }
-}
-
-function pressBackspace() {
-    if (currentGuess.length > 0) {
-        currentGuess = currentGuess.substring(0, currentGuess.length - 1)
-    }
-}
-
-document.addEventListener("keydown", keyDown);
-document.addEventListener("keyup", keyUp);
-
-function keyDown(e) {
-    let code = `${e.code}`
-    if (code.substring(0, 3) === "Key") {
-        code = code.substring(3)
-    } else if (code === "Enter" || code === "Backspace") {
-        code = code.toLowerCase()
-    } else {
-        return
-    }
-    d3.select("#key" + code).classed("hover", true);
-    typeKey(code)
-}
-
-function keyUp(e) {
-    let code = `${e.code}`
-    if (code.substring(0, 3) === "Key") {
-        code = code.substring(3)
-    } else if (code === "Enter" || code === "Backspace") {
-        code = code.toLowerCase()
-    } else {
-        return
-    }
-    d3.select("#key" + code).classed("hover", false);
-}
-
-function updateGuess() {
-    for (let col = 0; col < 5; col++) {
-        let text = ""
-        if (col < currentGuess.length) {
-            text = currentGuess.substring(col, col + 1)
-        }
-        d3.select("#boxText" + guessNum + col)
-            .classed("invalid", currentGuess.length === 5 && !validGuess())
-            .text(text)
     }
 }
