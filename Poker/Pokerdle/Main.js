@@ -1,6 +1,4 @@
 // TODO:
-// suit shapes
-// flip key colors on hover with suit
 // animations
 // - reveal suits
 // - invalid word shake
@@ -392,6 +390,23 @@ for (let r = 0; r < 3; r++) {
         let key = svg.append("g")
             .attr("transform", "translate(" + x + "," + y + ")")
             .attr("id", "g" + id)
+            .on("mouseover", function() {
+                d3.selectAll(this.children).classed("hover", true)
+                d3.selectAll(this.children[1].children).classed("hover", true)
+            })
+            .on("mouseout", function() {
+                d3.selectAll(this.children).classed("hover", false)
+                d3.selectAll(this.children[1].children).classed("hover", false)
+            })
+            .on("click", function() {
+                typeKey(id)
+                if (mobile) {
+                    setTimeout(() => {
+                        d3.selectAll(this.children).classed("hover", false)
+                        d3.selectAll(this.children[1].children).classed("hover", false)
+                    }, 100);
+                }
+            })
         
         key.append("rect")
             .attr("width", keyWidth * keyStretch + keyPadding * (keyStretch - 1))
@@ -400,18 +415,6 @@ for (let r = 0; r < 3; r++) {
             .attr("ry", keyWidth / 8)
             .attr("class", "key")
             .attr("id", "key" + id)
-            .on("mouseover", function() {
-                d3.select(this).classed("hover", true);
-            })
-            .on("mouseout", function() {
-                d3.select(this).classed("hover", false);
-            })
-            .on("click", function() {
-                typeKey(id)
-                if (mobile) {
-                    setTimeout(() => {d3.select(this).classed("hover", false)}, 100);
-                }
-            })
         
         key.append("g")
             .attr("transform", "translate(" + keyWidth / 2 + "," + keyHeight / 2 + ")")
@@ -422,20 +425,6 @@ for (let r = 0; r < 3; r++) {
             .attr("y", keyHeight * 0.65 * (l === enter ? 1.1 : 1))
             .attr("id", "text" + id)
             .text(l)
-            .on("mouseover", function() {
-                d3.select(this).classed("hover", true);
-                d3.select(this.parentNode.children[0]).classed("hover", true);
-            })
-            .on("mouseout", function() {
-                d3.select(this).classed("hover", false);
-                d3.select(this.parentNode.children[0]).classed("hover", false);
-            })
-            .on("click", function() {
-                typeKey(id)
-                if (mobile) {
-                    setTimeout(() => {d3.select(this.parentNode.children[0]).classed("hover", false)}, 150);
-                }
-            })
         
         count++
         x += (keyWidth + keyPadding) * keyStretch
@@ -611,10 +600,6 @@ function guess() {
     currentGuess = ""
 }
 
-const colorS = "#2f2f2f"
-const colorH = "#54130a"
-const colorD = "#182376"
-const colorC = "#2f6818"
 const boxC = boxS / 2
 const keyCX = keyWidth / 2
 const keyCY = keyHeight / 2
@@ -627,9 +612,9 @@ const c = [[0, -boxS / 6], [boxS / 6, boxS * Math.sqrt(2)/12], [-boxS / 6, boxS 
 const cK = [[0, -keyS / 6], [keyS / 6, keyS * Math.sqrt(2)/12], [-keyS / 6, keyS * Math.sqrt(2)/12]]
 var stem = [[0.01196, 0.1], [0.02992, 0.21313], [0.0387, 0.25], [0.05301, 0.3], [0.06568, 0.3377], [0.03, 0.3342], [0, 1/3], [-0.03, 0.3342], [-0.06568, 0.3377], [-0.05301, 0.3], [-0.0387, 0.25], [-0.02992, 0.21313], [-0.01196, 0.1]]
 for (let i = 0; i < stem.length; i++) {
-    stem[i][1] *= 1.25
+    stem[i][1] *= 7/6
 }
-function drawStem(gBox, gKey, color, key) {
+function drawStem(gBox, gKey, suit, key) {
     gBoxStem = ""
     gKeyStem = ""
     for (i of stem) {
@@ -638,13 +623,13 @@ function drawStem(gBox, gKey, color, key) {
     }
     gBox.append("polygon")
         .attr("points", gBoxStem)
-        .style("fill", color)
         .classed("suitShape", true)
+        .classed(suit, true)
     gKey.append("polygon")
         .attr("points", gKeyStem)
-        .style("fill", color)
         .classed("suitShape", true)
         .classed("ss" + key, true)
+        .classed(suit, true)
 }
 function drawSuit(suit, row, col, key) {
     d3.selectAll(".ss" + key).remove()
@@ -652,6 +637,11 @@ function drawSuit(suit, row, col, key) {
         .classed(suit, true)
     let gBox = d3.select("#g" + row + col).select(".suitG")
     let gKey = d3.select("#g" + key).select(".suitG")
+    gKey.classed("spade", false)
+    gKey.classed("heart", false)
+    gKey.classed("diamond", false)
+    gKey.classed("heart", false)
+    gKey.classed(suit, true)
     switch (suit) {
         case "spade":
             for (i of [-1, 1]) {
@@ -659,26 +649,26 @@ function drawSuit(suit, row, col, key) {
                     .attr("cx", -boxS / 6 * i)
                     .attr("cy", boxS / 6)
                     .attr("r", boxS / 6)
-                    .attr("fill", colorS)
                     .classed("suitShape", true)
+                    .classed(suit, true)
                 gKey.append("circle")
                     .attr("cx", -keyS / 6 * i)
                     .attr("cy", keyS / 6)
                     .attr("r", keyS / 6)
-                    .attr("fill", colorS)
                     .classed("suitShape", true)
                     .classed("ss" + key, true)
+                    .classed(suit, true)
             }
             gBox.append("polygon")
                 .attr("points", `${h[0][0]}, ${-h[0][1]} ${h[1][0]}, ${-h[1][1]} ${h[2][0]}, ${-h[2][1]} ${h[3][0]}, ${-h[3][1]}`)
-                .style("fill", colorS)
                 .classed("suitShape", true)
+                .classed(suit, true)
             gKey.append("polygon")
                 .attr("points", `${hK[0][0]}, ${-hK[0][1]} ${hK[1][0]}, ${-hK[1][1]} ${hK[2][0]}, ${-hK[2][1]} ${hK[3][0]}, ${-hK[3][1]}`)
-                .style("fill", colorS)
                 .classed("suitShape", true)
                 .classed("ss" + key, true)
-            drawStem(gBox, gKey, colorS, key)
+                .classed(suit, true)
+            drawStem(gBox, gKey, suit, key)
             break
         case "heart":
             for (i of [-1, 1]) {
@@ -686,76 +676,67 @@ function drawSuit(suit, row, col, key) {
                     .attr("cx", -boxS / 6 * i)
                     .attr("cy", -boxS / 6)
                     .attr("r", boxS / 6)
-                    .attr("fill", colorH)
                     .classed("suitShape", true)
+                    .classed(suit, true)
                 gKey.append("circle")
                     .attr("cx", -keyS / 6 * i)
                     .attr("cy", -keyS / 6)
                     .attr("r", keyS / 6)
-                    .attr("fill", colorH)
                     .classed("suitShape", true)
                     .classed("ss" + key, true)
+                    .classed(suit, true)
             }
             gBox.append("polygon")
                 .attr("points", `${h[0][0]}, ${h[0][1]} ${h[1][0]}, ${h[1][1]} ${h[2][0]}, ${h[2][1]} ${h[3][0]}, ${h[3][1]}`)
-                .style("fill", colorH)
                 .classed("suitShape", true)
+                .classed(suit, true)
             gKey.append("polygon")
                 .attr("points", `${hK[0][0]}, ${hK[0][1]} ${hK[1][0]}, ${hK[1][1]} ${hK[2][0]}, ${hK[2][1]} ${hK[3][0]}, ${hK[3][1]}`)
-                .style("fill", colorH)
                 .classed("suitShape", true)
                 .classed("ss" + key, true)
+                .classed(suit, true)
             break
         case "diamond":
             gBox.append("polygon")
                 .attr("points", `${d[0][0]}, ${d[0][1]} ${d[1][0]}, ${d[1][1]} ${d[2][0]}, ${d[2][1]} ${d[3][0]}, ${d[3][1]}`)
-                .style("fill", colorD)
                 .classed("suitShape", true)
+                .classed(suit, true)
             gKey.append("polygon")
                 .attr("points", `${dK[0][0]}, ${dK[0][1]} ${dK[1][0]}, ${dK[1][1]} ${dK[2][0]}, ${dK[2][1]} ${dK[3][0]}, ${dK[3][1]}`)
-                .style("fill", colorD)
                 .classed("suitShape", true)
                 .classed("ss" + key, true)
+                .classed(suit, true)
             break
         case "club":
             gBox.append("circle")
                 .attr("r", boxC / 4)
-                .style("fill", colorC)
                 .classed("suitShape", true)
+                .classed(suit, true)
             gKey.append("circle")
                 .attr("r", keyS / 8)
-                .style("fill", colorC)
                 .classed("suitShape", true)
                 .classed("ss" + key, true)
+                .classed(suit, true)
             for (i of c) {
                 gBox.append("circle")
                     .attr("cx", i[0])
                     .attr("cy", i[1])
                     .attr("r", boxC / 3)
-                    .style("fill", colorC)
                     .classed("suitShape", true)
+                    .classed(suit, true)
             }
             for (i of cK) {
                 gKey.append("circle")
                     .attr("cx", i[0])
                     .attr("cy", i[1])
                     .attr("r", keyS / 6)
-                    .style("fill", colorC)
                     .classed("suitShape", true)
                     .classed("ss" + key, true)
+                    .classed(suit, true)
             }
-            drawStem(gBox, gKey, colorC, key)
+            drawStem(gBox, gKey, suit, key)
             break
     }
-    d3.selectAll(".suitShape")
-        .on("mouseover", function() {
-            d3.select(this).classed("hover", true);
-            d3.select(this.parentNode.parentNode.children[0]).classed("hover", true);
-        })
-        .on("mouseout", function() {
-            d3.select(this).classed("hover", false);
-            d3.select(this.parentNode.parentNode.children[0]).classed("hover", false);
-        })
 }
 
 function pressBackspace() {

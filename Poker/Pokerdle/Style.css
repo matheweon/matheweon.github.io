@@ -117,29 +117,44 @@ text {
     fill: #888;
 }
 
-.key.hover {
+.key.hover:not(.spade):not(.heart):not(.diamond):not(.club) {
     fill: #555;
+}
+
+.key.hover, text.hover, .suitG.hover {
     cursor: pointer;
 }
 
-text.hover, .suitShape.hover {
-    cursor: pointer;
-}
-
-.spade {
+.spade:not(.hover), .suitShape.spade.hover {
     fill: #4f4f4f;
 }
 
-.heart {
+.key.spade.hover, .suitShape.spade {
+    fill: #2f2f2f;
+}
+
+.heart:not(.hover), .suitShape.heart.hover {
     fill: #8b0901;
 }
 
-.diamond {
+.key.heart.hover, .suitShape.heart {
+    fill: #54130a;
+}
+
+.diamond:not(.hover), .suitShape.diamond.hover {
     fill: #283ac4;
 }
 
-.club {
+.key.diamond.hover, .suitShape.diamond {
+    fill: #182376;
+}
+
+.club:not(.hover), .suitShape.club.hover {
     fill: #52ac2a;
+}
+
+.key.club.hover, .suitShape.club {
+    fill: #2f6818;
 }
 
 .invalid {
