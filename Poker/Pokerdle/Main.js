@@ -1,10 +1,17 @@
 // TODO:
 // animations
-// - reveal suits
+// - press key letter pop
+// - reveal suits (folds vertically), maybe choose an easier animation
 // - invalid word shake
 // help (?) button
-// - instructions
+// - credits to me!
+// - instructions (link to wordle)
+// -- what each suit means
 // - shows all poker words
+// -- button to show/hide only possible words
+// stats button
+// - similar to wordle
+// settings button?
 // daily word
 
 const pokerWords = [
@@ -14,6 +21,7 @@ const pokerWords = [
     "allin",
     "angle",
     "antes",
+    "asian",
     "backs",
     "balls",
     "bands",
@@ -121,6 +129,7 @@ const pokerWords = [
     "force",
     "fours",
     "freer",
+    "freqs",
     "front",
     "funds",
     "games",
@@ -155,6 +164,7 @@ const pokerWords = [
     "kicks",
     "kills",
     "kings",
+    "large",
     "lasts",
     "later",
     "leads",
@@ -177,9 +187,13 @@ const pokerWords = [
     "lower",
     "lucky",
     "lying",
+    "magic",
     "match",
     "merge",
     "micro",
+    "milky",
+    "miner",
+    "mines",
     "minus",
     "mixed",
     "money",
@@ -192,6 +206,7 @@ const pokerWords = [
     "north",
     "nutty",
     "ocean",
+    "often",
     "omaha",
     "opens",
     "orbit",
@@ -201,6 +216,7 @@ const pokerWords = [
     "pairs",
     "payer",
     "penny",
+    "place",
     "plays",
     "plohi",
     "poker",
@@ -250,18 +266,23 @@ const pokerWords = [
     "seven",
     "shark",
     "shill",
+    "shoot",
     "short",
     "shots",
     "shove",
     "shows",
     "sixes",
     "sixty",
+    "sized",
+    "sizes",
     "skill",
     "sleep",
     "slick",
     "slows",
     "small",
+    "smell",
     "snaps",
+    "sniff",
     "solve",
     "south",
     "space",
@@ -277,6 +298,7 @@ const pokerWords = [
     "stabs",
     "stack",
     "stake",
+    "stall",
     "stand",
     "stare",
     "stars",
@@ -286,6 +308,7 @@ const pokerWords = [
     "steam",
     "steel",
     "stick",
+    "stiff",
     "stole",
     "stone",
     "stuck",
@@ -301,6 +324,7 @@ const pokerWords = [
     "taint",
     "takes",
     "tanks",
+    "teeny",
     "tells",
     "texas",
     "thick",
@@ -506,7 +530,8 @@ function keyDown(e) {
     } else {
         return
     }
-    d3.select("#key" + code).classed("hover", true);
+    d3.select("#key" + code).classed("hover", true)
+    d3.selectAll("#g" + code + ">g>*").classed("hover", true)
     typeKey(code)
 }
 
@@ -519,7 +544,8 @@ function keyUp(e) {
     } else {
         return
     }
-    d3.select("#key" + code).classed("hover", false);
+    d3.select("#key" + code).classed("hover", false)
+    d3.selectAll("#g" + code + ">g>*").classed("hover", false)
 }
 
 function updateGuess() {
@@ -542,7 +568,9 @@ function typeKey(key) {
     } else if (currentGuess.length < 5) {
         currentGuess += key
     }
-    updateGuess()
+    if (!resetReady) {
+        updateGuess()
+    }
 }
 
 function pressBackspace() {
@@ -646,24 +674,11 @@ function guess() {
     }
     for (let col = 0; col < 5; col++) {
         let l = currentGuess.substring(col, col + 1)
-        let key = d3.select("#key" + l)
-        key
-            .classed("club", false)
-            .classed("diamond", false)
-            .classed("heart", false)
-            .classed("spade", false)
         if (allCorrect) {
             resetReady = true
             drawSuit("heart", guessNum, col, l)
-            key.classed("heart", true)
         } else {
             drawSuit(suits[col], guessNum, col, l)
-            let suit = key.attr("class").substring(4)
-            if (suit !== "club") {
-                if (!(suit === "diamond" && suits[col] === "spade")) {
-                    key.classed(suits[col], "true")
-                }
-            }
         }
     }
     guesses[guessNum] = currentGuess
@@ -687,17 +702,22 @@ var stem = [[0.01196, 0.1], [0.02992, 0.21313], [0.0387, 0.25], [0.05301, 0.3], 
 for (let i = 0; i < stem.length; i++) {
     stem[i][1] *= 7/6
 }
-function drawStem(gBox, gKey, suit, key) {
+// THIS CODE IS SUPER JANK BUT WORKS
+function drawStemBox(gBox, suit) {
     gBoxStem = ""
-    gKeyStem = ""
     for (i of stem) {
         gBoxStem += i[0] * boxC * 2 + ", " + i[1] * boxC * 2 + " "
-        gKeyStem += i[0] * keyS + ", " + i[1] * keyS + " "
     }
     gBox.append("polygon")
         .attr("points", gBoxStem)
         .classed("suitShape", true)
         .classed(suit, true)
+}
+function drawStemKey(gKey, suit, key) {
+    gKeyStem = ""
+    for (i of stem) {
+        gKeyStem += i[0] * keyS + ", " + i[1] * keyS + " "
+    }
     gKey.append("polygon")
         .attr("points", gKeyStem)
         .classed("suitShape", true)
@@ -705,16 +725,19 @@ function drawStem(gBox, gKey, suit, key) {
         .classed(suit, true)
 }
 function drawSuit(suit, row, col, key) {
-    d3.selectAll(".ss" + key).remove()
     d3.select("#box" + row + col)
         .classed(suit, true)
     let gBox = d3.select("#g" + row + col).select(".suitG")
     let gKey = d3.select("#g" + key).select(".suitG")
-    gKey.classed("spade", false)
-    gKey.classed("heart", false)
-    gKey.classed("diamond", false)
-    gKey.classed("heart", false)
-    gKey.classed(suit, true)
+    let rectKey = d3.select("#key" + key)
+    let currentSuit = rectKey.attr("class").split(" ")[1]
+    if (!((currentSuit === suit) || (currentSuit === "club" && (suit === "diamond" || suit === "spade")) || (currentSuit === "diamond" && suit === "spade"))) {
+        rectKey.classed("spade", false)
+        rectKey.classed("heart", false)
+        rectKey.classed("diamond", false)
+        rectKey.classed("club", false)
+        rectKey.classed(suit, true)
+    }
     switch (suit) {
         case "spade":
             for (i of [-1, 1]) {
@@ -724,26 +747,34 @@ function drawSuit(suit, row, col, key) {
                     .attr("r", boxS / 6)
                     .classed("suitShape", true)
                     .classed(suit, true)
-                gKey.append("circle")
-                    .attr("cx", -keyS / 6 * i)
-                    .attr("cy", keyS / 6)
-                    .attr("r", keyS / 6)
-                    .classed("suitShape", true)
-                    .classed("ss" + key, true)
-                    .classed(suit, true)
             }
             gBox.append("polygon")
                 .attr("points", `${h[0][0]}, ${-h[0][1]} ${h[1][0]}, ${-h[1][1]} ${h[2][0]}, ${-h[2][1]} ${h[3][0]}, ${-h[3][1]}`)
                 .classed("suitShape", true)
                 .classed(suit, true)
+            drawStemBox(gBox, suit)
+            if (currentSuit === "diamond" || currentSuit === "club") {
+                break
+            }
+            d3.selectAll(".ss" + key).remove()
+            for (i of [-1, 1]) {
+                gKey.append("circle")
+                .attr("cx", -keyS / 6 * i)
+                .attr("cy", keyS / 6)
+                .attr("r", keyS / 6)
+                .classed("suitShape", true)
+                .classed("ss" + key, true)
+                .classed(suit, true)
+            }
             gKey.append("polygon")
                 .attr("points", `${hK[0][0]}, ${-hK[0][1]} ${hK[1][0]}, ${-hK[1][1]} ${hK[2][0]}, ${-hK[2][1]} ${hK[3][0]}, ${-hK[3][1]}`)
                 .classed("suitShape", true)
                 .classed("ss" + key, true)
                 .classed(suit, true)
-            drawStem(gBox, gKey, suit, key)
+            drawStemKey(gKey, suit, key)
             break
         case "heart":
+            d3.selectAll(".ss" + key).remove()
             for (i of [-1, 1]) {
                 gBox.append("circle")
                     .attr("cx", -boxS / 6 * i)
@@ -774,6 +805,10 @@ function drawSuit(suit, row, col, key) {
                 .attr("points", `${d[0][0]}, ${d[0][1]} ${d[1][0]}, ${d[1][1]} ${d[2][0]}, ${d[2][1]} ${d[3][0]}, ${d[3][1]}`)
                 .classed("suitShape", true)
                 .classed(suit, true)
+            if (currentSuit === "club") {
+                break
+            }
+            d3.selectAll(".ss" + key).remove()
             gKey.append("polygon")
                 .attr("points", `${dK[0][0]}, ${dK[0][1]} ${dK[1][0]}, ${dK[1][1]} ${dK[2][0]}, ${dK[2][1]} ${dK[3][0]}, ${dK[3][1]}`)
                 .classed("suitShape", true)
@@ -785,11 +820,6 @@ function drawSuit(suit, row, col, key) {
                 .attr("r", boxC / 4)
                 .classed("suitShape", true)
                 .classed(suit, true)
-            gKey.append("circle")
-                .attr("r", keyS / 8)
-                .classed("suitShape", true)
-                .classed("ss" + key, true)
-                .classed(suit, true)
             for (i of c) {
                 gBox.append("circle")
                     .attr("cx", i[0])
@@ -798,6 +828,13 @@ function drawSuit(suit, row, col, key) {
                     .classed("suitShape", true)
                     .classed(suit, true)
             }
+            drawStemBox(gBox, suit)
+            d3.selectAll(".ss" + key).remove()
+            gKey.append("circle")
+                .attr("r", keyS / 8)
+                .classed("suitShape", true)
+                .classed("ss" + key, true)
+                .classed(suit, true)
             for (i of cK) {
                 gKey.append("circle")
                     .attr("cx", i[0])
@@ -807,7 +844,7 @@ function drawSuit(suit, row, col, key) {
                     .classed("ss" + key, true)
                     .classed(suit, true)
             }
-            drawStem(gBox, gKey, suit, key)
+            drawStemKey(gKey, suit, key)
             break
     }
 }
