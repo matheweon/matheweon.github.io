@@ -398,11 +398,17 @@ console.log(printStr)
 
 // Create elements in svg
 const mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+const mobileClickMs = 100
 const height = window.innerHeight
 const width = Math.min(window.innerWidth, height / 1.5)
+const rootStyle = document.querySelector(":root").style
+const stdTextSize = height / 717 * 1.5
+rootStyle.setProperty("--textSize", stdTextSize + "em")
+rootStyle.setProperty("--gridTextSize", (stdTextSize * 2) + "em")
 const svg = d3.select("body").append("svg")
     .attr("width", width)
     .attr("height", height)
+
 
 const keyPaddingRatio = 1/6
 const keyWidth = width / (10 + 11 * keyPaddingRatio)
@@ -440,7 +446,7 @@ for (let r = 0; r < 3; r++) {
                     setTimeout(() => {
                         d3.selectAll(this.children).classed("hover", false)
                         d3.selectAll(this.children[1].children).classed("hover", false)
-                    }, 100);
+                    }, mobileClickMs);
                 }
             })
         
@@ -506,10 +512,11 @@ const answerText = svg.append("text")
     .attr("y", width + boxS / 4)
     .attr("id", "answerText")
 
-const help = svg.append("g")
-    .attr("id", "help")
+const help = svg.append("g").attr("id", "help")
+const helpButton = svg.append("g")
+    .attr("id", "helpButton")
     .attr("transform", "translate(" + (width - keyPadding - keyWidth / 2) + "," + (keyboardY - keyWidth * 5/9) + ")")
-help.append("circle")
+helpButton.append("circle")
     .attr("r", keyWidth / 3)
     .attr("stroke-width", keyWidth / 16)
     .classed("auxButton", true)
@@ -519,7 +526,15 @@ help.append("circle")
     .on("mouseout", function() {
         d3.select(this.parentNode).selectAll("*").classed("hover", false)
     })
-help.append("text")
+    .on("click", function() {
+        clickHelp()
+        if (mobile) {
+            setTimeout(() => {
+                d3.select(this.parentNode).selectAll("*").classed("hover", false)
+            }, mobileClickMs);
+        }
+    })
+const helpQuestionMark = helpButton.append("text")
     .attr("y", keyWidth / 5)
     .text("?")
     .classed("auxButton", true)
@@ -529,14 +544,25 @@ help.append("text")
     .on("mouseout", function() {
         d3.select(this.parentNode).selectAll("*").classed("hover", false)
     })
-    .on("click", clickHelp)
+    .on("click", function() {
+        clickHelp()
+        if (mobile) {
+            setTimeout(() => {
+                d3.select(this.parentNode).selectAll("*").classed("hover", false)
+            }, mobileClickMs);
+        }
+    })
+if (mobile) {
+    helpQuestionMark.style("font-size", (stdTextSize * 0.8) + "em")
+}
 
-const stats = svg.append("g")
-    .attr("id", "stats")
+const stats = svg.append("g").attr("id", "stats")
+const statsButton = svg.append("g")
+    .attr("id", "statsButton")
     .attr("transform", "translate(" + (keyPadding * 1.75) + "," + (keyboardY - keyWidth * 1/4) + ")")
 for (i of [[0, 1.75], [1, 2.5], [2, 1]]) {
     let unit = keyWidth / 4
-    stats.append("rect")
+    statsButton.append("rect")
         .attr("x", unit * i[0])
         .attr("y", -unit * i[1])
         .attr("width", unit)
@@ -549,7 +575,14 @@ for (i of [[0, 1.75], [1, 2.5], [2, 1]]) {
         .on("mouseout", function() {
             d3.select(this.parentNode).selectAll("*").classed("hover", false)
         })
-        .on("click", clickStats)
+        .on("click", function() {
+            clickStats()
+            if (mobile) {
+                setTimeout(() => {
+                    d3.select(this.parentNode).selectAll("*").classed("hover", false)
+                }, mobileClickMs);
+            }
+        })
 }
 
 // Key listeners
@@ -607,16 +640,21 @@ function updateGuess() {
 updateGuess()
 
 function typeKey(key) {
-    if (key === "enter") {
-        pressEnter()
-    } else if (key === "backspace") {
-        pressBackspace()
-    } else if (currentGuess.length < 5) {
-        animateBoxInput()
-        currentGuess += key
-    }
-    if (!resetReady) {
-        updateGuess()
+    if (onHelp || onStats) {
+        clearHelp()
+        clearStats()
+    } else {
+        if (key === "enter") {
+            pressEnter()
+        } else if (key === "backspace") {
+            pressBackspace()
+        } else if (currentGuess.length < 5) {
+            animateBoxInput()
+            currentGuess += key
+        }
+        if (!resetReady) {
+            updateGuess()
+        }
     }
 }
 
@@ -960,10 +998,61 @@ function animateInvalidWord(frame = 0) {
 }
 
 // Help and Stats button handlers
+var onHelp = false
 function clickHelp() {
-    console.log("help")
+    if (!onHelp) {
+        clearStats()
+        onHelp = true
+        help.append("rect")
+            .attr("x", boxP)
+            .attr("y", boxP)
+            .attr("width", boxS * 5 + boxP * 4)
+            .attr("height", boxS * 5 + boxP * 4)
+            .attr("rx", boxBorderW)
+            .attr("ry", boxBorderW)
+            .attr("stroke", "#888")
+            .attr("stroke-width", boxBorderW)
+        help.append("text")
+            .attr("x", width / 2)
+            .attr("y", boxS / 2)
+            .text("Created by Mathew Seng")
+    }
 }
 
+function clearHelp() {
+    help.selectAll("*").remove()
+    onHelp = false
+}
+
+var onStats = false
 function clickStats() {
-    console.log("stats")
+    if (!onStats) {
+        clearHelp()
+        onStats = true
+        stats.append("rect")
+            .attr("x", boxP)
+            .attr("y", boxP)
+            .attr("width", boxS * 5 + boxP * 4)
+            .attr("height", boxS * 5 + boxP * 4)
+            .attr("rx", boxBorderW)
+            .attr("ry", boxBorderW)
+            .attr("stroke", "#888")
+            .attr("stroke-width", boxBorderW)
+        stats.append("text")
+            .attr("x", width / 2)
+            .attr("y", boxS / 2)
+            .text("Statistics")
+    }
+}
+
+function clearStats() {
+    stats.selectAll("*").remove()
+    onStats = false
+}
+
+document.body.addEventListener("click", clickBody, true)
+
+function clickBody() {
+    clearHelp()
+    clearStats()
 }
