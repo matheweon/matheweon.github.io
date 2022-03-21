@@ -557,7 +557,7 @@ const helpQuestionMark = helpButton.append("text")
         }
     })
 if (mobile) {
-    helpQuestionMark.style("font-size", (stdTextSize * 0.85) + "em")
+    helpQuestionMark.style("font-size", (stdTextSize * 0.875) + "em")
 }
 
 const stats = svg.append("g").attr("id", "stats")
@@ -985,6 +985,7 @@ function drawSuit(suit, row, col, key) {
 }
 
 // Animations
+const frameMs = 1000/60
 const animInputFrames = 8
 function animateBoxInput(g = d3.select("#g" + guessNum + currentGuess.length), frame = 0) {
     let animLen = animInputFrames / 2
@@ -995,11 +996,11 @@ function animateBoxInput(g = d3.select("#g" + guessNum + currentGuess.length), f
     g.select("rect").attr("transform", "translate(" + trans + "," + trans + ") scale(" + scale + "," + scale + ")")
     g.select("text").attr("transform", "translate(" + trans + "," + trans + ") scale(" + scale + "," + scale + ")")
     if (frame < animInputFrames) {
-        setTimeout(() => animateBoxInput(g, frame + 1), 10)
+        setTimeout(() => animateBoxInput(g, frame + 1), frameMs)
     }
 }
 
-const animRevealFrames = 40
+const animRevealFrames = 24
 var animRevealOver = true
 function animateReveal(draw, col, row = guessNum, frame = 0, gKey) {
     animRevealOver = false
@@ -1025,19 +1026,19 @@ function animateReveal(draw, col, row = guessNum, frame = 0, gKey) {
     gKey.select("g").selectAll("*").attr("transform", "scale(1," + scale + ")")
     gKey.select("text").attr("transform", "translate(0," + keyTrans + ") scale(1," + scale + ")")
     if (frame < animRevealFrames * (col / 2 + 1)) {
-        setTimeout(() => animateReveal(draw, col, row, frame + 1, gKey), 10)
+        setTimeout(() => animateReveal(draw, col, row, frame + 1, gKey), frameMs)
     } else {
         animRevealOver = true
     }
 }
 
-const animInvalidFrames = 30
+const animInvalidFrames = 18
 const animInvalidShakes = 3
 function animateInvalidWord(frame = 0) {
     let x = Math.sin(frame / (animInvalidFrames / animInvalidShakes) * 2 * Math.PI) * boxS / 16
     d3.selectAll(".invalid").attr("transform", "translate(" + x + ",0)")
     if (frame < animInvalidFrames) {
-        setTimeout(() => animateInvalidWord(frame + 1), 10)
+        setTimeout(() => animateInvalidWord(frame + 1), frameMs)
     }
 }
 
