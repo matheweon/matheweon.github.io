@@ -1002,16 +1002,22 @@ function animateBoxInput(g = d3.select("#g" + guessNum + currentGuess.length), f
 
 const animRevealFrames = 24
 var animRevealOver = true
-function animateReveal(draw, col, row = guessNum, frame = 0, gKey) {
+function animateReveal(draw, col, row = guessNum, frame = 0, gKey, guess) {
     animRevealOver = false
     if (gKey === undefined) {
         gKey = d3.select("#g" + currentGuess.substring(col, col + 1))
     }
+    if (guess === undefined) {
+        guess = currentGuess
+    }
     let animLen = animRevealFrames / 2
     let colFrame = frame - col * animRevealFrames / 2
     let ratio = colFrame < animLen ? colFrame / animLen : (animRevealFrames - colFrame) / animLen
+    let ready = true
+    let drawn = colFrame >= animLen
     if (ratio < 0) {
         ratio = 0
+        ready = false
     } else if (ratio === 1) {
         draw()
     }
@@ -1022,11 +1028,17 @@ function animateReveal(draw, col, row = guessNum, frame = 0, gKey) {
     g.select("rect").attr("transform", "translate(0," + trans + ") scale(1," + scale + ")")
     g.select("g").selectAll("*").attr("transform", "scale(1," + scale + ")")
     g.select("text").attr("transform", "translate(0," + trans + ") scale(1," + scale + ")")
-    gKey.select("rect").attr("transform", "translate(0," + keyTrans + ") scale(1," + scale + ")")
-    gKey.select("g").selectAll("*").attr("transform", "scale(1," + scale + ")")
-    gKey.select("text").attr("transform", "translate(0," + keyTrans + ") scale(1," + scale + ")")
+    if (ready) {
+        let lastLetterSame = guess.substring(col - 1, col) === guess.substring(col, col + 1)
+        if (lastLetterSame && !drawn) {
+            scale = 0
+        }
+        gKey.select("rect").attr("transform", "translate(0," + keyTrans + ") scale(1," + scale + ")")
+        gKey.select("g").selectAll("*").attr("transform", "scale(1," + scale + ")")
+        gKey.select("text").attr("transform", "translate(0," + keyTrans + ") scale(1," + scale + ")")
+    }
     if (frame < animRevealFrames * (col / 2 + 1)) {
-        setTimeout(() => animateReveal(draw, col, row, frame + 1, gKey), frameMs)
+        setTimeout(() => animateReveal(draw, col, row, frame + 1, gKey, guess), frameMs)
     } else {
         animRevealOver = true
     }
