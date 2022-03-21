@@ -401,10 +401,13 @@ const mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.
 const mobileClickMs = 100
 const height = window.innerHeight
 const width = Math.min(window.innerWidth, height / 1.5)
-const rootStyle = document.querySelector(":root").style
+const root = document.querySelector(":root")
 const stdTextSize = height / 717 * 1.5
-rootStyle.setProperty("--textSize", stdTextSize + "em")
-rootStyle.setProperty("--gridTextSize", (stdTextSize * 2) + "em")
+root.style.setProperty("--textSize", stdTextSize + "em")
+root.style.setProperty("--gridTextSize", (stdTextSize * 2) + "em")
+root.addEventListener("dblclick", function(e) {
+    e.preventDefault()
+})
 const svg = d3.select("body").append("svg")
     .attr("width", width)
     .attr("height", height)
@@ -512,13 +515,14 @@ const answerText = svg.append("text")
     .attr("y", width + boxS / 4)
     .attr("id", "answerText")
 
+const buttonStrokeWidth = keyWidth / 16
 const help = svg.append("g").attr("id", "help")
 const helpButton = svg.append("g")
     .attr("id", "helpButton")
     .attr("transform", "translate(" + (width - keyPadding - keyWidth / 2) + "," + (keyboardY - keyWidth * 5/9) + ")")
 helpButton.append("circle")
     .attr("r", keyWidth / 3)
-    .attr("stroke-width", keyWidth / 16)
+    .attr("stroke-width", buttonStrokeWidth)
     .classed("auxButton", true)
     .on("mouseover", function() {
         d3.select(this.parentNode).selectAll("*").classed("hover", true)
@@ -553,7 +557,7 @@ const helpQuestionMark = helpButton.append("text")
         }
     })
 if (mobile) {
-    helpQuestionMark.style("font-size", (stdTextSize * 0.8) + "em")
+    helpQuestionMark.style("font-size", (stdTextSize * 0.85) + "em")
 }
 
 const stats = svg.append("g").attr("id", "stats")
@@ -567,7 +571,7 @@ for (i of [[0, 1.75], [1, 2.5], [2, 1]]) {
         .attr("y", -unit * i[1])
         .attr("width", unit)
         .attr("height", unit * i[1])
-        .attr("stroke-width", unit / 4)
+        .attr("stroke-width", buttonStrokeWidth)
         .classed("auxButton", true)
         .on("mouseover", function() {
             d3.select(this.parentNode).selectAll("*").classed("hover", true)
@@ -577,6 +581,45 @@ for (i of [[0, 1.75], [1, 2.5], [2, 1]]) {
         })
         .on("click", function() {
             clickStats()
+            if (mobile) {
+                setTimeout(() => {
+                    d3.select(this.parentNode).selectAll("*").classed("hover", false)
+                }, mobileClickMs);
+            }
+        })
+}
+
+const list = svg.append("g").attr("id", "list")
+const listButton = svg.append("g")
+    .attr("id", "listButton")
+    .attr("transform", "translate(" + (width - keyPadding * 2 - keyWidth * 11/6) + "," + (keyboardY - keyWidth * 8/9) + ")")
+const listButtonRects = [
+    [0, 0, 64, 64],
+    [12, 13, 4, 4],
+    [24, 15, 28, 1],
+    [12, 29, 4, 4],
+    [24, 31, 28, 1],
+    [12, 45, 4, 4],
+    [24, 47, 28, 1]
+]
+for (i of listButtonRects) {
+    listButton.append("rect")
+        .attr("x", keyWidth * 2/3 * i[0] / 64)
+        .attr("y", keyWidth * 2/3 * i[1] / 64)
+        .attr("rx", keyWidth / 8)
+        .attr("ry", keyWidth / 8)
+        .attr("width", keyWidth * 2/3 * i[2] / 64)
+        .attr("height", keyWidth * 2/3 * i[3] / 64)
+        .attr("stroke-width", buttonStrokeWidth)
+        .classed("auxButton", true)
+        .on("mouseover", function() {
+            d3.select(this.parentNode).selectAll("*").classed("hover", true)
+        })
+        .on("mouseout", function() {
+            d3.select(this.parentNode).selectAll("*").classed("hover", false)
+        })
+        .on("click", function() {
+            clickList()
             if (mobile) {
                 setTimeout(() => {
                     d3.select(this.parentNode).selectAll("*").classed("hover", false)
@@ -640,9 +683,10 @@ function updateGuess() {
 updateGuess()
 
 function typeKey(key) {
-    if (onHelp || onStats) {
+    if (onHelp || onStats || onList) {
         clearHelp()
         clearStats()
+        clearList()
     } else {
         if (key === "enter") {
             pressEnter()
@@ -804,7 +848,7 @@ function drawStemBox(gBox, suit) {
         .classed("suitShape", true)
         .classed(suit, true)
 }
-function drawStemKey(gKey, suit, key) {
+function drawStemKey(gKey, suit, key = "") {
     gKeyStem = ""
     for (i of stem) {
         gKeyStem += i[0] * keyS + ", " + i[1] * keyS + " "
@@ -941,7 +985,7 @@ function drawSuit(suit, row, col, key) {
 }
 
 // Animations
-const animInputFrames = 16
+const animInputFrames = 8
 function animateBoxInput(g = d3.select("#g" + guessNum + currentGuess.length), frame = 0) {
     let animLen = animInputFrames / 2
     let ratio = frame < animLen ? frame / animLen : (animInputFrames - frame) / animLen
@@ -951,11 +995,11 @@ function animateBoxInput(g = d3.select("#g" + guessNum + currentGuess.length), f
     g.select("rect").attr("transform", "translate(" + trans + "," + trans + ") scale(" + scale + "," + scale + ")")
     g.select("text").attr("transform", "translate(" + trans + "," + trans + ") scale(" + scale + "," + scale + ")")
     if (frame < animInputFrames) {
-        setTimeout(() => animateBoxInput(g, frame + 1), 4)
+        setTimeout(() => animateBoxInput(g, frame + 1), 10)
     }
 }
 
-const animRevealFrames = 100
+const animRevealFrames = 40
 var animRevealOver = true
 function animateReveal(draw, col, row = guessNum, frame = 0, gKey) {
     animRevealOver = false
@@ -981,19 +1025,19 @@ function animateReveal(draw, col, row = guessNum, frame = 0, gKey) {
     gKey.select("g").selectAll("*").attr("transform", "scale(1," + scale + ")")
     gKey.select("text").attr("transform", "translate(0," + keyTrans + ") scale(1," + scale + ")")
     if (frame < animRevealFrames * (col / 2 + 1)) {
-        setTimeout(() => animateReveal(draw, col, row, frame + 1, gKey), 4)
+        setTimeout(() => animateReveal(draw, col, row, frame + 1, gKey), 10)
     } else {
         animRevealOver = true
     }
 }
 
-const animInvalidFrames = 75
+const animInvalidFrames = 30
 const animInvalidShakes = 3
 function animateInvalidWord(frame = 0) {
     let x = Math.sin(frame / (animInvalidFrames / animInvalidShakes) * 2 * Math.PI) * boxS / 16
     d3.selectAll(".invalid").attr("transform", "translate(" + x + ",0)")
     if (frame < animInvalidFrames) {
-        setTimeout(() => animateInvalidWord(frame + 1))
+        setTimeout(() => animateInvalidWord(frame + 1), 10)
     }
 }
 
@@ -1002,6 +1046,7 @@ var onHelp = false
 function clickHelp() {
     if (!onHelp) {
         clearStats()
+        clearList()
         onHelp = true
         help.append("rect")
             .attr("x", boxP)
@@ -1012,9 +1057,112 @@ function clickHelp() {
             .attr("ry", boxBorderW)
             .attr("stroke", "#888")
             .attr("stroke-width", boxBorderW)
+        let unit = boxS / 4
+        let start = width / 2 - unit * 3.5
+        let logo = ["PROBE", "ORBIT", "KINGS", "EIGHT", "RANGE", "DONKS", "LIMPS", "EVENT"]
+        for (let i = 0; i < 8; i++) {
+            for (let j = 0; j < 5; j++) {
+                let l = help.append("text")
+                    .attr("x", start + unit * i)
+                    .attr("y", boxS * 0.5 + unit * j)
+                    .text(logo[i].substring(j, j + 1))
+                l.classed(["spade", "heart", "diamond", "club"][i % 4], true)
+                if (j !== 0) {
+                    l.classed("dark", true)
+                }
+            }
+        }
+        let suits = ["spade", "diamond", "club", "heart"]
+        for (let i = 0; i < 4; i++) {
+            let suit = suits[i]
+            let gBox = help.append("g")
+                .attr("transform", "translate(" + (boxS * 0.69) + "," + (boxS * (1.65 + i * 0.9) + ")"))
+                .attr("id", "g" + suit)
+
+            gBox.append("rect")
+                .attr("width", keyWidth)
+                .attr("height", keyHeight)
+                .attr("rx", keyWidth / 8)
+                .attr("ry", keyWidth / 8)
+                .attr("class", "key " + suit)
+                .attr("id", "key" + suit)
+            
+            let gKey = gBox.append("g")
+                .attr("transform", "translate(" + keyWidth / 2 + "," + keyHeight / 2 + ")")
+                .classed("suitG", true)
+            
+            switch (i) {
+                case 0:
+                    for (j of [-1, 1]) {
+                        gKey.append("circle")
+                        .attr("cx", -keyS / 6 * j)
+                        .attr("cy", keyS / 6)
+                        .attr("r", keyS / 6)
+                        .classed("suitShape", true)
+                        .classed(suit, true)
+                    }
+                    gKey.append("polygon")
+                        .attr("points", `${hK[0][0]}, ${-hK[0][1]} ${hK[1][0]}, ${-hK[1][1]} ${hK[2][0]}, ${-hK[2][1]} ${hK[3][0]}, ${-hK[3][1]}`)
+                        .classed("suitShape", true)
+                        .classed(suit, true)
+                    drawStemKey(gKey, suit)
+                    gBox.append("text")
+                        .attr("x", boxS * 1.5)
+                        .attr("y", boxS / 2)
+                        .text("= not in word")
+                    break
+                case 1:
+                    gKey.append("polygon")
+                        .attr("points", `${dK[0][0]}, ${dK[0][1]} ${dK[1][0]}, ${dK[1][1]} ${dK[2][0]}, ${dK[2][1]} ${dK[3][0]}, ${dK[3][1]}`)
+                        .classed("suitShape", true)
+                        .classed(suit, true)
+                    gBox.append("text")
+                        .attr("x", boxS * 2.57)
+                        .attr("y", boxS / 2)
+                        .text("= in word but wrong position")
+                    break
+                case 2:
+                    gKey.append("circle")
+                        .attr("r", keyS / 8)
+                        .classed("suitShape", true)
+                        .classed(suit, true)
+                    for (j of cK) {
+                        gKey.append("circle")
+                            .attr("cx", j[0])
+                            .attr("cy", j[1])
+                            .attr("r", keyS / 6)
+                            .classed("suitShape", true)
+                            .classed(suit, true)
+                    }
+                    drawStemKey(gKey, suit)
+                    gBox.append("text")
+                        .attr("x", boxS * 1.81)
+                        .attr("y", boxS / 2)
+                        .text("= correct position")
+                    break
+                case 3:
+                    for (j of [-1, 1]) {
+                        gKey.append("circle")
+                            .attr("cx", -keyS / 6 * j)
+                            .attr("cy", -keyS / 6)
+                            .attr("r", keyS / 6)
+                            .classed("suitShape", true)
+                            .classed(suit, true)
+                    }
+                    gKey.append("polygon")
+                        .attr("points", `${hK[0][0]}, ${hK[0][1]} ${hK[1][0]}, ${hK[1][1]} ${hK[2][0]}, ${hK[2][1]} ${hK[3][0]}, ${hK[3][1]}`)
+                        .classed("suitShape", true)
+                        .classed(suit, true)
+                    gBox.append("text")
+                        .attr("x", boxS * 1.6)
+                        .attr("y", boxS / 2)
+                        .text("= correct word")
+                    break
+            }
+        }
         help.append("text")
             .attr("x", width / 2)
-            .attr("y", boxS / 2)
+            .attr("y", boxS * 5.6)
             .text("Created by Mathew Seng")
     }
 }
@@ -1028,6 +1176,7 @@ var onStats = false
 function clickStats() {
     if (!onStats) {
         clearHelp()
+        clearList()
         onStats = true
         stats.append("rect")
             .attr("x", boxP)
@@ -1050,9 +1199,55 @@ function clearStats() {
     onStats = false
 }
 
-document.body.addEventListener("click", clickBody, true)
+var onList = false
+function clickList() {
+    if (!onList) {
+        clearHelp()
+        clearStats()
+        onList = true
+        list.append("rect")
+            .attr("x", boxP)
+            .attr("y", boxP)
+            .attr("width", boxS * 5 + boxP * 4)
+            .attr("height", boxS * 5 + boxP * 4)
+            .attr("rx", boxBorderW)
+            .attr("ry", boxBorderW)
+            .attr("stroke", "#888")
+            .attr("stroke-width", boxBorderW)
+        list.append("text")
+            .attr("x", width / 2)
+            .attr("y", boxS / 2)
+            .text("Pokerdle Word List")
+        let wordsArr = []
+        let wordsPerLine = 10
+        for (let i = 0; i < pokerWords.length; i++) {
+            if (i % wordsPerLine === 0) {
+                wordsArr.push([])
+            }
+            wordsArr[Math.floor(i / wordsPerLine)].push(pokerWords[i])
+        }
+        for (let i = 0; i < wordsArr.length; i++) {
+            for (let j = 0; j < wordsArr[i].length; j++) {
+                let x = width / 2 + (j - (wordsPerLine / 2 - 0.5)) * width / (wordsPerLine + 1)
+                let y = boxS * (0.8 + i * 0.14)
+                list.append("text")
+                    .attr("x", x)
+                    .attr("y", y)
+                    .style("font-size", (stdTextSize / 2) + "em")
+                    .text(wordsArr[i][j])
+            }
+        }
+    }
+}
 
+function clearList() {
+    list.selectAll("*").remove()
+    onList = false
+}
+
+document.body.addEventListener("click", clickBody, true)
 function clickBody() {
     clearHelp()
     clearStats()
+    clearList()
 }

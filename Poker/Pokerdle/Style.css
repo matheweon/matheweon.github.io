@@ -45,7 +45,7 @@ text {
     fill: #4f4f4f;
 }
 
-.key.spade.hover, .suitShape.spade {
+.key.spade.hover, .suitShape.spade, .spade.dark{
     fill: #2f2f2f;
 }
 
@@ -53,7 +53,7 @@ text {
     fill: #8b0901;
 }
 
-.key.heart.hover, .suitShape.heart {
+.key.heart.hover, .suitShape.heart, .heart.dark {
     fill: #54130a;
 }
 
@@ -61,7 +61,7 @@ text {
     fill: #283ac4;
 }
 
-.key.diamond.hover, .suitShape.diamond {
+.key.diamond.hover, .suitShape.diamond, .diamond.dark {
     fill: #182376;
 }
 
@@ -69,7 +69,7 @@ text {
     fill: #52ac2a;
 }
 
-.key.club.hover, .suitShape.club {
+.key.club.hover, .suitShape.club, .club.dark {
     fill: #2f6818;
 }
 
