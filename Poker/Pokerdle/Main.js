@@ -1,8 +1,4 @@
 // TODO:
-// animations
-// - press key letter pop
-// - reveal suits (folds vertically), maybe choose an easier animation
-// - invalid word shake
 // help (?) button
 // - credits to me!
 // - instructions (link to wordle)
@@ -224,6 +220,7 @@ const pokerWords = [
     "posts",
     "prays",
     "preys",
+    "price",
     "prize",
     "probe",
     "props",
@@ -399,7 +396,7 @@ for (word of pokerWords) {
 }
 console.log(printStr)
 
-// Create keyboard and grid in svg
+// Create elements in svg
 const mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
 const height = window.innerHeight
 const width = Math.min(window.innerWidth, height / 1.5)
@@ -488,9 +485,8 @@ for (let row = 0; row < 5; row++) {
             .attr("height", boxS)
             .attr("rx", boxBorderW)
             .attr("ry", boxBorderW)
-            .attr("class", "box")
+            .attr("class", "box boxDark")
             .attr("id", "box" + row + col)
-            .attr("stroke", "#333")
             .attr("stroke-width", boxBorderW)
         
         box.append("g")
@@ -505,10 +501,56 @@ for (let row = 0; row < 5; row++) {
     }
 }
 
-svg.append("text")
+const answerText = svg.append("text")
     .attr("x", width / 2)
     .attr("y", width + boxS / 4)
     .attr("id", "answerText")
+
+const help = svg.append("g")
+    .attr("id", "help")
+    .attr("transform", "translate(" + (width - keyPadding - keyWidth / 2) + "," + (keyboardY - keyWidth * 5/9) + ")")
+help.append("circle")
+    .attr("r", keyWidth / 3)
+    .attr("stroke-width", keyWidth / 16)
+    .classed("auxButton", true)
+    .on("mouseover", function() {
+        d3.select(this.parentNode).selectAll("*").classed("hover", true)
+    })
+    .on("mouseout", function() {
+        d3.select(this.parentNode).selectAll("*").classed("hover", false)
+    })
+help.append("text")
+    .attr("y", keyWidth / 5)
+    .text("?")
+    .classed("auxButton", true)
+    .on("mouseover", function() {
+        d3.select(this.parentNode).selectAll("*").classed("hover", true)
+    })
+    .on("mouseout", function() {
+        d3.select(this.parentNode).selectAll("*").classed("hover", false)
+    })
+    .on("click", clickHelp)
+
+const stats = svg.append("g")
+    .attr("id", "stats")
+    .attr("transform", "translate(" + (keyPadding * 1.75) + "," + (keyboardY - keyWidth * 1/4) + ")")
+for (i of [[0, 1.75], [1, 2.5], [2, 1]]) {
+    let unit = keyWidth / 4
+    stats.append("rect")
+        .attr("x", unit * i[0])
+        .attr("y", -unit * i[1])
+        .attr("width", unit)
+        .attr("height", unit * i[1])
+        .attr("stroke-width", unit / 4)
+        .classed("auxButton", true)
+        .on("mouseover", function() {
+            d3.select(this.parentNode).selectAll("*").classed("hover", true)
+        })
+        .on("mouseout", function() {
+            d3.select(this.parentNode).selectAll("*").classed("hover", false)
+        })
+        .on("click", clickStats)
+}
 
 // Key listeners
 var currentWord = pokerWords[Math.floor(Math.random() * pokerWords.length)]
@@ -553,12 +595,16 @@ function updateGuess() {
         let text = ""
         if (col < currentGuess.length) {
             text = currentGuess.substring(col, col + 1)
+            d3.select("#box" + guessNum + col).classed("boxLight", true).classed("boxMed", false)
+        } else {
+            d3.select("#box" + guessNum + col).classed("boxMed", true).classed("boxLight", false).classed("boxDark", false)
         }
         d3.select("#boxText" + guessNum + col)
             .classed("invalid", currentGuess.length === 5 && !validGuess())
             .text(text)
     }
 }
+updateGuess()
 
 function typeKey(key) {
     if (key === "enter") {
@@ -566,6 +612,7 @@ function typeKey(key) {
     } else if (key === "backspace") {
         pressBackspace()
     } else if (currentGuess.length < 5) {
+        animateBoxInput()
         currentGuess += key
     }
     if (!resetReady) {
@@ -580,18 +627,22 @@ function pressBackspace() {
 }
 
 function pressEnter() {
-    if (resetReady) {
-        reset()
-        return
-    }
-    let correct = false
-    if (validGuess()) {
-        correct = guess()
-    }
-    if (guessNum === 5) {
-        resetReady = true
-        if (!correct) {
-            d3.select("#answerText").text(currentWord.toUpperCase())
+    if (animRevealOver) {
+        if (resetReady) {
+            reset()
+            return
+        }
+        let correct = false
+        if (validGuess()) {
+            correct = guess()
+        } else {
+            animateInvalidWord()
+        }
+        if (guessNum === 5) {
+            resetReady = true
+            if (!correct) {
+                answerText.text(currentWord.toUpperCase())
+            }
         }
     }
 }
@@ -608,6 +659,9 @@ function reset() {
                 .classed("diamond", false)
                 .classed("heart", false)
                 .classed("spade", false)
+                .classed("boxLight", false)
+                .classed("boxMed", false)
+                .classed("boxDark", true)
             d3.select("#boxText" + row + col)
                 .text("")
         }
@@ -619,7 +673,7 @@ function reset() {
         .classed("spade", false)
     d3.selectAll(".suitShape")
         .remove()
-    d3.select("#answerText").text("")
+    answerText.text("")
     currentWord = pokerWords[Math.floor(Math.random() * pokerWords.length)]
     currentGuess = ""
     guessNum = 0
@@ -642,6 +696,10 @@ function guess() {
             }
         }
         suits[col] = suit
+    }
+    if (allCorrect) {
+        resetReady = true
+        suits = ["heart", "heart", "heart", "heart", "heart"]
     }
     // Double Letters
     let guessLetters = {}
@@ -674,12 +732,7 @@ function guess() {
     }
     for (let col = 0; col < 5; col++) {
         let l = currentGuess.substring(col, col + 1)
-        if (allCorrect) {
-            resetReady = true
-            drawSuit("heart", guessNum, col, l)
-        } else {
-            drawSuit(suits[col], guessNum, col, l)
-        }
+        animateReveal(() => drawSuit(suits[col], guessNum - 1, col, l), col)
     }
     guesses[guessNum] = currentGuess
     guessNum++
@@ -847,4 +900,70 @@ function drawSuit(suit, row, col, key) {
             drawStemKey(gKey, suit, key)
             break
     }
+}
+
+// Animations
+const animInputFrames = 16
+function animateBoxInput(g = d3.select("#g" + guessNum + currentGuess.length), frame = 0) {
+    let animLen = animInputFrames / 2
+    let ratio = frame < animLen ? frame / animLen : (animInputFrames - frame) / animLen
+    ratio = Math.pow(ratio, 2/3)
+    let scale = 1 + 1/6 * ratio
+    let trans = -boxBorderW * ratio
+    g.select("rect").attr("transform", "translate(" + trans + "," + trans + ") scale(" + scale + "," + scale + ")")
+    g.select("text").attr("transform", "translate(" + trans + "," + trans + ") scale(" + scale + "," + scale + ")")
+    if (frame < animInputFrames) {
+        setTimeout(() => animateBoxInput(g, frame + 1), 4)
+    }
+}
+
+const animRevealFrames = 100
+var animRevealOver = true
+function animateReveal(draw, col, row = guessNum, frame = 0, gKey) {
+    animRevealOver = false
+    if (gKey === undefined) {
+        gKey = d3.select("#g" + currentGuess.substring(col, col + 1))
+    }
+    let animLen = animRevealFrames / 2
+    let colFrame = frame - col * animRevealFrames / 2
+    let ratio = colFrame < animLen ? colFrame / animLen : (animRevealFrames - colFrame) / animLen
+    if (ratio < 0) {
+        ratio = 0
+    } else if (ratio === 1) {
+        draw()
+    }
+    let scale = 1 - ratio
+    let trans = boxS / 2 * ratio
+    let keyTrans = keyHeight / 2 * ratio
+    let g = d3.select("#g" + row + col)
+    g.select("rect").attr("transform", "translate(0," + trans + ") scale(1," + scale + ")")
+    g.select("g").selectAll("*").attr("transform", "scale(1," + scale + ")")
+    g.select("text").attr("transform", "translate(0," + trans + ") scale(1," + scale + ")")
+    gKey.select("rect").attr("transform", "translate(0," + keyTrans + ") scale(1," + scale + ")")
+    gKey.select("g").selectAll("*").attr("transform", "scale(1," + scale + ")")
+    gKey.select("text").attr("transform", "translate(0," + keyTrans + ") scale(1," + scale + ")")
+    if (frame < animRevealFrames * (col / 2 + 1)) {
+        setTimeout(() => animateReveal(draw, col, row, frame + 1, gKey), 4)
+    } else {
+        animRevealOver = true
+    }
+}
+
+const animInvalidFrames = 75
+const animInvalidShakes = 3
+function animateInvalidWord(frame = 0) {
+    let x = Math.sin(frame / (animInvalidFrames / animInvalidShakes) * 2 * Math.PI) * boxS / 16
+    d3.selectAll(".invalid").attr("transform", "translate(" + x + ",0)")
+    if (frame < animInvalidFrames) {
+        setTimeout(() => animateInvalidWord(frame + 1))
+    }
+}
+
+// Help and Stats button handlers
+function clickHelp() {
+    console.log("help")
+}
+
+function clickStats() {
+    console.log("stats")
 }
