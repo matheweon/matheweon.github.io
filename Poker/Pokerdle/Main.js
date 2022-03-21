@@ -1,9 +1,5 @@
 // TODO:
-// help (?) button
-// - credits to me!
-// - instructions (link to wordle)
-// -- what each suit means
-// - shows all poker words
+// list button
 // -- button to show/hide only possible words
 // stats button
 // - similar to wordle
@@ -35,6 +31,7 @@ const pokerWords = [
     "bleed",
     "blind",
     "block",
+    "blows",
     "bluff",
     "board",
     "boats",
@@ -75,6 +72,7 @@ const pokerWords = [
     "count",
     "crabs",
     "crack",
+    "cycle",
     "deals",
     "dealt",
     "death",
@@ -85,7 +83,9 @@ const pokerWords = [
     "dimes",
     "dirty",
     "dnegs",
+    "dodge",
     "donks",
+    "doubt",
     "doyle",
     "drawn",
     "draws",
@@ -131,12 +131,14 @@ const pokerWords = [
     "games",
     "giant",
     "gifts",
+    "goods",
     "grabs",
     "grand",
     "greed",
     "greek",
     "green",
     "grind",
+    "guide",
     "gypsy",
     "hands",
     "heads",
@@ -160,6 +162,7 @@ const pokerWords = [
     "kicks",
     "kills",
     "kings",
+    "knock",
     "large",
     "lasts",
     "later",
@@ -336,6 +339,7 @@ const pokerWords = [
     "times",
     "token",
     "tough",
+    "track",
     "traps",
     "trash",
     "treys",
@@ -361,6 +365,7 @@ const pokerWords = [
     "witty",
     "wraps",
     "yacht",
+    "yoink",
     "zeros"
 ]
 const findDuplicates = (arr) => {
@@ -640,6 +645,12 @@ document.addEventListener("keydown", keyDown);
 document.addEventListener("keyup", keyUp);
 
 function keyDown(e) {
+    if (onHelp || onStats || onList) {
+        clearHelp()
+        clearStats()
+        clearList()
+        return
+    }
     let code = `${e.code}`
     if (code.substring(0, 3) === "Key") {
         code = code.substring(3)
@@ -683,22 +694,16 @@ function updateGuess() {
 updateGuess()
 
 function typeKey(key) {
-    if (onHelp || onStats || onList) {
-        clearHelp()
-        clearStats()
-        clearList()
-    } else {
-        if (key === "enter") {
-            pressEnter()
-        } else if (key === "backspace") {
-            pressBackspace()
-        } else if (currentGuess.length < 5) {
-            animateBoxInput()
-            currentGuess += key
-        }
-        if (!resetReady) {
-            updateGuess()
-        }
+    if (key === "enter") {
+        pressEnter()
+    } else if (key === "backspace") {
+        pressBackspace()
+    } else if (currentGuess.length < 5) {
+        animateBoxInput()
+        currentGuess += key
+    }
+    if (!resetReady) {
+        updateGuess()
     }
 }
 
@@ -1068,8 +1073,8 @@ function clickHelp() {
             .attr("height", boxS * 5 + boxP * 4)
             .attr("rx", boxBorderW)
             .attr("ry", boxBorderW)
-            .attr("stroke", "#888")
             .attr("stroke-width", boxBorderW)
+            .classed("bigBox", true)
         let unit = boxS / 4
         let start = width / 2 - unit * 3.5
         let logo = ["PROBE", "ORBIT", "KINGS", "EIGHT", "RANGE", "DONKS", "LIMPS", "EVENT"]
@@ -1198,8 +1203,8 @@ function clickStats() {
             .attr("height", boxS * 5 + boxP * 4)
             .attr("rx", boxBorderW)
             .attr("ry", boxBorderW)
-            .attr("stroke", "#888")
             .attr("stroke-width", boxBorderW)
+            .classed("bigBox", true)
         stats.append("text")
             .attr("x", width / 2)
             .attr("y", boxS / 2)
@@ -1225,8 +1230,8 @@ function clickList() {
             .attr("height", boxS * 5 + boxP * 4)
             .attr("rx", boxBorderW)
             .attr("ry", boxBorderW)
-            .attr("stroke", "#888")
             .attr("stroke-width", boxBorderW)
+            .classed("bigBox", true)
         list.append("text")
             .attr("x", width / 2)
             .attr("y", boxS / 2)
