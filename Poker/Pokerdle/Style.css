@@ -11,6 +11,11 @@ html, body {
     height: 100%;
     overflow: hidden;
 }
+
+svg {
+    margin-left: var(--svgMargin);
+}
+
 text {
     fill: white;
     font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;

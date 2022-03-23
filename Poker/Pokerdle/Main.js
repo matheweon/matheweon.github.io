@@ -410,6 +410,7 @@ const root = document.querySelector(":root")
 const stdTextSize = height / 717 * 1.5
 root.style.setProperty("--textSize", stdTextSize + "em")
 root.style.setProperty("--gridTextSize", (stdTextSize * 2) + "em")
+root.style.setProperty("--svgMargin", (window.innerWidth - width) / 2 + "px")
 root.addEventListener("dblclick", function(e) {
     e.preventDefault()
 })
