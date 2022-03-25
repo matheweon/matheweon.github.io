@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html id='html'>
+
+<head>
+    <title>Poker Preflop</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'/>
+    <link rel='stylesheet' href='Style.css'>
+    <link rel='icon' type='image/x-icon' href='PPChip.png'>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+    <script src='https://d3js.org/d3.v7.min.js'></script>
+</head>
+
+<body id='body' scroll='no'>
+    <script src='FastClick.js'></script>
+    <script src='MTT4.js'></script>
+    <script src='Main.js'></script>
+    <script type='text/javascript'>
+        // Import from matheweon.github.io if the local file cannot be found
+        function appendScript(localPath, filepath) {
+            if ($('body script[src="' + localPath + '"]').length > 0)
+                return;
+
+            var ele = document.createElement('script');
+            ele.setAttribute('type', 'text/javascript');
+            ele.setAttribute('src', filepath);
+            $('body').append(ele);
+        }
+
+        function appendStyle(localPath, filepath) {
+            if ($('head link[href="' + localPath + '"]').length > 0)
+                return;
+
+            var ele = document.createElement('link');
+            ele.setAttribute('type', 'text/css');
+            ele.setAttribute('rel', 'Stylesheet');
+            ele.setAttribute('href', filepath);
+            $('head').append(ele);
+        }
+
+        appendStyle('Style.css', 'https://matheweon.github.io/Poker/Pokerdle/Style.css');
+        appendScript('FastClick.js', 'https://matheweon.github.io/Poker/Pokerdle/FastClick.js');
+        appendScript('MTT4.js', 'https://matheweon.github.io/Poker/Pokerdle/MTT4.js');
+        appendScript('Main.js', 'https://matheweon.github.io/Poker/Pokerdle/Main.js');
+    </script>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'/>
+</body>
+
+</html>

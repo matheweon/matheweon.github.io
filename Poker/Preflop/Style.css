@@ -1,0 +1,38 @@
+body {
+    margin: 0px !important;
+}
+
+html {
+    background-color: black;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+text {
+    fill: white;
+    font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-size: var(--textSize);
+    font-weight: 500;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.cellB {
+    fill: black;
+}
+
+.o2_3 {
+    fill: red;
+}
+
+.f {
+    fill: blue;
+}
