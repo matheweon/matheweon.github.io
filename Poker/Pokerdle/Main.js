@@ -278,6 +278,7 @@ const pokerWords = [
     "skill",
     "sleep",
     "slick",
+    "slide",
     "slows",
     "small",
     "smell",
@@ -338,6 +339,7 @@ const pokerWords = [
     "timer",
     "times",
     "token",
+    "tokes",
     "tough",
     "track",
     "traps",
@@ -357,6 +359,7 @@ const pokerWords = [
     "waits",
     "wakes",
     "walks",
+    "watch",
     "weeds",
     "whale",
     "wheel",
@@ -521,47 +524,40 @@ const answerText = svg.append("text")
     .attr("y", width + boxS / 4)
     .attr("id", "answerText")
 
+function applyButtonFunc(b, func) {
+    b.classed("auxButton", true)
+    .on("mouseover", function() {
+        d3.select(this.parentNode).selectAll("*").classed("hover", true)
+    })
+    .on("mouseout", function() {
+        d3.select(this.parentNode).selectAll("*").classed("hover", false)
+    })
+    .on("click", function() {
+        func()
+        if (mobile) {
+            setTimeout(() => {
+                d3.select(this.parentNode).selectAll("*").classed("hover", false)
+            }, mobileClickMs);
+        }
+    })
+    return b
+}
+
 const buttonStrokeWidth = keyWidth / 16
 const help = svg.append("g").attr("id", "help")
 const helpButton = svg.append("g")
     .attr("id", "helpButton")
     .attr("transform", "translate(" + (width - keyPadding - keyWidth / 2) + "," + (keyboardY - keyWidth * 5/9) + ")")
-helpButton.append("circle")
+applyButtonFunc(helpButton.append("circle")
     .attr("r", keyWidth / 3)
     .attr("stroke-width", buttonStrokeWidth)
-    .classed("auxButton", true)
-    .on("mouseover", function() {
-        d3.select(this.parentNode).selectAll("*").classed("hover", true)
-    })
-    .on("mouseout", function() {
-        d3.select(this.parentNode).selectAll("*").classed("hover", false)
-    })
-    .on("click", function() {
-        clickHelp()
-        if (mobile) {
-            setTimeout(() => {
-                d3.select(this.parentNode).selectAll("*").classed("hover", false)
-            }, mobileClickMs);
-        }
-    })
-const helpQuestionMark = helpButton.append("text")
+    , clickHelp
+)
+const helpQuestionMark = applyButtonFunc(helpButton.append("text")
     .attr("y", keyWidth / 5)
     .text("?")
-    .classed("auxButton", true)
-    .on("mouseover", function() {
-        d3.select(this.parentNode).selectAll("*").classed("hover", true)
-    })
-    .on("mouseout", function() {
-        d3.select(this.parentNode).selectAll("*").classed("hover", false)
-    })
-    .on("click", function() {
-        clickHelp()
-        if (mobile) {
-            setTimeout(() => {
-                d3.select(this.parentNode).selectAll("*").classed("hover", false)
-            }, mobileClickMs);
-        }
-    })
+    , clickHelp
+)
 if (mobile) {
     helpQuestionMark.style("font-size", (stdTextSize * 0.875) + "em")
 }
@@ -572,27 +568,14 @@ const statsButton = svg.append("g")
     .attr("transform", "translate(" + (keyPadding * 1.75) + "," + (keyboardY - keyWidth * 1/4) + ")")
 for (i of [[0, 1.75], [1, 2.5], [2, 1]]) {
     let unit = keyWidth / 4
-    statsButton.append("rect")
+    applyButtonFunc(statsButton.append("rect")
         .attr("x", unit * i[0])
         .attr("y", -unit * i[1])
         .attr("width", unit)
         .attr("height", unit * i[1])
         .attr("stroke-width", buttonStrokeWidth)
-        .classed("auxButton", true)
-        .on("mouseover", function() {
-            d3.select(this.parentNode).selectAll("*").classed("hover", true)
-        })
-        .on("mouseout", function() {
-            d3.select(this.parentNode).selectAll("*").classed("hover", false)
-        })
-        .on("click", function() {
-            clickStats()
-            if (mobile) {
-                setTimeout(() => {
-                    d3.select(this.parentNode).selectAll("*").classed("hover", false)
-                }, mobileClickMs);
-            }
-        })
+        , clickStats
+    )
 }
 
 const list = svg.append("g").attr("id", "list")
@@ -609,7 +592,7 @@ const listButtonRects = [
     [24, 47, 28, 1]
 ]
 for (i of listButtonRects) {
-    listButton.append("rect")
+    applyButtonFunc(listButton.append("rect")
         .attr("x", keyWidth * 2/3 * i[0] / 64)
         .attr("y", keyWidth * 2/3 * i[1] / 64)
         .attr("rx", keyWidth / 8)
@@ -617,21 +600,8 @@ for (i of listButtonRects) {
         .attr("width", keyWidth * 2/3 * i[2] / 64)
         .attr("height", keyWidth * 2/3 * i[3] / 64)
         .attr("stroke-width", buttonStrokeWidth)
-        .classed("auxButton", true)
-        .on("mouseover", function() {
-            d3.select(this.parentNode).selectAll("*").classed("hover", true)
-        })
-        .on("mouseout", function() {
-            d3.select(this.parentNode).selectAll("*").classed("hover", false)
-        })
-        .on("click", function() {
-            clickList()
-            if (mobile) {
-                setTimeout(() => {
-                    d3.select(this.parentNode).selectAll("*").classed("hover", false)
-                }, mobileClickMs);
-            }
-        })
+        , clickList
+    )
 }
 
 // Key listeners
@@ -1219,6 +1189,7 @@ function clearStats() {
 }
 
 var onList = false
+const wordsVPad = 5 / Math.ceil(pokerWords.length / 10)
 function clickList() {
     if (!onList) {
         clearHelp()
@@ -1248,7 +1219,7 @@ function clickList() {
         for (let i = 0; i < wordsArr.length; i++) {
             for (let j = 0; j < wordsArr[i].length; j++) {
                 let x = width / 2 + (j - (wordsPerLine / 2 - 0.5)) * width / (wordsPerLine + 1)
-                let y = boxS * (0.8 + i * 0.14)
+                let y = boxS * (0.8 + i * wordsVPad)
                 list.append("text")
                     .attr("x", x)
                     .attr("y", y)
@@ -1257,6 +1228,19 @@ function clickList() {
             }
         }
     }
+    let eyeButton = svg.append("g")
+        .attr("id", "eyeButton")
+        .attr("transform", "translate(" + (width - keyPadding * 2 - keyWidth * 11/6) + "," + (keyWidth * 0.8) + ")")
+    applyButtonFunc(eyeButton.append("circle")
+        .attr("rx", keyWidth / 16)
+        .attr("ry", keyWidth / 16)
+        .classed("eye", true)
+        , clickEye
+    )
+}
+
+function clickEye() {
+    console.log("eye")
 }
 
 function clearList() {

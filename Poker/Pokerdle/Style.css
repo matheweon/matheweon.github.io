@@ -103,11 +103,11 @@ text {
     cursor: pointer;
 }
 
-text.auxButton {
+text.auxButton, .eye.auxButton {
     fill: #444;
 }
 
-text.auxButton.hover {
+text.auxButton.hover, .eye.auxButton.hover {
     fill: #fff;
 }
 
