@@ -88,20 +88,38 @@ for (let i = 0; i < 14; i++) {
 }
 
 function formatId(s) {
-    return (isNaN(s.substring(0, 1)) ? '' : '_') + s.replace(/\s/g, '')
+    return (isNaN(s.substring(0, 1)) ? '' : '_') + s.replace(/\s/g, '').replace('.', '_')
 }
 
 const gameTypeG = svg.append('g').attr('id', 'gameType')
-const gameTypes = ['4Max MTT', 'Heads Up', '6Max Cash']
+const gameTypes = ['4Max MTT', 'HU SnG', 'HU Cash', '6Max Cash']
 const stackDepthG = svg.append('g').attr('id', 'stackDepth')
-const stackDepths = ['100', '80', '60', '50', '40', '35', '30', '25', '20', '17', '14', '12', '10']
+var stackDepths = ['100', '80', '60', '50', '40', '35', '30', '25', '20', '17', '14', '12', '10']
+const positionsG = svg.append('g').attr('id', 'positions')
+var positions = ['CO', 'BU', 'SB', 'BB']
 const actionsG = svg.append('g').attr('id', 'action')
-const actions = ['CO', 'BU', 'SB', 'SBcBB']
-const positions = ['CO', 'BU', 'SB', 'BB']
+var actions = {
+    'CO': {
+
+    },
+    'BU': {
+
+    },
+    'SB': {
+        'SBcBB': {
+            
+        },
+        'SBoBB': {
+
+        },
+        'SBaBB': {}
+    }
+}
 var rangeInfo = {
     'gameType': formatId(gameTypes[0]),
     'stackDepth': formatId(stackDepths[0]),
-    'action': formatId(actions[0])
+    'action': formatId(positions[0]),
+    'position': formatId(positions[0])
 }
 
 const buttonP = cellsW / 50
@@ -130,6 +148,7 @@ function applyHover(sel, click = () => {}, over = () => {}, out = () => {}) {
 applyHover(d3.selectAll('.cellG'), (g) => clickHand(g), (g) => hoverHand(g), displayRangeFreqs)
 
 function select(g) {
+    if (g === null) return
     d3.select(g.parentNode).selectAll('*').selectAll('*').classed('selected', false)
     d3.selectAll(g.children).classed('selected', true)
 }
@@ -156,27 +175,28 @@ function createButtons(bg, bs, id, row) {
     }
     applyHover(d3.select('#' + id).selectAll('g'), (g) => {
         select(g)
-        if (id === 'action') {
-            rangeInfo[id] = actions[positions.indexOf(d3.select(g).attr('id'))]
-        } else {
-            rangeInfo[id] = d3.select(g).attr('id')
+        if (id === 'position') {
+            rangeInfo['action'] = actions[positions.indexOf(d3.select(g).attr('id'))]
         }
+        rangeInfo[id] = d3.select(g).attr('id')
         updateRange()
+        updateButtons()
         prevRangeInfo = JSON.parse(JSON.stringify(rangeInfo))
     }, (g) => {
-        if (id === 'action') {
-            rangeInfo[id] = actions[positions.indexOf(d3.select(g).attr('id'))]
-        } else {
-            rangeInfo[id] = d3.select(g).attr('id')
+        if (id === 'position') {
+            rangeInfo['action'] = actions[positions.indexOf(d3.select(g).attr('id'))]
         }
+        rangeInfo[id] = d3.select(g).attr('id')
         updateRange()
+        updateButtons()
         displayRangeFreqs()
     }, () => {
         rangeInfo = JSON.parse(JSON.stringify(prevRangeInfo))
         updateRange()
+        updateButtons()
         displayRangeFreqs()
     })
-    select(document.getElementById(formatId(bs[0])))
+    select(document.getElementById(rangeInfo[id === 'position' ? 'action' : id]))
     updateRange()
 }
 
@@ -198,9 +218,74 @@ function displayRangeFreqs() {
     displayActionFreqs(actStrArr)
 }
 
-createButtons(gameTypeG, gameTypes, 'gameType', 0)
-createButtons(stackDepthG, stackDepths, 'stackDepth', 1)
-createButtons(actionsG, positions, 'action', 2.5)
+var prevGameType = rangeInfo['gameType']
+function updateButtons(bypass) {
+    if (!bypass && prevGameType === rangeInfo['gameType']) {
+        return
+    }
+    prevGameType = rangeInfo['gameType']
+    d3.select('#stackDepth').selectAll('*').remove()
+    d3.select('#action').selectAll('*').remove()
+    if (bypass) {
+        d3.select('#gameType').selectAll('*').remove()
+        createButtons(gameTypeG, gameTypes, 'gameType', 0)
+    }
+    switch (rangeInfo['gameType']) {
+        case '_4MaxMTT':
+            stackDepths = ['100', '80', '60', '50', '40', '35', '30', '25', '20', '17', '14', '12', '10']
+            actions = {
+                'CO': {
+
+                },
+                'BU': {
+
+                },
+                'SB': {
+                    'SBcBB': {
+                        
+                    },
+                    'SBoBB': {
+
+                    },
+                    'SBaBB': {}
+                }
+            }
+            positions = ['CO', 'BU', 'SB', 'SBcBB']
+            break
+        case 'HUSnG':
+            stackDepths = ['25', '22.5', '20', '18', '16', '15', '14', '13', '12', '11', '10', '9', '8', '7', '6', '5', '4', '3', '2', '1']
+            actions = {
+                'BU': {
+                    'BUcBB': {
+                        'BUcBB3': {},
+                        'BUcBB7': {},
+                        'BUcBBa': {}
+                    },
+                    'BUoBB': {
+                        'BUoBB5': {},
+                        'BUoBB7_5': {},
+                        'BUoBBa': {}
+                    }
+                }
+            }
+            positions = ['BU', 'BB']
+            break
+        case 'HUCash':
+            stackDepths = ['100']
+            actions = {'BU': {'BUoBB': {'BUoBB3BU': {'BUoBB3BU4BB': {'BUoBB3BU4BBaBU': {}}}}}}
+            positions = ['BU', 'BB']
+            break
+        case '_6MaxCash':
+            stackDepths = ['200', '150', '100', '75', '50', '40', '20']
+            actions = ['LJ', 'HJ', 'CO', 'BU', 'SB', 'BUcBB']
+            positions = ['LJ', 'HJ', 'CO', 'BU', 'SB', 'BB']
+            break
+    }
+    createButtons(stackDepthG, stackDepths, 'stackDepth', 1)
+    createButtons(actionsG, positions, 'action', 2.5)
+    // CREATE MORE ACTIONS HERE
+}
+updateButtons(true)
 
 const rollText = svg.append('text')
     .attr('x', cellsW + buttonP)
@@ -357,12 +442,14 @@ function displayRange(r) {
 }
 
 function updateRange() {
-    d3.selectAll('.cell').remove()
     let gT = rangeInfo['gameType']
     let sD = parseInt(rangeInfo['stackDepth'].substring(1))
     let pos = rangeInfo['action']
     if (gT === '_4MaxMTT') {
-        displayRange(parseGTOString(MTT4[sD][pos]))
+        d3.selectAll('.cell').remove()
+        let r = MTT4[sD]
+        r ? r = r[pos] : {}
+        r ? displayRange(parseGTOString(r)) : {}
     }
 }
 
