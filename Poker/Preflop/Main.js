@@ -501,13 +501,14 @@ function clickHand(g) {
     let freqs = currentRange[row][col]
     let acts = Object.keys(freqs)
     let roll = Math.random() * 100
+    let rollCounter = roll
     let act;
     for (a of acts) {
         act = a
-        if (roll < freqs[a]) {
+        if (rollCounter < freqs[a]) {
             break
         }
-        roll -= freqs[a]
+        rollCounter -= freqs[a]
     }
     act = parseAction(act, true)
     roll = Math.floor(roll)
