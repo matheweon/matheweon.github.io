@@ -92,7 +92,7 @@ function formatId(s) {
 }
 
 const gameTypeG = svg.append('g').attr('id', 'gameType')
-const gameTypes = ['4Max MTT'] // '6Max Cash'
+const gameTypes = ['4Max MTT', 'Heads Up', '6Max Cash']
 const stackDepthG = svg.append('g').attr('id', 'stackDepth')
 const stackDepths = ['100', '80', '60', '50', '40', '35', '30', '25', '20', '17', '14', '12', '10']
 const actionsG = svg.append('g').attr('id', 'action')
@@ -448,10 +448,10 @@ function displayActionFreqs(acts) {
             .text(a.replace('B', '')), a)
         g.append('rect')
             .attr('x', cellsW + buttonP)
-            .attr('y', y - cellS)
+            .attr('y', y - cellS * 0.75)
             .attr('width', width - cellsW - cellS * 3)
             .attr('height', cellS)
-            .style('fill', 'hsla(0, 0%, 0%, 0)')
+            .style('fill', 'hsla(0, 0%, 100%, 0)')
             .on('mouseover', function() {
                 highlight(this)
             })
@@ -463,6 +463,7 @@ function displayActionFreqs(acts) {
             .attr('y', y)
             .classed('textRight', true)
             .classed('bigText', true)
+            .style('fill', 'hsl(' + num * 1.2 + ' 100% 50%)')
             .text(num)
         y -= cellS
     }
