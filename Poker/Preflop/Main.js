@@ -3,11 +3,6 @@ const mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.
 const mobileClickMs = 300
 var width = window.innerWidth
 var height = Math.min(window.innerHeight, width * 0.65)
-if (mobile) {
-    let temp = width
-    width = height
-    height = temp
-}
 const root = document.querySelector(':root')
 const stdTextSize = height / 50
 root.style.setProperty('--textSize', stdTextSize + 'px')
