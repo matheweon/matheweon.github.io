@@ -147,6 +147,7 @@ const pokerWords = [
     "heavy",
     "hides",
     "highs",
+    "holds",
     "holes",
     "hooks",
     "horse",

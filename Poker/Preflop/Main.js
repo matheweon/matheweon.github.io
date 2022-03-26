@@ -22,7 +22,7 @@ const background = svg.append('rect')
             roll = '0' + roll
         }
         displayActionFreqs()
-        rollText.text(roll)
+        colorGradient(rollText.text(roll), roll)
     })
 
 const actionColors = {
@@ -95,7 +95,7 @@ const gameTypeG = svg.append('g').attr('id', 'gameType')
 const gameTypes = ['4Max MTT', 'HU SnG', 'HU Cash', '6Max Cash']
 const stackDepthG = svg.append('g').attr('id', 'stackDepth')
 var stackDepths = ['100', '80', '60', '50', '40', '35', '30', '25', '20', '17', '14', '12', '10']
-const positionsG = svg.append('g').attr('id', 'positions')
+const positionsG = svg.append('g').attr('id', 'position')
 var positions = ['CO', 'BU', 'SB', 'BB']
 const actionsG = svg.append('g').attr('id', 'action')
 var actions = {
@@ -119,7 +119,7 @@ var rangeInfo = {
     'gameType': formatId(gameTypes[0]),
     'stackDepth': formatId(stackDepths[0]),
     'action': formatId(positions[0]),
-    'position': formatId(positions[0])
+    'position': null
 }
 
 const buttonP = cellsW / 50
@@ -176,7 +176,7 @@ function createButtons(bg, bs, id, row) {
     applyHover(d3.select('#' + id).selectAll('g'), (g) => {
         select(g)
         if (id === 'position') {
-            rangeInfo['action'] = actions[positions.indexOf(d3.select(g).attr('id'))]
+            rangeInfo['action'] = d3.select(g).attr('id') // UPDATE THIS
         }
         rangeInfo[id] = d3.select(g).attr('id')
         updateRange()
@@ -184,7 +184,7 @@ function createButtons(bg, bs, id, row) {
         prevRangeInfo = JSON.parse(JSON.stringify(rangeInfo))
     }, (g) => {
         if (id === 'position') {
-            rangeInfo['action'] = actions[positions.indexOf(d3.select(g).attr('id'))]
+            rangeInfo['action'] = d3.select(g).attr('id')
         }
         rangeInfo[id] = d3.select(g).attr('id')
         updateRange()
@@ -197,6 +197,7 @@ function createButtons(bg, bs, id, row) {
         displayRangeFreqs()
     })
     select(document.getElementById(rangeInfo[id === 'position' ? 'action' : id]))
+    //select(document.getElementById(rangeInfo[id]))
     updateRange()
 }
 
@@ -225,6 +226,7 @@ function updateButtons(bypass) {
     }
     prevGameType = rangeInfo['gameType']
     d3.select('#stackDepth').selectAll('*').remove()
+    d3.select('#position').selectAll('*').remove()
     d3.select('#action').selectAll('*').remove()
     if (bypass) {
         d3.select('#gameType').selectAll('*').remove()
@@ -235,10 +237,16 @@ function updateButtons(bypass) {
             stackDepths = ['100', '80', '60', '50', '40', '35', '30', '25', '20', '17', '14', '12', '10']
             actions = {
                 'CO': {
-
+                    'COo': {},
+                    'COoBU': {},
+                    'COoSB': {},
+                    'COoBB': {}
                 },
                 'BU': {
-
+                    '': {},
+                    'BUo': {},
+                    'BUoSB': {},
+                    'BUoBB': {}
                 },
                 'SB': {
                     'SBcBB': {
@@ -282,8 +290,16 @@ function updateButtons(bypass) {
             break
     }
     createButtons(stackDepthG, stackDepths, 'stackDepth', 1)
-    createButtons(actionsG, positions, 'action', 2.5)
+    createButtons(positionsG, positions, 'position', 2.5)
     // CREATE MORE ACTIONS HERE
+    //console.log(Object.keys(actions[rangeInfo['action']]))
+    //console.log(rangeInfo['action'])
+    /*if (rangeInfo['action'] === null) {
+        console.log(Object.keys(actions))
+        createButtons(actionsG, Object.keys(actions), 'action', 3.5)
+    } else {
+        createButtons(actionsG, Object.keys(actions[rangeInfo['action']]), 'action', 3.5)
+    }*/
 }
 updateButtons(true)
 
@@ -444,11 +460,11 @@ function displayRange(r) {
 function updateRange() {
     let gT = rangeInfo['gameType']
     let sD = parseInt(rangeInfo['stackDepth'].substring(1))
-    let pos = rangeInfo['action']
+    let act = rangeInfo['action']
     if (gT === '_4MaxMTT') {
         d3.selectAll('.cell').remove()
         let r = MTT4[sD]
-        r ? r = r[pos] : {}
+        r ? r = r[act] : {}
         r ? displayRange(parseGTOString(r)) : {}
     }
 }
@@ -499,7 +515,7 @@ function clickHand(g) {
         roll = '0' + roll
     }
     displayActionFreqs()
-    rollText.text(roll + ': ' + act)
+    colorGradient(rollText.text(roll + ': ' + act), roll)
 }
 
 function hoverHand(g) {
@@ -514,6 +530,10 @@ function hoverHand(g) {
         actStrings.push(parseAction(a) + ': ' + freqs[a])
     }
     displayActionFreqs(actStrings)
+}
+
+function colorGradient(t, n) {
+    return t.style('fill', 'hsl(' + n * 1.2 + ' 100% 50%)')
 }
 
 function displayActionFreqs(acts) {
@@ -545,13 +565,12 @@ function displayActionFreqs(acts) {
             .on('mouseout', function() {
                 highlight(this, true)
             })
-        g.append('text')
+        colorGradient(g.append('text')
             .attr('x', width - buttonP)
             .attr('y', y)
             .classed('textRight', true)
             .classed('bigText', true)
-            .style('fill', 'hsl(' + num * 1.2 + ' 100% 50%)')
-            .text(num)
+            .text(num), num)
         y -= cellS
     }
 }
