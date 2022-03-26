@@ -17,6 +17,7 @@ text {
     font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
     font-size: var(--textSize);
     font-weight: 500;
+    text-anchor: middle;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -25,14 +26,93 @@ text {
     user-select: none;
 }
 
+.textLeft {
+    text-anchor: start;
+}
+
+.textRight {
+    text-anchor: end;
+}
+
+.bigText {
+    font-size: var(--bigTextSize);
+}
+
 .cellB {
     fill: black;
 }
 
-.o2_3 {
-    fill: red;
+.button {
+    fill: #555;
+    stroke-width: 2px;
+    stroke: #333;
+}
+
+.hover {
+    cursor: pointer;
+}
+
+.button.hover {
+    fill: #777;
+}
+
+.button.selected {
+    fill: #aaa;
+}
+
+.r-3 {
+    fill: hsl(7deg 69% 40%)
+}
+
+.r-3.hover {
+    fill: hsl(7deg 69% 20%)
+}
+
+.r-2 {
+    fill: hsl(6deg 65% 46%);
+}
+
+.r-2.hover {
+    fill: hsl(6deg 65% 26%);
+}
+
+.r-1 {
+    fill: hsl(2deg 67% 54%);
+}
+
+.r-1.hover {
+    fill: hsl(2deg 67% 34%)
+}
+
+.r-0 {
+    fill: hsl(360deg 81% 62%)
+}
+
+.r-0.hover {
+    fill: hsl(360deg 81% 42%)
+}
+
+.c, .x {
+    fill: hsl(128deg 40% 54%);
+}
+
+.c.hover, .x.hover {
+    fill: hsl(128deg 40% 34%);
 }
 
 .f {
-    fill: blue;
+    fill: hsl(197deg 45% 42%);
+}
+
+.f.hover {
+    fill : hsl(197deg 45% 22%);
+}
+
+.hidden {
+    display: none;
+}
+
+.bigText.hidden {
+    display: block;
+    opacity: 50%;
 }

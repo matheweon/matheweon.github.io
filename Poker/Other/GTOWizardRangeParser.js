@@ -14,8 +14,14 @@ for (let i = 0; i < 13; i++) {
     }
 }
 // Arrays for each action
-let allInFreqs = [];
-let raiseFreqs = [];
+let raise7Freqs = [];
+let raise6Freqs = [];
+let raise5Freqs = [];
+let raise4Freqs = [];
+let raise3Freqs = [];
+let raise2Freqs = [];
+let raise1Freqs = [];
+let raise0Freqs = [];
 let callFreqs = [];
 let foldFreqs = [];
 // Push every hand's frequencies for each action into their respective arrays
@@ -31,8 +37,14 @@ for (let i = 0; i < 169; i++) {
     let addedFreqs = 0;
     // Stop if hand does not exist in range
     if (colorFreqs === "") {
-        allInFreqs.push(0);
-        raiseFreqs.push(0);
+        raise7Freqs.push(0);
+        raise6Freqs.push(0);
+        raise5Freqs.push(0);
+        raise4Freqs.push(0);
+        raise3Freqs.push(0);
+        raise2Freqs.push(0);
+        raise1Freqs.push(0);
+        raise0Freqs.push(0);
         callFreqs.push(0);
         foldFreqs.push(0);
         continue;
@@ -44,11 +56,29 @@ for (let i = 0; i < 169; i++) {
         let color = colors.substring(colors.indexOf("rgb") + 4, colors.indexOf("rgb") + 16);
         let freq = Math.round((parseFloat(colorFreqs.substring(0, colorFreqs.indexOf("%"))).toFixed(2) - addedFreqs) * prevFreq) / 100;
         switch (color) {
-            case "216, 59, 59)": // All in
-                allInFreqs.push(freq);
+            case "143, 0, 0), ": // Raise7
+                raise7Freqs.push(freq);
                 break;
-            case "245, 83, 83)": // Raise
-                raiseFreqs.push(freq);
+            case "171, 23, 23)": // Raise6
+                raise6Freqs.push(freq);
+                break;
+            case "180, 30, 30)": // Raise5
+                raise5Freqs.push(freq);
+                break;
+            case "194, 41, 41)": // Raise4
+                raise4Freqs.push(freq);
+                break;
+            case "205, 50, 50)": // Raise3
+                raise3Freqs.push(freq);
+                break;
+            case "216, 59, 59)": // Raise2
+                raise2Freqs.push(freq);
+                break;
+            case "230, 71, 71)": // Raise1
+                raise1Freqs.push(freq);
+                break;
+            case "245, 83, 83)": // Raise0
+                raise0Freqs.push(freq);
                 break;
             case "90, 185, 102": // Call
                 callFreqs.push(freq);
@@ -62,11 +92,29 @@ for (let i = 0; i < 169; i++) {
         colors = colors.substring(colors.indexOf(", linear-gradient") + 2);
     }
     // Push 0 to arrays if action is not taken
-    if (allInFreqs.length !== i + 1) {
-        allInFreqs.push(0);
+    if (raise7Freqs.length !== i + 1) {
+        raise7Freqs.push(0);
     }
-    if (raiseFreqs.length !== i + 1) {
-        raiseFreqs.push(0);
+    if (raise6Freqs.length !== i + 1) {
+        raise6Freqs.push(0);
+    }
+    if (raise5Freqs.length !== i + 1) {
+        raise5Freqs.push(0);
+    }
+    if (raise4Freqs.length !== i + 1) {
+        raise4Freqs.push(0);
+    }
+    if (raise3Freqs.length !== i + 1) {
+        raise3Freqs.push(0);
+    }
+    if (raise2Freqs.length !== i + 1) {
+        raise2Freqs.push(0);
+    }
+    if (raise1Freqs.length !== i + 1) {
+        raise1Freqs.push(0);
+    }
+    if (raise0Freqs.length !== i + 1) {
+        raise0Freqs.push(0);
     }
     if (callFreqs.length !== i + 1) {
         callFreqs.push(0);
@@ -76,7 +124,7 @@ for (let i = 0; i < 169; i++) {
     }
 }
 // Print GTO ranges for each action array
-for (let actionFreqs of [allInFreqs, raiseFreqs, callFreqs, foldFreqs]) {
+for (let actionFreqs of [raise7Freqs, raise6Freqs, raise5Freqs, raise4Freqs, raise3Freqs, raise2Freqs, raise1Freqs, raise0Freqs, callFreqs, foldFreqs]) {
     // Array of each unique freqency percentage
     let actionUniqueFreqs = [0];
     for (let i = 0; i < 169; i++) {
@@ -112,14 +160,32 @@ for (let actionFreqs of [allInFreqs, raiseFreqs, callFreqs, foldFreqs]) {
     actionString = actionString.substring(0, actionString.length - 1);
     // Print GTO range
     switch (actionFreqs) {
-        case allInFreqs:
-            console.log("All In: " + actionString);
+        case raise7Freqs:
+            console.log("Raise7: " + actionString);
             break;
-        case raiseFreqs:
-            console.log("Raise: " + actionString);
+        case raise6Freqs:
+            console.log("Raise6: " + actionString);
+            break;
+        case raise5Freqs:
+            console.log("Raise5: " + actionString);
+            break;
+        case raise4Freqs:
+            console.log("Raise4: " + actionString);
+            break;
+        case raise3Freqs:
+            console.log("Raise3: " + actionString);
+            break;
+        case raise2Freqs:
+            console.log("Raise2: " + actionString);
+            break;
+        case raise1Freqs:
+            console.log("Raise1: " + actionString);
+            break;
+        case raise0Freqs:
+            console.log("Raise0: " + actionString);
             break;
         case callFreqs:
-            console.log("Call: " + actionString);
+            console.log("Call/Check: " + actionString);
             break;
         case foldFreqs:
             console.log("Fold: " + actionString);
