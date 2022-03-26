@@ -469,7 +469,7 @@ function updateRange() {
     }
 }
 
-function parseAction(act) {
+function parseAction(act, removeSpecial) {
     switch (act.substring(0, 1)) {
         case 'f':
             act = 'Fold'
@@ -490,8 +490,8 @@ function parseAction(act) {
             act = 'All In ' + act.substring(1)
             break
     }
-    act = act.replace('_', '.')
-    return act
+    if (removeSpecial) act = act.replace('B', '')
+    return act.replace('_', '.')
 }
 
 function clickHand(g) {
@@ -509,7 +509,7 @@ function clickHand(g) {
         }
         roll -= freqs[a]
     }
-    act = parseAction(act)
+    act = parseAction(act, true)
     roll = Math.floor(roll)
     if (roll < 10) {
         roll = '0' + roll
