@@ -114,7 +114,7 @@ text {
     display: none;
 }
 
-.bigText.hidden {
+.bigText.hidden, text.hidden {
     display: block;
     opacity: 25%;
 }

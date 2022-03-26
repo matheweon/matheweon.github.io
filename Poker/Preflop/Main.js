@@ -568,6 +568,12 @@ function highlight(rect, out = false) {
             d3.selectAll('.' + c).classed('hidden', true)
         }
     }
+    iterCells((i, j) => {
+        let g = d3.select('#cellG' + i + '-' + j)
+        if (g.select('.' + hiClass).attr('width') === '0') {
+            g.select('text').classed('hidden', true)
+        }
+    })
 }
 
 function applyTextColor(t, a) {
