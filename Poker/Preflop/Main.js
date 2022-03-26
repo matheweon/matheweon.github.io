@@ -1,8 +1,13 @@
 // Create elements in svg
 const mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
 const mobileClickMs = 300
-const width = window.innerWidth
-const height = Math.min(window.innerHeight, width * 0.65)
+var width = window.innerWidth
+var height = Math.min(window.innerHeight, width * 0.65)
+if (mobile) {
+    let temp = width
+    width = height
+    height = temp
+}
 const root = document.querySelector(':root')
 const stdTextSize = height / 50
 root.style.setProperty('--textSize', stdTextSize + 'px')
