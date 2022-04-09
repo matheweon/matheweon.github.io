@@ -62,35 +62,35 @@ text {
     fill: #999;
 }
 
-.r-3 {
+.R-3 {
     fill: hsl(7deg 69% 40%)
 }
 
-.r-3.hover {
+.R-3.hover {
     fill: hsl(7deg 69% 20%)
 }
 
-.r-2 {
+.R-2 {
     fill: hsl(6deg 65% 46%);
 }
 
-.r-2.hover {
+.R-2.hover {
     fill: hsl(6deg 65% 26%);
 }
 
-.r-1 {
+.R-1 {
     fill: hsl(2deg 67% 54%);
 }
 
-.r-1.hover {
+.R-1.hover {
     fill: hsl(2deg 67% 34%)
 }
 
-.r-0 {
+.R-0 {
     fill: hsl(360deg 81% 62%)
 }
 
-.r-0.hover {
+.R-0.hover {
     fill: hsl(360deg 81% 42%)
 }
 

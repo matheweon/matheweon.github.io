@@ -1,3 +1,14 @@
+/*
+TODO:
+- Ranges
+    - 100 BB, BvB full tree DONE
+    - 100 BB, 3rd level or full tree?
+    - 10 BB, full tree
+    - Short stack depths, full tree
+- Change cells from full height to range height or have an option for that?
+- Some weird bugs when clicking around the game tree selector
+*/
+
 // Create elements in svg
 const mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
 const mobileClickMs = 300
@@ -26,15 +37,15 @@ const background = svg.append('rect')
     })
 
 const actionColors = {
-    'r-3': ['a35', 'a30', 'a25', 'a20', 'a17', 'a14', 'a12', 'a10'],
-    'r-2': ['rB6', 'r7', 'r10'],
-    'r-1': ['o2', 'o2_1', 'o2_2', 'o2_3', 'o2_5', 'o3', 'o3_5', 'o4', 'r4', 'r4_5', 'r5', 'r6', 'r6_5'],
-    'r-0': ['r2_5', 'r3', 'r3_5']
+    'R-3': ['a35', 'a30', 'a25', 'a20', 'a17', 'a14', 'a12', 'a10'],
+    'R-2': ['rB6', 'r7', 'r10'],
+    'R-1': ['o2', 'o2_1', 'o2_2', 'o2_3', 'o2_5', 'o3', 'o3_5', 'o4', 'r4', 'r4_5', 'r5', 'r6', 'r6_5'],
+    'R-0': ['r2_5', 'r3', 'r3_5']
 }
 
 function condenseClasses(r) {
     let output = ''
-    for (c of actionColors['r-' + r]) {
+    for (c of actionColors['R-' + r]) {
         output += '.' + c + ', '
     }
     return output.substring(0, output.length - 2)
@@ -97,29 +108,13 @@ const stackDepthG = svg.append('g').attr('id', 'stackDepth')
 var stackDepths = ['100', '80', '60', '50', '40', '35', '30', '25', '20', '17', '14', '12', '10']
 const positionsG = svg.append('g').attr('id', 'position')
 var positions = ['CO', 'BU', 'SB', 'BB']
-const actionsG = svg.append('g').attr('id', 'action')
-var actions = {
-    'CO': {
-
-    },
-    'BU': {
-
-    },
-    'SB': {
-        'SBcBB': {
-            
-        },
-        'SBoBB': {
-
-        },
-        'SBaBB': {}
-    }
-}
+const actionsGs = [svg.append('g').attr('id', 'action0'), svg.append('g').attr('id', 'action1'), svg.append('g').attr('id', 'action2'), svg.append('g').attr('id', 'action3'), svg.append('g').attr('id', 'action4'), svg.append('g').attr('id', 'action5')]
+var actions = {}
 var rangeInfo = {
     'gameType': formatId(gameTypes[0]),
     'stackDepth': formatId(stackDepths[0]),
-    'action': formatId(positions[0]),
-    'position': null
+    'action': [],
+    'position': positions[0]
 }
 
 const buttonP = cellsW / 50
@@ -149,18 +144,41 @@ applyHover(d3.selectAll('.cellG'), (g) => clickHand(g), (g) => hoverHand(g), dis
 
 function select(g) {
     if (g === null) return
-    d3.select(g.parentNode).selectAll('*').selectAll('*').classed('selected', false)
+    //if (d3.select(g.parentNode).attr('id').substring(0, 6) !== 'action') {
+        d3.select(g.parentNode).selectAll('*').selectAll('*').classed('selected', false)
+    //}
     d3.selectAll(g.children).classed('selected', true)
 }
 
 var prevRangeInfo = {}
+// Deep copy rangeInfo
 prevRangeInfo = JSON.parse(JSON.stringify(rangeInfo))
-function createButtons(bg, bs, id, row) {
+// Ex: createButtons(stackDepthG, stackDepths, 'stackDepth', 1)
+// bg: buttonG
+// bs: button ids
+// id: 'gameType', 'stackDepth', 'position', or 'action'
+// row: y offset of buttons
+// tree (for 'position' and 'action'): game tree
+// actLevel (for 'action'): row of actions
+function createButtons(bg, bs, id, row, tree, actLevel) {
+    isAction = id.substring(0, 6) === 'action'
     for (let i = 0; i < bs.length; i++) {
+        let act = JSON.parse(JSON.stringify(rangeInfo['action']))
+        if (isAction) {
+            if (bs[i] === '') {
+                continue
+            }
+            if (act[act.length - 1] !== bs[i]) {
+                act.push(bs[i])
+            }
+        }
         let g = bg.append('g')
             .attr('transform', 'translate(' + (cellsW + buttonP) + ',' + (buttonP + buttonH * row) + ')')
             .classed('buttonG', true)
             .attr('id', formatId(bs[i]))
+        if (isAction) {
+            g.attr('action', act)
+        }
         let w = buttonGW / bs.length
         let x = w * i
         g.append('rect')
@@ -171,37 +189,71 @@ function createButtons(bg, bs, id, row) {
         g.append('text')
             .attr('x', x + w / 2)
             .attr('y', buttonH * 0.65)
-            .text(bs[i])
+            .text(isAction ? parseAction(bs[i].substring(2)) : bs[i])
     }
     applyHover(d3.select('#' + id).selectAll('g'), (g) => {
-        select(g)
-        if (id === 'position') {
-            rangeInfo['action'] = d3.select(g).attr('id') // UPDATE THIS
+        /*if (id === 'position') {
+            rangeInfo['action'] = d3.select(g).attr('action').split(',')
+        }*/
+        console.log(d3.select(g).attr('id'))
+        if (d3.select(g).attr('action') !== null) {
+            rangeInfo['position'] = d3.select(g).attr('id').substring(0, 2)
+            console.log('action: ')
+            console.log(rangeInfo['action'])
+            console.log(rangeInfo['action'][rangeInfo['action'].length - 1])
+            //if (rangeInfo['action'][rangeInfo['action'].length - 1] === d3.select(g).attr('id')) {
+            if (d3.select(g).select('rect').classed('selected')) {
+                console.log('unselected ' + d3.select(g).attr('id'))
+                // Remove until last action by popping
+                while (rangeInfo['action'][rangeInfo['action'].length - 1] !== d3.select(g).attr('id') && rangeInfo['action'].length > 0) {
+                    rangeInfo['action'].pop()
+                }
+                rangeInfo['action'].pop()
+            } else {
+                console.log('selected ' + d3.select(g).attr('id'))
+                rangeInfo['action'] = d3.select(g).attr('action').split(',')
+            }
+        } else {
+            rangeInfo[id] = d3.select(g).attr('id')
         }
-        rangeInfo[id] = d3.select(g).attr('id')
+        select(g)
         updateRange()
         updateButtons()
         prevRangeInfo = JSON.parse(JSON.stringify(rangeInfo))
     }, (g) => {
-        if (id === 'position') {
-            rangeInfo['action'] = d3.select(g).attr('id')
+        /*if (id === 'position') {
+            rangeInfo['action'] = d3.select(g).attr('action').split(',')
+        }*/
+        if (d3.select(g).attr('action') !== null) {
+            rangeInfo['position'] = d3.select(g).attr('id').substring(0, 2)
+            //rangeInfo['action'] = d3.select(g).attr('action').split(',')
+        } else {
+            rangeInfo[id] = d3.select(g).attr('id')
         }
-        rangeInfo[id] = d3.select(g).attr('id')
         updateRange()
-        updateButtons()
+        if (d3.select(g).attr('action') === null) {
+            console.log('updated buttons')
+            updateButtons()
+        }
         displayRangeFreqs()
-    }, () => {
+    }, (g) => {
         rangeInfo = JSON.parse(JSON.stringify(prevRangeInfo))
         updateRange()
-        updateButtons()
+        if (d3.select(g).attr('action') === null) {
+            updateButtons()
+        }
         displayRangeFreqs()
     })
-    select(document.getElementById(rangeInfo[id === 'position' ? 'action' : id]))
-    //select(document.getElementById(rangeInfo[id]))
+    if (!isAction) {
+        select(document.getElementById(rangeInfo[id]))
+    }
     updateRange()
 }
 
 function displayRangeFreqs() {
+    if (currentRange === undefined) {
+        return
+    }
     let sumFreqs = {}
     for (act of Object.keys(currentRange[0][0])) {
         sumFreqs[act] = 0
@@ -220,14 +272,19 @@ function displayRangeFreqs() {
 }
 
 var prevGameType = rangeInfo['gameType']
+var prevAction = rangeInfo['action']
 function updateButtons(bypass) {
-    if (!bypass && prevGameType === rangeInfo['gameType']) {
+    console.log(rangeInfo['action'])
+    if (!bypass && prevGameType === rangeInfo['gameType'] && prevAction === rangeInfo['action']) {
         return
     }
     prevGameType = rangeInfo['gameType']
+    prevAction = rangeInfo['action']
     d3.select('#stackDepth').selectAll('*').remove()
     d3.select('#position').selectAll('*').remove()
-    d3.select('#action').selectAll('*').remove()
+    for (let i = 0; i <= 5; i++) {
+        d3.select('#action' + i).selectAll('*').remove()
+    }
     if (bypass) {
         d3.select('#gameType').selectAll('*').remove()
         createButtons(gameTypeG, gameTypes, 'gameType', 0)
@@ -235,71 +292,33 @@ function updateButtons(bypass) {
     switch (rangeInfo['gameType']) {
         case '_4MaxMTT':
             stackDepths = ['100', '80', '60', '50', '40', '35', '30', '25', '20', '17', '14', '12', '10']
-            actions = {
-                'CO': {
-                    'COo': {},
-                    'COoBU': {},
-                    'COoSB': {},
-                    'COoBB': {}
-                },
-                'BU': {
-                    '': {},
-                    'BUo': {},
-                    'BUoSB': {},
-                    'BUoBB': {}
-                },
-                'SB': {
-                    'SBcBB': {
-                        
-                    },
-                    'SBoBB': {
-
-                    },
-                    'SBaBB': {}
-                }
-            }
-            positions = ['CO', 'BU', 'SB', 'SBcBB']
+            positions = ['CO', 'BU', 'SB', 'BB']
             break
         case 'HUSnG':
             stackDepths = ['25', '22.5', '20', '18', '16', '15', '14', '13', '12', '11', '10', '9', '8', '7', '6', '5', '4', '3', '2', '1']
-            actions = {
-                'BU': {
-                    'BUcBB': {
-                        'BUcBB3': {},
-                        'BUcBB7': {},
-                        'BUcBBa': {}
-                    },
-                    'BUoBB': {
-                        'BUoBB5': {},
-                        'BUoBB7_5': {},
-                        'BUoBBa': {}
-                    }
-                }
-            }
             positions = ['BU', 'BB']
             break
         case 'HUCash':
             stackDepths = ['100']
-            actions = {'BU': {'BUoBB': {'BUoBB3BU': {'BUoBB3BU4BB': {'BUoBB3BU4BBaBU': {}}}}}}
             positions = ['BU', 'BB']
             break
         case '_6MaxCash':
             stackDepths = ['200', '150', '100', '75', '50', '40', '20']
-            actions = ['LJ', 'HJ', 'CO', 'BU', 'SB', 'BUcBB']
             positions = ['LJ', 'HJ', 'CO', 'BU', 'SB', 'BB']
             break
     }
     createButtons(stackDepthG, stackDepths, 'stackDepth', 1)
     createButtons(positionsG, positions, 'position', 2.5)
-    // CREATE MORE ACTIONS HERE
-    //console.log(Object.keys(actions[rangeInfo['action']]))
-    //console.log(rangeInfo['action'])
-    /*if (rangeInfo['action'] === null) {
-        console.log(Object.keys(actions))
-        createButtons(actionsG, Object.keys(actions), 'action', 3.5)
-    } else {
-        createButtons(actionsG, Object.keys(actions[rangeInfo['action']]), 'action', 3.5)
-    }*/
+
+    let acts = parseTree(rangeInfo['action'])
+    console.log(acts)
+    for (let row = 0; row < acts.length; row++) {
+        createButtons(actionsGs[row], acts[row], 'action' + row, 3.5 + row)
+    }
+    for (a of rangeInfo['action']) {
+        d3.select('#' + a).selectAll('*').classed('selected', true)
+        console.log('selected ' + a)
+    }
 }
 updateButtons(true)
 
@@ -314,6 +333,10 @@ const actionFreqs = svg.append('g').attr('id', 'actionFreqs')
 displayRangeFreqs()
 
 function parseGTOString(r) {
+    if (r[Object.keys(r)[0]] === '') {
+        console.log('Range not defined')
+        return
+    }
     let output = []
     for (let i = 0; i < 13; i++) {
         let row = []
@@ -434,6 +457,10 @@ function sortActions(acts) {
 
 var currentRange;
 function displayRange(r) {
+    if (r === undefined) {
+        console.log('Range not defined')
+        return
+    }
     currentRange = r
     let acts = Object.keys(r[0][0])
     acts = sortActions(acts)
@@ -451,21 +478,48 @@ function displayRange(r) {
         }
         cellG.select('text').raise()
     })
-    d3.selectAll(condenseClasses(3)).classed('r-3', true)
-    d3.selectAll(condenseClasses(2)).classed('r-2', true)
-    d3.selectAll(condenseClasses(1)).classed('r-1', true)
-    d3.selectAll(condenseClasses(0)).classed('r-0', true)
+    d3.selectAll(condenseClasses(3)).classed('R-3', true)
+    d3.selectAll(condenseClasses(2)).classed('R-2', true)
+    d3.selectAll(condenseClasses(1)).classed('R-1', true)
+    d3.selectAll(condenseClasses(0)).classed('R-0', true)
+    // Misc. classes not predefined
+    d3.selectAll('.cell[class*="r"]').classed('R-1', true)
+    d3.selectAll('.cell[class*="a"]').classed('R-3', true)
 }
 
 function updateRange() {
     let gT = rangeInfo['gameType']
     let sD = parseInt(rangeInfo['stackDepth'].substring(1))
-    let act = rangeInfo['action']
+    let pos = rangeInfo['position']
+    let act = JSON.parse(JSON.stringify(rangeInfo['action']))
+    // Remove last act if it has same pos as pos so correct range can be displayed
+    if (rangeInfo['action'].length > 0 && rangeInfo['action'][rangeInfo['action'].length - 1].substring(0, 2) === pos) {
+        act.pop()
+    }
     if (gT === '_4MaxMTT') {
         d3.selectAll('.cell').remove()
-        let r = MTT4[sD]
-        r ? r = r[act] : {}
-        r ? displayRange(parseGTOString(r)) : {}
+        let acts = MTT4[sD]
+        if (acts === undefined) {
+            console.log('Stack depth range not defined')
+            return
+        }
+        for (a of act) {
+            acts = acts[a]
+        }
+        let actArr = Object.keys(acts)
+        let curActs = []
+        for (a of actArr) {
+            if (a.substring(0, 2) === pos) {
+                curActs.push(a)
+            }
+        }
+        console.log(curActs)
+        let freqs = {}
+        for (a of curActs) {
+            freqs[a.substring(2)] = acts[a]['']
+        }
+        // acts should be a dictionary of action freqs
+        displayRange(parseGTOString(freqs))
     }
 }
 
@@ -499,7 +553,7 @@ function clickHand(g) {
     let row = rowCol[0]
     let col = rowCol[1]
     let freqs = currentRange[row][col]
-    let acts = Object.keys(freqs)
+    let acts = sortActions(Object.keys(freqs))
     let roll = Math.random() * 100
     let rollCounter = roll
     let act;
@@ -576,7 +630,7 @@ function displayActionFreqs(acts) {
     }
 }
 
-const colorClasses = ['f', 'x', 'c', 'r-0', 'r-1', 'r-2', 'r-3']
+const colorClasses = ['f', 'x', 'c', 'R-0', 'R-1', 'R-2', 'R-3']
 function highlight(rect, out = false) {
     if (out) {
         d3.selectAll('*').classed('hidden', false)
@@ -611,17 +665,63 @@ function applyTextColor(t, a) {
         default:
             let firstWord = a.split(' ')[0]
             if (firstWord === 'All') {
-                color = 'r-3'
+                color = 'R-3'
             } else if (firstWord === 'Open') {
-                color = 'r-1'
+                color = 'R-1'
             } else { // firstWord === 'Raise'
+                let colorFound = false
                 let r = 'r' + a.split(' ')[1].replace('.', '_')
                 for (let i = 0; i < 3; i++) {
-                    if (actionColors['r-' + i].includes(r)) {
-                        color = 'r-' + i
+                    if (actionColors['R-' + i].includes(r)) {
+                        color = 'R-' + i
+                        colorFound = true
                     }
+                }
+                if (!colorFound) {
+                    color = 'R-1'
                 }
             }
     }
     t.classed(color, true)
+}
+
+// act is an array of actions, Ex: ['BUo2_3', 'SBc', 'BBxx']
+function parseTree(act, tree = MTT4[100]) {
+    let acts = []
+    // Initalize acts to an array of # of positions arrays
+    for (let i = 0; i < positions.length; i++) {
+        acts.push([])
+    }
+    // Traverse tree to node of action
+    for (let i = 0; i < act.length; i++) {
+        tree = tree[act[i]]
+    }
+    // Get available actions
+    let keys = Object.keys(tree)
+    keys = act.concat(keys)
+    // Place actions on correct positions
+    for (let i = 0; i < keys.length; i++) {
+        let p = positions.indexOf(keys[i].substring(0, 2))
+        if (p === -1) { // if key === '', aka GTO string range
+            //currentRange = tree['']
+            continue
+        }
+        acts[p].push(keys[i])
+    }
+    let maxLen = 0
+    for (pos of acts) {
+        if (pos.length > maxLen) {
+            maxLen = pos.length
+        }
+    }
+    for (let i = 0; i < maxLen; i++) {
+        for (let j = 0; j < positions.length; j++) {
+            if (acts[j][i] === undefined) {
+                acts[j].push('')
+            }
+        }
+    }
+    // Transpose array
+    acts = acts[0].map((_, colIndex) => acts.map(row => row[colIndex]))
+    return acts
 }

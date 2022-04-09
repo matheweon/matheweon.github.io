@@ -1,4 +1,10 @@
-// INSTRUCTIONS: Open range in GTOWizard, open the JavaScript console, paste this code there
+/*
+INSTRUCTIONS:
+1. Open range in GTOWizard
+    a. If range has parts not in range, change cell mode to Full Height
+2. Open the JavaScript console
+3. Paste this code there and press Enter
+*/
 // Defines array of index to hand pairs (Ex. 0: AA, 1: AKs, 13: AKo, 168: 22)
 let cards = ["A", "K", "Q", "J", "T", "9", "8", "7", "6", "5", "4", "3", "2"];
 let indexToHand = [];
