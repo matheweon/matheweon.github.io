@@ -686,7 +686,14 @@ function applyTextColor(t, a) {
 }
 
 // act is an array of actions, Ex: ['BUo2_3', 'SBc', 'BBxx']
-function parseTree(act, tree = MTT4[100]) {
+function parseTree(act) {
+    let tree
+    if (rangeInfo['gameType'] === '_4MaxMTT') {
+        tree = MTT4[parseInt(rangeInfo['stackDepth'].substring(1))]
+    } else {
+        console.log('No tree to parse')
+        return
+    }
     let acts = []
     // Initalize acts to an array of # of positions arrays
     for (let i = 0; i < positions.length; i++) {
