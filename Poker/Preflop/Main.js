@@ -295,7 +295,7 @@ function updateButtons(bypass) {
             positions = ['CO', 'BU', 'SB', 'BB']
             break
         case 'HeadsUp':
-            stackDepths = ['100', '25', '22.5', '20', '18', '16', '15', '14', '13', '12', '11', '10', '9', '8', '7', '6', '5', '4', '3', '2', '1']
+            stackDepths = ['100', '25', '22.5', '20', '18', '16', '15', '14', '13', '12', '11', '10', '9', '8', '7', '6', '5', '4', '3', '2']
             positions = ['BU', 'BB']
             break
         case '_6MaxCash':
