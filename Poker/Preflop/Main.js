@@ -103,7 +103,7 @@ function formatId(s) {
 }
 
 const gameTypeG = svg.append('g').attr('id', 'gameType')
-const gameTypes = ['4Max MTT', 'HU SnG', 'HU Cash', '6Max Cash']
+const gameTypes = ['4Max MTT', 'Heads Up', '6Max Cash']
 const stackDepthG = svg.append('g').attr('id', 'stackDepth')
 var stackDepths = ['100', '80', '60', '50', '40', '35', '30', '25', '20', '17', '14', '12', '10']
 const positionsG = svg.append('g').attr('id', 'position')
@@ -266,7 +266,7 @@ function displayRangeFreqs() {
     acts = sortActions(Object.keys(sumFreqs))
     actStrArr = []
     for (act of acts) {
-        actStrArr.push(parseAction(act) + ': ' + Math.round(sumFreqs[act] * 100) / 100)
+        actStrArr.push(parseAction(act) + ': ' + (Math.round(sumFreqs[act] * 100) / 100).toFixed(2))
     }
     displayActionFreqs(actStrArr)
 }
@@ -294,12 +294,8 @@ function updateButtons(bypass) {
             stackDepths = ['100', '80', '60', '50', '40', '35', '30', '25', '20', '17', '14', '12', '10']
             positions = ['CO', 'BU', 'SB', 'BB']
             break
-        case 'HUSnG':
-            stackDepths = ['25', '22.5', '20', '18', '16', '15', '14', '13', '12', '11', '10', '9', '8', '7', '6', '5', '4', '3', '2', '1']
-            positions = ['BU', 'BB']
-            break
-        case 'HUCash':
-            stackDepths = ['100']
+        case 'HeadsUp':
+            stackDepths = ['100', '25', '22.5', '20', '18', '16', '15', '14', '13', '12', '11', '10', '9', '8', '7', '6', '5', '4', '3', '2', '1']
             positions = ['BU', 'BB']
             break
         case '_6MaxCash':
@@ -496,31 +492,29 @@ function updateRange() {
     if (rangeInfo['action'].length > 0 && rangeInfo['action'][rangeInfo['action'].length - 1].substring(0, 2) === pos) {
         act.pop()
     }
-    if (gT === '_4MaxMTT') {
-        d3.selectAll('.cell').remove()
-        let acts = MTT4[sD]
-        if (acts === undefined) {
-            console.log('Stack depth range not defined')
-            return
-        }
-        for (a of act) {
-            acts = acts[a]
-        }
-        let actArr = Object.keys(acts)
-        let curActs = []
-        for (a of actArr) {
-            if (a.substring(0, 2) === pos) {
-                curActs.push(a)
-            }
-        }
-        console.log(curActs)
-        let freqs = {}
-        for (a of curActs) {
-            freqs[a.substring(2)] = acts[a]['']
-        }
-        // acts should be a dictionary of action freqs
-        displayRange(parseGTOString(freqs))
+    d3.selectAll('.cell').remove()
+    let acts = getTree()[sD]
+    if (acts === undefined) {
+        console.log('Stack depth range not defined')
+        return
     }
+    for (a of act) {
+        acts = acts[a]
+    }
+    let actArr = Object.keys(acts)
+    let curActs = []
+    for (a of actArr) {
+        if (a.substring(0, 2) === pos) {
+            curActs.push(a)
+        }
+    }
+    console.log(curActs)
+    let freqs = {}
+    for (a of curActs) {
+        freqs[a.substring(2)] = acts[a]['']
+    }
+    // acts should be a dictionary of action freqs
+    displayRange(parseGTOString(freqs))
 }
 
 function parseAction(act, removeSpecial) {
@@ -582,7 +576,7 @@ function hoverHand(g) {
     acts = sortActions(acts)
     let actStrings = []
     for (a of acts) {
-        actStrings.push(parseAction(a) + ': ' + freqs[a])
+        actStrings.push(parseAction(a) + ': ' + freqs[a].toFixed(2))
     }
     displayActionFreqs(actStrings)
 }
@@ -687,13 +681,7 @@ function applyTextColor(t, a) {
 
 // act is an array of actions, Ex: ['BUo2_3', 'SBc', 'BBxx']
 function parseTree(act) {
-    let tree
-    if (rangeInfo['gameType'] === '_4MaxMTT') {
-        tree = MTT4[parseInt(rangeInfo['stackDepth'].substring(1))]
-    } else {
-        console.log('No tree to parse')
-        return
-    }
+    let tree = getTree()[parseInt(rangeInfo['stackDepth'].substring(1))]
     let acts = []
     // Initalize acts to an array of # of positions arrays
     for (let i = 0; i < positions.length; i++) {
@@ -731,4 +719,15 @@ function parseTree(act) {
     // Transpose array
     acts = acts[0].map((_, colIndex) => acts.map(row => row[colIndex]))
     return acts
+}
+
+function getTree(gT = rangeInfo['gameType']) {
+    switch (gT) {
+        case '_4MaxMTT':
+            return MTT4
+        case 'HeadsUp':
+            return HU
+        case '_6MaxCash':
+            return Cash6
+    }
 }
