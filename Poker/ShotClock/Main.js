@@ -66,7 +66,7 @@ function buildButton(s, text, bWidth, bHeight, x, y) {
         .attr("font-size", textSize)
         .text(text)
         .on("click", () => clickButton(s, id));
-    document.getElementById(id + "Text").addEventListener("touchstart", () => {clickButton(s, id)});
+    //document.getElementById(id + "Text").addEventListener("touchstart", () => {clickButton(s, id)});
 }
 buildButton(0, "Preflop", bWidth, bHeight, unit, 0);
 buildButton(1, "Flop", bWidth, bHeight, unit * 10, 0);
@@ -87,21 +87,18 @@ var latestTap;
 var startTouchX;
 var startTouchY;
 document.getElementById("html").addEventListener("touchstart", reset);
-document.getElementById("html").addEventListener("touchmove", swipe);
+//document.getElementById("html").addEventListener("touchmove", swipe);
 function getTouches(evt) {
     return evt.touches ||          // browser API
         evt.originalEvent.touches; // jQuery
 }                
-function swipe(evt) {
-    /*if (!xDown || !yDown) {
-        return;
-    }*/
+/*function swipe(evt) {
     if (Math.sqrt(Math.pow(startTouchX - evt.touches[0].clientX, 2) + Math.pow(startTouchY - evt.touches[0].clientY, 2)) > 500) {
         restart();
         startTouchX = null;
         startTouchY = null;
     }
-}
+}*/
 
 function restart() {
     timeLeft = 0;
