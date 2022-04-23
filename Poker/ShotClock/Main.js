@@ -26,11 +26,13 @@ function clickButton(s, id) {
         timeBanksUsed++;
         timeLeft += streetTimes[s];
         timeBankPressed = true;
-        let color = timeBanksUsed === 1 ? "#666" : timeBanksUsed === 2 ? "#999" : timeBanksUsed === 3 ? "#ccc" : "#fff"; 
-        d3.select("#" + id + "Button").style("fill", color);
+        //let color = timeBanksUsed === 1 ? "#666" : timeBanksUsed === 2 ? "#999" : timeBanksUsed === 3 ? "#ccc" : "#fff"; 
+        //d3.select("#" + id + "Button").style("fill", color);
+        d3.select("#TimeBankText").text("Time Bank (" + timeBanksUsed + ")")
     } else {
         street = s;
         timeBankPressed = false;
+        d3.select("#TimeBankText").text("Time Bank");
         d3.selectAll(".button").style("fill", "#333");
         d3.select("#" + id + "Button").style("fill", "#666");
     }
@@ -94,7 +96,7 @@ function swipe(evt) {
     if (!xDown || !yDown) {
         return;
     }
-    if (Math.sqrt(Math.pow(startTouchX - evt.touches[0].clientX, 2) + Math.pow(startTouchY - evt.touches[0].clientY, 2)) > 400) {
+    if (Math.sqrt(Math.pow(startTouchX - evt.touches[0].clientX, 2) + Math.pow(startTouchY - evt.touches[0].clientY, 2)) > 100) {
         restart();
     }
     startTouchX = null;
@@ -104,6 +106,9 @@ function swipe(evt) {
 function restart() {
     timeLeft = 0;
     started = false;
+    timeBanksUsed = 0;
+    timeBankPressed = false;
+    d3.select("#TimeBankText").text("Time Bank");
 }
 
 function reset(evt=null) {
@@ -114,20 +119,22 @@ function reset(evt=null) {
     }
     started = true;
     // Test for double tap
-    if (!mobile) {
-        var now = new Date().getTime();
-        var timeSince = now - latestTap;
-        if (timeSince < 300) {
-            restart();
-        }
-        latestTap = new Date().getTime();
+    //if (!mobile) {
+    var now = new Date().getTime();
+    var timeSince = now - latestTap;
+    if (timeSince < 300) {
+        restart();
     }
+    latestTap = new Date().getTime();
+    //}
     if (!timeBankPressed) {
         timeLeft = streetTimes[street];
         timeBanksUsed = 0;
-        d3.select("#TimeBankButton").style("fill", "#333");
+        //d3.select("#TimeBankButton").style("fill", "#333");
+        d3.select("#TimeBankText").text("Time Bank");
     }
     timeBankPressed = false;
+    // Load/Test Tone.js
     Tone.loaded().then(() => {
         const now = Tone.now()
         sampler.triggerAttackRelease("C4", 0, now, 0);
@@ -173,6 +180,9 @@ function timer(timestamp) {
         }
         for (let i = 0; i <= 3; i++) {
             if (prevTimeLeft > i && timeLeft <= i) {
+                if (i === 0) {
+                    clickButton(4)
+                }
                 Tone.loaded().then(() => {
                     sampler.triggerAttackRelease(i === 0 ? "C5" : "G4", 1);
                 });
