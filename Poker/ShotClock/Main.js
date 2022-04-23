@@ -93,14 +93,14 @@ function getTouches(evt) {
         evt.originalEvent.touches; // jQuery
 }                
 function swipe(evt) {
-    if (!xDown || !yDown) {
+    /*if (!xDown || !yDown) {
         return;
-    }
-    if (Math.sqrt(Math.pow(startTouchX - evt.touches[0].clientX, 2) + Math.pow(startTouchY - evt.touches[0].clientY, 2)) > 100) {
+    }*/
+    if (Math.sqrt(Math.pow(startTouchX - evt.touches[0].clientX, 2) + Math.pow(startTouchY - evt.touches[0].clientY, 2)) > 500) {
         restart();
+        startTouchX = null;
+        startTouchY = null;
     }
-    startTouchX = null;
-    startTouchY = null;
 }
 
 function restart() {
@@ -116,6 +116,8 @@ function reset(evt=null) {
         const firstTouch = getTouches(evt)[0];                                      
         startTouchX = firstTouch.clientX;                                      
         startTouchY = firstTouch.clientY;
+    } else if (mobile) {
+        return;
     }
     started = true;
     // Test for double tap
