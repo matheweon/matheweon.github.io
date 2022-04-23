@@ -86,7 +86,7 @@ var mainText = svg.append("text")
 var latestTap;
 var startTouchX;
 var startTouchY;
-document.getElementById("html").addEventListener("touchstart", reset);
+//document.getElementById("html").addEventListener("touchstart", reset);
 //document.getElementById("html").addEventListener("touchmove", swipe);
 function getTouches(evt) {
     return evt.touches ||          // browser API
@@ -109,13 +109,13 @@ function restart() {
 }
 
 function reset(evt=null) {
-    if (evt) {
+    /*if (evt) {
         const firstTouch = getTouches(evt)[0];                                      
         startTouchX = firstTouch.clientX;                                      
         startTouchY = firstTouch.clientY;
     } else if (mobile) {
         return;
-    }
+    }*/
     started = true;
     // Test for double tap
     var now = new Date().getTime();
