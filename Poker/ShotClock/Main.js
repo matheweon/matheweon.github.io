@@ -28,7 +28,7 @@ function clickButton(s, id) {
         timeBankPressed = true;
         //let color = timeBanksUsed === 1 ? "#666" : timeBanksUsed === 2 ? "#999" : timeBanksUsed === 3 ? "#ccc" : "#fff"; 
         //d3.select("#" + id + "Button").style("fill", color);
-        d3.select("#TimeBankText").text("Time Bank (" + timeBanksUsed + ")")
+        d3.select("#TimeBankText").text("Time Bank (" + timeBanksUsed + ")");
     } else {
         street = s;
         timeBankPressed = false;
@@ -121,14 +121,12 @@ function reset(evt=null) {
     }
     started = true;
     // Test for double tap
-    //if (!mobile) {
     var now = new Date().getTime();
     var timeSince = now - latestTap;
     if (timeSince < 300) {
         restart();
     }
     latestTap = new Date().getTime();
-    //}
     if (!timeBankPressed) {
         timeLeft = streetTimes[street];
         timeBanksUsed = 0;
@@ -141,7 +139,7 @@ function reset(evt=null) {
         const now = Tone.now()
         sampler.triggerAttackRelease("C4", 0, now, 0);
         Tone.context.resume();
-        console.log(Tone.context.state);
+        //console.log(Tone.context.state);
         // For devices/browsers that start the audiocontext in suspended mode, this prompts the user to unmute sound.
         if (Tone.context.state !== "running" && muted) {
             d3.select("unmute")
@@ -184,6 +182,7 @@ function timer(timestamp) {
             if (prevTimeLeft > i && timeLeft <= i) {
                 if (i === 0) {
                     clickButton(4)
+                    timeBankPressed = false;
                 }
                 Tone.loaded().then(() => {
                     sampler.triggerAttackRelease(i === 0 ? "C5" : "G4", 1);
