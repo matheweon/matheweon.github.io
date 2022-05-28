@@ -38,7 +38,7 @@ const background = svg.append('rect')
 
 const actionColors = {
     'R-3': ['a35', 'a30', 'a25', 'a20', 'a17', 'a14', 'a12', 'a10'],
-    'R-2': ['rB6', 'r7', 'r10'],
+    'R-2': ['rB6', 'r7', 'r9_5', 'r10'], // Not sure why r9_5 isn't working (for HU 60 BB 3bet)
     'R-1': ['o2', 'o2_1', 'o2_2', 'o2_3', 'o2_5', 'o3', 'o3_5', 'o4', 'r4', 'r4_5', 'r5', 'r6', 'r6_5'],
     'R-0': ['r2_5', 'r3', 'r3_5']
 }
@@ -103,16 +103,16 @@ function formatId(s) {
 }
 
 const gameTypeG = svg.append('g').attr('id', 'gameType')
-const gameTypes = ['4Max MTT', 'Heads Up', '6Max Cash']
+const gameTypes = ['6Max Cash', 'HU', 'HU SnG', '4Max MTT']
 const stackDepthG = svg.append('g').attr('id', 'stackDepth')
-var stackDepths = ['100', '80', '60', '50', '40', '35', '30', '25', '20', '17', '14', '12', '10']
+var stackDepths = ['150', '100', '80', '60', '40', '20']
 const positionsG = svg.append('g').attr('id', 'position')
-var positions = ['CO', 'BU', 'SB', 'BB']
+var positions = ['BU', 'BB']
 const actionsGs = [svg.append('g').attr('id', 'action0'), svg.append('g').attr('id', 'action1'), svg.append('g').attr('id', 'action2'), svg.append('g').attr('id', 'action3'), svg.append('g').attr('id', 'action4'), svg.append('g').attr('id', 'action5')]
 var actions = {}
 var rangeInfo = {
-    'gameType': formatId(gameTypes[0]),
-    'stackDepth': formatId(stackDepths[0]),
+    'gameType': 'HU',
+    'stackDepth': '_100',
     'action': [],
     'position': positions[0]
 }
@@ -290,17 +290,21 @@ function updateButtons(bypass) {
         createButtons(gameTypeG, gameTypes, 'gameType', 0)
     }
     switch (rangeInfo['gameType']) {
-        case '_4MaxMTT':
-            stackDepths = ['100', '80', '60', '50', '40', '35', '30', '25', '20', '17', '14', '12', '10']
-            positions = ['CO', 'BU', 'SB', 'BB']
-            break
-        case 'HeadsUp':
-            stackDepths = ['100', '25', '22.5', '20', '18', '16', '15', '14', '13', '12', '11', '10', '9', '8', '7', '6', '5', '4', '3', '2']
-            positions = ['BU', 'BB']
-            break
         case '_6MaxCash':
             stackDepths = ['200', '150', '100', '75', '50', '40', '20']
             positions = ['LJ', 'HJ', 'CO', 'BU', 'SB', 'BB']
+            break
+        case 'HU':
+            stackDepths = ['150', '100', '80', '60', '40', '20']
+            positions = ['BU', 'BB']
+            break
+        case 'HUSnG':
+            stackDepths = ['25', '22.5', '20', '18', '16', '15', '14', '13', '12', '11', '10', '9', '8', '7', '6', '5', '4', '3', '2']
+            positions = ['BU', 'BB']
+            break
+        case '_4MaxMTT':
+            stackDepths = ['100', '80', '60', '50', '40', '35', '30', '25', '20', '17', '14', '12', '10']
+            positions = ['CO', 'BU', 'SB', 'BB']
             break
     }
     createButtons(stackDepthG, stackDepths, 'stackDepth', 1)
@@ -479,7 +483,8 @@ function displayRange(r) {
     d3.selectAll(condenseClasses(1)).classed('R-1', true)
     d3.selectAll(condenseClasses(0)).classed('R-0', true)
     // Misc. classes not predefined
-    d3.selectAll('.cell[class*="r"]').classed('R-1', true)
+    // R-1 should only be added if the cell does not have R-2 or R-3 class
+    //d3.selectAll('.cell[class*="r"]').classed('R-1', true)
     d3.selectAll('.cell[class*="a"]').classed('R-3', true)
 }
 
@@ -723,11 +728,13 @@ function parseTree(act) {
 
 function getTree(gT = rangeInfo['gameType']) {
     switch (gT) {
-        case '_4MaxMTT':
-            return MTT4
-        case 'HeadsUp':
-            return HU
         case '_6MaxCash':
             return Cash6
+        case 'HU':
+            return HU
+        case 'HUSnG':
+            return HUSnG
+        case '_4MaxMTT':
+            return MTT4
     }
 }
