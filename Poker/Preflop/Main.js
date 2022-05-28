@@ -483,8 +483,7 @@ function displayRange(r) {
     d3.selectAll(condenseClasses(1)).classed('R-1', true)
     d3.selectAll(condenseClasses(0)).classed('R-0', true)
     // Misc. classes not predefined
-    // R-1 should only be added if the cell does not have R-2 or R-3 class
-    //d3.selectAll('.cell[class*="r"]').classed('R-1', true)
+    d3.selectAll('.cell[class*="r"]:not(.R-1):not(.R-2):not(.R-3)').classed('R-1', true)
     d3.selectAll('.cell[class*="a"]').classed('R-3', true)
 }
 
