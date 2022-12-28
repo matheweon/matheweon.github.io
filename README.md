@@ -1,6 +1,10 @@
 # matheweon.github.io
 
-Poker Preflop Randomizer: https://matheweon.github.io/PokerPreflop.html
+Pokerdle (Wordle for Poker Terms): https://matheweon.github.io/Poker/Pokerdle/Pokerdle.html
+
+Poker Shot Clock: https://matheweon.github.io/Poker/ShotClock/ShotClock.html
+
+Poker Preflop Ranges and Randomizer: https://matheweon.github.io/PokerPreflop.html
 
 Ear Training: https://matheweon.github.io/Music/EarTraining/EarTraining.html
 
@@ -14,3 +18,5 @@ sbeve: https://matheweon.github.io/Random/sbeve.html
 Unfinished:
 
 EWI Fingerings: https://matheweon.github.io/EWI/EWI-Fingerings.html
+
+Blu's Adventure: https://matheweon.github.io/Lori/BlusAdventure/BlusAdventure.html
