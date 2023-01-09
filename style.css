@@ -35,12 +35,12 @@ body {
     margin: 0 10px;
     flex-grow: 1;
     text-align: center;
+    width: 100%;
   }  
   
   a {
     color: #333;
     text-decoration: none;
-    font-size: 125%;
   }
   
   a:hover {
