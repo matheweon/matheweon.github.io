@@ -39,6 +39,7 @@ for (let i = 0; i < 169; i++) {
     // Format: '21.5% 100%, 86.5% 100%, 100% 100%'
     let colorFreqs = style.backgroundSize;
     // Format: 'linear-gradient(to right, rgb(216, 59, 59), rgb(216, 59, 59)), linear-gradient(to right, rgb(245, 83, 83), rgb(245, 83, 83)), linear-gradient(to right, rgb(90, 185, 102), rgb(90, 185, 102))'
+    // Format: 'linear-gradient(to right, var(--clr-R1), var(--clr-R1)),linear-gradient(to right, var(--clr-F), var(--clr-F))'
     let colors = style.backgroundImage;
     let addedFreqs = 0;
     // Stop if hand does not exist in range

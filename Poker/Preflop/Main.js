@@ -105,7 +105,7 @@ function formatId(s) {
 const gameTypeG = svg.append('g').attr('id', 'gameType')
 const gameTypes = ['6Max Cash', 'HU', 'HU SnG', '4Max MTT']
 const stackDepthG = svg.append('g').attr('id', 'stackDepth')
-var stackDepths = ['150', '100', '80', '60', '40', '20']
+var stackDepths = ['200', '150', '100', '80', '60', '40', '20']
 const positionsG = svg.append('g').attr('id', 'position')
 var positions = ['BU', 'BB']
 const actionsGs = [svg.append('g').attr('id', 'action0'), svg.append('g').attr('id', 'action1'), svg.append('g').attr('id', 'action2'), svg.append('g').attr('id', 'action3'), svg.append('g').attr('id', 'action4'), svg.append('g').attr('id', 'action5')]
@@ -295,7 +295,7 @@ function updateButtons(bypass) {
             positions = ['LJ', 'HJ', 'CO', 'BU', 'SB', 'BB']
             break
         case 'HU':
-            stackDepths = ['150', '100', '80', '60', '40', '20']
+            stackDepths = ['200', '150', '100', '80', '60', '40', '20']
             positions = ['BU', 'BB']
             break
         case 'HUSnG':
