@@ -1,0 +1,1574 @@
+entry,at,order
+"The player ""Kevin Gao @ 5pBNkD583R"" passed the room ownership to ""Michael @ GScnVzO7r5"".",2023-04-16T19:09:23.901Z,168167216390100
+"The player ""Henry @ lCLb0ZDuNV"" quits the game with a stack of 0.",2023-04-16T19:03:46.854Z,168167182685400
+"-- ending hand #86 --",2023-04-16T19:03:40.749Z,168167182074901
+"""Michael @ GScnVzO7r5"" collected 3844 from pot with Full House, 3's over 2's (combination: 3♣, 3♠, 3♦, 2♣, 2♥)",2023-04-16T19:03:40.749Z,168167182074900
+"River: 8♣, 2♣, 3♦, 6♠ [2♥]",2023-04-16T19:03:36.742Z,168167181674200
+"Turn: 8♣, 2♣, 3♦ [6♠]",2023-04-16T19:03:32.667Z,168167181266700
+"Flop:  [8♣, 2♣, 3♦]",2023-04-16T19:03:28.638Z,168167180863800
+"""Michael @ GScnVzO7r5"" shows a 3♣, 3♠.",2023-04-16T19:03:24.615Z,168167180461501
+"""Henry @ lCLb0ZDuNV"" shows a A♦, 6♦.",2023-04-16T19:03:24.615Z,168167180461500
+"""Henry @ lCLb0ZDuNV"" calls 1910 and go all in",2023-04-16T19:03:23.789Z,168167180378900
+"""Michael @ GScnVzO7r5"" raises to 1910",2023-04-16T19:03:20.615Z,168167180061500
+"""Henry @ lCLb0ZDuNV"" raises to 360",2023-04-16T19:03:15.511Z,168167179551100
+"""Michael @ GScnVzO7r5"" posts a big blind of 120",2023-04-16T19:03:06.188Z,168167178618810
+"""Henry @ lCLb0ZDuNV"" posts a small blind of 60",2023-04-16T19:03:06.188Z,168167178618809
+"""Michael @ GScnVzO7r5"" posts an ante of 12",2023-04-16T19:03:06.188Z,168167178618808
+"""Henry @ lCLb0ZDuNV"" posts an ante of 12",2023-04-16T19:03:06.188Z,168167178618807
+"Player stacks: #6 ""Henry @ lCLb0ZDuNV"" (1922) | #10 ""Michael @ GScnVzO7r5"" (6078)",2023-04-16T19:03:06.188Z,168167178618804
+"-- starting hand #86 (id: brnpmrj43rlb)  (No Limit Texas Hold'em) (dealer: ""Henry @ lCLb0ZDuNV"") --",2023-04-16T19:03:06.188Z,168167178618803
+"The game's ante was changed from 10 to 12.",2023-04-16T19:03:06.188Z,168167178618802
+"The game's big blind was changed from 100 to 120.",2023-04-16T19:03:06.188Z,168167178618801
+"The game's small blind was changed from 50 to 60.",2023-04-16T19:03:06.188Z,168167178618800
+"-- ending hand #85 --",2023-04-16T19:03:00.178Z,168167178017803
+"""Henry @ lCLb0ZDuNV"" shows a 8♦, 5♥.",2023-04-16T19:03:00.178Z,168167178017802
+"""Michael @ GScnVzO7r5"" collected 4122 from pot with Two Pair, 10's & 6's (combination: 10♥, 10♣, 6♠, 6♥, 8♥)",2023-04-16T19:03:00.178Z,168167178017801
+"""Michael @ GScnVzO7r5"" shows a 10♥, 6♠.",2023-04-16T19:03:00.178Z,168167178017800
+"""Michael @ GScnVzO7r5"" calls 1374",2023-04-16T19:02:59.349Z,168167177934900
+"""Henry @ lCLb0ZDuNV"" bets 1374",2023-04-16T19:02:57.296Z,168167177729600
+"River: 10♣, 3♥, 6♥, 8♥ [5♠]",2023-04-16T19:02:50.712Z,168167177071200
+"""Michael @ GScnVzO7r5"" calls 412",2023-04-16T19:02:49.892Z,168167176989200
+"""Henry @ lCLb0ZDuNV"" bets 412",2023-04-16T19:02:41.509Z,168167176150900
+"Turn: 10♣, 3♥, 6♥ [8♥]",2023-04-16T19:02:36.871Z,168167175687100
+"""Michael @ GScnVzO7r5"" calls 165",2023-04-16T19:02:36.010Z,168167175601000
+"""Henry @ lCLb0ZDuNV"" bets 165",2023-04-16T19:02:29.671Z,168167174967100
+"Flop:  [10♣, 3♥, 6♥]",2023-04-16T19:02:20.962Z,168167174096200
+"""Henry @ lCLb0ZDuNV"" checks",2023-04-16T19:02:20.126Z,168167174012600
+"""Michael @ GScnVzO7r5"" calls 100",2023-04-16T19:02:16.359Z,168167173635900
+"""Henry @ lCLb0ZDuNV"" posts a big blind of 100",2023-04-16T19:02:11.461Z,168167173146107
+"""Michael @ GScnVzO7r5"" posts a small blind of 50",2023-04-16T19:02:11.461Z,168167173146106
+"""Michael @ GScnVzO7r5"" posts an ante of 10",2023-04-16T19:02:11.461Z,168167173146105
+"""Henry @ lCLb0ZDuNV"" posts an ante of 10",2023-04-16T19:02:11.461Z,168167173146104
+"Player stacks: #6 ""Henry @ lCLb0ZDuNV"" (3983) | #10 ""Michael @ GScnVzO7r5"" (4017)",2023-04-16T19:02:11.461Z,168167173146101
+"-- starting hand #85 (id: siui6bes53vo)  (No Limit Texas Hold'em) (dealer: ""Michael @ GScnVzO7r5"") --",2023-04-16T19:02:11.461Z,168167173146100
+"-- ending hand #84 --",2023-04-16T19:02:08.455Z,168167172845502
+"""Henry @ lCLb0ZDuNV"" collected 1374 from pot",2023-04-16T19:02:08.455Z,168167172845501
+"Uncalled bet of 1374 returned to ""Henry @ lCLb0ZDuNV""",2023-04-16T19:02:08.455Z,168167172845500
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T19:02:07.561Z,168167172756100
+"""Henry @ lCLb0ZDuNV"" bets 1374",2023-04-16T19:02:03.515Z,168167172351500
+"""Michael @ GScnVzO7r5"" checks",2023-04-16T19:01:58.411Z,168167171841100
+"River: 7♦, 5♣, 2♥, 3♣ [8♣]",2023-04-16T19:01:50.398Z,168167171039800
+"""Michael @ GScnVzO7r5"" calls 412",2023-04-16T19:01:49.591Z,168167170959100
+"""Henry @ lCLb0ZDuNV"" bets 412",2023-04-16T19:01:44.940Z,168167170494000
+"""Michael @ GScnVzO7r5"" checks",2023-04-16T19:01:38.500Z,168167169850000
+"Turn: 7♦, 5♣, 2♥ [3♣]",2023-04-16T19:01:32.388Z,168167169238800
+"""Michael @ GScnVzO7r5"" calls 165",2023-04-16T19:01:31.540Z,168167169154000
+"""Henry @ lCLb0ZDuNV"" bets 165",2023-04-16T19:01:25.833Z,168167168583300
+"""Michael @ GScnVzO7r5"" checks",2023-04-16T19:01:21.463Z,168167168146300
+"Flop:  [7♦, 5♣, 2♥]",2023-04-16T19:01:14.743Z,168167167474300
+"""Michael @ GScnVzO7r5"" checks",2023-04-16T19:01:13.936Z,168167167393600
+"""Henry @ lCLb0ZDuNV"" calls 100",2023-04-16T19:01:06.692Z,168167166669200
+"""Michael @ GScnVzO7r5"" posts a big blind of 100",2023-04-16T19:01:00.922Z,168167166092207
+"""Henry @ lCLb0ZDuNV"" posts a small blind of 50",2023-04-16T19:01:00.922Z,168167166092206
+"""Michael @ GScnVzO7r5"" posts an ante of 10",2023-04-16T19:01:00.922Z,168167166092205
+"""Henry @ lCLb0ZDuNV"" posts an ante of 10",2023-04-16T19:01:00.922Z,168167166092204
+"Player stacks: #6 ""Henry @ lCLb0ZDuNV"" (3296) | #10 ""Michael @ GScnVzO7r5"" (4704)",2023-04-16T19:01:00.922Z,168167166092201
+"-- starting hand #84 (id: lvsme0cbxk9b)  (No Limit Texas Hold'em) (dealer: ""Henry @ lCLb0ZDuNV"") --",2023-04-16T19:01:00.922Z,168167166092200
+"-- ending hand #83 --",2023-04-16T19:00:57.967Z,168167165796702
+"""Henry @ lCLb0ZDuNV"" collected 220 from pot",2023-04-16T19:00:57.967Z,168167165796701
+"Uncalled bet of 200 returned to ""Henry @ lCLb0ZDuNV""",2023-04-16T19:00:57.967Z,168167165796700
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T19:00:57.128Z,168167165712800
+"""Henry @ lCLb0ZDuNV"" raises to 300",2023-04-16T19:00:47.357Z,168167164735700
+"""Michael @ GScnVzO7r5"" calls 100",2023-04-16T19:00:44.266Z,168167164426600
+"""Henry @ lCLb0ZDuNV"" posts a big blind of 100",2023-04-16T19:00:40.210Z,168167164021007
+"""Michael @ GScnVzO7r5"" posts a small blind of 50",2023-04-16T19:00:40.210Z,168167164021006
+"""Michael @ GScnVzO7r5"" posts an ante of 10",2023-04-16T19:00:40.210Z,168167164021005
+"""Henry @ lCLb0ZDuNV"" posts an ante of 10",2023-04-16T19:00:40.210Z,168167164021004
+"Player stacks: #6 ""Henry @ lCLb0ZDuNV"" (3186) | #10 ""Michael @ GScnVzO7r5"" (4814)",2023-04-16T19:00:40.210Z,168167164021001
+"-- starting hand #83 (id: prsvssydcadf)  (No Limit Texas Hold'em) (dealer: ""Michael @ GScnVzO7r5"") --",2023-04-16T19:00:40.210Z,168167164021000
+"-- ending hand #82 --",2023-04-16T19:00:37.230Z,168167163723002
+"""Henry @ lCLb0ZDuNV"" collected 550 from pot",2023-04-16T19:00:37.230Z,168167163723001
+"Uncalled bet of 412 returned to ""Henry @ lCLb0ZDuNV""",2023-04-16T19:00:37.230Z,168167163723000
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T19:00:36.410Z,168167163641000
+"""Henry @ lCLb0ZDuNV"" bets 412",2023-04-16T19:00:28.373Z,168167162837300
+"""Michael @ GScnVzO7r5"" checks",2023-04-16T19:00:25.493Z,168167162549300
+"Turn: 9♠, K♣, 6♦ [J♠]",2023-04-16T19:00:18.614Z,168167161861400
+"""Michael @ GScnVzO7r5"" calls 165",2023-04-16T19:00:17.799Z,168167161779900
+"""Henry @ lCLb0ZDuNV"" bets 165",2023-04-16T19:00:11.272Z,168167161127200
+"""Michael @ GScnVzO7r5"" checks",2023-04-16T19:00:07.838Z,168167160783800
+"Flop:  [9♠, K♣, 6♦]",2023-04-16T19:00:01.424Z,168167160142400
+"""Michael @ GScnVzO7r5"" checks",2023-04-16T19:00:00.600Z,168167160060000
+"""Henry @ lCLb0ZDuNV"" calls 100",2023-04-16T18:59:55.028Z,168167159502800
+"""Michael @ GScnVzO7r5"" posts a big blind of 100",2023-04-16T18:59:52.728Z,168167159272807
+"""Henry @ lCLb0ZDuNV"" posts a small blind of 50",2023-04-16T18:59:52.728Z,168167159272806
+"""Michael @ GScnVzO7r5"" posts an ante of 10",2023-04-16T18:59:52.728Z,168167159272805
+"""Henry @ lCLb0ZDuNV"" posts an ante of 10",2023-04-16T18:59:52.728Z,168167159272804
+"Player stacks: #6 ""Henry @ lCLb0ZDuNV"" (2911) | #10 ""Michael @ GScnVzO7r5"" (5089)",2023-04-16T18:59:52.728Z,168167159272801
+"-- starting hand #82 (id: ggv30guovs3b)  (No Limit Texas Hold'em) (dealer: ""Henry @ lCLb0ZDuNV"") --",2023-04-16T18:59:52.728Z,168167159272800
+"-- ending hand #81 --",2023-04-16T18:59:49.811Z,168167158981102
+"""Michael @ GScnVzO7r5"" collected 1050 from pot",2023-04-16T18:59:49.811Z,168167158981101
+"Uncalled bet of 385 returned to ""Michael @ GScnVzO7r5""",2023-04-16T18:59:49.811Z,168167158981100
+"""Henry @ lCLb0ZDuNV"" folds",2023-04-16T18:59:48.970Z,168167158897000
+"""Michael @ GScnVzO7r5"" raises to 700",2023-04-16T18:59:37.620Z,168167157762000
+"""Henry @ lCLb0ZDuNV"" bets 315",2023-04-16T18:59:23.348Z,168167156334800
+"Flop:  [K♠, 9♥, 4♦]",2023-04-16T18:59:19.161Z,168167155916100
+"""Henry @ lCLb0ZDuNV"" calls 200",2023-04-16T18:59:18.350Z,168167155835000
+"""Michael @ GScnVzO7r5"" raises to 200",2023-04-16T18:59:15.315Z,168167155531500
+"""Henry @ lCLb0ZDuNV"" posts a big blind of 100",2023-04-16T18:59:09.030Z,168167154903007
+"""Michael @ GScnVzO7r5"" posts a small blind of 50",2023-04-16T18:59:09.030Z,168167154903006
+"""Michael @ GScnVzO7r5"" posts an ante of 10",2023-04-16T18:59:09.030Z,168167154903005
+"""Henry @ lCLb0ZDuNV"" posts an ante of 10",2023-04-16T18:59:09.030Z,168167154903004
+"Player stacks: #6 ""Henry @ lCLb0ZDuNV"" (3436) | #10 ""Michael @ GScnVzO7r5"" (4564)",2023-04-16T18:59:09.030Z,168167154903001
+"-- starting hand #81 (id: etwsiqywxjmu)  (No Limit Texas Hold'em) (dealer: ""Michael @ GScnVzO7r5"") --",2023-04-16T18:59:09.030Z,168167154903000
+"-- ending hand #80 --",2023-04-16T18:59:06.093Z,168167154609302
+"""Henry @ lCLb0ZDuNV"" collected 620 from pot",2023-04-16T18:59:06.093Z,168167154609301
+"Uncalled bet of 465 returned to ""Henry @ lCLb0ZDuNV""",2023-04-16T18:59:06.093Z,168167154609300
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:59:05.271Z,168167154527100
+"""Henry @ lCLb0ZDuNV"" bets 465",2023-04-16T18:59:03.735Z,168167154373500
+"""Michael @ GScnVzO7r5"" checks",2023-04-16T18:59:00.316Z,168167154031600
+"Flop:  [K♦, 3♣, J♣]",2023-04-16T18:58:54.218Z,168167153421800
+"""Michael @ GScnVzO7r5"" calls 300",2023-04-16T18:58:53.383Z,168167153338300
+"""Henry @ lCLb0ZDuNV"" raises to 300",2023-04-16T18:58:48.294Z,168167152829400
+"""Michael @ GScnVzO7r5"" posts a big blind of 100",2023-04-16T18:58:43.530Z,168167152353007
+"""Henry @ lCLb0ZDuNV"" posts a small blind of 50",2023-04-16T18:58:43.530Z,168167152353006
+"""Michael @ GScnVzO7r5"" posts an ante of 10",2023-04-16T18:58:43.530Z,168167152353005
+"""Henry @ lCLb0ZDuNV"" posts an ante of 10",2023-04-16T18:58:43.530Z,168167152353004
+"Player stacks: #6 ""Henry @ lCLb0ZDuNV"" (3126) | #10 ""Michael @ GScnVzO7r5"" (4874)",2023-04-16T18:58:43.530Z,168167152353001
+"-- starting hand #80 (id: wtjehnhpuhsb)  (No Limit Texas Hold'em) (dealer: ""Henry @ lCLb0ZDuNV"") --",2023-04-16T18:58:43.530Z,168167152353000
+"-- ending hand #79 --",2023-04-16T18:58:40.609Z,168167152060902
+"""Henry @ lCLb0ZDuNV"" collected 420 from pot",2023-04-16T18:58:40.609Z,168167152060901
+"Uncalled bet of 315 returned to ""Henry @ lCLb0ZDuNV""",2023-04-16T18:58:40.609Z,168167152060900
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:58:39.766Z,168167151976600
+"""Henry @ lCLb0ZDuNV"" bets 315",2023-04-16T18:58:36.070Z,168167151607000
+"Flop:  [Q♥, 3♥, 8♠]",2023-04-16T18:58:30.054Z,168167151005400
+"""Henry @ lCLb0ZDuNV"" calls 200",2023-04-16T18:58:29.206Z,168167150920600
+"""Michael @ GScnVzO7r5"" raises to 200",2023-04-16T18:58:27.529Z,168167150752900
+"""Henry @ lCLb0ZDuNV"" posts a big blind of 100",2023-04-16T18:58:21.197Z,168167150119707
+"""Michael @ GScnVzO7r5"" posts a small blind of 50",2023-04-16T18:58:21.197Z,168167150119706
+"""Michael @ GScnVzO7r5"" posts an ante of 10",2023-04-16T18:58:21.197Z,168167150119705
+"""Henry @ lCLb0ZDuNV"" posts an ante of 10",2023-04-16T18:58:21.197Z,168167150119704
+"Player stacks: #6 ""Henry @ lCLb0ZDuNV"" (2916) | #10 ""Michael @ GScnVzO7r5"" (5084)",2023-04-16T18:58:21.197Z,168167150119701
+"-- starting hand #79 (id: a917elrdvojz)  (No Limit Texas Hold'em) (dealer: ""Michael @ GScnVzO7r5"") --",2023-04-16T18:58:21.197Z,168167150119700
+"-- ending hand #78 --",2023-04-16T18:58:18.198Z,168167149819802
+"""Henry @ lCLb0ZDuNV"" collected 620 from pot",2023-04-16T18:58:18.198Z,168167149819801
+"Uncalled bet of 310 returned to ""Henry @ lCLb0ZDuNV""",2023-04-16T18:58:18.198Z,168167149819800
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:58:17.293Z,168167149729300
+"""Henry @ lCLb0ZDuNV"" bets 310",2023-04-16T18:58:16.264Z,168167149626400
+"""Michael @ GScnVzO7r5"" checks",2023-04-16T18:58:10.109Z,168167149010900
+"Flop:  [8♠, 3♠, 5♥]",2023-04-16T18:58:02.774Z,168167148277400
+"""Michael @ GScnVzO7r5"" calls 300",2023-04-16T18:58:01.844Z,168167148184400
+"""Henry @ lCLb0ZDuNV"" raises to 300",2023-04-16T18:57:54.799Z,168167147479900
+"""Michael @ GScnVzO7r5"" posts a big blind of 100",2023-04-16T18:57:50.976Z,168167147097607
+"""Henry @ lCLb0ZDuNV"" posts a small blind of 50",2023-04-16T18:57:50.976Z,168167147097606
+"""Michael @ GScnVzO7r5"" posts an ante of 10",2023-04-16T18:57:50.976Z,168167147097605
+"""Henry @ lCLb0ZDuNV"" posts an ante of 10",2023-04-16T18:57:50.976Z,168167147097604
+"Player stacks: #6 ""Henry @ lCLb0ZDuNV"" (2606) | #10 ""Michael @ GScnVzO7r5"" (5394)",2023-04-16T18:57:50.976Z,168167147097601
+"-- starting hand #78 (id: r43zqw7abwdc)  (No Limit Texas Hold'em) (dealer: ""Henry @ lCLb0ZDuNV"") --",2023-04-16T18:57:50.976Z,168167147097600
+"-- ending hand #77 --",2023-04-16T18:57:47.970Z,168167146797002
+"""Henry @ lCLb0ZDuNV"" collected 220 from pot",2023-04-16T18:57:47.970Z,168167146797001
+"Uncalled bet of 200 returned to ""Henry @ lCLb0ZDuNV""",2023-04-16T18:57:47.970Z,168167146797000
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:57:47.084Z,168167146708400
+"""Henry @ lCLb0ZDuNV"" raises to 300",2023-04-16T18:57:45.792Z,168167146579200
+"""Michael @ GScnVzO7r5"" calls 100",2023-04-16T18:57:40.552Z,168167146055200
+"""Henry @ lCLb0ZDuNV"" posts a big blind of 100",2023-04-16T18:57:37.962Z,168167145796207
+"""Michael @ GScnVzO7r5"" posts a small blind of 50",2023-04-16T18:57:37.962Z,168167145796206
+"""Michael @ GScnVzO7r5"" posts an ante of 10",2023-04-16T18:57:37.962Z,168167145796205
+"""Henry @ lCLb0ZDuNV"" posts an ante of 10",2023-04-16T18:57:37.962Z,168167145796204
+"Player stacks: #6 ""Henry @ lCLb0ZDuNV"" (2496) | #10 ""Michael @ GScnVzO7r5"" (5504)",2023-04-16T18:57:37.962Z,168167145796201
+"-- starting hand #77 (id: ub3qdya8idbq)  (No Limit Texas Hold'em) (dealer: ""Michael @ GScnVzO7r5"") --",2023-04-16T18:57:37.962Z,168167145796200
+"-- ending hand #76 --",2023-04-16T18:57:35.055Z,168167145505502
+"""Michael @ GScnVzO7r5"" collected 120 from pot",2023-04-16T18:57:35.055Z,168167145505501
+"Uncalled bet of 50 returned to ""Michael @ GScnVzO7r5""",2023-04-16T18:57:35.055Z,168167145505500
+"""Henry @ lCLb0ZDuNV"" folds",2023-04-16T18:57:34.213Z,168167145421300
+"""Michael @ GScnVzO7r5"" posts a big blind of 100",2023-04-16T18:57:27.053Z,168167144705307
+"""Henry @ lCLb0ZDuNV"" posts a small blind of 50",2023-04-16T18:57:27.053Z,168167144705306
+"""Michael @ GScnVzO7r5"" posts an ante of 10",2023-04-16T18:57:27.053Z,168167144705305
+"""Henry @ lCLb0ZDuNV"" posts an ante of 10",2023-04-16T18:57:27.053Z,168167144705304
+"Player stacks: #6 ""Henry @ lCLb0ZDuNV"" (2556) | #10 ""Michael @ GScnVzO7r5"" (5444)",2023-04-16T18:57:27.053Z,168167144705301
+"-- starting hand #76 (id: i4cl3qpikzc8)  (No Limit Texas Hold'em) (dealer: ""Henry @ lCLb0ZDuNV"") --",2023-04-16T18:57:27.053Z,168167144705300
+"-- ending hand #75 --",2023-04-16T18:57:21.033Z,168167144103301
+"""Michael @ GScnVzO7r5"" collected 5444 from pot with Two Pair, 10's & 7's (combination: 10♣, 10♥, 7♣, 7♦, A♣)",2023-04-16T18:57:21.033Z,168167144103300
+"River: 2♠, 10♥, 2♦, A♣ [7♦]",2023-04-16T18:57:16.971Z,168167143697100
+"Turn: 2♠, 10♥, 2♦ [A♣]",2023-04-16T18:57:12.968Z,168167143296800
+"""Michael @ GScnVzO7r5"" shows a 7♣, 10♣.",2023-04-16T18:57:08.963Z,168167142896301
+"""Henry @ lCLb0ZDuNV"" shows a 5♦, 5♣.",2023-04-16T18:57:08.963Z,168167142896300
+"""Henry @ lCLb0ZDuNV"" calls 2112",2023-04-16T18:57:08.109Z,168167142810900
+"""Michael @ GScnVzO7r5"" raises to 2112 and go all in",2023-04-16T18:57:05.676Z,168167142567600
+"""Henry @ lCLb0ZDuNV"" bets 915",2023-04-16T18:57:01.543Z,168167142154300
+"Flop:  [2♠, 10♥, 2♦]",2023-04-16T18:56:54.901Z,168167141490100
+"""Michael @ GScnVzO7r5"" calls 600",2023-04-16T18:56:53.985Z,168167141398500
+"""Henry @ lCLb0ZDuNV"" raises to 600",2023-04-16T18:56:44.883Z,168167140488300
+"""Michael @ GScnVzO7r5"" raises to 200",2023-04-16T18:56:35.641Z,168167139564100
+"""Henry @ lCLb0ZDuNV"" posts a big blind of 100",2023-04-16T18:56:31.275Z,168167139127507
+"""Michael @ GScnVzO7r5"" posts a small blind of 50",2023-04-16T18:56:31.275Z,168167139127506
+"""Michael @ GScnVzO7r5"" posts an ante of 10",2023-04-16T18:56:31.275Z,168167139127505
+"""Henry @ lCLb0ZDuNV"" posts an ante of 10",2023-04-16T18:56:31.275Z,168167139127504
+"Player stacks: #6 ""Henry @ lCLb0ZDuNV"" (5278) | #10 ""Michael @ GScnVzO7r5"" (2722)",2023-04-16T18:56:31.275Z,168167139127501
+"-- starting hand #75 (id: 2xpsadhgkb5i)  (No Limit Texas Hold'em) (dealer: ""Michael @ GScnVzO7r5"") --",2023-04-16T18:56:31.275Z,168167139127500
+"-- ending hand #74 --",2023-04-16T18:56:28.276Z,168167138827602
+"""Henry @ lCLb0ZDuNV"" collected 220 from pot",2023-04-16T18:56:28.276Z,168167138827601
+"Uncalled bet of 200 returned to ""Henry @ lCLb0ZDuNV""",2023-04-16T18:56:28.276Z,168167138827600
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:56:27.451Z,168167138745100
+"""Henry @ lCLb0ZDuNV"" raises to 300",2023-04-16T18:56:25.673Z,168167138567300
+"""Michael @ GScnVzO7r5"" posts a big blind of 100",2023-04-16T18:56:15.046Z,168167137504607
+"""Henry @ lCLb0ZDuNV"" posts a small blind of 50",2023-04-16T18:56:15.046Z,168167137504606
+"""Michael @ GScnVzO7r5"" posts an ante of 10",2023-04-16T18:56:15.046Z,168167137504605
+"""Henry @ lCLb0ZDuNV"" posts an ante of 10",2023-04-16T18:56:15.046Z,168167137504604
+"Player stacks: #6 ""Henry @ lCLb0ZDuNV"" (5168) | #10 ""Michael @ GScnVzO7r5"" (2832)",2023-04-16T18:56:15.046Z,168167137504601
+"-- starting hand #74 (id: njnqp1erhxhs)  (No Limit Texas Hold'em) (dealer: ""Henry @ lCLb0ZDuNV"") --",2023-04-16T18:56:15.046Z,168167137504600
+"-- ending hand #73 --",2023-04-16T18:56:12.047Z,168167137204702
+"""Henry @ lCLb0ZDuNV"" collected 420 from pot",2023-04-16T18:56:12.047Z,168167137204701
+"Uncalled bet of 315 returned to ""Henry @ lCLb0ZDuNV""",2023-04-16T18:56:12.047Z,168167137204700
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:56:11.159Z,168167137115900
+"""Henry @ lCLb0ZDuNV"" bets 315",2023-04-16T18:56:07.256Z,168167136725600
+"Flop:  [7♦, K♥, 3♦]",2023-04-16T18:56:00.202Z,168167136020200
+"""Henry @ lCLb0ZDuNV"" calls 200",2023-04-16T18:55:59.310Z,168167135931000
+"""Michael @ GScnVzO7r5"" raises to 200",2023-04-16T18:55:56.900Z,168167135690000
+"""Henry @ lCLb0ZDuNV"" posts a big blind of 100",2023-04-16T18:55:48.383Z,168167134838307
+"""Michael @ GScnVzO7r5"" posts a small blind of 50",2023-04-16T18:55:48.383Z,168167134838306
+"""Michael @ GScnVzO7r5"" posts an ante of 10",2023-04-16T18:55:48.383Z,168167134838305
+"""Henry @ lCLb0ZDuNV"" posts an ante of 10",2023-04-16T18:55:48.383Z,168167134838304
+"Player stacks: #6 ""Henry @ lCLb0ZDuNV"" (4958) | #10 ""Michael @ GScnVzO7r5"" (3042)",2023-04-16T18:55:48.383Z,168167134838301
+"-- starting hand #73 (id: 0hvw0fkmdn2w)  (No Limit Texas Hold'em) (dealer: ""Michael @ GScnVzO7r5"") --",2023-04-16T18:55:48.383Z,168167134838300
+"-- ending hand #72 --",2023-04-16T18:55:45.387Z,168167134538702
+"""Michael @ GScnVzO7r5"" collected 120 from pot",2023-04-16T18:55:45.387Z,168167134538701
+"Uncalled bet of 50 returned to ""Michael @ GScnVzO7r5""",2023-04-16T18:55:45.387Z,168167134538700
+"""Henry @ lCLb0ZDuNV"" folds",2023-04-16T18:55:44.553Z,168167134455300
+"""Michael @ GScnVzO7r5"" posts a big blind of 100",2023-04-16T18:55:28.622Z,168167132862207
+"""Henry @ lCLb0ZDuNV"" posts a small blind of 50",2023-04-16T18:55:28.622Z,168167132862206
+"""Michael @ GScnVzO7r5"" posts an ante of 10",2023-04-16T18:55:28.622Z,168167132862205
+"""Henry @ lCLb0ZDuNV"" posts an ante of 10",2023-04-16T18:55:28.622Z,168167132862204
+"Player stacks: #6 ""Henry @ lCLb0ZDuNV"" (5018) | #10 ""Michael @ GScnVzO7r5"" (2982)",2023-04-16T18:55:28.622Z,168167132862201
+"-- starting hand #72 (id: isji4g5cxd3h)  (No Limit Texas Hold'em) (dealer: ""Henry @ lCLb0ZDuNV"") --",2023-04-16T18:55:28.622Z,168167132862200
+"-- ending hand #71 --",2023-04-16T18:55:25.669Z,168167132566902
+"""Henry @ lCLb0ZDuNV"" collected 220 from pot",2023-04-16T18:55:25.669Z,168167132566901
+"Uncalled bet of 200 returned to ""Henry @ lCLb0ZDuNV""",2023-04-16T18:55:25.669Z,168167132566900
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:55:24.823Z,168167132482300
+"""Henry @ lCLb0ZDuNV"" raises to 300",2023-04-16T18:55:21.402Z,168167132140200
+"""Michael @ GScnVzO7r5"" calls 100",2023-04-16T18:55:14.900Z,168167131490000
+"""Henry @ lCLb0ZDuNV"" posts a big blind of 100",2023-04-16T18:55:05.445Z,168167130544507
+"""Michael @ GScnVzO7r5"" posts a small blind of 50",2023-04-16T18:55:05.445Z,168167130544506
+"""Michael @ GScnVzO7r5"" posts an ante of 10",2023-04-16T18:55:05.445Z,168167130544505
+"""Henry @ lCLb0ZDuNV"" posts an ante of 10",2023-04-16T18:55:05.445Z,168167130544504
+"Player stacks: #6 ""Henry @ lCLb0ZDuNV"" (4908) | #10 ""Michael @ GScnVzO7r5"" (3092)",2023-04-16T18:55:05.445Z,168167130544501
+"-- starting hand #71 (id: vt2jqnb67xfp)  (No Limit Texas Hold'em) (dealer: ""Michael @ GScnVzO7r5"") --",2023-04-16T18:55:05.445Z,168167130544500
+"-- ending hand #70 --",2023-04-16T18:55:02.530Z,168167130253002
+"""Michael @ GScnVzO7r5"" collected 120 from pot",2023-04-16T18:55:02.530Z,168167130253001
+"Uncalled bet of 50 returned to ""Michael @ GScnVzO7r5""",2023-04-16T18:55:02.530Z,168167130253000
+"""Henry @ lCLb0ZDuNV"" folds",2023-04-16T18:55:01.723Z,168167130172300
+"""Michael @ GScnVzO7r5"" posts a big blind of 100",2023-04-16T18:54:51.010Z,168167129101010
+"""Henry @ lCLb0ZDuNV"" posts a small blind of 50",2023-04-16T18:54:51.010Z,168167129101009
+"""Michael @ GScnVzO7r5"" posts an ante of 10",2023-04-16T18:54:51.010Z,168167129101008
+"""Henry @ lCLb0ZDuNV"" posts an ante of 10",2023-04-16T18:54:51.010Z,168167129101007
+"Player stacks: #6 ""Henry @ lCLb0ZDuNV"" (4968) | #10 ""Michael @ GScnVzO7r5"" (3032)",2023-04-16T18:54:51.010Z,168167129101004
+"-- starting hand #70 (id: h1fqp4akf1cs)  (No Limit Texas Hold'em) (dealer: ""Henry @ lCLb0ZDuNV"") --",2023-04-16T18:54:51.010Z,168167129101003
+"The game's ante was changed from 8 to 10.",2023-04-16T18:54:51.010Z,168167129101002
+"The game's big blind was changed from 80 to 100.",2023-04-16T18:54:51.010Z,168167129101001
+"The game's small blind was changed from 40 to 50.",2023-04-16T18:54:51.010Z,168167129101000
+"-- ending hand #69 --",2023-04-16T18:54:45.005Z,168167128500501
+"""Michael @ GScnVzO7r5"" collected 3032 from pot with Three of a Kind, 5's (combination: 5♦, 5♥, 5♣, Q♦, J♥)",2023-04-16T18:54:45.005Z,168167128500500
+"River: 5♣, 4♥, Q♦, J♥ [3♦]",2023-04-16T18:54:40.922Z,168167128092200
+"Turn: 5♣, 4♥, Q♦ [J♥]",2023-04-16T18:54:36.914Z,168167127691400
+"Flop:  [5♣, 4♥, Q♦]",2023-04-16T18:54:32.826Z,168167127282600
+"""Michael @ GScnVzO7r5"" shows a 5♦, 5♥.",2023-04-16T18:54:28.823Z,168167126882301
+"""Henry @ lCLb0ZDuNV"" shows a A♦, A♣.",2023-04-16T18:54:28.823Z,168167126882300
+"""Henry @ lCLb0ZDuNV"" calls 1508",2023-04-16T18:54:27.965Z,168167126796500
+"""Michael @ GScnVzO7r5"" raises to 1508 and go all in",2023-04-16T18:54:26.337Z,168167126633700
+"""Henry @ lCLb0ZDuNV"" posts a big blind of 80",2023-04-16T18:54:14.757Z,168167125475707
+"""Michael @ GScnVzO7r5"" posts a small blind of 40",2023-04-16T18:54:14.757Z,168167125475706
+"""Michael @ GScnVzO7r5"" posts an ante of 8",2023-04-16T18:54:14.757Z,168167125475705
+"""Henry @ lCLb0ZDuNV"" posts an ante of 8",2023-04-16T18:54:14.757Z,168167125475704
+"Player stacks: #6 ""Henry @ lCLb0ZDuNV"" (6484) | #10 ""Michael @ GScnVzO7r5"" (1516)",2023-04-16T18:54:14.757Z,168167125475701
+"-- starting hand #69 (id: sienmmugcs3n)  (No Limit Texas Hold'em) (dealer: ""Michael @ GScnVzO7r5"") --",2023-04-16T18:54:14.757Z,168167125475700
+"-- ending hand #68 --",2023-04-16T18:54:08.721Z,168167124872101
+"""Henry @ lCLb0ZDuNV"" collected 6484 from pot with Flush, Kd High (combination: K♦, Q♦, 10♦, 7♦, 2♦)",2023-04-16T18:54:08.721Z,168167124872100
+"River: 10♣, Q♦, 7♦, J♠ [2♦]",2023-04-16T18:54:04.703Z,168167124470300
+"""Michael @ GScnVzO7r5"" shows a J♦, J♣.",2023-04-16T18:54:00.646Z,168167124064601
+"""Henry @ lCLb0ZDuNV"" shows a K♦, 10♦.",2023-04-16T18:54:00.646Z,168167124064600
+"""Henry @ lCLb0ZDuNV"" calls 2114 and go all in",2023-04-16T18:53:59.809Z,168167123980900
+"""Michael @ GScnVzO7r5"" bets 2114",2023-04-16T18:53:53.945Z,168167123394500
+"Turn: 10♣, Q♦, 7♦ [J♠]",2023-04-16T18:53:40.426Z,168167122042600
+"""Henry @ lCLb0ZDuNV"" calls 480",2023-04-16T18:53:39.562Z,168167121956200
+"""Michael @ GScnVzO7r5"" bets 480",2023-04-16T18:53:36.016Z,168167121601600
+"Flop:  [10♣, Q♦, 7♦]",2023-04-16T18:53:21.615Z,168167120161500
+"""Henry @ lCLb0ZDuNV"" calls 640",2023-04-16T18:53:20.781Z,168167120078100
+"""Michael @ GScnVzO7r5"" raises to 640",2023-04-16T18:53:18.309Z,168167119830900
+"""Henry @ lCLb0ZDuNV"" raises to 240",2023-04-16T18:53:06.271Z,168167118627100
+"""Michael @ GScnVzO7r5"" posts a big blind of 80",2023-04-16T18:52:58.994Z,168167117899407
+"""Henry @ lCLb0ZDuNV"" posts a small blind of 40",2023-04-16T18:52:58.994Z,168167117899406
+"""Michael @ GScnVzO7r5"" posts an ante of 8",2023-04-16T18:52:58.994Z,168167117899405
+"""Henry @ lCLb0ZDuNV"" posts an ante of 8",2023-04-16T18:52:58.994Z,168167117899404
+"Player stacks: #6 ""Henry @ lCLb0ZDuNV"" (3242) | #10 ""Michael @ GScnVzO7r5"" (4758)",2023-04-16T18:52:58.994Z,168167117899401
+"-- starting hand #68 (id: 2hrqojshvl7o)  (No Limit Texas Hold'em) (dealer: ""Henry @ lCLb0ZDuNV"") --",2023-04-16T18:52:58.994Z,168167117899400
+"-- ending hand #67 --",2023-04-16T18:52:55.996Z,168167117599602
+"""Michael @ GScnVzO7r5"" collected 656 from pot",2023-04-16T18:52:55.996Z,168167117599601
+"Uncalled bet of 3242 returned to ""Michael @ GScnVzO7r5""",2023-04-16T18:52:55.996Z,168167117599600
+"""Henry @ lCLb0ZDuNV"" folds",2023-04-16T18:52:55.130Z,168167117513000
+"""Michael @ GScnVzO7r5"" raises to 3562",2023-04-16T18:52:39.828Z,168167115982800
+"""Henry @ lCLb0ZDuNV"" raises to 320",2023-04-16T18:52:29.548Z,168167114954800
+"""Michael @ GScnVzO7r5"" raises to 160",2023-04-16T18:52:20.558Z,168167114055800
+"""Henry @ lCLb0ZDuNV"" posts a big blind of 80",2023-04-16T18:52:12.752Z,168167113275207
+"""Michael @ GScnVzO7r5"" posts a small blind of 40",2023-04-16T18:52:12.752Z,168167113275206
+"""Michael @ GScnVzO7r5"" posts an ante of 8",2023-04-16T18:52:12.752Z,168167113275205
+"""Henry @ lCLb0ZDuNV"" posts an ante of 8",2023-04-16T18:52:12.752Z,168167113275204
+"Player stacks: #6 ""Henry @ lCLb0ZDuNV"" (3570) | #10 ""Michael @ GScnVzO7r5"" (4430)",2023-04-16T18:52:12.752Z,168167113275201
+"-- starting hand #67 (id: 7mtbo0v7parb)  (No Limit Texas Hold'em) (dealer: ""Michael @ GScnVzO7r5"") --",2023-04-16T18:52:12.752Z,168167113275200
+"-- ending hand #66 --",2023-04-16T18:52:09.791Z,168167112979102
+"""Henry @ lCLb0ZDuNV"" collected 1240 from pot",2023-04-16T18:52:09.791Z,168167112979101
+"Uncalled bet of 930 returned to ""Henry @ lCLb0ZDuNV""",2023-04-16T18:52:09.791Z,168167112979100
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:52:08.965Z,168167112896500
+"""Henry @ lCLb0ZDuNV"" bets 930",2023-04-16T18:52:07.917Z,168167112791700
+"""Michael @ GScnVzO7r5"" checks",2023-04-16T18:52:04.752Z,168167112475200
+"Turn: 4♦, 3♦, 2♥ [J♦]",2023-04-16T18:51:57.089Z,168167111708900
+"""Michael @ GScnVzO7r5"" calls 372",2023-04-16T18:51:56.230Z,168167111623000
+"""Henry @ lCLb0ZDuNV"" bets 372",2023-04-16T18:51:49.504Z,168167110950400
+"""Michael @ GScnVzO7r5"" checks",2023-04-16T18:51:44.274Z,168167110427400
+"Flop:  [4♦, 3♦, 2♥]",2023-04-16T18:51:36.864Z,168167109686400
+"""Michael @ GScnVzO7r5"" calls 240",2023-04-16T18:51:36.048Z,168167109604800
+"""Henry @ lCLb0ZDuNV"" raises to 240",2023-04-16T18:51:25.073Z,168167108507300
+"""Michael @ GScnVzO7r5"" posts a big blind of 80",2023-04-16T18:51:15.639Z,168167107563907
+"""Henry @ lCLb0ZDuNV"" posts a small blind of 40",2023-04-16T18:51:15.639Z,168167107563906
+"""Michael @ GScnVzO7r5"" posts an ante of 8",2023-04-16T18:51:15.639Z,168167107563905
+"""Henry @ lCLb0ZDuNV"" posts an ante of 8",2023-04-16T18:51:15.639Z,168167107563904
+"Player stacks: #6 ""Henry @ lCLb0ZDuNV"" (2950) | #10 ""Michael @ GScnVzO7r5"" (5050)",2023-04-16T18:51:15.639Z,168167107563901
+"-- starting hand #66 (id: ichiow22tu9g)  (No Limit Texas Hold'em) (dealer: ""Henry @ lCLb0ZDuNV"") --",2023-04-16T18:51:15.639Z,168167107563900
+"-- ending hand #65 --",2023-04-16T18:51:12.701Z,168167107270102
+"""Henry @ lCLb0ZDuNV"" collected 96 from pot",2023-04-16T18:51:12.701Z,168167107270101
+"Uncalled bet of 40 returned to ""Henry @ lCLb0ZDuNV""",2023-04-16T18:51:12.701Z,168167107270100
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:51:11.882Z,168167107188200
+"""Henry @ lCLb0ZDuNV"" posts a big blind of 80",2023-04-16T18:51:06.839Z,168167106683907
+"""Michael @ GScnVzO7r5"" posts a small blind of 40",2023-04-16T18:51:06.839Z,168167106683906
+"""Michael @ GScnVzO7r5"" posts an ante of 8",2023-04-16T18:51:06.839Z,168167106683905
+"""Henry @ lCLb0ZDuNV"" posts an ante of 8",2023-04-16T18:51:06.839Z,168167106683904
+"Player stacks: #6 ""Henry @ lCLb0ZDuNV"" (2902) | #10 ""Michael @ GScnVzO7r5"" (5098)",2023-04-16T18:51:06.839Z,168167106683901
+"-- starting hand #65 (id: kjvhtzak5yke)  (No Limit Texas Hold'em) (dealer: ""Michael @ GScnVzO7r5"") --",2023-04-16T18:51:06.839Z,168167106683900
+"-- ending hand #64 --",2023-04-16T18:51:03.826Z,168167106382602
+"""Henry @ lCLb0ZDuNV"" collected 440 from pot",2023-04-16T18:51:03.826Z,168167106382601
+"Uncalled bet of 330 returned to ""Henry @ lCLb0ZDuNV""",2023-04-16T18:51:03.826Z,168167106382600
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:51:02.941Z,168167106294100
+"""Henry @ lCLb0ZDuNV"" bets 330",2023-04-16T18:51:01.361Z,168167106136100
+"""Michael @ GScnVzO7r5"" checks",2023-04-16T18:50:58.165Z,168167105816500
+"Turn: 6♣, 9♣, 7♠ [Q♥]",2023-04-16T18:50:49.805Z,168167104980500
+"""Michael @ GScnVzO7r5"" calls 132",2023-04-16T18:50:48.902Z,168167104890200
+"""Henry @ lCLb0ZDuNV"" bets 132",2023-04-16T18:50:43.913Z,168167104391300
+"""Michael @ GScnVzO7r5"" checks",2023-04-16T18:50:39.917Z,168167103991700
+"Flop:  [6♣, 9♣, 7♠]",2023-04-16T18:50:33.495Z,168167103349500
+"""Michael @ GScnVzO7r5"" checks",2023-04-16T18:50:32.679Z,168167103267900
+"""Henry @ lCLb0ZDuNV"" calls 80",2023-04-16T18:50:26.592Z,168167102659200
+"""Michael @ GScnVzO7r5"" posts a big blind of 80",2023-04-16T18:50:22.579Z,168167102257907
+"""Henry @ lCLb0ZDuNV"" posts a small blind of 40",2023-04-16T18:50:22.579Z,168167102257906
+"""Michael @ GScnVzO7r5"" posts an ante of 8",2023-04-16T18:50:22.579Z,168167102257905
+"""Henry @ lCLb0ZDuNV"" posts an ante of 8",2023-04-16T18:50:22.579Z,168167102257904
+"Player stacks: #6 ""Henry @ lCLb0ZDuNV"" (2682) | #10 ""Michael @ GScnVzO7r5"" (5318)",2023-04-16T18:50:22.579Z,168167102257901
+"-- starting hand #64 (id: fpipwzq6w2tq)  (No Limit Texas Hold'em) (dealer: ""Henry @ lCLb0ZDuNV"") --",2023-04-16T18:50:22.579Z,168167102257900
+"-- ending hand #63 --",2023-04-16T18:50:19.639Z,168167101963902
+"""Michael @ GScnVzO7r5"" collected 1240 from pot",2023-04-16T18:50:19.639Z,168167101963901
+"Uncalled bet of 600 returned to ""Michael @ GScnVzO7r5""",2023-04-16T18:50:19.639Z,168167101963900
+"""Henry @ lCLb0ZDuNV"" folds",2023-04-16T18:50:18.785Z,168167101878500
+"""Michael @ GScnVzO7r5"" bets 600",2023-04-16T18:50:15.406Z,168167101540600
+"""Henry @ lCLb0ZDuNV"" checks",2023-04-16T18:50:04.353Z,168167100435300
+"Turn: Q♦, 5♦, 3♥ [J♥]",2023-04-16T18:49:53.508Z,168167099350800
+"""Michael @ GScnVzO7r5"" calls 372",2023-04-16T18:49:52.667Z,168167099266700
+"""Henry @ lCLb0ZDuNV"" bets 372",2023-04-16T18:49:44.199Z,168167098419900
+"Flop:  [Q♦, 5♦, 3♥]",2023-04-16T18:49:37.975Z,168167097797500
+"""Michael @ GScnVzO7r5"" calls 240",2023-04-16T18:49:37.163Z,168167097716300
+"""Henry @ lCLb0ZDuNV"" raises to 240",2023-04-16T18:49:27.819Z,168167096781900
+"""Michael @ GScnVzO7r5"" raises to 160",2023-04-16T18:49:19.276Z,168167095927600
+"""Henry @ lCLb0ZDuNV"" posts a big blind of 80",2023-04-16T18:49:12.960Z,168167095296007
+"""Michael @ GScnVzO7r5"" posts a small blind of 40",2023-04-16T18:49:12.960Z,168167095296006
+"""Michael @ GScnVzO7r5"" posts an ante of 8",2023-04-16T18:49:12.960Z,168167095296005
+"""Henry @ lCLb0ZDuNV"" posts an ante of 8",2023-04-16T18:49:12.960Z,168167095296004
+"Player stacks: #6 ""Henry @ lCLb0ZDuNV"" (3302) | #10 ""Michael @ GScnVzO7r5"" (4698)",2023-04-16T18:49:12.960Z,168167095296001
+"-- starting hand #63 (id: j8stxmynr1fd)  (No Limit Texas Hold'em) (dealer: ""Michael @ GScnVzO7r5"") --",2023-04-16T18:49:12.960Z,168167095296000
+"-- ending hand #62 --",2023-04-16T18:49:09.998Z,168167094999802
+"""Michael @ GScnVzO7r5"" collected 176 from pot",2023-04-16T18:49:09.998Z,168167094999801
+"Uncalled bet of 160 returned to ""Michael @ GScnVzO7r5""",2023-04-16T18:49:09.998Z,168167094999800
+"""Henry @ lCLb0ZDuNV"" folds",2023-04-16T18:49:09.169Z,168167094916900
+"""Michael @ GScnVzO7r5"" raises to 240",2023-04-16T18:49:05.704Z,168167094570400
+"""Henry @ lCLb0ZDuNV"" calls 80",2023-04-16T18:48:58.607Z,168167093860700
+"""Michael @ GScnVzO7r5"" posts a big blind of 80",2023-04-16T18:48:52.972Z,168167093297207
+"""Henry @ lCLb0ZDuNV"" posts a small blind of 40",2023-04-16T18:48:52.972Z,168167093297206
+"""Michael @ GScnVzO7r5"" posts an ante of 8",2023-04-16T18:48:52.972Z,168167093297205
+"""Henry @ lCLb0ZDuNV"" posts an ante of 8",2023-04-16T18:48:52.972Z,168167093297204
+"Player stacks: #6 ""Henry @ lCLb0ZDuNV"" (3390) | #10 ""Michael @ GScnVzO7r5"" (4610)",2023-04-16T18:48:52.972Z,168167093297201
+"-- starting hand #62 (id: 86b0ky1azodv)  (No Limit Texas Hold'em) (dealer: ""Henry @ lCLb0ZDuNV"") --",2023-04-16T18:48:52.972Z,168167093297200
+"-- ending hand #61 --",2023-04-16T18:48:50.031Z,168167093003102
+"""Henry @ lCLb0ZDuNV"" collected 496 from pot",2023-04-16T18:48:50.031Z,168167093003101
+"Uncalled bet of 248 returned to ""Henry @ lCLb0ZDuNV""",2023-04-16T18:48:50.031Z,168167093003100
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:48:49.185Z,168167092918500
+"""Henry @ lCLb0ZDuNV"" bets 248",2023-04-16T18:48:47.761Z,168167092776100
+"Turn: 8♦, A♦, J♣ [J♠]",2023-04-16T18:48:41.358Z,168167092135800
+"""Michael @ GScnVzO7r5"" checks",2023-04-16T18:48:40.530Z,168167092053000
+"""Henry @ lCLb0ZDuNV"" checks",2023-04-16T18:48:33.505Z,168167091350500
+"Flop:  [8♦, A♦, J♣]",2023-04-16T18:48:29.072Z,168167090907200
+"""Michael @ GScnVzO7r5"" calls 240",2023-04-16T18:48:28.239Z,168167090823900
+"""Henry @ lCLb0ZDuNV"" raises to 240",2023-04-16T18:48:23.319Z,168167090331900
+"""Michael @ GScnVzO7r5"" raises to 160",2023-04-16T18:48:15.848Z,168167089584800
+"""Henry @ lCLb0ZDuNV"" posts a big blind of 80",2023-04-16T18:48:11.118Z,168167089111807
+"""Michael @ GScnVzO7r5"" posts a small blind of 40",2023-04-16T18:48:11.118Z,168167089111806
+"""Michael @ GScnVzO7r5"" posts an ante of 8",2023-04-16T18:48:11.118Z,168167089111805
+"""Henry @ lCLb0ZDuNV"" posts an ante of 8",2023-04-16T18:48:11.118Z,168167089111804
+"Player stacks: #6 ""Henry @ lCLb0ZDuNV"" (3142) | #10 ""Michael @ GScnVzO7r5"" (4858)",2023-04-16T18:48:11.118Z,168167089111801
+"-- starting hand #61 (id: poacixwlbp5d)  (No Limit Texas Hold'em) (dealer: ""Michael @ GScnVzO7r5"") --",2023-04-16T18:48:11.118Z,168167089111800
+"-- ending hand #60 --",2023-04-16T18:48:05.027Z,168167088502701
+"""Michael @ GScnVzO7r5"" collected 4858 from pot with Straight, 7 High (combination: 7♠, 6♣, 5♠, 4♠, 3♥)",2023-04-16T18:48:05.027Z,168167088502700
+"River: 4♠, 5♠, 2♦, 3♥ [7♠]",2023-04-16T18:48:01.025Z,168167088102500
+"""Michael @ GScnVzO7r5"" shows a 6♣, 9♣.",2023-04-16T18:47:56.980Z,168167087698001
+"""Henry @ lCLb0ZDuNV"" shows a 10♣, A♦.",2023-04-16T18:47:56.980Z,168167087698000
+"""Henry @ lCLb0ZDuNV"" calls 2141",2023-04-16T18:47:56.120Z,168167087612000
+"""Michael @ GScnVzO7r5"" raises to 2141 and go all in",2023-04-16T18:47:48.653Z,168167086865300
+"""Henry @ lCLb0ZDuNV"" raises to 720",2023-04-16T18:47:36.160Z,168167085616000
+"""Michael @ GScnVzO7r5"" bets 320",2023-04-16T18:47:22.557Z,168167084255700
+"Turn: 4♠, 5♠, 2♦ [3♥]",2023-04-16T18:47:08.745Z,168167082874500
+"""Henry @ lCLb0ZDuNV"" calls 120",2023-04-16T18:47:07.911Z,168167082791100
+"""Michael @ GScnVzO7r5"" bets 120",2023-04-16T18:47:03.279Z,168167082327900
+"Flop:  [4♠, 5♠, 2♦]",2023-04-16T18:46:52.153Z,168167081215300
+"""Michael @ GScnVzO7r5"" calls 160",2023-04-16T18:46:51.334Z,168167081133400
+"""Henry @ lCLb0ZDuNV"" raises to 160",2023-04-16T18:46:46.273Z,168167080627300
+"""Michael @ GScnVzO7r5"" posts a big blind of 80",2023-04-16T18:46:39.850Z,168167079985010
+"""Henry @ lCLb0ZDuNV"" posts a small blind of 40",2023-04-16T18:46:39.850Z,168167079985009
+"""Michael @ GScnVzO7r5"" posts an ante of 8",2023-04-16T18:46:39.850Z,168167079985008
+"""Henry @ lCLb0ZDuNV"" posts an ante of 8",2023-04-16T18:46:39.850Z,168167079985007
+"Player stacks: #6 ""Henry @ lCLb0ZDuNV"" (5571) | #10 ""Michael @ GScnVzO7r5"" (2429)",2023-04-16T18:46:39.850Z,168167079985004
+"-- starting hand #60 (id: 7njmsgusdbk4)  (No Limit Texas Hold'em) (dealer: ""Henry @ lCLb0ZDuNV"") --",2023-04-16T18:46:39.850Z,168167079985003
+"The game's ante was changed from 6 to 8.",2023-04-16T18:46:39.850Z,168167079985002
+"The game's big blind was changed from 60 to 80.",2023-04-16T18:46:39.850Z,168167079985001
+"The game's small blind was changed from 30 to 40.",2023-04-16T18:46:39.850Z,168167079985000
+"-- ending hand #59 --",2023-04-16T18:46:36.852Z,168167079685202
+"""Henry @ lCLb0ZDuNV"" collected 372 from pot",2023-04-16T18:46:36.852Z,168167079685201
+"Uncalled bet of 279 returned to ""Henry @ lCLb0ZDuNV""",2023-04-16T18:46:36.852Z,168167079685200
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:46:35.991Z,168167079599100
+"""Henry @ lCLb0ZDuNV"" bets 279",2023-04-16T18:46:30.275Z,168167079027500
+"Flop:  [2♣, 10♣, A♥]",2023-04-16T18:46:23.840Z,168167078384000
+"""Michael @ GScnVzO7r5"" calls 180",2023-04-16T18:46:23.032Z,168167078303200
+"""Henry @ lCLb0ZDuNV"" raises to 180",2023-04-16T18:46:12.913Z,168167077291300
+"""Michael @ GScnVzO7r5"" calls 60",2023-04-16T18:46:09.598Z,168167076959800
+"""Henry @ lCLb0ZDuNV"" posts a big blind of 60",2023-04-16T18:46:04.508Z,168167076450807
+"""Michael @ GScnVzO7r5"" posts a small blind of 30",2023-04-16T18:46:04.508Z,168167076450806
+"""Michael @ GScnVzO7r5"" posts an ante of 6",2023-04-16T18:46:04.508Z,168167076450805
+"""Henry @ lCLb0ZDuNV"" posts an ante of 6",2023-04-16T18:46:04.508Z,168167076450804
+"Player stacks: #6 ""Henry @ lCLb0ZDuNV"" (5385) | #10 ""Michael @ GScnVzO7r5"" (2615)",2023-04-16T18:46:04.508Z,168167076450801
+"-- starting hand #59 (id: vx1s5mzofgmm)  (No Limit Texas Hold'em) (dealer: ""Michael @ GScnVzO7r5"") --",2023-04-16T18:46:04.508Z,168167076450800
+"-- ending hand #58 --",2023-04-16T18:46:01.577Z,168167076157702
+"""Henry @ lCLb0ZDuNV"" collected 372 from pot",2023-04-16T18:46:01.577Z,168167076157701
+"Uncalled bet of 279 returned to ""Henry @ lCLb0ZDuNV""",2023-04-16T18:46:01.577Z,168167076157700
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:46:00.756Z,168167076075600
+"""Henry @ lCLb0ZDuNV"" bets 279",2023-04-16T18:45:54.608Z,168167075460800
+"""Michael @ GScnVzO7r5"" checks",2023-04-16T18:45:51.538Z,168167075153800
+"Flop:  [K♦, 2♣, 2♠]",2023-04-16T18:45:44.870Z,168167074487000
+"""Michael @ GScnVzO7r5"" calls 180",2023-04-16T18:45:44.055Z,168167074405500
+"""Henry @ lCLb0ZDuNV"" raises to 180",2023-04-16T18:45:37.437Z,168167073743700
+"""Michael @ GScnVzO7r5"" posts a big blind of 60",2023-04-16T18:45:32.664Z,168167073266407
+"""Henry @ lCLb0ZDuNV"" posts a small blind of 30",2023-04-16T18:45:32.664Z,168167073266406
+"""Michael @ GScnVzO7r5"" posts an ante of 6",2023-04-16T18:45:32.664Z,168167073266405
+"""Henry @ lCLb0ZDuNV"" posts an ante of 6",2023-04-16T18:45:32.664Z,168167073266404
+"Player stacks: #6 ""Henry @ lCLb0ZDuNV"" (5199) | #10 ""Michael @ GScnVzO7r5"" (2801)",2023-04-16T18:45:32.664Z,168167073266401
+"-- starting hand #58 (id: 75onaqcjdbex)  (No Limit Texas Hold'em) (dealer: ""Henry @ lCLb0ZDuNV"") --",2023-04-16T18:45:32.664Z,168167073266400
+"-- ending hand #57 --",2023-04-16T18:45:29.716Z,168167072971602
+"""Michael @ GScnVzO7r5"" collected 132 from pot",2023-04-16T18:45:29.716Z,168167072971601
+"Uncalled bet of 60 returned to ""Michael @ GScnVzO7r5""",2023-04-16T18:45:29.716Z,168167072971600
+"""Henry @ lCLb0ZDuNV"" folds",2023-04-16T18:45:28.867Z,168167072886700
+"""Michael @ GScnVzO7r5"" raises to 120",2023-04-16T18:45:25.495Z,168167072549500
+"""Henry @ lCLb0ZDuNV"" posts a big blind of 60",2023-04-16T18:45:16.110Z,168167071611007
+"""Michael @ GScnVzO7r5"" posts a small blind of 30",2023-04-16T18:45:16.110Z,168167071611006
+"""Michael @ GScnVzO7r5"" posts an ante of 6",2023-04-16T18:45:16.110Z,168167071611005
+"""Henry @ lCLb0ZDuNV"" posts an ante of 6",2023-04-16T18:45:16.110Z,168167071611004
+"Player stacks: #6 ""Henry @ lCLb0ZDuNV"" (5265) | #10 ""Michael @ GScnVzO7r5"" (2735)",2023-04-16T18:45:16.110Z,168167071611001
+"-- starting hand #57 (id: ypbral0jckae)  (No Limit Texas Hold'em) (dealer: ""Michael @ GScnVzO7r5"") --",2023-04-16T18:45:16.110Z,168167071611000
+"-- ending hand #56 --",2023-04-16T18:45:13.167Z,168167071316702
+"""Henry @ lCLb0ZDuNV"" collected 252 from pot",2023-04-16T18:45:13.167Z,168167071316701
+"Uncalled bet of 189 returned to ""Henry @ lCLb0ZDuNV""",2023-04-16T18:45:13.167Z,168167071316700
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:45:12.358Z,168167071235800
+"""Henry @ lCLb0ZDuNV"" bets 189",2023-04-16T18:45:04.410Z,168167070441000
+"""Michael @ GScnVzO7r5"" checks",2023-04-16T18:45:01.011Z,168167070101100
+"Flop:  [3♦, 7♦, Q♠]",2023-04-16T18:44:54.638Z,168167069463800
+"""Michael @ GScnVzO7r5"" calls 120",2023-04-16T18:44:53.765Z,168167069376500
+"""Henry @ lCLb0ZDuNV"" raises to 120",2023-04-16T18:44:48.608Z,168167068860800
+"""Michael @ GScnVzO7r5"" posts a big blind of 60",2023-04-16T18:44:42.294Z,168167068229407
+"""Henry @ lCLb0ZDuNV"" posts a small blind of 30",2023-04-16T18:44:42.294Z,168167068229406
+"""Michael @ GScnVzO7r5"" posts an ante of 6",2023-04-16T18:44:42.294Z,168167068229405
+"""Henry @ lCLb0ZDuNV"" posts an ante of 6",2023-04-16T18:44:42.294Z,168167068229404
+"Player stacks: #6 ""Henry @ lCLb0ZDuNV"" (5139) | #10 ""Michael @ GScnVzO7r5"" (2861)",2023-04-16T18:44:42.294Z,168167068229401
+"-- starting hand #56 (id: 1q3cx2s65u9h)  (No Limit Texas Hold'em) (dealer: ""Henry @ lCLb0ZDuNV"") --",2023-04-16T18:44:42.294Z,168167068229400
+"-- ending hand #55 --",2023-04-16T18:44:39.338Z,168167067933802
+"""Michael @ GScnVzO7r5"" collected 132 from pot",2023-04-16T18:44:39.338Z,168167067933801
+"Uncalled bet of 60 returned to ""Michael @ GScnVzO7r5""",2023-04-16T18:44:39.338Z,168167067933800
+"""Henry @ lCLb0ZDuNV"" folds",2023-04-16T18:44:38.519Z,168167067851900
+"""Michael @ GScnVzO7r5"" raises to 120",2023-04-16T18:44:33.248Z,168167067324800
+"""Henry @ lCLb0ZDuNV"" posts a big blind of 60",2023-04-16T18:44:23.075Z,168167066307507
+"""Michael @ GScnVzO7r5"" posts a small blind of 30",2023-04-16T18:44:23.075Z,168167066307506
+"""Michael @ GScnVzO7r5"" posts an ante of 6",2023-04-16T18:44:23.075Z,168167066307505
+"""Henry @ lCLb0ZDuNV"" posts an ante of 6",2023-04-16T18:44:23.075Z,168167066307504
+"Player stacks: #6 ""Henry @ lCLb0ZDuNV"" (5205) | #10 ""Michael @ GScnVzO7r5"" (2795)",2023-04-16T18:44:23.075Z,168167066307501
+"-- starting hand #55 (id: jkuk0zbygls4)  (No Limit Texas Hold'em) (dealer: ""Michael @ GScnVzO7r5"") --",2023-04-16T18:44:23.075Z,168167066307500
+"-- ending hand #54 --",2023-04-16T18:44:20.116Z,168167066011602
+"""Henry @ lCLb0ZDuNV"" collected 252 from pot",2023-04-16T18:44:20.116Z,168167066011601
+"Uncalled bet of 126 returned to ""Henry @ lCLb0ZDuNV""",2023-04-16T18:44:20.116Z,168167066011600
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:44:19.291Z,168167065929100
+"""Henry @ lCLb0ZDuNV"" bets 126",2023-04-16T18:44:09.495Z,168167064949500
+"""Michael @ GScnVzO7r5"" checks",2023-04-16T18:44:04.474Z,168167064447400
+"Flop:  [J♥, 7♥, 10♠]",2023-04-16T18:43:56.820Z,168167063682000
+"""Michael @ GScnVzO7r5"" calls 120",2023-04-16T18:43:55.969Z,168167063596900
+"""Henry @ lCLb0ZDuNV"" raises to 120",2023-04-16T18:43:47.233Z,168167062723300
+"""Michael @ GScnVzO7r5"" posts a big blind of 60",2023-04-16T18:43:37.729Z,168167061772907
+"""Henry @ lCLb0ZDuNV"" posts a small blind of 30",2023-04-16T18:43:37.729Z,168167061772906
+"""Michael @ GScnVzO7r5"" posts an ante of 6",2023-04-16T18:43:37.729Z,168167061772905
+"""Henry @ lCLb0ZDuNV"" posts an ante of 6",2023-04-16T18:43:37.729Z,168167061772904
+"Player stacks: #6 ""Henry @ lCLb0ZDuNV"" (5079) | #10 ""Michael @ GScnVzO7r5"" (2921)",2023-04-16T18:43:37.729Z,168167061772901
+"-- starting hand #54 (id: fbjk8qyntbwm)  (No Limit Texas Hold'em) (dealer: ""Henry @ lCLb0ZDuNV"") --",2023-04-16T18:43:37.729Z,168167061772900
+"-- ending hand #53 --",2023-04-16T18:43:34.806Z,168167061480602
+"""Michael @ GScnVzO7r5"" collected 264 from pot",2023-04-16T18:43:34.806Z,168167061480601
+"Uncalled bet of 120 returned to ""Michael @ GScnVzO7r5""",2023-04-16T18:43:34.806Z,168167061480600
+"""Henry @ lCLb0ZDuNV"" folds",2023-04-16T18:43:33.937Z,168167061393700
+"""Michael @ GScnVzO7r5"" bets 120",2023-04-16T18:43:28.856Z,168167060885600
+"""Henry @ lCLb0ZDuNV"" checks",2023-04-16T18:43:18.978Z,168167059897800
+"Turn: 3♦, 10♦, A♣ [5♠]",2023-04-16T18:43:08.041Z,168167058804100
+"""Michael @ GScnVzO7r5"" calls 66",2023-04-16T18:43:07.227Z,168167058722700
+"""Henry @ lCLb0ZDuNV"" bets 66",2023-04-16T18:43:02.552Z,168167058255200
+"Flop:  [3♦, 10♦, A♣]",2023-04-16T18:42:57.902Z,168167057790200
+"""Henry @ lCLb0ZDuNV"" checks",2023-04-16T18:42:57.066Z,168167057706600
+"""Michael @ GScnVzO7r5"" calls 60",2023-04-16T18:42:50.704Z,168167057070400
+"""Henry @ lCLb0ZDuNV"" posts a big blind of 60",2023-04-16T18:42:48.023Z,168167056802307
+"""Michael @ GScnVzO7r5"" posts a small blind of 30",2023-04-16T18:42:48.023Z,168167056802306
+"""Michael @ GScnVzO7r5"" posts an ante of 6",2023-04-16T18:42:48.023Z,168167056802305
+"""Henry @ lCLb0ZDuNV"" posts an ante of 6",2023-04-16T18:42:48.023Z,168167056802304
+"Player stacks: #6 ""Henry @ lCLb0ZDuNV"" (5211) | #10 ""Michael @ GScnVzO7r5"" (2789)",2023-04-16T18:42:48.023Z,168167056802301
+"-- starting hand #53 (id: csamoaqcizev)  (No Limit Texas Hold'em) (dealer: ""Michael @ GScnVzO7r5"") --",2023-04-16T18:42:48.023Z,168167056802300
+"-- ending hand #52 --",2023-04-16T18:42:45.088Z,168167056508802
+"""Michael @ GScnVzO7r5"" collected 72 from pot",2023-04-16T18:42:45.088Z,168167056508801
+"Uncalled bet of 30 returned to ""Michael @ GScnVzO7r5""",2023-04-16T18:42:45.088Z,168167056508800
+"""Henry @ lCLb0ZDuNV"" folds",2023-04-16T18:42:44.271Z,168167056427100
+"""Michael @ GScnVzO7r5"" posts a big blind of 60",2023-04-16T18:42:40.283Z,168167056028308
+"""Henry @ lCLb0ZDuNV"" posts a small blind of 30",2023-04-16T18:42:40.283Z,168167056028307
+"""Michael @ GScnVzO7r5"" posts an ante of 6",2023-04-16T18:42:40.283Z,168167056028306
+"""Henry @ lCLb0ZDuNV"" posts an ante of 6",2023-04-16T18:42:40.283Z,168167056028305
+"Player stacks: #6 ""Henry @ lCLb0ZDuNV"" (5247) | #10 ""Michael @ GScnVzO7r5"" (2753)",2023-04-16T18:42:40.283Z,168167056028302
+"-- starting hand #52 (id: rmeznkzr7fgh)  (No Limit Texas Hold'em) (dealer: ""Henry @ lCLb0ZDuNV"") --",2023-04-16T18:42:40.283Z,168167056028301
+"The player ""Kevin Gao @ 5pBNkD583R"" quits the game with a stack of 0.",2023-04-16T18:42:40.283Z,168167056028300
+"-- ending hand #51 --",2023-04-16T18:42:34.267Z,168167055426703
+"""Kevin Gao @ 5pBNkD583R"" shows a A♥, Q♦.",2023-04-16T18:42:34.267Z,168167055426702
+"""Henry @ lCLb0ZDuNV"" collected 2070 from pot with Two Pair, 10's & 5's (combination: 10♥, 10♣, 5♦, 5♣, Q♠)",2023-04-16T18:42:34.267Z,168167055426701
+"""Henry @ lCLb0ZDuNV"" shows a 10♥, 5♦.",2023-04-16T18:42:34.267Z,168167055426700
+"""Henry @ lCLb0ZDuNV"" calls 391",2023-04-16T18:42:33.432Z,168167055343200
+"""Kevin Gao @ 5pBNkD583R"" bets 391 and go all in",2023-04-16T18:42:30.656Z,168167055065600
+"River: Q♠, 5♣, 10♣, 8♦ [3♥]",2023-04-16T18:42:26.202Z,168167054620200
+"""Henry @ lCLb0ZDuNV"" calls 322",2023-04-16T18:42:25.370Z,168167054537000
+"""Kevin Gao @ 5pBNkD583R"" bets 322",2023-04-16T18:42:22.885Z,168167054288500
+"Turn: Q♠, 5♣, 10♣ [8♦]",2023-04-16T18:42:19.258Z,168167053925800
+"""Henry @ lCLb0ZDuNV"" calls 193",2023-04-16T18:42:18.410Z,168167053841000
+"""Kevin Gao @ 5pBNkD583R"" bets 193",2023-04-16T18:42:15.381Z,168167053538100
+"Flop:  [Q♠, 5♣, 10♣]",2023-04-16T18:42:08.445Z,168167052844500
+"""Henry @ lCLb0ZDuNV"" calls 120",2023-04-16T18:42:07.632Z,168167052763200
+"""Kevin Gao @ 5pBNkD583R"" raises to 120",2023-04-16T18:42:05.699Z,168167052569900
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:42:03.327Z,168167052332700
+"""Henry @ lCLb0ZDuNV"" posts a big blind of 60",2023-04-16T18:42:02.025Z,168167052202509
+"""Kevin Gao @ 5pBNkD583R"" posts a small blind of 30",2023-04-16T18:42:02.025Z,168167052202508
+"""Michael @ GScnVzO7r5"" posts an ante of 6",2023-04-16T18:42:02.025Z,168167052202507
+"""Henry @ lCLb0ZDuNV"" posts an ante of 6",2023-04-16T18:42:02.025Z,168167052202506
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 6",2023-04-16T18:42:02.025Z,168167052202505
+"Player stacks: #4 ""Kevin Gao @ 5pBNkD583R"" (1032) | #6 ""Henry @ lCLb0ZDuNV"" (4209) | #10 ""Michael @ GScnVzO7r5"" (2759)",2023-04-16T18:42:02.025Z,168167052202501
+"-- starting hand #51 (id: zvpnrdmcwify)  (No Limit Texas Hold'em) (dealer: ""Michael @ GScnVzO7r5"") --",2023-04-16T18:42:02.025Z,168167052202500
+"-- ending hand #50 --",2023-04-16T18:41:59.112Z,168167051911202
+"""Henry @ lCLb0ZDuNV"" collected 168 from pot",2023-04-16T18:41:59.112Z,168167051911201
+"Uncalled bet of 126 returned to ""Henry @ lCLb0ZDuNV""",2023-04-16T18:41:59.112Z,168167051911200
+"""Kevin Gao @ 5pBNkD583R"" folds",2023-04-16T18:41:58.282Z,168167051828200
+"""Henry @ lCLb0ZDuNV"" bets 126",2023-04-16T18:41:55.546Z,168167051554600
+"""Kevin Gao @ 5pBNkD583R"" checks",2023-04-16T18:41:50.791Z,168167051079100
+"Flop:  [2♦, 4♠, Q♣]",2023-04-16T18:41:46.093Z,168167050609300
+"""Kevin Gao @ 5pBNkD583R"" checks",2023-04-16T18:41:45.258Z,168167050525800
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:41:44.366Z,168167050436600
+"""Henry @ lCLb0ZDuNV"" calls 60",2023-04-16T18:41:40.177Z,168167050017700
+"""Kevin Gao @ 5pBNkD583R"" posts a big blind of 60",2023-04-16T18:41:33.533Z,168167049353309
+"""Michael @ GScnVzO7r5"" posts a small blind of 30",2023-04-16T18:41:33.533Z,168167049353308
+"""Michael @ GScnVzO7r5"" posts an ante of 6",2023-04-16T18:41:33.533Z,168167049353307
+"""Henry @ lCLb0ZDuNV"" posts an ante of 6",2023-04-16T18:41:33.533Z,168167049353306
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 6",2023-04-16T18:41:33.533Z,168167049353305
+"Player stacks: #4 ""Kevin Gao @ 5pBNkD583R"" (1098) | #6 ""Henry @ lCLb0ZDuNV"" (4107) | #10 ""Michael @ GScnVzO7r5"" (2795)",2023-04-16T18:41:33.533Z,168167049353301
+"-- starting hand #50 (id: b5x9dchoxeif)  (No Limit Texas Hold'em) (dealer: ""Henry @ lCLb0ZDuNV"") --",2023-04-16T18:41:33.533Z,168167049353300
+"""Michael @ GScnVzO7r5"" shows a 5♣, 2♥.",2023-04-16T18:41:31.661Z,168167049166100
+"-- ending hand #49 --",2023-04-16T18:41:29.928Z,168167048992802
+"""Michael @ GScnVzO7r5"" collected 78 from pot",2023-04-16T18:41:29.928Z,168167048992801
+"Uncalled bet of 30 returned to ""Michael @ GScnVzO7r5""",2023-04-16T18:41:29.928Z,168167048992800
+"""Henry @ lCLb0ZDuNV"" folds",2023-04-16T18:41:29.089Z,168167048908900
+"""Kevin Gao @ 5pBNkD583R"" folds",2023-04-16T18:41:26.677Z,168167048667700
+"""Michael @ GScnVzO7r5"" posts a big blind of 60",2023-04-16T18:41:23.788Z,168167048378809
+"""Henry @ lCLb0ZDuNV"" posts a small blind of 30",2023-04-16T18:41:23.788Z,168167048378808
+"""Michael @ GScnVzO7r5"" posts an ante of 6",2023-04-16T18:41:23.788Z,168167048378807
+"""Henry @ lCLb0ZDuNV"" posts an ante of 6",2023-04-16T18:41:23.788Z,168167048378806
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 6",2023-04-16T18:41:23.788Z,168167048378805
+"Player stacks: #4 ""Kevin Gao @ 5pBNkD583R"" (1104) | #6 ""Henry @ lCLb0ZDuNV"" (4143) | #10 ""Michael @ GScnVzO7r5"" (2753)",2023-04-16T18:41:23.788Z,168167048378801
+"-- starting hand #49 (id: 99qglxgomfmc)  (No Limit Texas Hold'em) (dealer: ""Kevin Gao @ 5pBNkD583R"") --",2023-04-16T18:41:23.788Z,168167048378800
+"-- ending hand #48 --",2023-04-16T18:41:17.780Z,168167047778001
+"""Kevin Gao @ 5pBNkD583R"" collected 1104 from pot with Pair, J's (combination: J♦, J♣, A♦, 9♣, 7♥)",2023-04-16T18:41:17.780Z,168167047778000
+"River: 7♥, 9♣, 3♣, A♦ [6♦]",2023-04-16T18:41:13.767Z,168167047376700
+"Turn: 7♥, 9♣, 3♣ [A♦]",2023-04-16T18:41:09.764Z,168167046976400
+"""Henry @ lCLb0ZDuNV"" shows a 6♠, 5♥.",2023-04-16T18:41:05.715Z,168167046571501
+"""Kevin Gao @ 5pBNkD583R"" shows a J♦, J♣.",2023-04-16T18:41:05.715Z,168167046571500
+"""Henry @ lCLb0ZDuNV"" calls 423",2023-04-16T18:41:04.858Z,168167046485800
+"""Kevin Gao @ 5pBNkD583R"" bets 423 and go all in",2023-04-16T18:40:52.498Z,168167045249800
+"Flop:  [7♥, 9♣, 3♣]",2023-04-16T18:40:49.495Z,168167044949500
+"""Henry @ lCLb0ZDuNV"" calls 120",2023-04-16T18:40:48.658Z,168167044865800
+"""Kevin Gao @ 5pBNkD583R"" raises to 120",2023-04-16T18:40:44.571Z,168167044457100
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:40:39.722Z,168167043972200
+"""Henry @ lCLb0ZDuNV"" posts a big blind of 60",2023-04-16T18:40:36.880Z,168167043688009
+"""Kevin Gao @ 5pBNkD583R"" posts a small blind of 30",2023-04-16T18:40:36.880Z,168167043688008
+"""Michael @ GScnVzO7r5"" posts an ante of 6",2023-04-16T18:40:36.880Z,168167043688007
+"""Henry @ lCLb0ZDuNV"" posts an ante of 6",2023-04-16T18:40:36.880Z,168167043688006
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 6",2023-04-16T18:40:36.880Z,168167043688005
+"Player stacks: #4 ""Kevin Gao @ 5pBNkD583R"" (549) | #6 ""Henry @ lCLb0ZDuNV"" (4692) | #10 ""Michael @ GScnVzO7r5"" (2759)",2023-04-16T18:40:36.880Z,168167043688001
+"-- starting hand #48 (id: 430hg421q7c8)  (No Limit Texas Hold'em) (dealer: ""Michael @ GScnVzO7r5"") --",2023-04-16T18:40:36.880Z,168167043688000
+"-- ending hand #47 --",2023-04-16T18:40:33.913Z,168167043391302
+"""Kevin Gao @ 5pBNkD583R"" collected 168 from pot",2023-04-16T18:40:33.913Z,168167043391301
+"Uncalled bet of 381 returned to ""Kevin Gao @ 5pBNkD583R""",2023-04-16T18:40:33.913Z,168167043391300
+"""Henry @ lCLb0ZDuNV"" folds",2023-04-16T18:40:33.104Z,168167043310400
+"""Kevin Gao @ 5pBNkD583R"" bets 381 and go all in",2023-04-16T18:40:31.120Z,168167043112000
+"Flop:  [8♣, 10♠, 9♣]",2023-04-16T18:40:25.470Z,168167042547000
+"""Kevin Gao @ 5pBNkD583R"" checks",2023-04-16T18:40:24.580Z,168167042458000
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:40:23.313Z,168167042331300
+"""Henry @ lCLb0ZDuNV"" calls 60",2023-04-16T18:40:20.618Z,168167042061800
+"""Kevin Gao @ 5pBNkD583R"" posts a big blind of 60",2023-04-16T18:40:15.697Z,168167041569709
+"""Michael @ GScnVzO7r5"" posts a small blind of 30",2023-04-16T18:40:15.697Z,168167041569708
+"""Michael @ GScnVzO7r5"" posts an ante of 6",2023-04-16T18:40:15.697Z,168167041569707
+"""Henry @ lCLb0ZDuNV"" posts an ante of 6",2023-04-16T18:40:15.697Z,168167041569706
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 6",2023-04-16T18:40:15.697Z,168167041569705
+"Player stacks: #4 ""Kevin Gao @ 5pBNkD583R"" (447) | #6 ""Henry @ lCLb0ZDuNV"" (4758) | #10 ""Michael @ GScnVzO7r5"" (2795)",2023-04-16T18:40:15.697Z,168167041569701
+"-- starting hand #47 (id: sgflgcwraowp)  (No Limit Texas Hold'em) (dealer: ""Henry @ lCLb0ZDuNV"") --",2023-04-16T18:40:15.697Z,168167041569700
+"-- ending hand #46 --",2023-04-16T18:40:12.770Z,168167041277002
+"""Henry @ lCLb0ZDuNV"" collected 438 from pot",2023-04-16T18:40:12.770Z,168167041277001
+"Uncalled bet of 219 returned to ""Henry @ lCLb0ZDuNV""",2023-04-16T18:40:12.770Z,168167041277000
+"""Kevin Gao @ 5pBNkD583R"" folds",2023-04-16T18:40:11.918Z,168167041191800
+"""Henry @ lCLb0ZDuNV"" bets 219",2023-04-16T18:40:09.609Z,168167040960900
+"Flop:  [J♥, 8♦, J♦]",2023-04-16T18:39:59.999Z,168167039999900
+"""Kevin Gao @ 5pBNkD583R"" calls 180",2023-04-16T18:39:59.186Z,168167039918600
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:39:57.918Z,168167039791800
+"""Henry @ lCLb0ZDuNV"" raises to 180",2023-04-16T18:39:52.297Z,168167039229700
+"""Kevin Gao @ 5pBNkD583R"" calls 60",2023-04-16T18:39:47.748Z,168167038774800
+"""Michael @ GScnVzO7r5"" posts a big blind of 60",2023-04-16T18:39:40.830Z,168167038083009
+"""Henry @ lCLb0ZDuNV"" posts a small blind of 30",2023-04-16T18:39:40.830Z,168167038083008
+"""Michael @ GScnVzO7r5"" posts an ante of 6",2023-04-16T18:39:40.830Z,168167038083007
+"""Henry @ lCLb0ZDuNV"" posts an ante of 6",2023-04-16T18:39:40.830Z,168167038083006
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 6",2023-04-16T18:39:40.830Z,168167038083005
+"Player stacks: #4 ""Kevin Gao @ 5pBNkD583R"" (633) | #6 ""Henry @ lCLb0ZDuNV"" (4506) | #10 ""Michael @ GScnVzO7r5"" (2861)",2023-04-16T18:39:40.830Z,168167038083001
+"-- starting hand #46 (id: wxomxwpwvto3)  (No Limit Texas Hold'em) (dealer: ""Kevin Gao @ 5pBNkD583R"") --",2023-04-16T18:39:40.830Z,168167038083000
+"-- ending hand #45 --",2023-04-16T18:39:34.825Z,168167037482503
+"""Henry @ lCLb0ZDuNV"" shows a 6♠, 9♠.",2023-04-16T18:39:34.825Z,168167037482502
+"""Michael @ GScnVzO7r5"" collected 1170 from pot with Straight, K High (combination: K♠, Q♦, J♥, 10♠, 9♣)",2023-04-16T18:39:34.825Z,168167037482501
+"""Michael @ GScnVzO7r5"" shows a Q♦, 9♣.",2023-04-16T18:39:34.825Z,168167037482500
+"""Michael @ GScnVzO7r5"" calls 351",2023-04-16T18:39:33.992Z,168167037399200
+"""Henry @ lCLb0ZDuNV"" bets 351",2023-04-16T18:39:32.587Z,168167037258700
+"River: 9♥, 10♠, K♠, 3♦ [J♥]",2023-04-16T18:39:23.330Z,168167036333000
+"""Michael @ GScnVzO7r5"" checks",2023-04-16T18:39:22.457Z,168167036245700
+"""Henry @ lCLb0ZDuNV"" checks",2023-04-16T18:39:14.775Z,168167035477500
+"Turn: 9♥, 10♠, K♠ [3♦]",2023-04-16T18:39:07.640Z,168167034764000
+"""Henry @ lCLb0ZDuNV"" calls 90",2023-04-16T18:39:06.819Z,168167034681900
+"""Michael @ GScnVzO7r5"" bets 90",2023-04-16T18:39:02.949Z,168167034294900
+"""Henry @ lCLb0ZDuNV"" checks",2023-04-16T18:38:55.362Z,168167033536200
+"Flop:  [9♥, 10♠, K♠]",2023-04-16T18:38:50.471Z,168167033047100
+"""Henry @ lCLb0ZDuNV"" calls 120",2023-04-16T18:38:49.632Z,168167032963200
+"""Kevin Gao @ 5pBNkD583R"" folds",2023-04-16T18:38:47.958Z,168167032795800
+"""Michael @ GScnVzO7r5"" raises to 120",2023-04-16T18:38:33.399Z,168167031339900
+"""Henry @ lCLb0ZDuNV"" posts a big blind of 60",2023-04-16T18:38:27.000Z,168167030700012
+"""Kevin Gao @ 5pBNkD583R"" posts a small blind of 30",2023-04-16T18:38:27.000Z,168167030700011
+"""Michael @ GScnVzO7r5"" posts an ante of 6",2023-04-16T18:38:27.000Z,168167030700010
+"""Henry @ lCLb0ZDuNV"" posts an ante of 6",2023-04-16T18:38:27.000Z,168167030700009
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 6",2023-04-16T18:38:27.000Z,168167030700008
+"Player stacks: #4 ""Kevin Gao @ 5pBNkD583R"" (669) | #6 ""Henry @ lCLb0ZDuNV"" (5073) | #10 ""Michael @ GScnVzO7r5"" (2258)",2023-04-16T18:38:27.000Z,168167030700004
+"-- starting hand #45 (id: yeyybw7vmdlq)  (No Limit Texas Hold'em) (dealer: ""Michael @ GScnVzO7r5"") --",2023-04-16T18:38:27.000Z,168167030700003
+"The game's ante was changed from 5 to 6.",2023-04-16T18:38:27.000Z,168167030700002
+"The game's big blind was changed from 50 to 60.",2023-04-16T18:38:27.000Z,168167030700001
+"The game's small blind was changed from 25 to 30.",2023-04-16T18:38:27.000Z,168167030700000
+"-- ending hand #44 --",2023-04-16T18:38:20.996Z,168167030099602
+"""Michael @ GScnVzO7r5"" collected 215 from pot with Flush, Jc High (combination: J♣, 10♣, 7♣, 6♣, 4♣)",2023-04-16T18:38:20.996Z,168167030099601
+"""Michael @ GScnVzO7r5"" shows a 4♣, 10♥.",2023-04-16T18:38:20.996Z,168167030099600
+"""Kevin Gao @ 5pBNkD583R"" checks",2023-04-16T18:38:20.183Z,168167030018300
+"""Michael @ GScnVzO7r5"" checks",2023-04-16T18:38:18.063Z,168167029806300
+"River: 6♣, K♠, 7♣, 10♣ [J♣]",2023-04-16T18:38:13.445Z,168167029344500
+"""Michael @ GScnVzO7r5"" calls 50",2023-04-16T18:38:12.639Z,168167029263900
+"""Kevin Gao @ 5pBNkD583R"" bets 50",2023-04-16T18:38:07.830Z,168167028783000
+"""Michael @ GScnVzO7r5"" checks",2023-04-16T18:38:04.689Z,168167028468900
+"Turn: 6♣, K♠, 7♣ [10♣]",2023-04-16T18:37:53.098Z,168167027309800
+"""Kevin Gao @ 5pBNkD583R"" checks",2023-04-16T18:37:52.245Z,168167027224500
+"""Michael @ GScnVzO7r5"" checks",2023-04-16T18:37:51.040Z,168167027104000
+"Flop:  [6♣, K♠, 7♣]",2023-04-16T18:37:42.874Z,168167026287400
+"""Kevin Gao @ 5pBNkD583R"" checks",2023-04-16T18:37:42.032Z,168167026203200
+"""Michael @ GScnVzO7r5"" calls 50",2023-04-16T18:37:40.703Z,168167026070300
+"""Henry @ lCLb0ZDuNV"" folds",2023-04-16T18:37:35.986Z,168167025598600
+"""Kevin Gao @ 5pBNkD583R"" posts a big blind of 50",2023-04-16T18:37:32.510Z,168167025251009
+"""Michael @ GScnVzO7r5"" posts a small blind of 25",2023-04-16T18:37:32.510Z,168167025251008
+"""Michael @ GScnVzO7r5"" posts an ante of 5",2023-04-16T18:37:32.510Z,168167025251007
+"""Henry @ lCLb0ZDuNV"" posts an ante of 5",2023-04-16T18:37:32.510Z,168167025251006
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 5",2023-04-16T18:37:32.510Z,168167025251005
+"Player stacks: #4 ""Kevin Gao @ 5pBNkD583R"" (774) | #6 ""Henry @ lCLb0ZDuNV"" (5078) | #10 ""Michael @ GScnVzO7r5"" (2148)",2023-04-16T18:37:32.510Z,168167025251001
+"-- starting hand #44 (id: 7imfd7xcejvo)  (No Limit Texas Hold'em) (dealer: ""Henry @ lCLb0ZDuNV"") --",2023-04-16T18:37:32.510Z,168167025251000
+"-- ending hand #43 --",2023-04-16T18:37:29.584Z,168167024958402
+"""Michael @ GScnVzO7r5"" collected 440 from pot",2023-04-16T18:37:29.584Z,168167024958401
+"Uncalled bet of 150 returned to ""Michael @ GScnVzO7r5""",2023-04-16T18:37:29.584Z,168167024958400
+"""Kevin Gao @ 5pBNkD583R"" folds",2023-04-16T18:37:28.734Z,168167024873400
+"""Michael @ GScnVzO7r5"" bets 150",2023-04-16T18:37:25.647Z,168167024564700
+"River: 2♠, 8♥, 6♥, 3♣ [9♠]",2023-04-16T18:37:13.610Z,168167023361000
+"""Kevin Gao @ 5pBNkD583R"" checks",2023-04-16T18:37:12.791Z,168167023279100
+"""Michael @ GScnVzO7r5"" checks",2023-04-16T18:37:11.325Z,168167023132500
+"Turn: 2♠, 8♥, 6♥ [3♣]",2023-04-16T18:37:05.082Z,168167022508200
+"""Michael @ GScnVzO7r5"" calls 100",2023-04-16T18:37:04.276Z,168167022427600
+"""Kevin Gao @ 5pBNkD583R"" bets 100",2023-04-16T18:36:59.105Z,168167021910500
+"""Michael @ GScnVzO7r5"" checks",2023-04-16T18:36:55.522Z,168167021552200
+"Flop:  [2♠, 8♥, 6♥]",2023-04-16T18:36:48.747Z,168167020874700
+"""Michael @ GScnVzO7r5"" calls 100",2023-04-16T18:36:47.867Z,168167020786700
+"""Henry @ lCLb0ZDuNV"" folds",2023-04-16T18:36:39.561Z,168167019956100
+"""Kevin Gao @ 5pBNkD583R"" raises to 100",2023-04-16T18:36:37.349Z,168167019734900
+"""Michael @ GScnVzO7r5"" posts a big blind of 50",2023-04-16T18:36:34.531Z,168167019453109
+"""Henry @ lCLb0ZDuNV"" posts a small blind of 25",2023-04-16T18:36:34.531Z,168167019453108
+"""Michael @ GScnVzO7r5"" posts an ante of 5",2023-04-16T18:36:34.531Z,168167019453107
+"""Henry @ lCLb0ZDuNV"" posts an ante of 5",2023-04-16T18:36:34.531Z,168167019453106
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 5",2023-04-16T18:36:34.531Z,168167019453105
+"Player stacks: #4 ""Kevin Gao @ 5pBNkD583R"" (979) | #6 ""Henry @ lCLb0ZDuNV"" (5108) | #10 ""Michael @ GScnVzO7r5"" (1913)",2023-04-16T18:36:34.531Z,168167019453101
+"-- starting hand #43 (id: jqqq3rn4zahz)  (No Limit Texas Hold'em) (dealer: ""Kevin Gao @ 5pBNkD583R"") --",2023-04-16T18:36:34.531Z,168167019453100
+"-- ending hand #42 --",2023-04-16T18:36:28.527Z,168167018852703
+"""Henry @ lCLb0ZDuNV"" shows a 5♥, 8♦.",2023-04-16T18:36:28.527Z,168167018852702
+"""Michael @ GScnVzO7r5"" collected 1800 from pot with Pair, A's (combination: A♥, A♠, 9♣, 8♥, 6♠)",2023-04-16T18:36:28.527Z,168167018852701
+"""Michael @ GScnVzO7r5"" shows a 9♣, A♥.",2023-04-16T18:36:28.527Z,168167018852700
+"""Michael @ GScnVzO7r5"" calls 600",2023-04-16T18:36:27.683Z,168167018768300
+"""Henry @ lCLb0ZDuNV"" bets 600",2023-04-16T18:36:25.620Z,168167018562000
+"River: 4♦, 3♥, 6♠, A♠ [8♥]",2023-04-16T18:36:17.430Z,168167017743000
+"""Michael @ GScnVzO7r5"" calls 180",2023-04-16T18:36:16.575Z,168167017657500
+"""Henry @ lCLb0ZDuNV"" bets 180",2023-04-16T18:36:09.449Z,168167016944900
+"Turn: 4♦, 3♥, 6♠ [A♠]",2023-04-16T18:36:05.719Z,168167016571900
+"""Michael @ GScnVzO7r5"" checks",2023-04-16T18:36:04.867Z,168167016486700
+"""Henry @ lCLb0ZDuNV"" checks",2023-04-16T18:35:59.451Z,168167015945100
+"Flop:  [4♦, 3♥, 6♠]",2023-04-16T18:35:53.839Z,168167015383900
+"""Henry @ lCLb0ZDuNV"" calls 100",2023-04-16T18:35:53.025Z,168167015302500
+"""Kevin Gao @ 5pBNkD583R"" folds",2023-04-16T18:35:51.719Z,168167015171900
+"""Michael @ GScnVzO7r5"" raises to 100",2023-04-16T18:35:50.235Z,168167015023500
+"""Henry @ lCLb0ZDuNV"" posts a big blind of 50",2023-04-16T18:35:38.788Z,168167013878809
+"""Kevin Gao @ 5pBNkD583R"" posts a small blind of 25",2023-04-16T18:35:38.788Z,168167013878808
+"""Michael @ GScnVzO7r5"" posts an ante of 5",2023-04-16T18:35:38.788Z,168167013878807
+"""Henry @ lCLb0ZDuNV"" posts an ante of 5",2023-04-16T18:35:38.788Z,168167013878806
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 5",2023-04-16T18:35:38.788Z,168167013878805
+"Player stacks: #4 ""Kevin Gao @ 5pBNkD583R"" (1009) | #6 ""Henry @ lCLb0ZDuNV"" (5993) | #10 ""Michael @ GScnVzO7r5"" (998)",2023-04-16T18:35:38.788Z,168167013878801
+"-- starting hand #42 (id: eqnteuiml3sq)  (No Limit Texas Hold'em) (dealer: ""Michael @ GScnVzO7r5"") --",2023-04-16T18:35:38.788Z,168167013878800
+"-- ending hand #41 --",2023-04-16T18:35:35.757Z,168167013575702
+"""Henry @ lCLb0ZDuNV"" collected 165 from pot",2023-04-16T18:35:35.757Z,168167013575701
+"Uncalled bet of 100 returned to ""Henry @ lCLb0ZDuNV""",2023-04-16T18:35:35.757Z,168167013575700
+"""Kevin Gao @ 5pBNkD583R"" folds",2023-04-16T18:35:34.889Z,168167013488900
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:35:32.407Z,168167013240700
+"""Henry @ lCLb0ZDuNV"" bets 100",2023-04-16T18:35:27.586Z,168167012758600
+"""Kevin Gao @ 5pBNkD583R"" checks",2023-04-16T18:35:16.720Z,168167011672000
+"""Michael @ GScnVzO7r5"" checks",2023-04-16T18:35:12.577Z,168167011257700
+"Turn: 3♦, 9♣, 9♥ [A♥]",2023-04-16T18:35:08.707Z,168167010870700
+"""Henry @ lCLb0ZDuNV"" checks",2023-04-16T18:35:07.844Z,168167010784400
+"""Kevin Gao @ 5pBNkD583R"" checks",2023-04-16T18:35:05.226Z,168167010522600
+"""Michael @ GScnVzO7r5"" checks",2023-04-16T18:35:01.579Z,168167010157900
+"Flop:  [3♦, 9♣, 9♥]",2023-04-16T18:34:55.731Z,168167009573100
+"""Kevin Gao @ 5pBNkD583R"" checks",2023-04-16T18:34:54.928Z,168167009492800
+"""Michael @ GScnVzO7r5"" calls 50",2023-04-16T18:34:53.333Z,168167009333300
+"""Henry @ lCLb0ZDuNV"" calls 50",2023-04-16T18:34:43.815Z,168167008381500
+"""Kevin Gao @ 5pBNkD583R"" posts a big blind of 50",2023-04-16T18:34:40.103Z,168167008010309
+"""Michael @ GScnVzO7r5"" posts a small blind of 25",2023-04-16T18:34:40.103Z,168167008010308
+"""Michael @ GScnVzO7r5"" posts an ante of 5",2023-04-16T18:34:40.103Z,168167008010307
+"""Henry @ lCLb0ZDuNV"" posts an ante of 5",2023-04-16T18:34:40.103Z,168167008010306
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 5",2023-04-16T18:34:40.103Z,168167008010305
+"Player stacks: #4 ""Kevin Gao @ 5pBNkD583R"" (1064) | #6 ""Henry @ lCLb0ZDuNV"" (5883) | #10 ""Michael @ GScnVzO7r5"" (1053)",2023-04-16T18:34:40.103Z,168167008010301
+"-- starting hand #41 (id: xfpy4i6dp2fa)  (No Limit Texas Hold'em) (dealer: ""Henry @ lCLb0ZDuNV"") --",2023-04-16T18:34:40.103Z,168167008010300
+"-- ending hand #40 --",2023-04-16T18:34:37.116Z,168167007711602
+"""Henry @ lCLb0ZDuNV"" collected 115 from pot",2023-04-16T18:34:37.116Z,168167007711601
+"Uncalled bet of 86 returned to ""Henry @ lCLb0ZDuNV""",2023-04-16T18:34:37.116Z,168167007711600
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:34:36.311Z,168167007631100
+"""Henry @ lCLb0ZDuNV"" bets 86",2023-04-16T18:34:31.450Z,168167007145000
+"Flop:  [J♠, 2♦, 8♣]",2023-04-16T18:34:22.869Z,168167006286900
+"""Michael @ GScnVzO7r5"" checks",2023-04-16T18:34:21.959Z,168167006195900
+"""Henry @ lCLb0ZDuNV"" calls 50",2023-04-16T18:34:18.746Z,168167005874600
+"""Kevin Gao @ 5pBNkD583R"" folds",2023-04-16T18:34:17.337Z,168167005733700
+"""Michael @ GScnVzO7r5"" posts a big blind of 50",2023-04-16T18:34:08.229Z,168167004822909
+"""Henry @ lCLb0ZDuNV"" posts a small blind of 25",2023-04-16T18:34:08.229Z,168167004822908
+"""Michael @ GScnVzO7r5"" posts an ante of 5",2023-04-16T18:34:08.229Z,168167004822907
+"""Henry @ lCLb0ZDuNV"" posts an ante of 5",2023-04-16T18:34:08.229Z,168167004822906
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 5",2023-04-16T18:34:08.229Z,168167004822905
+"Player stacks: #4 ""Kevin Gao @ 5pBNkD583R"" (1069) | #6 ""Henry @ lCLb0ZDuNV"" (5823) | #10 ""Michael @ GScnVzO7r5"" (1108)",2023-04-16T18:34:08.229Z,168167004822901
+"-- starting hand #40 (id: 0y0f9tecoq7l)  (No Limit Texas Hold'em) (dealer: ""Kevin Gao @ 5pBNkD583R"") --",2023-04-16T18:34:08.229Z,168167004822900
+"-- ending hand #39 --",2023-04-16T18:34:05.230Z,168167004523002
+"""Henry @ lCLb0ZDuNV"" collected 65 from pot",2023-04-16T18:34:05.230Z,168167004523001
+"Uncalled bet of 25 returned to ""Henry @ lCLb0ZDuNV""",2023-04-16T18:34:05.230Z,168167004523000
+"""Kevin Gao @ 5pBNkD583R"" folds",2023-04-16T18:34:04.356Z,168167004435600
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:34:01.996Z,168167004199600
+"""Henry @ lCLb0ZDuNV"" posts a big blind of 50",2023-04-16T18:34:00.229Z,168167004022910
+"""Kevin Gao @ 5pBNkD583R"" posts a small blind of 25",2023-04-16T18:34:00.229Z,168167004022909
+"""Michael @ GScnVzO7r5"" posts an ante of 5",2023-04-16T18:34:00.229Z,168167004022908
+"""Henry @ lCLb0ZDuNV"" posts an ante of 5",2023-04-16T18:34:00.229Z,168167004022907
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 5",2023-04-16T18:34:00.229Z,168167004022906
+"Player stacks: #4 ""Kevin Gao @ 5pBNkD583R"" (1099) | #6 ""Henry @ lCLb0ZDuNV"" (5788) | #10 ""Michael @ GScnVzO7r5"" (1113)",2023-04-16T18:34:00.229Z,168167004022902
+"-- starting hand #39 (id: wyovxdf5o21u)  (No Limit Texas Hold'em) (dead button) --",2023-04-16T18:34:00.229Z,168167004022901
+"The player ""Kippo @ 7l35ni-6pZ"" quits the game with a stack of 0.",2023-04-16T18:34:00.229Z,168167004022900
+"-- ending hand #38 --",2023-04-16T18:33:54.218Z,168167003421804
+"""Kevin Gao @ 5pBNkD583R"" collected 100 from pot with Pair, A's (combination: A♣, A♦, K♦, 9♠, 7♠)",2023-04-16T18:33:54.218Z,168167003421803
+"""Kippo @ 7l35ni-6pZ"" shows a 4♠, 3♠.",2023-04-16T18:33:54.218Z,168167003421802
+"""Kevin Gao @ 5pBNkD583R"" collected 419 from pot with Pair, A's (combination: A♣, A♦, K♦, 9♠, 7♠)",2023-04-16T18:33:54.218Z,168167003421801
+"""Kevin Gao @ 5pBNkD583R"" shows a 7♠, A♣.",2023-04-16T18:33:54.218Z,168167003421800
+"""Michael @ GScnVzO7r5"" checks",2023-04-16T18:33:53.376Z,168167003337600
+"""Kevin Gao @ 5pBNkD583R"" checks",2023-04-16T18:33:52.169Z,168167003216900
+"River: 2♦, K♦, A♦, 9♠ [4♥]",2023-04-16T18:33:50.302Z,168167003030200
+"""Michael @ GScnVzO7r5"" checks",2023-04-16T18:33:49.463Z,168167002946300
+"""Kevin Gao @ 5pBNkD583R"" checks",2023-04-16T18:33:40.018Z,168167002001800
+"Turn: 2♦, K♦, A♦ [9♠]",2023-04-16T18:33:38.559Z,168167001855900
+"""Michael @ GScnVzO7r5"" calls 50",2023-04-16T18:33:37.723Z,168167001772300
+"""Kevin Gao @ 5pBNkD583R"" bets 50",2023-04-16T18:33:31.991Z,168167001199100
+"Flop:  [2♦, K♦, A♦]",2023-04-16T18:33:27.188Z,168167000718800
+"""Michael @ GScnVzO7r5"" calls 133",2023-04-16T18:33:26.386Z,168167000638600
+"""Kevin Gao @ 5pBNkD583R"" calls 133",2023-04-16T18:33:24.038Z,168167000403800
+"""Kippo @ 7l35ni-6pZ"" raises to 133 and go all in",2023-04-16T18:33:22.966Z,168167000296600
+"""Michael @ GScnVzO7r5"" raises to 100",2023-04-16T18:33:18.845Z,168166999884500
+"""Henry @ lCLb0ZDuNV"" folds",2023-04-16T18:33:12.514Z,168166999251400
+"""Kevin Gao @ 5pBNkD583R"" posts a big blind of 50",2023-04-16T18:33:02.317Z,168166998231711
+"""Kippo @ 7l35ni-6pZ"" posts a small blind of 25",2023-04-16T18:33:02.317Z,168166998231710
+"""Michael @ GScnVzO7r5"" posts an ante of 5",2023-04-16T18:33:02.317Z,168166998231709
+"""Henry @ lCLb0ZDuNV"" posts an ante of 5",2023-04-16T18:33:02.317Z,168166998231708
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 5",2023-04-16T18:33:02.317Z,168166998231707
+"""Kippo @ 7l35ni-6pZ"" posts an ante of 5",2023-04-16T18:33:02.317Z,168166998231706
+"Player stacks: #2 ""Kippo @ 7l35ni-6pZ"" (138) | #4 ""Kevin Gao @ 5pBNkD583R"" (768) | #6 ""Henry @ lCLb0ZDuNV"" (5793) | #10 ""Michael @ GScnVzO7r5"" (1301)",2023-04-16T18:33:02.317Z,168166998231701
+"-- starting hand #38 (id: uk3zm6sgnhav)  (No Limit Texas Hold'em) (dealer: ""Michael @ GScnVzO7r5"") --",2023-04-16T18:33:02.317Z,168166998231700
+"-- ending hand #37 --",2023-04-16T18:32:56.311Z,168166997631103
+"""Kippo @ 7l35ni-6pZ"" shows a Q♠, J♥.",2023-04-16T18:32:56.311Z,168166997631102
+"""Henry @ lCLb0ZDuNV"" collected 5793 from pot with Flush, Qd High (combination: Q♦, J♦, 10♦, 9♦, 3♦)",2023-04-16T18:32:56.311Z,168166997631101
+"""Henry @ lCLb0ZDuNV"" shows a J♦, 10♦.",2023-04-16T18:32:56.311Z,168166997631100
+"""Henry @ lCLb0ZDuNV"" calls 2070 and go all in",2023-04-16T18:32:55.436Z,168166997543600
+"""Kippo @ 7l35ni-6pZ"" bets 2070",2023-04-16T18:32:53.258Z,168166997325800
+"River: 9♦, A♣, 4♥, Q♦ [3♦]",2023-04-16T18:32:36.525Z,168166995652500
+"""Henry @ lCLb0ZDuNV"" calls 682",2023-04-16T18:32:35.684Z,168166995568400
+"""Kippo @ 7l35ni-6pZ"" raises to 682",2023-04-16T18:32:32.946Z,168166995294600
+"""Henry @ lCLb0ZDuNV"" bets 216",2023-04-16T18:32:17.740Z,168166993774000
+"""Kippo @ 7l35ni-6pZ"" checks",2023-04-16T18:32:14.475Z,168166993447500
+"Turn: 9♦, A♣, 4♥ [Q♦]",2023-04-16T18:32:04.866Z,168166992486600
+"""Kippo @ 7l35ni-6pZ"" calls 72",2023-04-16T18:32:04.029Z,168166992402900
+"""Henry @ lCLb0ZDuNV"" bets 72",2023-04-16T18:31:50.806Z,168166991080600
+"""Kippo @ 7l35ni-6pZ"" checks",2023-04-16T18:31:47.579Z,168166990757900
+"Flop:  [9♦, A♣, 4♥]",2023-04-16T18:31:40.936Z,168166990093600
+"""Kippo @ 7l35ni-6pZ"" checks",2023-04-16T18:31:40.106Z,168166990010600
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:31:36.065Z,168166989606500
+"""Henry @ lCLb0ZDuNV"" calls 50",2023-04-16T18:31:33.889Z,168166989388900
+"""Kevin Gao @ 5pBNkD583R"" folds",2023-04-16T18:31:31.750Z,168166989175000
+"""Kippo @ 7l35ni-6pZ"" posts a big blind of 50",2023-04-16T18:31:29.427Z,168166988942711
+"""Michael @ GScnVzO7r5"" posts a small blind of 25",2023-04-16T18:31:29.427Z,168166988942710
+"""Michael @ GScnVzO7r5"" posts an ante of 5",2023-04-16T18:31:29.427Z,168166988942709
+"""Henry @ lCLb0ZDuNV"" posts an ante of 5",2023-04-16T18:31:29.427Z,168166988942708
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 5",2023-04-16T18:31:29.427Z,168166988942707
+"""Kippo @ 7l35ni-6pZ"" posts an ante of 5",2023-04-16T18:31:29.427Z,168166988942706
+"Player stacks: #2 ""Kippo @ 7l35ni-6pZ"" (3017) | #4 ""Kevin Gao @ 5pBNkD583R"" (773) | #6 ""Henry @ lCLb0ZDuNV"" (2879) | #10 ""Michael @ GScnVzO7r5"" (1331)",2023-04-16T18:31:29.427Z,168166988942701
+"-- starting hand #37 (id: evemphbsqhpt)  (No Limit Texas Hold'em) (dealer: ""Henry @ lCLb0ZDuNV"") --",2023-04-16T18:31:29.427Z,168166988942700
+"-- ending hand #36 --",2023-04-16T18:31:26.517Z,168166988651702
+"""Henry @ lCLb0ZDuNV"" collected 120 from pot",2023-04-16T18:31:26.517Z,168166988651701
+"Uncalled bet of 100 returned to ""Henry @ lCLb0ZDuNV""",2023-04-16T18:31:26.517Z,168166988651700
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:31:25.700Z,168166988570000
+"""Henry @ lCLb0ZDuNV"" raises to 150",2023-04-16T18:31:07.356Z,168166986735600
+"""Kevin Gao @ 5pBNkD583R"" folds",2023-04-16T18:30:59.557Z,168166985955700
+"""Kippo @ 7l35ni-6pZ"" folds",2023-04-16T18:30:57.812Z,168166985781200
+"""Michael @ GScnVzO7r5"" posts a big blind of 50",2023-04-16T18:30:56.334Z,168166985633411
+"""Henry @ lCLb0ZDuNV"" posts a small blind of 25",2023-04-16T18:30:56.334Z,168166985633410
+"""Michael @ GScnVzO7r5"" posts an ante of 5",2023-04-16T18:30:56.334Z,168166985633409
+"""Henry @ lCLb0ZDuNV"" posts an ante of 5",2023-04-16T18:30:56.334Z,168166985633408
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 5",2023-04-16T18:30:56.334Z,168166985633407
+"""Kippo @ 7l35ni-6pZ"" posts an ante of 5",2023-04-16T18:30:56.334Z,168166985633406
+"Player stacks: #2 ""Kippo @ 7l35ni-6pZ"" (3022) | #4 ""Kevin Gao @ 5pBNkD583R"" (778) | #6 ""Henry @ lCLb0ZDuNV"" (2814) | #10 ""Michael @ GScnVzO7r5"" (1386)",2023-04-16T18:30:56.334Z,168166985633401
+"-- starting hand #36 (id: a7cnqjumysfg)  (No Limit Texas Hold'em) (dealer: ""Kevin Gao @ 5pBNkD583R"") --",2023-04-16T18:30:56.334Z,168166985633400
+"-- ending hand #35 --",2023-04-16T18:30:53.374Z,168166985337402
+"""Henry @ lCLb0ZDuNV"" collected 245 from pot",2023-04-16T18:30:53.374Z,168166985337401
+"Uncalled bet of 183 returned to ""Henry @ lCLb0ZDuNV""",2023-04-16T18:30:53.374Z,168166985337400
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:30:52.565Z,168166985256500
+"""Henry @ lCLb0ZDuNV"" bets 183",2023-04-16T18:30:38.976Z,168166983897600
+"Flop:  [K♣, 2♥, 4♠]",2023-04-16T18:30:33.856Z,168166983385600
+"""Henry @ lCLb0ZDuNV"" calls 100",2023-04-16T18:30:33.024Z,168166983302400
+"""Kevin Gao @ 5pBNkD583R"" folds",2023-04-16T18:30:31.359Z,168166983135900
+"""Kippo @ 7l35ni-6pZ"" folds",2023-04-16T18:30:30.472Z,168166983047200
+"""Michael @ GScnVzO7r5"" raises to 100",2023-04-16T18:30:29.522Z,168166982952200
+"""Henry @ lCLb0ZDuNV"" posts a big blind of 50",2023-04-16T18:30:25.351Z,168166982535111
+"""Kevin Gao @ 5pBNkD583R"" posts a small blind of 25",2023-04-16T18:30:25.351Z,168166982535110
+"""Michael @ GScnVzO7r5"" posts an ante of 5",2023-04-16T18:30:25.351Z,168166982535109
+"""Henry @ lCLb0ZDuNV"" posts an ante of 5",2023-04-16T18:30:25.351Z,168166982535108
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 5",2023-04-16T18:30:25.351Z,168166982535107
+"""Kippo @ 7l35ni-6pZ"" posts an ante of 5",2023-04-16T18:30:25.351Z,168166982535106
+"Player stacks: #2 ""Kippo @ 7l35ni-6pZ"" (3027) | #4 ""Kevin Gao @ 5pBNkD583R"" (808) | #6 ""Henry @ lCLb0ZDuNV"" (2674) | #10 ""Michael @ GScnVzO7r5"" (1491)",2023-04-16T18:30:25.351Z,168166982535101
+"-- starting hand #35 (id: gkowaucw1guc)  (No Limit Texas Hold'em) (dealer: ""Kippo @ 7l35ni-6pZ"") --",2023-04-16T18:30:25.351Z,168166982535100
+"-- ending hand #34 --",2023-04-16T18:30:22.444Z,168166982244402
+"""Kippo @ 7l35ni-6pZ"" collected 370 from pot",2023-04-16T18:30:22.444Z,168166982244401
+"Uncalled bet of 185 returned to ""Kippo @ 7l35ni-6pZ""",2023-04-16T18:30:22.444Z,168166982244400
+"""Henry @ lCLb0ZDuNV"" folds",2023-04-16T18:30:21.554Z,168166982155400
+"""Kippo @ 7l35ni-6pZ"" bets 185",2023-04-16T18:30:18.380Z,168166981838000
+"Flop:  [2♥, 9♠, 3♦]",2023-04-16T18:30:05.638Z,168166980563800
+"""Henry @ lCLb0ZDuNV"" calls 150",2023-04-16T18:30:04.754Z,168166980475400
+"""Kevin Gao @ 5pBNkD583R"" folds",2023-04-16T18:30:02.250Z,168166980225000
+"""Kippo @ 7l35ni-6pZ"" raises to 150",2023-04-16T18:29:59.170Z,168166979917000
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:29:45.827Z,168166978582700
+"""Henry @ lCLb0ZDuNV"" calls 50",2023-04-16T18:29:39.621Z,168166977962100
+"""Kevin Gao @ 5pBNkD583R"" posts a big blind of 50",2023-04-16T18:29:35.606Z,168166977560614
+"""Kippo @ 7l35ni-6pZ"" posts a small blind of 25",2023-04-16T18:29:35.606Z,168166977560613
+"""Michael @ GScnVzO7r5"" posts an ante of 5",2023-04-16T18:29:35.606Z,168166977560612
+"""Henry @ lCLb0ZDuNV"" posts an ante of 5",2023-04-16T18:29:35.606Z,168166977560611
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 5",2023-04-16T18:29:35.606Z,168166977560610
+"""Kippo @ 7l35ni-6pZ"" posts an ante of 5",2023-04-16T18:29:35.606Z,168166977560609
+"Player stacks: #2 ""Kippo @ 7l35ni-6pZ"" (2812) | #4 ""Kevin Gao @ 5pBNkD583R"" (863) | #6 ""Henry @ lCLb0ZDuNV"" (2829) | #10 ""Michael @ GScnVzO7r5"" (1496)",2023-04-16T18:29:35.606Z,168166977560604
+"-- starting hand #34 (id: m6xh4tw893px)  (No Limit Texas Hold'em) (dealer: ""Michael @ GScnVzO7r5"") --",2023-04-16T18:29:35.606Z,168166977560603
+"The game's ante was changed from 4 to 5.",2023-04-16T18:29:35.606Z,168166977560602
+"The game's big blind was changed from 40 to 50.",2023-04-16T18:29:35.606Z,168166977560601
+"The game's small blind was changed from 20 to 25.",2023-04-16T18:29:35.606Z,168166977560600
+"-- ending hand #33 --",2023-04-16T18:29:32.653Z,168166977265302
+"""Henry @ lCLb0ZDuNV"" collected 590 from pot",2023-04-16T18:29:32.653Z,168166977265301
+"Uncalled bet of 442 returned to ""Henry @ lCLb0ZDuNV""",2023-04-16T18:29:32.653Z,168166977265300
+"""Kippo @ 7l35ni-6pZ"" folds",2023-04-16T18:29:31.846Z,168166977184600
+"""Henry @ lCLb0ZDuNV"" bets 442",2023-04-16T18:29:30.195Z,168166977019500
+"""Kippo @ 7l35ni-6pZ"" checks",2023-04-16T18:29:26.486Z,168166976648600
+"River: 6♥, 7♦, 3♣, 10♥ [J♠]",2023-04-16T18:29:18.737Z,168166975873700
+"""Kippo @ 7l35ni-6pZ"" calls 177",2023-04-16T18:29:17.831Z,168166975783100
+"""Henry @ lCLb0ZDuNV"" bets 177",2023-04-16T18:29:03.213Z,168166974321300
+"""Kippo @ 7l35ni-6pZ"" checks",2023-04-16T18:29:00.389Z,168166974038900
+"Turn: 6♥, 7♦, 3♣ [10♥]",2023-04-16T18:28:52.708Z,168166973270800
+"""Henry @ lCLb0ZDuNV"" calls 60",2023-04-16T18:28:51.821Z,168166973182100
+"""Kippo @ 7l35ni-6pZ"" bets 60",2023-04-16T18:28:48.375Z,168166972837500
+"Flop:  [6♥, 7♦, 3♣]",2023-04-16T18:28:34.491Z,168166971449100
+"""Kippo @ 7l35ni-6pZ"" checks",2023-04-16T18:28:33.647Z,168166971364700
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:28:28.351Z,168166970835100
+"""Henry @ lCLb0ZDuNV"" calls 40",2023-04-16T18:28:26.834Z,168166970683400
+"""Kevin Gao @ 5pBNkD583R"" folds",2023-04-16T18:28:24.882Z,168166970488200
+"""Kippo @ 7l35ni-6pZ"" posts a big blind of 40",2023-04-16T18:28:22.883Z,168166970288311
+"""Michael @ GScnVzO7r5"" posts a small blind of 20",2023-04-16T18:28:22.883Z,168166970288310
+"""Michael @ GScnVzO7r5"" posts an ante of 4",2023-04-16T18:28:22.883Z,168166970288309
+"""Henry @ lCLb0ZDuNV"" posts an ante of 4",2023-04-16T18:28:22.883Z,168166970288308
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 4",2023-04-16T18:28:22.883Z,168166970288307
+"""Kippo @ 7l35ni-6pZ"" posts an ante of 4",2023-04-16T18:28:22.883Z,168166970288306
+"Player stacks: #2 ""Kippo @ 7l35ni-6pZ"" (3093) | #4 ""Kevin Gao @ 5pBNkD583R"" (867) | #6 ""Henry @ lCLb0ZDuNV"" (2520) | #10 ""Michael @ GScnVzO7r5"" (1520)",2023-04-16T18:28:22.883Z,168166970288301
+"-- starting hand #33 (id: jhbu3spxbpfb)  (No Limit Texas Hold'em) (dealer: ""Henry @ lCLb0ZDuNV"") --",2023-04-16T18:28:22.883Z,168166970288300
+"-- ending hand #32 --",2023-04-16T18:28:19.946Z,168166969994602
+"""Michael @ GScnVzO7r5"" collected 96 from pot",2023-04-16T18:28:19.946Z,168166969994601
+"Uncalled bet of 120 returned to ""Michael @ GScnVzO7r5""",2023-04-16T18:28:19.946Z,168166969994600
+"""Henry @ lCLb0ZDuNV"" folds",2023-04-16T18:28:19.086Z,168166969908600
+"""Michael @ GScnVzO7r5"" raises to 160",2023-04-16T18:28:16.038Z,168166969603800
+"""Henry @ lCLb0ZDuNV"" calls 40",2023-04-16T18:28:09.190Z,168166968919000
+"""Kevin Gao @ 5pBNkD583R"" folds",2023-04-16T18:28:06.118Z,168166968611800
+"""Kippo @ 7l35ni-6pZ"" folds",2023-04-16T18:28:03.126Z,168166968312600
+"""Michael @ GScnVzO7r5"" posts a big blind of 40",2023-04-16T18:28:00.492Z,168166968049211
+"""Henry @ lCLb0ZDuNV"" posts a small blind of 20",2023-04-16T18:28:00.492Z,168166968049210
+"""Michael @ GScnVzO7r5"" posts an ante of 4",2023-04-16T18:28:00.492Z,168166968049209
+"""Henry @ lCLb0ZDuNV"" posts an ante of 4",2023-04-16T18:28:00.492Z,168166968049208
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 4",2023-04-16T18:28:00.492Z,168166968049207
+"""Kippo @ 7l35ni-6pZ"" posts an ante of 4",2023-04-16T18:28:00.492Z,168166968049206
+"Player stacks: #2 ""Kippo @ 7l35ni-6pZ"" (3097) | #4 ""Kevin Gao @ 5pBNkD583R"" (871) | #6 ""Henry @ lCLb0ZDuNV"" (2564) | #10 ""Michael @ GScnVzO7r5"" (1468)",2023-04-16T18:28:00.492Z,168166968049201
+"-- starting hand #32 (id: lqm9roqteb0p)  (No Limit Texas Hold'em) (dealer: ""Kevin Gao @ 5pBNkD583R"") --",2023-04-16T18:28:00.492Z,168166968049200
+"-- ending hand #31 --",2023-04-16T18:27:57.574Z,168166967757402
+"""Henry @ lCLb0ZDuNV"" collected 136 from pot",2023-04-16T18:27:57.574Z,168166967757401
+"Uncalled bet of 68 returned to ""Henry @ lCLb0ZDuNV""",2023-04-16T18:27:57.574Z,168166967757400
+"""Kevin Gao @ 5pBNkD583R"" folds",2023-04-16T18:27:56.748Z,168166967674800
+"""Kippo @ 7l35ni-6pZ"" folds",2023-04-16T18:27:55.394Z,168166967539400
+"""Henry @ lCLb0ZDuNV"" bets 68",2023-04-16T18:27:39.566Z,168166965956600
+"""Kevin Gao @ 5pBNkD583R"" checks",2023-04-16T18:27:35.517Z,168166965551700
+"Flop:  [10♣, 4♣, 2♣]",2023-04-16T18:27:32.415Z,168166965241500
+"""Henry @ lCLb0ZDuNV"" checks",2023-04-16T18:27:31.562Z,168166965156200
+"""Kevin Gao @ 5pBNkD583R"" calls 40",2023-04-16T18:27:29.846Z,168166964984600
+"""Kippo @ 7l35ni-6pZ"" calls 40",2023-04-16T18:27:27.376Z,168166964737600
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:27:14.558Z,168166963455800
+"""Henry @ lCLb0ZDuNV"" posts a big blind of 40",2023-04-16T18:27:13.325Z,168166963332511
+"""Kevin Gao @ 5pBNkD583R"" posts a small blind of 20",2023-04-16T18:27:13.325Z,168166963332510
+"""Michael @ GScnVzO7r5"" posts an ante of 4",2023-04-16T18:27:13.325Z,168166963332509
+"""Henry @ lCLb0ZDuNV"" posts an ante of 4",2023-04-16T18:27:13.325Z,168166963332508
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 4",2023-04-16T18:27:13.325Z,168166963332507
+"""Kippo @ 7l35ni-6pZ"" posts an ante of 4",2023-04-16T18:27:13.325Z,168166963332506
+"Player stacks: #2 ""Kippo @ 7l35ni-6pZ"" (3141) | #4 ""Kevin Gao @ 5pBNkD583R"" (915) | #6 ""Henry @ lCLb0ZDuNV"" (2472) | #10 ""Michael @ GScnVzO7r5"" (1472)",2023-04-16T18:27:13.325Z,168166963332501
+"-- starting hand #31 (id: wmcqpe1r4ah0)  (No Limit Texas Hold'em) (dealer: ""Kippo @ 7l35ni-6pZ"") --",2023-04-16T18:27:13.325Z,168166963332500
+"-- ending hand #30 --",2023-04-16T18:27:10.320Z,168166963032002
+"""Kippo @ 7l35ni-6pZ"" collected 592 from pot",2023-04-16T18:27:10.320Z,168166963032001
+"Uncalled bet of 2472 returned to ""Kippo @ 7l35ni-6pZ""",2023-04-16T18:27:10.320Z,168166963032000
+"""Henry @ lCLb0ZDuNV"" folds",2023-04-16T18:27:09.460Z,168166962946000
+"""Kippo @ 7l35ni-6pZ"" bets 2472",2023-04-16T18:27:06.176Z,168166962617600
+"River: 9♠, 2♥, 8♠, 3♦ [3♣]",2023-04-16T18:27:01.506Z,168166962150600
+"""Henry @ lCLb0ZDuNV"" checks",2023-04-16T18:27:00.613Z,168166962061300
+"""Kippo @ 7l35ni-6pZ"" checks",2023-04-16T18:26:58.059Z,168166961805900
+"Turn: 9♠, 2♥, 8♠ [3♦]",2023-04-16T18:26:46.342Z,168166960634200
+"""Henry @ lCLb0ZDuNV"" calls 148",2023-04-16T18:26:45.540Z,168166960554000
+"""Kippo @ 7l35ni-6pZ"" bets 148",2023-04-16T18:26:43.480Z,168166960348000
+"Flop:  [9♠, 2♥, 8♠]",2023-04-16T18:26:32.077Z,168166959207700
+"""Henry @ lCLb0ZDuNV"" calls 120",2023-04-16T18:26:31.162Z,168166959116200
+"""Kevin Gao @ 5pBNkD583R"" folds",2023-04-16T18:26:28.936Z,168166958893600
+"""Kippo @ 7l35ni-6pZ"" raises to 120",2023-04-16T18:26:26.420Z,168166958642000
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:26:20.727Z,168166958072700
+"""Henry @ lCLb0ZDuNV"" calls 40",2023-04-16T18:26:18.724Z,168166957872400
+"""Kevin Gao @ 5pBNkD583R"" posts a big blind of 40",2023-04-16T18:26:12.884Z,168166957288411
+"""Kippo @ 7l35ni-6pZ"" posts a small blind of 20",2023-04-16T18:26:12.884Z,168166957288410
+"""Michael @ GScnVzO7r5"" posts an ante of 4",2023-04-16T18:26:12.884Z,168166957288409
+"""Henry @ lCLb0ZDuNV"" posts an ante of 4",2023-04-16T18:26:12.884Z,168166957288408
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 4",2023-04-16T18:26:12.884Z,168166957288407
+"""Kippo @ 7l35ni-6pZ"" posts an ante of 4",2023-04-16T18:26:12.884Z,168166957288406
+"Player stacks: #2 ""Kippo @ 7l35ni-6pZ"" (2821) | #4 ""Kevin Gao @ 5pBNkD583R"" (959) | #6 ""Henry @ lCLb0ZDuNV"" (2744) | #10 ""Michael @ GScnVzO7r5"" (1476)",2023-04-16T18:26:12.884Z,168166957288401
+"-- starting hand #30 (id: schrcfgj71ny)  (No Limit Texas Hold'em) (dealer: ""Michael @ GScnVzO7r5"") --",2023-04-16T18:26:12.884Z,168166957288400
+"-- ending hand #29 --",2023-04-16T18:26:09.938Z,168166956993802
+"""Henry @ lCLb0ZDuNV"" collected 116 from pot",2023-04-16T18:26:09.938Z,168166956993801
+"Uncalled bet of 80 returned to ""Henry @ lCLb0ZDuNV""",2023-04-16T18:26:09.938Z,168166956993800
+"""Kippo @ 7l35ni-6pZ"" folds",2023-04-16T18:26:09.120Z,168166956912000
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:25:56.636Z,168166955663600
+"""Henry @ lCLb0ZDuNV"" raises to 120",2023-04-16T18:25:50.940Z,168166955094000
+"""Kevin Gao @ 5pBNkD583R"" folds",2023-04-16T18:25:42.247Z,168166954224700
+"""Kippo @ 7l35ni-6pZ"" posts a big blind of 40",2023-04-16T18:25:37.097Z,168166953709711
+"""Michael @ GScnVzO7r5"" posts a small blind of 20",2023-04-16T18:25:37.097Z,168166953709710
+"""Michael @ GScnVzO7r5"" posts an ante of 4",2023-04-16T18:25:37.097Z,168166953709709
+"""Henry @ lCLb0ZDuNV"" posts an ante of 4",2023-04-16T18:25:37.097Z,168166953709708
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 4",2023-04-16T18:25:37.097Z,168166953709707
+"""Kippo @ 7l35ni-6pZ"" posts an ante of 4",2023-04-16T18:25:37.097Z,168166953709706
+"Player stacks: #2 ""Kippo @ 7l35ni-6pZ"" (2865) | #4 ""Kevin Gao @ 5pBNkD583R"" (963) | #6 ""Henry @ lCLb0ZDuNV"" (2672) | #10 ""Michael @ GScnVzO7r5"" (1500)",2023-04-16T18:25:37.097Z,168166953709701
+"-- starting hand #29 (id: wfpmoddq1xzt)  (No Limit Texas Hold'em) (dealer: ""Henry @ lCLb0ZDuNV"") --",2023-04-16T18:25:37.097Z,168166953709700
+"-- ending hand #28 --",2023-04-16T18:25:34.190Z,168166953419002
+"""Michael @ GScnVzO7r5"" collected 136 from pot",2023-04-16T18:25:34.190Z,168166953419001
+"Uncalled bet of 160 returned to ""Michael @ GScnVzO7r5""",2023-04-16T18:25:34.190Z,168166953419000
+"""Henry @ lCLb0ZDuNV"" folds",2023-04-16T18:25:33.342Z,168166953334200
+"""Kevin Gao @ 5pBNkD583R"" folds",2023-04-16T18:25:30.425Z,168166953042500
+"""Michael @ GScnVzO7r5"" raises to 200",2023-04-16T18:25:28.657Z,168166952865700
+"""Henry @ lCLb0ZDuNV"" calls 40",2023-04-16T18:25:18.596Z,168166951859600
+"""Kevin Gao @ 5pBNkD583R"" calls 40",2023-04-16T18:25:16.618Z,168166951661800
+"""Kippo @ 7l35ni-6pZ"" folds",2023-04-16T18:25:13.423Z,168166951342300
+"""Michael @ GScnVzO7r5"" posts a big blind of 40",2023-04-16T18:25:02.287Z,168166950228711
+"""Henry @ lCLb0ZDuNV"" posts a small blind of 20",2023-04-16T18:25:02.287Z,168166950228710
+"""Michael @ GScnVzO7r5"" posts an ante of 4",2023-04-16T18:25:02.287Z,168166950228709
+"""Henry @ lCLb0ZDuNV"" posts an ante of 4",2023-04-16T18:25:02.287Z,168166950228708
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 4",2023-04-16T18:25:02.287Z,168166950228707
+"""Kippo @ 7l35ni-6pZ"" posts an ante of 4",2023-04-16T18:25:02.287Z,168166950228706
+"Player stacks: #2 ""Kippo @ 7l35ni-6pZ"" (2869) | #4 ""Kevin Gao @ 5pBNkD583R"" (1007) | #6 ""Henry @ lCLb0ZDuNV"" (2716) | #10 ""Michael @ GScnVzO7r5"" (1408)",2023-04-16T18:25:02.287Z,168166950228701
+"-- starting hand #28 (id: mq7pnocxqy7q)  (No Limit Texas Hold'em) (dealer: ""Kevin Gao @ 5pBNkD583R"") --",2023-04-16T18:25:02.287Z,168166950228700
+"-- ending hand #27 --",2023-04-16T18:24:59.321Z,168166949932102
+"""Kippo @ 7l35ni-6pZ"" collected 116 from pot",2023-04-16T18:24:59.321Z,168166949932101
+"Uncalled bet of 80 returned to ""Kippo @ 7l35ni-6pZ""",2023-04-16T18:24:59.321Z,168166949932100
+"""Henry @ lCLb0ZDuNV"" folds",2023-04-16T18:24:58.484Z,168166949848400
+"""Kevin Gao @ 5pBNkD583R"" folds",2023-04-16T18:24:57.634Z,168166949763400
+"""Kippo @ 7l35ni-6pZ"" raises to 120",2023-04-16T18:24:49.286Z,168166948928600
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:24:36.573Z,168166947657300
+"""Henry @ lCLb0ZDuNV"" posts a big blind of 40",2023-04-16T18:24:35.122Z,168166947512211
+"""Kevin Gao @ 5pBNkD583R"" posts a small blind of 20",2023-04-16T18:24:35.122Z,168166947512210
+"""Michael @ GScnVzO7r5"" posts an ante of 4",2023-04-16T18:24:35.122Z,168166947512209
+"""Henry @ lCLb0ZDuNV"" posts an ante of 4",2023-04-16T18:24:35.122Z,168166947512208
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 4",2023-04-16T18:24:35.122Z,168166947512207
+"""Kippo @ 7l35ni-6pZ"" posts an ante of 4",2023-04-16T18:24:35.122Z,168166947512206
+"Player stacks: #2 ""Kippo @ 7l35ni-6pZ"" (2797) | #4 ""Kevin Gao @ 5pBNkD583R"" (1031) | #6 ""Henry @ lCLb0ZDuNV"" (2760) | #10 ""Michael @ GScnVzO7r5"" (1412)",2023-04-16T18:24:35.122Z,168166947512201
+"-- starting hand #27 (id: dwawttfxk50m)  (No Limit Texas Hold'em) (dealer: ""Kippo @ 7l35ni-6pZ"") --",2023-04-16T18:24:35.122Z,168166947512200
+"-- ending hand #26 --",2023-04-16T18:24:32.176Z,168166947217602
+"""Henry @ lCLb0ZDuNV"" collected 356 from pot",2023-04-16T18:24:32.176Z,168166947217601
+"Uncalled bet of 267 returned to ""Henry @ lCLb0ZDuNV""",2023-04-16T18:24:32.176Z,168166947217600
+"""Kevin Gao @ 5pBNkD583R"" folds",2023-04-16T18:24:31.371Z,168166947137100
+"""Henry @ lCLb0ZDuNV"" bets 267",2023-04-16T18:24:21.854Z,168166946185400
+"""Kevin Gao @ 5pBNkD583R"" checks",2023-04-16T18:24:10.912Z,168166945091200
+"Turn: 7♣, 9♦, 3♠ [3♥]",2023-04-16T18:24:09.333Z,168166944933300
+"""Henry @ lCLb0ZDuNV"" calls 40",2023-04-16T18:24:08.509Z,168166944850900
+"""Kevin Gao @ 5pBNkD583R"" bets 40",2023-04-16T18:24:01.469Z,168166944146900
+"Flop:  [7♣, 9♦, 3♠]",2023-04-16T18:23:49.192Z,168166942919200
+"""Kevin Gao @ 5pBNkD583R"" calls 120",2023-04-16T18:23:48.355Z,168166942835500
+"""Kippo @ 7l35ni-6pZ"" folds",2023-04-16T18:23:46.715Z,168166942671500
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:23:44.215Z,168166942421500
+"""Henry @ lCLb0ZDuNV"" raises to 120",2023-04-16T18:23:43.358Z,168166942335800
+"""Kevin Gao @ 5pBNkD583R"" posts a big blind of 40",2023-04-16T18:23:32.777Z,168166941277711
+"""Kippo @ 7l35ni-6pZ"" posts a small blind of 20",2023-04-16T18:23:32.777Z,168166941277710
+"""Michael @ GScnVzO7r5"" posts an ante of 4",2023-04-16T18:23:32.777Z,168166941277709
+"""Henry @ lCLb0ZDuNV"" posts an ante of 4",2023-04-16T18:23:32.777Z,168166941277708
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 4",2023-04-16T18:23:32.777Z,168166941277707
+"""Kippo @ 7l35ni-6pZ"" posts an ante of 4",2023-04-16T18:23:32.777Z,168166941277706
+"Player stacks: #2 ""Kippo @ 7l35ni-6pZ"" (2821) | #4 ""Kevin Gao @ 5pBNkD583R"" (1195) | #6 ""Henry @ lCLb0ZDuNV"" (2568) | #10 ""Michael @ GScnVzO7r5"" (1416)",2023-04-16T18:23:32.777Z,168166941277701
+"-- starting hand #26 (id: kni90albj9fo)  (No Limit Texas Hold'em) (dealer: ""Michael @ GScnVzO7r5"") --",2023-04-16T18:23:32.777Z,168166941277700
+"-- ending hand #25 --",2023-04-16T18:23:29.824Z,168166940982402
+"""Kippo @ 7l35ni-6pZ"" collected 256 from pot",2023-04-16T18:23:29.824Z,168166940982401
+"Uncalled bet of 160 returned to ""Kippo @ 7l35ni-6pZ""",2023-04-16T18:23:29.824Z,168166940982400
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:23:28.989Z,168166940898900
+"""Kevin Gao @ 5pBNkD583R"" folds",2023-04-16T18:23:27.072Z,168166940707200
+"""Kippo @ 7l35ni-6pZ"" raises to 240",2023-04-16T18:23:06.243Z,168166938624300
+"""Michael @ GScnVzO7r5"" calls 80",2023-04-16T18:22:56.357Z,168166937635700
+"""Henry @ lCLb0ZDuNV"" folds",2023-04-16T18:22:49.374Z,168166936937400
+"""Kevin Gao @ 5pBNkD583R"" raises to 80",2023-04-16T18:22:48.517Z,168166936851700
+"""Kippo @ 7l35ni-6pZ"" posts a big blind of 40",2023-04-16T18:22:42.424Z,168166936242411
+"""Michael @ GScnVzO7r5"" posts a small blind of 20",2023-04-16T18:22:42.424Z,168166936242410
+"""Michael @ GScnVzO7r5"" posts an ante of 4",2023-04-16T18:22:42.424Z,168166936242409
+"""Henry @ lCLb0ZDuNV"" posts an ante of 4",2023-04-16T18:22:42.424Z,168166936242408
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 4",2023-04-16T18:22:42.424Z,168166936242407
+"""Kippo @ 7l35ni-6pZ"" posts an ante of 4",2023-04-16T18:22:42.424Z,168166936242406
+"Player stacks: #2 ""Kippo @ 7l35ni-6pZ"" (2649) | #4 ""Kevin Gao @ 5pBNkD583R"" (1279) | #6 ""Henry @ lCLb0ZDuNV"" (2572) | #10 ""Michael @ GScnVzO7r5"" (1500)",2023-04-16T18:22:42.424Z,168166936242401
+"-- starting hand #25 (id: s18o3orlhjwa)  (No Limit Texas Hold'em) (dealer: ""Henry @ lCLb0ZDuNV"") --",2023-04-16T18:22:42.424Z,168166936242400
+"-- ending hand #24 --",2023-04-16T18:22:39.509Z,168166935950902
+"""Henry @ lCLb0ZDuNV"" collected 192 from pot",2023-04-16T18:22:39.509Z,168166935950901
+"Uncalled bet of 96 returned to ""Henry @ lCLb0ZDuNV""",2023-04-16T18:22:39.509Z,168166935950900
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:22:38.702Z,168166935870200
+"""Henry @ lCLb0ZDuNV"" bets 96",2023-04-16T18:22:31.025Z,168166935102500
+"Turn: 6♣, Q♦, 8♥ [4♥]",2023-04-16T18:22:26.957Z,168166934695700
+"""Michael @ GScnVzO7r5"" calls 48",2023-04-16T18:22:26.154Z,168166934615400
+"""Henry @ lCLb0ZDuNV"" bets 48",2023-04-16T18:22:15.333Z,168166933533300
+"Flop:  [6♣, Q♦, 8♥]",2023-04-16T18:22:11.185Z,168166933118500
+"""Michael @ GScnVzO7r5"" checks",2023-04-16T18:22:10.355Z,168166933035500
+"""Henry @ lCLb0ZDuNV"" calls 40",2023-04-16T18:22:04.508Z,168166932450800
+"""Kevin Gao @ 5pBNkD583R"" folds",2023-04-16T18:22:02.675Z,168166932267500
+"""Kippo @ 7l35ni-6pZ"" folds",2023-04-16T18:22:01.135Z,168166932113500
+"""Michael @ GScnVzO7r5"" posts a big blind of 40",2023-04-16T18:21:54.900Z,168166931490011
+"""Henry @ lCLb0ZDuNV"" posts a small blind of 20",2023-04-16T18:21:54.900Z,168166931490010
+"""Michael @ GScnVzO7r5"" posts an ante of 4",2023-04-16T18:21:54.900Z,168166931490009
+"""Henry @ lCLb0ZDuNV"" posts an ante of 4",2023-04-16T18:21:54.900Z,168166931490008
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 4",2023-04-16T18:21:54.900Z,168166931490007
+"""Kippo @ 7l35ni-6pZ"" posts an ante of 4",2023-04-16T18:21:54.900Z,168166931490006
+"Player stacks: #2 ""Kippo @ 7l35ni-6pZ"" (2653) | #4 ""Kevin Gao @ 5pBNkD583R"" (1283) | #6 ""Henry @ lCLb0ZDuNV"" (2472) | #10 ""Michael @ GScnVzO7r5"" (1592)",2023-04-16T18:21:54.900Z,168166931490001
+"-- starting hand #24 (id: rhsmxrkmg0c6)  (No Limit Texas Hold'em) (dealer: ""Kevin Gao @ 5pBNkD583R"") --",2023-04-16T18:21:54.900Z,168166931490000
+"-- ending hand #23 --",2023-04-16T18:21:51.959Z,168166931195902
+"""Henry @ lCLb0ZDuNV"" collected 96 from pot",2023-04-16T18:21:51.959Z,168166931195901
+"Uncalled bet of 72 returned to ""Henry @ lCLb0ZDuNV""",2023-04-16T18:21:51.959Z,168166931195900
+"""Kevin Gao @ 5pBNkD583R"" folds",2023-04-16T18:21:51.105Z,168166931110500
+"""Henry @ lCLb0ZDuNV"" bets 72",2023-04-16T18:21:45.955Z,168166930595500
+"""Kevin Gao @ 5pBNkD583R"" checks",2023-04-16T18:21:38.799Z,168166929879900
+"Flop:  [9♦, Q♠, 6♠]",2023-04-16T18:21:35.706Z,168166929570600
+"""Henry @ lCLb0ZDuNV"" checks",2023-04-16T18:21:34.880Z,168166929488000
+"""Kevin Gao @ 5pBNkD583R"" calls 40",2023-04-16T18:21:32.616Z,168166929261600
+"""Kippo @ 7l35ni-6pZ"" folds",2023-04-16T18:21:31.002Z,168166929100200
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:21:30.046Z,168166929004600
+"""Henry @ lCLb0ZDuNV"" posts a big blind of 40",2023-04-16T18:21:27.080Z,168166928708014
+"""Kevin Gao @ 5pBNkD583R"" posts a small blind of 20",2023-04-16T18:21:27.080Z,168166928708013
+"""Michael @ GScnVzO7r5"" posts an ante of 4",2023-04-16T18:21:27.080Z,168166928708012
+"""Henry @ lCLb0ZDuNV"" posts an ante of 4",2023-04-16T18:21:27.080Z,168166928708011
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 4",2023-04-16T18:21:27.080Z,168166928708010
+"""Kippo @ 7l35ni-6pZ"" posts an ante of 4",2023-04-16T18:21:27.080Z,168166928708009
+"Player stacks: #2 ""Kippo @ 7l35ni-6pZ"" (2657) | #4 ""Kevin Gao @ 5pBNkD583R"" (1327) | #6 ""Henry @ lCLb0ZDuNV"" (2420) | #10 ""Michael @ GScnVzO7r5"" (1596)",2023-04-16T18:21:27.080Z,168166928708004
+"-- starting hand #23 (id: kv33rx5nhlrz)  (No Limit Texas Hold'em) (dealer: ""Kippo @ 7l35ni-6pZ"") --",2023-04-16T18:21:27.080Z,168166928708003
+"The game's ante was changed from 3 to 4.",2023-04-16T18:21:27.080Z,168166928708002
+"The game's big blind was changed from 30 to 40.",2023-04-16T18:21:27.080Z,168166928708001
+"The game's small blind was changed from 15 to 20.",2023-04-16T18:21:27.080Z,168166928708000
+"-- ending hand #22 --",2023-04-16T18:21:24.082Z,168166928408202
+"""Henry @ lCLb0ZDuNV"" collected 102 from pot",2023-04-16T18:21:24.082Z,168166928408201
+"Uncalled bet of 76 returned to ""Henry @ lCLb0ZDuNV""",2023-04-16T18:21:24.082Z,168166928408200
+"""Kevin Gao @ 5pBNkD583R"" folds",2023-04-16T18:21:23.271Z,168166928327100
+"""Kippo @ 7l35ni-6pZ"" folds",2023-04-16T18:21:18.881Z,168166927888100
+"""Henry @ lCLb0ZDuNV"" bets 76",2023-04-16T18:21:16.693Z,168166927669300
+"""Kevin Gao @ 5pBNkD583R"" checks",2023-04-16T18:21:13.601Z,168166927360100
+"""Kippo @ 7l35ni-6pZ"" checks",2023-04-16T18:21:11.914Z,168166927191400
+"Flop:  [10♥, 7♥, Q♥]",2023-04-16T18:21:04.750Z,168166926475000
+"""Kevin Gao @ 5pBNkD583R"" checks",2023-04-16T18:21:03.929Z,168166926392900
+"""Kippo @ 7l35ni-6pZ"" calls 30",2023-04-16T18:21:01.841Z,168166926184100
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:20:55.375Z,168166925537500
+"""Henry @ lCLb0ZDuNV"" calls 30",2023-04-16T18:20:54.534Z,168166925453400
+"""Kevin Gao @ 5pBNkD583R"" posts a big blind of 30",2023-04-16T18:20:42.264Z,168166924226411
+"""Kippo @ 7l35ni-6pZ"" posts a small blind of 15",2023-04-16T18:20:42.264Z,168166924226410
+"""Michael @ GScnVzO7r5"" posts an ante of 3",2023-04-16T18:20:42.264Z,168166924226409
+"""Henry @ lCLb0ZDuNV"" posts an ante of 3",2023-04-16T18:20:42.264Z,168166924226408
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 3",2023-04-16T18:20:42.264Z,168166924226407
+"""Kippo @ 7l35ni-6pZ"" posts an ante of 3",2023-04-16T18:20:42.264Z,168166924226406
+"Player stacks: #2 ""Kippo @ 7l35ni-6pZ"" (2690) | #4 ""Kevin Gao @ 5pBNkD583R"" (1360) | #6 ""Henry @ lCLb0ZDuNV"" (2351) | #10 ""Michael @ GScnVzO7r5"" (1599)",2023-04-16T18:20:42.264Z,168166924226401
+"-- starting hand #22 (id: 92swbuih4ryc)  (No Limit Texas Hold'em) (dealer: ""Michael @ GScnVzO7r5"") --",2023-04-16T18:20:42.264Z,168166924226400
+"-- ending hand #21 --",2023-04-16T18:20:39.331Z,168166923933102
+"""Michael @ GScnVzO7r5"" collected 72 from pot",2023-04-16T18:20:39.331Z,168166923933101
+"Uncalled bet of 90 returned to ""Michael @ GScnVzO7r5""",2023-04-16T18:20:39.331Z,168166923933100
+"""Kippo @ 7l35ni-6pZ"" folds",2023-04-16T18:20:38.461Z,168166923846100
+"""Michael @ GScnVzO7r5"" raises to 120",2023-04-16T18:20:26.099Z,168166922609900
+"""Henry @ lCLb0ZDuNV"" folds",2023-04-16T18:20:14.341Z,168166921434100
+"""Kevin Gao @ 5pBNkD583R"" folds",2023-04-16T18:20:13.060Z,168166921306000
+"""Kippo @ 7l35ni-6pZ"" posts a big blind of 30",2023-04-16T18:20:11.028Z,168166921102811
+"""Michael @ GScnVzO7r5"" posts a small blind of 15",2023-04-16T18:20:11.028Z,168166921102810
+"""Michael @ GScnVzO7r5"" posts an ante of 3",2023-04-16T18:20:11.028Z,168166921102809
+"""Henry @ lCLb0ZDuNV"" posts an ante of 3",2023-04-16T18:20:11.028Z,168166921102808
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 3",2023-04-16T18:20:11.028Z,168166921102807
+"""Kippo @ 7l35ni-6pZ"" posts an ante of 3",2023-04-16T18:20:11.028Z,168166921102806
+"Player stacks: #2 ""Kippo @ 7l35ni-6pZ"" (2723) | #4 ""Kevin Gao @ 5pBNkD583R"" (1363) | #6 ""Henry @ lCLb0ZDuNV"" (2354) | #10 ""Michael @ GScnVzO7r5"" (1560)",2023-04-16T18:20:11.028Z,168166921102801
+"-- starting hand #21 (id: s5o5gzyqnidt)  (No Limit Texas Hold'em) (dealer: ""Henry @ lCLb0ZDuNV"") --",2023-04-16T18:20:11.028Z,168166921102800
+"-- ending hand #20 --",2023-04-16T18:20:08.106Z,168166920810602
+"""Henry @ lCLb0ZDuNV"" collected 162 from pot",2023-04-16T18:20:08.106Z,168166920810601
+"Uncalled bet of 121 returned to ""Henry @ lCLb0ZDuNV""",2023-04-16T18:20:08.106Z,168166920810600
+"""Kevin Gao @ 5pBNkD583R"" folds",2023-04-16T18:20:07.297Z,168166920729700
+"""Henry @ lCLb0ZDuNV"" bets 121",2023-04-16T18:19:56.886Z,168166919688600
+"Flop:  [A♠, 2♦, 7♠]",2023-04-16T18:19:50.148Z,168166919014800
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:19:49.280Z,168166918928000
+"""Henry @ lCLb0ZDuNV"" calls 60",2023-04-16T18:19:48.425Z,168166918842500
+"""Kevin Gao @ 5pBNkD583R"" raises to 60",2023-04-16T18:19:45.514Z,168166918551400
+"""Kippo @ 7l35ni-6pZ"" folds",2023-04-16T18:19:42.970Z,168166918297000
+"""Michael @ GScnVzO7r5"" posts a big blind of 30",2023-04-16T18:19:35.303Z,168166917530311
+"""Henry @ lCLb0ZDuNV"" posts a small blind of 15",2023-04-16T18:19:35.303Z,168166917530310
+"""Michael @ GScnVzO7r5"" posts an ante of 3",2023-04-16T18:19:35.303Z,168166917530309
+"""Henry @ lCLb0ZDuNV"" posts an ante of 3",2023-04-16T18:19:35.303Z,168166917530308
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 3",2023-04-16T18:19:35.303Z,168166917530307
+"""Kippo @ 7l35ni-6pZ"" posts an ante of 3",2023-04-16T18:19:35.303Z,168166917530306
+"Player stacks: #2 ""Kippo @ 7l35ni-6pZ"" (2726) | #4 ""Kevin Gao @ 5pBNkD583R"" (1426) | #6 ""Henry @ lCLb0ZDuNV"" (2255) | #10 ""Michael @ GScnVzO7r5"" (1593)",2023-04-16T18:19:35.303Z,168166917530301
+"-- starting hand #20 (id: glzn6kcinse0)  (No Limit Texas Hold'em) (dealer: ""Kevin Gao @ 5pBNkD583R"") --",2023-04-16T18:19:35.303Z,168166917530300
+"-- ending hand #19 --",2023-04-16T18:19:32.398Z,168166917239802
+"""Henry @ lCLb0ZDuNV"" collected 384 from pot",2023-04-16T18:19:32.398Z,168166917239801
+"Uncalled bet of 288 returned to ""Henry @ lCLb0ZDuNV""",2023-04-16T18:19:32.398Z,168166917239800
+"""Kevin Gao @ 5pBNkD583R"" folds",2023-04-16T18:19:31.573Z,168166917157300
+"""Henry @ lCLb0ZDuNV"" bets 288",2023-04-16T18:19:21.108Z,168166916110800
+"""Kevin Gao @ 5pBNkD583R"" checks",2023-04-16T18:19:18.146Z,168166915814600
+"Turn: 9♦, 3♦, K♣ [7♠]",2023-04-16T18:19:16.289Z,168166915628900
+"""Kevin Gao @ 5pBNkD583R"" calls 96",2023-04-16T18:19:15.447Z,168166915544700
+"""Henry @ lCLb0ZDuNV"" bets 96",2023-04-16T18:19:14.086Z,168166915408600
+"""Kevin Gao @ 5pBNkD583R"" checks",2023-04-16T18:19:07.766Z,168166914776600
+"Flop:  [9♦, 3♦, K♣]",2023-04-16T18:19:04.881Z,168166914488100
+"""Kevin Gao @ 5pBNkD583R"" calls 90",2023-04-16T18:19:04.058Z,168166914405800
+"""Henry @ lCLb0ZDuNV"" raises to 90",2023-04-16T18:19:02.134Z,168166914213400
+"""Kevin Gao @ 5pBNkD583R"" calls 30",2023-04-16T18:18:58.746Z,168166913874600
+"""Kippo @ 7l35ni-6pZ"" folds",2023-04-16T18:18:57.662Z,168166913766200
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:18:56.659Z,168166913665900
+"""Henry @ lCLb0ZDuNV"" posts a big blind of 30",2023-04-16T18:18:54.537Z,168166913453711
+"""Kevin Gao @ 5pBNkD583R"" posts a small blind of 15",2023-04-16T18:18:54.537Z,168166913453710
+"""Michael @ GScnVzO7r5"" posts an ante of 3",2023-04-16T18:18:54.537Z,168166913453709
+"""Henry @ lCLb0ZDuNV"" posts an ante of 3",2023-04-16T18:18:54.537Z,168166913453708
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 3",2023-04-16T18:18:54.537Z,168166913453707
+"""Kippo @ 7l35ni-6pZ"" posts an ante of 3",2023-04-16T18:18:54.537Z,168166913453706
+"Player stacks: #2 ""Kippo @ 7l35ni-6pZ"" (2729) | #4 ""Kevin Gao @ 5pBNkD583R"" (1615) | #6 ""Henry @ lCLb0ZDuNV"" (2060) | #10 ""Michael @ GScnVzO7r5"" (1596)",2023-04-16T18:18:54.537Z,168166913453701
+"-- starting hand #19 (id: xa8qg2304mtm)  (No Limit Texas Hold'em) (dealer: ""Kippo @ 7l35ni-6pZ"") --",2023-04-16T18:18:54.537Z,168166913453700
+"-- ending hand #18 --",2023-04-16T18:18:51.570Z,168166913157002
+"""Kevin Gao @ 5pBNkD583R"" collected 42 from pot",2023-04-16T18:18:51.570Z,168166913157001
+"Uncalled bet of 15 returned to ""Kevin Gao @ 5pBNkD583R""",2023-04-16T18:18:51.570Z,168166913157000
+"""Kippo @ 7l35ni-6pZ"" folds",2023-04-16T18:18:50.737Z,168166913073700
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:18:41.357Z,168166912135700
+"""Henry @ lCLb0ZDuNV"" folds",2023-04-16T18:18:40.488Z,168166912048800
+"""Kevin Gao @ 5pBNkD583R"" posts a big blind of 30",2023-04-16T18:18:38.521Z,168166911852111
+"""Kippo @ 7l35ni-6pZ"" posts a small blind of 15",2023-04-16T18:18:38.521Z,168166911852110
+"""Michael @ GScnVzO7r5"" posts an ante of 3",2023-04-16T18:18:38.521Z,168166911852109
+"""Henry @ lCLb0ZDuNV"" posts an ante of 3",2023-04-16T18:18:38.521Z,168166911852108
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 3",2023-04-16T18:18:38.521Z,168166911852107
+"""Kippo @ 7l35ni-6pZ"" posts an ante of 3",2023-04-16T18:18:38.521Z,168166911852106
+"Player stacks: #2 ""Kippo @ 7l35ni-6pZ"" (2747) | #4 ""Kevin Gao @ 5pBNkD583R"" (1591) | #6 ""Henry @ lCLb0ZDuNV"" (2063) | #10 ""Michael @ GScnVzO7r5"" (1599)",2023-04-16T18:18:38.521Z,168166911852101
+"-- starting hand #18 (id: wlyqy3h1oftw)  (No Limit Texas Hold'em) (dealer: ""Michael @ GScnVzO7r5"") --",2023-04-16T18:18:38.521Z,168166911852100
+"-- ending hand #17 --",2023-04-16T18:18:35.562Z,168166911556202
+"""Kevin Gao @ 5pBNkD583R"" collected 297 from pot",2023-04-16T18:18:35.562Z,168166911556201
+"Uncalled bet of 148 returned to ""Kevin Gao @ 5pBNkD583R""",2023-04-16T18:18:35.562Z,168166911556200
+"""Kippo @ 7l35ni-6pZ"" folds",2023-04-16T18:18:34.758Z,168166911475800
+"""Henry @ lCLb0ZDuNV"" folds",2023-04-16T18:18:33.094Z,168166911309400
+"""Kevin Gao @ 5pBNkD583R"" bets 148",2023-04-16T18:18:22.406Z,168166910240600
+"""Kippo @ 7l35ni-6pZ"" checks",2023-04-16T18:18:17.789Z,168166909778900
+"Flop:  [9♦, 4♣, 4♠]",2023-04-16T18:18:11.273Z,168166909127300
+"""Kippo @ 7l35ni-6pZ"" calls 90",2023-04-16T18:18:10.452Z,168166909045200
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:18:00.299Z,168166908029900
+"""Henry @ lCLb0ZDuNV"" calls 90",2023-04-16T18:17:59.397Z,168166907939700
+"""Kevin Gao @ 5pBNkD583R"" raises to 90",2023-04-16T18:17:56.696Z,168166907669600
+"""Kippo @ 7l35ni-6pZ"" posts a big blind of 30",2023-04-16T18:17:51.303Z,168166907130311
+"""Michael @ GScnVzO7r5"" posts a small blind of 15",2023-04-16T18:17:51.303Z,168166907130310
+"""Michael @ GScnVzO7r5"" posts an ante of 3",2023-04-16T18:17:51.303Z,168166907130309
+"""Henry @ lCLb0ZDuNV"" posts an ante of 3",2023-04-16T18:17:51.303Z,168166907130308
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 3",2023-04-16T18:17:51.303Z,168166907130307
+"""Kippo @ 7l35ni-6pZ"" posts an ante of 3",2023-04-16T18:17:51.303Z,168166907130306
+"Player stacks: #2 ""Kippo @ 7l35ni-6pZ"" (2840) | #4 ""Kevin Gao @ 5pBNkD583R"" (1387) | #6 ""Henry @ lCLb0ZDuNV"" (2156) | #10 ""Michael @ GScnVzO7r5"" (1617)",2023-04-16T18:17:51.303Z,168166907130301
+"-- starting hand #17 (id: 120iozvcksnd)  (No Limit Texas Hold'em) (dealer: ""Henry @ lCLb0ZDuNV"") --",2023-04-16T18:17:51.303Z,168166907130300
+"-- ending hand #16 --",2023-04-16T18:17:48.379Z,168166906837902
+"""Henry @ lCLb0ZDuNV"" collected 255 from pot",2023-04-16T18:17:48.379Z,168166906837901
+"Uncalled bet of 191 returned to ""Henry @ lCLb0ZDuNV""",2023-04-16T18:17:48.379Z,168166906837900
+"""Kippo @ 7l35ni-6pZ"" folds",2023-04-16T18:17:47.503Z,168166906750300
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:17:46.549Z,168166906654900
+"""Henry @ lCLb0ZDuNV"" bets 191",2023-04-16T18:17:38.408Z,168166905840800
+"Turn: 6♦, 7♣, 4♥ [J♠]",2023-04-16T18:17:33.163Z,168166905316300
+"""Kippo @ 7l35ni-6pZ"" calls 51",2023-04-16T18:17:32.299Z,168166905229900
+"""Michael @ GScnVzO7r5"" calls 51",2023-04-16T18:17:22.188Z,168166904218800
+"""Henry @ lCLb0ZDuNV"" bets 51",2023-04-16T18:17:14.056Z,168166903405600
+"Flop:  [6♦, 7♣, 4♥]",2023-04-16T18:17:02.925Z,168166902292500
+"""Michael @ GScnVzO7r5"" checks",2023-04-16T18:17:02.096Z,168166902209600
+"""Henry @ lCLb0ZDuNV"" calls 30",2023-04-16T18:16:54.087Z,168166901408700
+"""Kevin Gao @ 5pBNkD583R"" folds",2023-04-16T18:16:52.388Z,168166901238800
+"""Kippo @ 7l35ni-6pZ"" calls 30",2023-04-16T18:16:47.936Z,168166900793600
+"""Michael @ GScnVzO7r5"" posts a big blind of 30",2023-04-16T18:16:43.224Z,168166900322411
+"""Henry @ lCLb0ZDuNV"" posts a small blind of 15",2023-04-16T18:16:43.224Z,168166900322410
+"""Michael @ GScnVzO7r5"" posts an ante of 3",2023-04-16T18:16:43.224Z,168166900322409
+"""Henry @ lCLb0ZDuNV"" posts an ante of 3",2023-04-16T18:16:43.224Z,168166900322408
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 3",2023-04-16T18:16:43.224Z,168166900322407
+"""Kippo @ 7l35ni-6pZ"" posts an ante of 3",2023-04-16T18:16:43.224Z,168166900322406
+"Player stacks: #2 ""Kippo @ 7l35ni-6pZ"" (2924) | #4 ""Kevin Gao @ 5pBNkD583R"" (1390) | #6 ""Henry @ lCLb0ZDuNV"" (1985) | #10 ""Michael @ GScnVzO7r5"" (1701)",2023-04-16T18:16:43.224Z,168166900322401
+"-- starting hand #16 (id: 5cohaqxrsa4t)  (No Limit Texas Hold'em) (dealer: ""Kevin Gao @ 5pBNkD583R"") --",2023-04-16T18:16:43.224Z,168166900322400
+"-- ending hand #15 --",2023-04-16T18:16:40.300Z,168166900030002
+"""Kippo @ 7l35ni-6pZ"" collected 87 from pot",2023-04-16T18:16:40.300Z,168166900030001
+"Uncalled bet of 60 returned to ""Kippo @ 7l35ni-6pZ""",2023-04-16T18:16:40.300Z,168166900030000
+"""Henry @ lCLb0ZDuNV"" folds",2023-04-16T18:16:39.440Z,168166899944000
+"""Kevin Gao @ 5pBNkD583R"" folds",2023-04-16T18:16:37.933Z,168166899793300
+"""Kippo @ 7l35ni-6pZ"" raises to 90",2023-04-16T18:16:36.005Z,168166899600500
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:16:31.127Z,168166899112700
+"""Henry @ lCLb0ZDuNV"" posts a big blind of 30",2023-04-16T18:16:29.075Z,168166898907511
+"""Kevin Gao @ 5pBNkD583R"" posts a small blind of 15",2023-04-16T18:16:29.075Z,168166898907510
+"""Michael @ GScnVzO7r5"" posts an ante of 3",2023-04-16T18:16:29.075Z,168166898907509
+"""Henry @ lCLb0ZDuNV"" posts an ante of 3",2023-04-16T18:16:29.075Z,168166898907508
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 3",2023-04-16T18:16:29.075Z,168166898907507
+"""Kippo @ 7l35ni-6pZ"" posts an ante of 3",2023-04-16T18:16:29.075Z,168166898907506
+"Player stacks: #2 ""Kippo @ 7l35ni-6pZ"" (2870) | #4 ""Kevin Gao @ 5pBNkD583R"" (1408) | #6 ""Henry @ lCLb0ZDuNV"" (2018) | #10 ""Michael @ GScnVzO7r5"" (1704)",2023-04-16T18:16:29.075Z,168166898907501
+"-- starting hand #15 (id: xvulze2lr5gi)  (No Limit Texas Hold'em) (dealer: ""Kippo @ 7l35ni-6pZ"") --",2023-04-16T18:16:29.075Z,168166898907500
+"-- ending hand #14 --",2023-04-16T18:16:26.164Z,168166898616402
+"""Henry @ lCLb0ZDuNV"" collected 87 from pot",2023-04-16T18:16:26.164Z,168166898616401
+"Uncalled bet of 55 returned to ""Henry @ lCLb0ZDuNV""",2023-04-16T18:16:26.164Z,168166898616400
+"""Kevin Gao @ 5pBNkD583R"" folds",2023-04-16T18:16:25.314Z,168166898531400
+"""Kippo @ 7l35ni-6pZ"" folds",2023-04-16T18:16:24.425Z,168166898442500
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:16:22.391Z,168166898239100
+"""Henry @ lCLb0ZDuNV"" raises to 85",2023-04-16T18:16:21.548Z,168166898154800
+"""Kevin Gao @ 5pBNkD583R"" posts a big blind of 30",2023-04-16T18:16:05.577Z,168166896557711
+"""Kippo @ 7l35ni-6pZ"" posts a small blind of 15",2023-04-16T18:16:05.577Z,168166896557710
+"""Michael @ GScnVzO7r5"" posts an ante of 3",2023-04-16T18:16:05.577Z,168166896557709
+"""Henry @ lCLb0ZDuNV"" posts an ante of 3",2023-04-16T18:16:05.577Z,168166896557708
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 3",2023-04-16T18:16:05.577Z,168166896557707
+"""Kippo @ 7l35ni-6pZ"" posts an ante of 3",2023-04-16T18:16:05.577Z,168166896557706
+"Player stacks: #2 ""Kippo @ 7l35ni-6pZ"" (2888) | #4 ""Kevin Gao @ 5pBNkD583R"" (1441) | #6 ""Henry @ lCLb0ZDuNV"" (1964) | #10 ""Michael @ GScnVzO7r5"" (1707)",2023-04-16T18:16:05.577Z,168166896557701
+"-- starting hand #14 (id: y6mis4a60qcj)  (No Limit Texas Hold'em) (dealer: ""Michael @ GScnVzO7r5"") --",2023-04-16T18:16:05.577Z,168166896557700
+"-- ending hand #13 --",2023-04-16T18:16:02.652Z,168166896265202
+"""Kippo @ 7l35ni-6pZ"" collected 1116 from pot",2023-04-16T18:16:02.652Z,168166896265201
+"Uncalled bet of 1441 returned to ""Kippo @ 7l35ni-6pZ""",2023-04-16T18:16:02.652Z,168166896265200
+"""Kevin Gao @ 5pBNkD583R"" folds",2023-04-16T18:16:01.808Z,168166896180800
+"""Kippo @ 7l35ni-6pZ"" bets 1441",2023-04-16T18:15:46.005Z,168166894600500
+"Turn: 6♣, 8♥, 3♥ [Q♦]",2023-04-16T18:15:29.328Z,168166892932800
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:15:28.499Z,168166892849900
+"""Henry @ lCLb0ZDuNV"" folds",2023-04-16T18:15:27.607Z,168166892760700
+"""Kevin Gao @ 5pBNkD583R"" calls 372",2023-04-16T18:15:19.884Z,168166891988400
+"""Kippo @ 7l35ni-6pZ"" bets 372",2023-04-16T18:15:09.476Z,168166890947600
+"""Michael @ GScnVzO7r5"" checks",2023-04-16T18:14:54.477Z,168166889447700
+"Flop:  [6♣, 8♥, 3♥]",2023-04-16T18:14:47.350Z,168166888735000
+"""Kevin Gao @ 5pBNkD583R"" calls 90",2023-04-16T18:14:46.498Z,168166888649800
+"""Kippo @ 7l35ni-6pZ"" calls 90",2023-04-16T18:14:45.094Z,168166888509400
+"""Michael @ GScnVzO7r5"" calls 90",2023-04-16T18:14:34.372Z,168166887437200
+"""Henry @ lCLb0ZDuNV"" raises to 90",2023-04-16T18:14:25.520Z,168166886552000
+"""Kevin Gao @ 5pBNkD583R"" calls 30",2023-04-16T18:14:17.312Z,168166885731200
+"""Kippo @ 7l35ni-6pZ"" posts a big blind of 30",2023-04-16T18:14:14.331Z,168166885433111
+"""Michael @ GScnVzO7r5"" posts a small blind of 15",2023-04-16T18:14:14.331Z,168166885433110
+"""Michael @ GScnVzO7r5"" posts an ante of 3",2023-04-16T18:14:14.331Z,168166885433109
+"""Henry @ lCLb0ZDuNV"" posts an ante of 3",2023-04-16T18:14:14.331Z,168166885433108
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 3",2023-04-16T18:14:14.331Z,168166885433107
+"""Kippo @ 7l35ni-6pZ"" posts an ante of 3",2023-04-16T18:14:14.331Z,168166885433106
+"Player stacks: #2 ""Kippo @ 7l35ni-6pZ"" (2237) | #4 ""Kevin Gao @ 5pBNkD583R"" (1906) | #6 ""Henry @ lCLb0ZDuNV"" (2057) | #10 ""Michael @ GScnVzO7r5"" (1800)",2023-04-16T18:14:14.331Z,168166885433101
+"-- starting hand #13 (id: tlucfi0wyy8h)  (No Limit Texas Hold'em) (dealer: ""Henry @ lCLb0ZDuNV"") --",2023-04-16T18:14:14.331Z,168166885433100
+"-- ending hand #12 --",2023-04-16T18:14:11.327Z,168166885132702
+"""Kevin Gao @ 5pBNkD583R"" collected 147 from pot",2023-04-16T18:14:11.327Z,168166885132701
+"Uncalled bet of 90 returned to ""Kevin Gao @ 5pBNkD583R""",2023-04-16T18:14:11.327Z,168166885132700
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:14:10.432Z,168166885043200
+"""Kevin Gao @ 5pBNkD583R"" bets 90",2023-04-16T18:14:04.946Z,168166884494600
+"""Michael @ GScnVzO7r5"" checks",2023-04-16T18:13:55.608Z,168166883560800
+"Flop:  [6♠, 3♥, K♠]",2023-04-16T18:13:49.884Z,168166882988400
+"""Michael @ GScnVzO7r5"" calls 60",2023-04-16T18:13:49.066Z,168166882906600
+"""Henry @ lCLb0ZDuNV"" folds",2023-04-16T18:13:44.400Z,168166882440000
+"""Kevin Gao @ 5pBNkD583R"" raises to 60",2023-04-16T18:13:37.242Z,168166881724200
+"""Kippo @ 7l35ni-6pZ"" folds",2023-04-16T18:13:34.920Z,168166881492000
+"""Michael @ GScnVzO7r5"" posts a big blind of 30",2023-04-16T18:13:33.504Z,168166881350411
+"""Henry @ lCLb0ZDuNV"" posts a small blind of 15",2023-04-16T18:13:33.504Z,168166881350410
+"""Michael @ GScnVzO7r5"" posts an ante of 3",2023-04-16T18:13:33.504Z,168166881350409
+"""Henry @ lCLb0ZDuNV"" posts an ante of 3",2023-04-16T18:13:33.504Z,168166881350408
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 3",2023-04-16T18:13:33.504Z,168166881350407
+"""Kippo @ 7l35ni-6pZ"" posts an ante of 3",2023-04-16T18:13:33.504Z,168166881350406
+"Player stacks: #2 ""Kippo @ 7l35ni-6pZ"" (2240) | #4 ""Kevin Gao @ 5pBNkD583R"" (1822) | #6 ""Henry @ lCLb0ZDuNV"" (2075) | #10 ""Michael @ GScnVzO7r5"" (1863)",2023-04-16T18:13:33.504Z,168166881350401
+"-- starting hand #12 (id: y9wkukykvoxm)  (No Limit Texas Hold'em) (dealer: ""Kevin Gao @ 5pBNkD583R"") --",2023-04-16T18:13:33.504Z,168166881350400
+"-- ending hand #11 --",2023-04-16T18:13:30.564Z,168166881056402
+"""Henry @ lCLb0ZDuNV"" collected 102 from pot",2023-04-16T18:13:30.564Z,168166881056401
+"Uncalled bet of 60 returned to ""Henry @ lCLb0ZDuNV""",2023-04-16T18:13:30.564Z,168166881056400
+"""Kevin Gao @ 5pBNkD583R"" folds",2023-04-16T18:13:29.762Z,168166880976200
+"""Kippo @ 7l35ni-6pZ"" folds",2023-04-16T18:13:27.060Z,168166880706000
+"""Henry @ lCLb0ZDuNV"" raises to 90",2023-04-16T18:13:18.944Z,168166879894400
+"""Kevin Gao @ 5pBNkD583R"" calls 30",2023-04-16T18:13:15.645Z,168166879564500
+"""Kippo @ 7l35ni-6pZ"" calls 30",2023-04-16T18:13:13.980Z,168166879398000
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:13:11.178Z,168166879117800
+"""Henry @ lCLb0ZDuNV"" posts a big blind of 30",2023-04-16T18:13:09.544Z,168166878954414
+"""Kevin Gao @ 5pBNkD583R"" posts a small blind of 15",2023-04-16T18:13:09.544Z,168166878954413
+"""Michael @ GScnVzO7r5"" posts an ante of 3",2023-04-16T18:13:09.544Z,168166878954412
+"""Henry @ lCLb0ZDuNV"" posts an ante of 3",2023-04-16T18:13:09.544Z,168166878954411
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 3",2023-04-16T18:13:09.544Z,168166878954410
+"""Kippo @ 7l35ni-6pZ"" posts an ante of 3",2023-04-16T18:13:09.544Z,168166878954409
+"Player stacks: #2 ""Kippo @ 7l35ni-6pZ"" (2273) | #4 ""Kevin Gao @ 5pBNkD583R"" (1855) | #6 ""Henry @ lCLb0ZDuNV"" (2006) | #10 ""Michael @ GScnVzO7r5"" (1866)",2023-04-16T18:13:09.544Z,168166878954404
+"-- starting hand #11 (id: mysivvdrojrl)  (No Limit Texas Hold'em) (dealer: ""Kippo @ 7l35ni-6pZ"") --",2023-04-16T18:13:09.544Z,168166878954403
+"The game's ante was changed from 2 to 3.",2023-04-16T18:13:09.544Z,168166878954402
+"The game's big blind was changed from 20 to 30.",2023-04-16T18:13:09.544Z,168166878954401
+"The game's small blind was changed from 10 to 15.",2023-04-16T18:13:09.544Z,168166878954400
+"-- ending hand #10 --",2023-04-16T18:13:03.539Z,168166878353903
+"""Kippo @ 7l35ni-6pZ"" shows a 2♠, Q♠.",2023-04-16T18:13:03.539Z,168166878353902
+"""Kevin Gao @ 5pBNkD583R"" collected 362 from pot with Straight, 9 High (combination: 9♠, 8♠, 7♣, 6♣, 5♥)",2023-04-16T18:13:03.539Z,168166878353901
+"""Kevin Gao @ 5pBNkD583R"" shows a 5♥, 7♣.",2023-04-16T18:13:03.539Z,168166878353900
+"""Kevin Gao @ 5pBNkD583R"" checks",2023-04-16T18:13:02.719Z,168166878271900
+"""Kippo @ 7l35ni-6pZ"" checks",2023-04-16T18:12:59.621Z,168166877962100
+"River: 9♠, 6♣, 6♦, 8♠ [9♣]",2023-04-16T18:12:52.993Z,168166877299300
+"""Kippo @ 7l35ni-6pZ"" calls 133",2023-04-16T18:12:52.138Z,168166877213800
+"""Kevin Gao @ 5pBNkD583R"" raises to 133",2023-04-16T18:12:35.197Z,168166875519700
+"""Kippo @ 7l35ni-6pZ"" bets 48",2023-04-16T18:12:25.175Z,168166874517500
+"Turn: 9♠, 6♣, 6♦ [8♠]",2023-04-16T18:12:16.126Z,168166873612600
+"""Kevin Gao @ 5pBNkD583R"" calls 24",2023-04-16T18:12:15.319Z,168166873531900
+"""Kippo @ 7l35ni-6pZ"" bets 24",2023-04-16T18:12:13.797Z,168166873379700
+"Flop:  [9♠, 6♣, 6♦]",2023-04-16T18:12:08.764Z,168166872876400
+"""Kevin Gao @ 5pBNkD583R"" checks",2023-04-16T18:12:07.945Z,168166872794500
+"""Kippo @ 7l35ni-6pZ"" calls 20",2023-04-16T18:12:05.865Z,168166872586500
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:11:55.248Z,168166871524800
+"""Henry @ lCLb0ZDuNV"" folds",2023-04-16T18:11:54.059Z,168166871405900
+"""Kevin Gao @ 5pBNkD583R"" posts a big blind of 20",2023-04-16T18:11:50.208Z,168166871020811
+"""Kippo @ 7l35ni-6pZ"" posts a small blind of 10",2023-04-16T18:11:50.208Z,168166871020810
+"""Michael @ GScnVzO7r5"" posts an ante of 2",2023-04-16T18:11:50.208Z,168166871020809
+"""Henry @ lCLb0ZDuNV"" posts an ante of 2",2023-04-16T18:11:50.208Z,168166871020808
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 2",2023-04-16T18:11:50.208Z,168166871020807
+"""Kippo @ 7l35ni-6pZ"" posts an ante of 2",2023-04-16T18:11:50.208Z,168166871020806
+"Player stacks: #2 ""Kippo @ 7l35ni-6pZ"" (2452) | #4 ""Kevin Gao @ 5pBNkD583R"" (1672) | #6 ""Henry @ lCLb0ZDuNV"" (2008) | #10 ""Michael @ GScnVzO7r5"" (1868)",2023-04-16T18:11:50.208Z,168166871020801
+"-- starting hand #10 (id: nxiqurlelui9)  (No Limit Texas Hold'em) (dealer: ""Michael @ GScnVzO7r5"") --",2023-04-16T18:11:50.208Z,168166871020800
+"-- ending hand #9 --",2023-04-16T18:11:44.133Z,168166870413302
+"""Kippo @ 7l35ni-6pZ"" collected 298 from pot with Straight, 8 High (combination: 8♠, 7♣, 6♣, 5♥, 4♦)",2023-04-16T18:11:44.133Z,168166870413301
+"""Kippo @ 7l35ni-6pZ"" shows a 10♥, 5♥.",2023-04-16T18:11:44.133Z,168166870413300
+"""Kevin Gao @ 5pBNkD583R"" checks",2023-04-16T18:11:43.309Z,168166870330900
+"""Kippo @ 7l35ni-6pZ"" checks",2023-04-16T18:11:42.188Z,168166870218800
+"River: 6♣, 4♦, 8♠, 7♣ [10♣]",2023-04-16T18:11:35.195Z,168166869519500
+"""Kippo @ 7l35ni-6pZ"" calls 80",2023-04-16T18:11:34.363Z,168166869436300
+"""Kevin Gao @ 5pBNkD583R"" bets 80",2023-04-16T18:11:20.017Z,168166868001700
+"""Kippo @ 7l35ni-6pZ"" checks",2023-04-16T18:11:15.533Z,168166867553300
+"Turn: 6♣, 4♦, 8♠ [7♣]",2023-04-16T18:11:05.826Z,168166866582600
+"""Kippo @ 7l35ni-6pZ"" calls 40",2023-04-16T18:11:04.981Z,168166866498100
+"""Kevin Gao @ 5pBNkD583R"" bets 40",2023-04-16T18:10:56.728Z,168166865672800
+"""Kippo @ 7l35ni-6pZ"" checks",2023-04-16T18:10:53.194Z,168166865319400
+"Flop:  [6♣, 4♦, 8♠]",2023-04-16T18:10:46.946Z,168166864694600
+"""Kippo @ 7l35ni-6pZ"" checks",2023-04-16T18:10:46.086Z,168166864608600
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:10:44.221Z,168166864422100
+"""Henry @ lCLb0ZDuNV"" folds",2023-04-16T18:10:40.273Z,168166864027300
+"""Kevin Gao @ 5pBNkD583R"" calls 20",2023-04-16T18:10:37.867Z,168166863786700
+"""Kippo @ 7l35ni-6pZ"" posts a big blind of 20",2023-04-16T18:10:32.935Z,168166863293511
+"""Michael @ GScnVzO7r5"" posts a small blind of 10",2023-04-16T18:10:32.935Z,168166863293510
+"""Michael @ GScnVzO7r5"" posts an ante of 2",2023-04-16T18:10:32.935Z,168166863293509
+"""Henry @ lCLb0ZDuNV"" posts an ante of 2",2023-04-16T18:10:32.935Z,168166863293508
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 2",2023-04-16T18:10:32.935Z,168166863293507
+"""Kippo @ 7l35ni-6pZ"" posts an ante of 2",2023-04-16T18:10:32.935Z,168166863293506
+"Player stacks: #2 ""Kippo @ 7l35ni-6pZ"" (2296) | #4 ""Kevin Gao @ 5pBNkD583R"" (1814) | #6 ""Henry @ lCLb0ZDuNV"" (2010) | #10 ""Michael @ GScnVzO7r5"" (1880)",2023-04-16T18:10:32.935Z,168166863293501
+"-- starting hand #9 (id: sfs0llimc9qx)  (No Limit Texas Hold'em) (dealer: ""Henry @ lCLb0ZDuNV"") --",2023-04-16T18:10:32.935Z,168166863293500
+"-- ending hand #8 --",2023-04-16T18:10:29.986Z,168166862998602
+"""Kevin Gao @ 5pBNkD583R"" collected 138 from pot",2023-04-16T18:10:29.986Z,168166862998601
+"Uncalled bet of 80 returned to ""Kevin Gao @ 5pBNkD583R""",2023-04-16T18:10:29.986Z,168166862998600
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:10:29.168Z,168166862916800
+"""Kevin Gao @ 5pBNkD583R"" bets 80",2023-04-16T18:10:24.387Z,168166862438700
+"""Michael @ GScnVzO7r5"" checks",2023-04-16T18:10:19.480Z,168166861948000
+"Flop:  [3♦, A♦, 3♠]",2023-04-16T18:10:13.969Z,168166861396900
+"""Michael @ GScnVzO7r5"" calls 60",2023-04-16T18:10:13.112Z,168166861311200
+"""Henry @ lCLb0ZDuNV"" folds",2023-04-16T18:10:05.631Z,168166860563100
+"""Kevin Gao @ 5pBNkD583R"" raises to 60",2023-04-16T18:10:04.072Z,168166860407200
+"""Kippo @ 7l35ni-6pZ"" folds",2023-04-16T18:09:59.240Z,168166859924000
+"""Michael @ GScnVzO7r5"" posts a big blind of 20",2023-04-16T18:09:54.071Z,168166859407111
+"""Henry @ lCLb0ZDuNV"" posts a small blind of 10",2023-04-16T18:09:54.071Z,168166859407110
+"""Michael @ GScnVzO7r5"" posts an ante of 2",2023-04-16T18:09:54.071Z,168166859407109
+"""Henry @ lCLb0ZDuNV"" posts an ante of 2",2023-04-16T18:09:54.071Z,168166859407108
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 2",2023-04-16T18:09:54.071Z,168166859407107
+"""Kippo @ 7l35ni-6pZ"" posts an ante of 2",2023-04-16T18:09:54.071Z,168166859407106
+"Player stacks: #2 ""Kippo @ 7l35ni-6pZ"" (2298) | #4 ""Kevin Gao @ 5pBNkD583R"" (1738) | #6 ""Henry @ lCLb0ZDuNV"" (2022) | #10 ""Michael @ GScnVzO7r5"" (1942)",2023-04-16T18:09:54.071Z,168166859407101
+"-- starting hand #8 (id: hxsa9qgabb8y)  (No Limit Texas Hold'em) (dealer: ""Kevin Gao @ 5pBNkD583R"") --",2023-04-16T18:09:54.071Z,168166859407100
+"-- ending hand #7 --",2023-04-16T18:09:51.129Z,168166859112902
+"""Henry @ lCLb0ZDuNV"" collected 48 from pot",2023-04-16T18:09:51.129Z,168166859112901
+"Uncalled bet of 36 returned to ""Henry @ lCLb0ZDuNV""",2023-04-16T18:09:51.129Z,168166859112900
+"""Kevin Gao @ 5pBNkD583R"" folds",2023-04-16T18:09:50.274Z,168166859027400
+"""Henry @ lCLb0ZDuNV"" bets 36",2023-04-16T18:09:43.539Z,168166858353900
+"""Kevin Gao @ 5pBNkD583R"" checks",2023-04-16T18:09:36.919Z,168166857691900
+"Flop:  [10♠, K♣, Q♥]",2023-04-16T18:09:31.313Z,168166857131300
+"""Henry @ lCLb0ZDuNV"" checks",2023-04-16T18:09:30.488Z,168166857048800
+"""Kevin Gao @ 5pBNkD583R"" calls 20",2023-04-16T18:09:28.091Z,168166856809100
+"""Kippo @ 7l35ni-6pZ"" folds",2023-04-16T18:09:26.615Z,168166856661500
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:09:24.466Z,168166856446600
+"""Henry @ lCLb0ZDuNV"" posts a big blind of 20",2023-04-16T18:09:23.206Z,168166856320611
+"""Kevin Gao @ 5pBNkD583R"" posts a small blind of 10",2023-04-16T18:09:23.206Z,168166856320610
+"""Michael @ GScnVzO7r5"" posts an ante of 2",2023-04-16T18:09:23.206Z,168166856320609
+"""Henry @ lCLb0ZDuNV"" posts an ante of 2",2023-04-16T18:09:23.206Z,168166856320608
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 2",2023-04-16T18:09:23.206Z,168166856320607
+"""Kippo @ 7l35ni-6pZ"" posts an ante of 2",2023-04-16T18:09:23.206Z,168166856320606
+"Player stacks: #2 ""Kippo @ 7l35ni-6pZ"" (2300) | #4 ""Kevin Gao @ 5pBNkD583R"" (1760) | #6 ""Henry @ lCLb0ZDuNV"" (1996) | #10 ""Michael @ GScnVzO7r5"" (1944)",2023-04-16T18:09:23.206Z,168166856320601
+"-- starting hand #7 (id: evmgfz1uo85m)  (No Limit Texas Hold'em) (dealer: ""Kippo @ 7l35ni-6pZ"") --",2023-04-16T18:09:23.206Z,168166856320600
+"-- ending hand #6 --",2023-04-16T18:09:20.210Z,168166856021002
+"""Kevin Gao @ 5pBNkD583R"" collected 128 from pot",2023-04-16T18:09:20.210Z,168166856021001
+"Uncalled bet of 60 returned to ""Kevin Gao @ 5pBNkD583R""",2023-04-16T18:09:20.210Z,168166856021000
+"""Kippo @ 7l35ni-6pZ"" folds",2023-04-16T18:09:19.364Z,168166855936400
+"""Kevin Gao @ 5pBNkD583R"" bets 60",2023-04-16T18:09:13.619Z,168166855361900
+"""Kippo @ 7l35ni-6pZ"" checks",2023-04-16T18:09:09.156Z,168166854915600
+"Flop:  [4♣, Q♦, 10♠]",2023-04-16T18:09:02.217Z,168166854221700
+"The player ""IPA @ ch9GmABv_d"" passed the room ownership to ""Kevin Gao @ 5pBNkD583R"".",2023-04-16T18:09:01.373Z,168166854137301
+"""Kevin Gao @ 5pBNkD583R"" calls 60",2023-04-16T18:09:01.373Z,168166854137300
+"""Kippo @ 7l35ni-6pZ"" raises to 60",2023-04-16T18:08:58.460Z,168166853846000
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:08:54.659Z,168166853465900
+"""Henry @ lCLb0ZDuNV"" folds",2023-04-16T18:08:51.812Z,168166853181200
+"""Kevin Gao @ 5pBNkD583R"" posts a big blind of 20",2023-04-16T18:08:47.141Z,168166852714111
+"""Kippo @ 7l35ni-6pZ"" posts a small blind of 10",2023-04-16T18:08:47.141Z,168166852714110
+"""Michael @ GScnVzO7r5"" posts an ante of 2",2023-04-16T18:08:47.141Z,168166852714109
+"""Henry @ lCLb0ZDuNV"" posts an ante of 2",2023-04-16T18:08:47.141Z,168166852714108
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 2",2023-04-16T18:08:47.141Z,168166852714107
+"""Kippo @ 7l35ni-6pZ"" posts an ante of 2",2023-04-16T18:08:47.141Z,168166852714106
+"Player stacks: #2 ""Kippo @ 7l35ni-6pZ"" (2362) | #4 ""Kevin Gao @ 5pBNkD583R"" (1694) | #6 ""Henry @ lCLb0ZDuNV"" (1998) | #10 ""Michael @ GScnVzO7r5"" (1946)",2023-04-16T18:08:47.141Z,168166852714101
+"-- starting hand #6 (id: g9nrv5i6twje)  (No Limit Texas Hold'em) (dealer: ""Michael @ GScnVzO7r5"") --",2023-04-16T18:08:47.141Z,168166852714100
+"-- ending hand #5 --",2023-04-16T18:08:44.205Z,168166852420502
+"""Michael @ GScnVzO7r5"" collected 88 from pot",2023-04-16T18:08:44.205Z,168166852420501
+"Uncalled bet of 50 returned to ""Michael @ GScnVzO7r5""",2023-04-16T18:08:44.205Z,168166852420500
+"""Kippo @ 7l35ni-6pZ"" folds",2023-04-16T18:08:43.381Z,168166852338100
+"""Michael @ GScnVzO7r5"" bets 50",2023-04-16T18:08:41.264Z,168166852126400
+"Turn: 2♣, J♣, A♥ [8♥]",2023-04-16T18:08:32.430Z,168166851243000
+"""Kippo @ 7l35ni-6pZ"" calls 20",2023-04-16T18:08:31.578Z,168166851157800
+"""Michael @ GScnVzO7r5"" bets 20",2023-04-16T18:08:25.245Z,168166850524500
+"Flop:  [2♣, J♣, A♥]",2023-04-16T18:08:17.114Z,168166849711400
+"""Kippo @ 7l35ni-6pZ"" checks",2023-04-16T18:08:16.286Z,168166849628600
+"""Michael @ GScnVzO7r5"" calls 20",2023-04-16T18:08:11.095Z,168166849109500
+"""Henry @ lCLb0ZDuNV"" folds",2023-04-16T18:08:05.052Z,168166848505200
+"""Kevin Gao @ 5pBNkD583R"" folds",2023-04-16T18:08:04.178Z,168166848417800
+"""Kippo @ 7l35ni-6pZ"" posts a big blind of 20",2023-04-16T18:08:00.872Z,168166848087211
+"""Michael @ GScnVzO7r5"" posts a small blind of 10",2023-04-16T18:08:00.872Z,168166848087210
+"""Michael @ GScnVzO7r5"" posts an ante of 2",2023-04-16T18:08:00.872Z,168166848087209
+"""Henry @ lCLb0ZDuNV"" posts an ante of 2",2023-04-16T18:08:00.872Z,168166848087208
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 2",2023-04-16T18:08:00.872Z,168166848087207
+"""Kippo @ 7l35ni-6pZ"" posts an ante of 2",2023-04-16T18:08:00.872Z,168166848087206
+"Player stacks: #2 ""Kippo @ 7l35ni-6pZ"" (2404) | #4 ""Kevin Gao @ 5pBNkD583R"" (1696) | #6 ""Henry @ lCLb0ZDuNV"" (2000) | #10 ""Michael @ GScnVzO7r5"" (1900)",2023-04-16T18:08:00.872Z,168166848087201
+"-- starting hand #5 (id: pitn7z9o7ll2)  (No Limit Texas Hold'em) (dealer: ""Henry @ lCLb0ZDuNV"") --",2023-04-16T18:08:00.872Z,168166848087200
+"-- ending hand #4 --",2023-04-16T18:07:57.935Z,168166847793502
+"""Kippo @ 7l35ni-6pZ"" collected 520 from pot",2023-04-16T18:07:57.935Z,168166847793501
+"Uncalled bet of 1696 returned to ""Kippo @ 7l35ni-6pZ""",2023-04-16T18:07:57.935Z,168166847793500
+"""Kevin Gao @ 5pBNkD583R"" folds",2023-04-16T18:07:57.123Z,168166847712300
+"""Kippo @ 7l35ni-6pZ"" bets 1696",2023-04-16T18:07:39.664Z,168166845966400
+"Turn: 3♥, 4♣, 9♦ [8♦]",2023-04-16T18:07:30.843Z,168166845084300
+"""Henry @ lCLb0ZDuNV"" folds",2023-04-16T18:07:30.034Z,168166845003400
+"""Kevin Gao @ 5pBNkD583R"" calls 156",2023-04-16T18:07:17.753Z,168166843775300
+"""Kippo @ 7l35ni-6pZ"" bets 156",2023-04-16T18:07:16.014Z,168166843601400
+"""Henry @ lCLb0ZDuNV"" checks",2023-04-16T18:07:05.259Z,168166842525900
+"Flop:  [3♥, 4♣, 9♦]",2023-04-16T18:07:01.766Z,168166842176600
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:07:00.960Z,168166842096000
+"""Henry @ lCLb0ZDuNV"" calls 60",2023-04-16T18:06:58.690Z,168166841869000
+"""Kevin Gao @ 5pBNkD583R"" calls 60",2023-04-16T18:06:55.233Z,168166841523300
+"""Kippo @ 7l35ni-6pZ"" raises to 60",2023-04-16T18:06:53.035Z,168166841303500
+"""Michael @ GScnVzO7r5"" posts a big blind of 20",2023-04-16T18:06:47.861Z,168166840786111
+"""Henry @ lCLb0ZDuNV"" posts a small blind of 10",2023-04-16T18:06:47.861Z,168166840786110
+"""Michael @ GScnVzO7r5"" posts an ante of 2",2023-04-16T18:06:47.861Z,168166840786109
+"""Henry @ lCLb0ZDuNV"" posts an ante of 2",2023-04-16T18:06:47.861Z,168166840786108
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 2",2023-04-16T18:06:47.861Z,168166840786107
+"""Kippo @ 7l35ni-6pZ"" posts an ante of 2",2023-04-16T18:06:47.861Z,168166840786106
+"Player stacks: #2 ""Kippo @ 7l35ni-6pZ"" (2102) | #4 ""Kevin Gao @ 5pBNkD583R"" (1914) | #6 ""Henry @ lCLb0ZDuNV"" (2062) | #10 ""Michael @ GScnVzO7r5"" (1922)",2023-04-16T18:06:47.861Z,168166840786101
+"-- starting hand #4 (id: thddyzeajuba)  (No Limit Texas Hold'em) (dealer: ""Kevin Gao @ 5pBNkD583R"") --",2023-04-16T18:06:47.861Z,168166840786100
+"-- ending hand #3 --",2023-04-16T18:06:44.939Z,168166840493902
+"""Henry @ lCLb0ZDuNV"" collected 128 from pot",2023-04-16T18:06:44.939Z,168166840493901
+"Uncalled bet of 80 returned to ""Henry @ lCLb0ZDuNV""",2023-04-16T18:06:44.939Z,168166840493900
+"""Kevin Gao @ 5pBNkD583R"" folds",2023-04-16T18:06:44.073Z,168166840407300
+"""Henry @ lCLb0ZDuNV"" bets 80",2023-04-16T18:06:37.396Z,168166839739600
+"""Kevin Gao @ 5pBNkD583R"" checks",2023-04-16T18:06:28.930Z,168166838893000
+"Flop:  [9♣, K♠, 4♦]",2023-04-16T18:06:26.245Z,168166838624500
+"""Kevin Gao @ 5pBNkD583R"" calls 60",2023-04-16T18:06:25.399Z,168166838539900
+"""Henry @ lCLb0ZDuNV"" raises to 60",2023-04-16T18:06:23.434Z,168166838343400
+"""Kevin Gao @ 5pBNkD583R"" calls 20",2023-04-16T18:06:17.414Z,168166837741400
+"""Kippo @ 7l35ni-6pZ"" folds",2023-04-16T18:06:16.123Z,168166837612300
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:06:15.149Z,168166837514900
+"""Henry @ lCLb0ZDuNV"" posts a big blind of 20",2023-04-16T18:06:13.580Z,168166837358011
+"""Kevin Gao @ 5pBNkD583R"" posts a small blind of 10",2023-04-16T18:06:13.580Z,168166837358010
+"""Michael @ GScnVzO7r5"" posts an ante of 2",2023-04-16T18:06:13.580Z,168166837358009
+"""Henry @ lCLb0ZDuNV"" posts an ante of 2",2023-04-16T18:06:13.580Z,168166837358008
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 2",2023-04-16T18:06:13.580Z,168166837358007
+"""Kippo @ 7l35ni-6pZ"" posts an ante of 2",2023-04-16T18:06:13.580Z,168166837358006
+"Player stacks: #2 ""Kippo @ 7l35ni-6pZ"" (2104) | #4 ""Kevin Gao @ 5pBNkD583R"" (1976) | #6 ""Henry @ lCLb0ZDuNV"" (1996) | #10 ""Michael @ GScnVzO7r5"" (1924)",2023-04-16T18:06:13.580Z,168166837358001
+"-- starting hand #3 (id: ex59it6wxzc2)  (No Limit Texas Hold'em) (dealer: ""Kippo @ 7l35ni-6pZ"") --",2023-04-16T18:06:13.580Z,168166837358000
+"-- ending hand #2 --",2023-04-16T18:06:10.645Z,168166837064502
+"""Michael @ GScnVzO7r5"" collected 58 from pot",2023-04-16T18:06:10.645Z,168166837064501
+"Uncalled bet of 30 returned to ""Michael @ GScnVzO7r5""",2023-04-16T18:06:10.645Z,168166837064500
+"""Kevin Gao @ 5pBNkD583R"" folds",2023-04-16T18:06:09.807Z,168166836980700
+"""Kippo @ 7l35ni-6pZ"" folds",2023-04-16T18:06:08.033Z,168166836803300
+"""Michael @ GScnVzO7r5"" raises to 50",2023-04-16T18:06:05.819Z,168166836581900
+"""Henry @ lCLb0ZDuNV"" folds",2023-04-16T18:05:56.837Z,168166835683700
+"""Kevin Gao @ 5pBNkD583R"" posts a big blind of 20",2023-04-16T18:05:50.281Z,168166835028111
+"""Kippo @ 7l35ni-6pZ"" posts a small blind of 10",2023-04-16T18:05:50.281Z,168166835028110
+"""Michael @ GScnVzO7r5"" posts an ante of 2",2023-04-16T18:05:50.281Z,168166835028109
+"""Henry @ lCLb0ZDuNV"" posts an ante of 2",2023-04-16T18:05:50.281Z,168166835028108
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 2",2023-04-16T18:05:50.281Z,168166835028107
+"""Kippo @ 7l35ni-6pZ"" posts an ante of 2",2023-04-16T18:05:50.281Z,168166835028106
+"Player stacks: #2 ""Kippo @ 7l35ni-6pZ"" (2116) | #4 ""Kevin Gao @ 5pBNkD583R"" (1998) | #6 ""Henry @ lCLb0ZDuNV"" (1998) | #10 ""Michael @ GScnVzO7r5"" (1888)",2023-04-16T18:05:50.281Z,168166835028101
+"-- starting hand #2 (id: 14bcuybtitsf)  (No Limit Texas Hold'em) (dealer: ""Michael @ GScnVzO7r5"") --",2023-04-16T18:05:50.281Z,168166835028100
+"-- ending hand #1 --",2023-04-16T18:05:47.347Z,168166834734702
+"""Kippo @ 7l35ni-6pZ"" collected 228 from pot",2023-04-16T18:05:47.347Z,168166834734701
+"Uncalled bet of 171 returned to ""Kippo @ 7l35ni-6pZ""",2023-04-16T18:05:47.347Z,168166834734700
+"""Michael @ GScnVzO7r5"" folds",2023-04-16T18:05:46.475Z,168166834647500
+"""Kippo @ 7l35ni-6pZ"" bets 171",2023-04-16T18:05:29.656Z,168166832965600
+"""Michael @ GScnVzO7r5"" checks",2023-04-16T18:05:14.785Z,168166831478500
+"River: 9♠, 9♥, 7♥, 7♣ [A♥]",2023-04-16T18:05:08.417Z,168166830841700
+"""Michael @ GScnVzO7r5"" calls 54",2023-04-16T18:05:07.608Z,168166830760800
+"""Kippo @ 7l35ni-6pZ"" bets 54",2023-04-16T18:04:57.012Z,168166829701200
+"""Michael @ GScnVzO7r5"" checks",2023-04-16T18:04:41.831Z,168166828183100
+"Turn: 9♠, 9♥, 7♥ [7♣]",2023-04-16T18:04:35.767Z,168166827576700
+"""Michael @ GScnVzO7r5"" calls 36",2023-04-16T18:04:34.960Z,168166827496000
+"""Kippo @ 7l35ni-6pZ"" bets 36",2023-04-16T18:04:27.654Z,168166826765400
+"""Michael @ GScnVzO7r5"" checks",2023-04-16T18:04:21.309Z,168166826130900
+"Flop:  [9♠, 9♥, 7♥]",2023-04-16T18:04:14.668Z,168166825466800
+"""Kippo @ 7l35ni-6pZ"" checks",2023-04-16T18:04:13.833Z,168166825383300
+"""Michael @ GScnVzO7r5"" calls 20",2023-04-16T18:04:10.316Z,168166825031600
+"""Henry @ lCLb0ZDuNV"" folds",2023-04-16T18:04:05.281Z,168166824528100
+"""Kevin Gao @ 5pBNkD583R"" folds",2023-04-16T18:03:58.495Z,168166823849500
+"""Kippo @ 7l35ni-6pZ"" posts a big blind of 20",2023-04-16T18:03:54.055Z,168166823405515
+"""Michael @ GScnVzO7r5"" posts a small blind of 10",2023-04-16T18:03:54.055Z,168166823405514
+"""Michael @ GScnVzO7r5"" posts an ante of 2",2023-04-16T18:03:54.055Z,168166823405513
+"""Henry @ lCLb0ZDuNV"" posts an ante of 2",2023-04-16T18:03:54.055Z,168166823405512
+"""Kevin Gao @ 5pBNkD583R"" posts an ante of 2",2023-04-16T18:03:54.055Z,168166823405511
+"""Kippo @ 7l35ni-6pZ"" posts an ante of 2",2023-04-16T18:03:54.055Z,168166823405510
+"Player stacks: #2 ""Kippo @ 7l35ni-6pZ"" (2000) | #4 ""Kevin Gao @ 5pBNkD583R"" (2000) | #6 ""Henry @ lCLb0ZDuNV"" (2000) | #10 ""Michael @ GScnVzO7r5"" (2000)",2023-04-16T18:03:54.055Z,168166823405505
+"The player ""Michael @ GScnVzO7r5"" joined the game with a stack of 2000.",2023-04-16T18:03:54.055Z,168166823405504
+"The player ""Henry @ lCLb0ZDuNV"" joined the game with a stack of 2000.",2023-04-16T18:03:54.055Z,168166823405503
+"The player ""Kevin Gao @ 5pBNkD583R"" joined the game with a stack of 2000.",2023-04-16T18:03:54.055Z,168166823405502
+"The player ""Kippo @ 7l35ni-6pZ"" joined the game with a stack of 2000.",2023-04-16T18:03:54.055Z,168166823405501
+"-- starting hand #1 (id: yeyiphgsspnr)  (No Limit Texas Hold'em) (dealer: ""Henry @ lCLb0ZDuNV"") --",2023-04-16T18:03:54.055Z,168166823405500
+"The admin approved the player ""Michael @ GScnVzO7r5"" participation with a stack of 2000.",2023-04-16T18:02:30.555Z,168166815055500
+"The admin approved the player ""Kippo @ 7l35ni-6pZ"" participation with a stack of 2000.",2023-04-16T18:02:29.208Z,168166814920800
+"The admin approved the player ""Henry @ lCLb0ZDuNV"" participation with a stack of 2000.",2023-04-16T18:02:26.372Z,168166814637200
+"The admin approved the player ""Kevin Gao @ 5pBNkD583R"" participation with a stack of 2000.",2023-04-16T18:02:25.140Z,168166814514000
+"The player ""Henry @ lCLb0ZDuNV"" requested a seat.",2023-04-16T17:59:44.244Z,168166798424400
+"The player ""Michael @ GScnVzO7r5"" requested a seat.",2023-04-16T17:57:14.544Z,168166783454400
+"The player ""Kippo @ 7l35ni-6pZ"" requested a seat.",2023-04-16T17:56:49.873Z,168166780987300
+"The player ""Kevin Gao @ 5pBNkD583R"" requested a seat.",2023-04-16T17:56:45.647Z,168166780564700
+"The game's ante was changed from 0 to 2.",2023-04-16T17:41:12.704Z,168166687270400
