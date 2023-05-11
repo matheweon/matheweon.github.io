@@ -1,9 +1,9 @@
 /*
 INSTRUCTIONS:
 1. Open range in GTOWizard
-    a. If range has parts not in range, change cell mode to Full Height
 2. Open the JavaScript console
 3. Paste this code there and press Enter
+4. If you want to copy the range text so you can paste it in Google Sheets, immediately press Tab after running the code
 */
 // Defines array of index to hand pairs (Ex. 0: AA, 1: AKs, 13: AKo, 168: 22)
 let cards = ["A", "K", "Q", "J", "T", "9", "8", "7", "6", "5", "4", "3", "2"];
@@ -19,183 +19,250 @@ for (let i = 0; i < 13; i++) {
         }
     }
 }
-// Arrays for each action
-let raise7Freqs = [];
-let raise6Freqs = [];
-let raise5Freqs = [];
-let raise4Freqs = [];
-let raise3Freqs = [];
-let raise2Freqs = [];
-let raise1Freqs = [];
-let raise0Freqs = [];
-let callFreqs = [];
-let foldFreqs = [];
+// Extracts colors from hand
+function extractUniqueHexColors(rgbs) {
+    // Regular expression to match RGB color values
+    const rgbRegExp = /rgb\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\)/g;
+  
+    // Function to convert an RGB color value to a HEX color value
+    function rgbToHex(r, g, b) {
+        return "#" + [r, g, b].map(x => x.toString(16).padStart(2, "0")).join("");
+    }
+  
+    // Extract RGB color values from the rgbs string
+    const rgbValues = [...rgbs.matchAll(rgbRegExp)].map(match => {
+        return {r: parseInt(match[1]), g: parseInt(match[2]), b: parseInt(match[3])};
+    });
+  
+    // Convert RGB values to HEX values and filter out duplicates
+    const uniqueHexValues = [...new Set(rgbValues.map(({r, g, b}) => rgbToHex(r, g, b)))];
+  
+    return uniqueHexValues;
+}
+// Extracts frequencies for each action
+function extractNonCumulativePercentages(percents) {
+    if (percents === "") {
+        return [0];
+    }
+
+    // Regular expression to match percentages
+    const percentageRegExp = /(\d+(?:\.\d+)?)%/g;
+  
+    // Extract percentage values from the percents string
+    const percentageValues = [...percents.matchAll(percentageRegExp)].map(match => parseFloat(match[1]));
+  
+    // Filter out only the first percentage of each group
+    const cumulativePercentages = percentageValues.filter((_, index) => index % 2 === 0);
+  
+    // Calculate the non-cumulative percentages
+    const nonCumulativePercentages = cumulativePercentages.reduce((acc, percentage, index) => {
+        if (index === 0) {
+            acc.push(Math.round(percentage * 10) / 10);
+        } else {
+            acc.push(Math.round((percentage - acc.reduce((a, b) => a + b, 0)) * 10) / 10);
+        }
+        return acc;
+    }, []);
+    // Add the range height as the first percentage
+    nonCumulativePercentages.unshift(percentageValues[1] > 99.5 ? 100 : Math.round(percentageValues[1] * 10) / 10);
+  
+    return nonCumulativePercentages;
+}
+// Action names, colors, and freqs
+let actionNames = ["C", "F", "R1", "R1_2", "R2", "R2_2", "R3", "R3_2", "R4", "R4_2"];
+let actionColors = {};
+for (act of actionNames) {
+    actionColors[act] = getComputedStyle(document.documentElement).getPropertyValue("--clr-" + act).toLowerCase();
+}
+let actionFreqs = {};
+actionFreqs["Height"] = [];
+for (act of actionNames) {
+    actionFreqs[act] = [];
+}
 // Push every hand's frequencies for each action into their respective arrays
 for (let i = 0; i < 169; i++) {
     // Get CSS style from hand div
     let style = document.getElementsByClassName("ra_table")[0].children[i].style;
-    // Number of actions the hand is split into
-    let splits = style.backgroundSize.split(",").length;
     // Format: '21.5% 100%, 86.5% 100%, 100% 100%'
-    let colorFreqs = style.backgroundSize;
+    // -> [100, 21.5, 65, 13.5]
+    let colorFreqs = extractNonCumulativePercentages(style.backgroundSize);
     // Format: 'linear-gradient(to right, rgb(216, 59, 59), rgb(216, 59, 59)), linear-gradient(to right, rgb(245, 83, 83), rgb(245, 83, 83)), linear-gradient(to right, rgb(90, 185, 102), rgb(90, 185, 102))'
-    // Format: 'linear-gradient(to right, var(--clr-R1), var(--clr-R1)),linear-gradient(to right, var(--clr-F), var(--clr-F))'
-    let colors = style.backgroundImage;
-    let addedFreqs = 0;
-    // Stop if hand does not exist in range
-    if (colorFreqs === "") {
-        raise7Freqs.push(0);
-        raise6Freqs.push(0);
-        raise5Freqs.push(0);
-        raise4Freqs.push(0);
-        raise3Freqs.push(0);
-        raise2Freqs.push(0);
-        raise1Freqs.push(0);
-        raise0Freqs.push(0);
-        callFreqs.push(0);
-        foldFreqs.push(0);
-        continue;
-    }
-    // Frequency for previous action (height of cell)
-    let prevFreq = Math.round(parseFloat(colorFreqs.split(" ")[colorFreqs.split(" ").length - 1].substring(0, colorFreqs.split(" ")[colorFreqs.split(" ").length - 1].length - 1)).toFixed(2) * 100) / 100;
-    // For each possible action with hand
-    for (let j = 0; j < splits; j++) {
-        let color = colors.substring(colors.indexOf("rgb") + 4, colors.indexOf("rgb") + 16);
-        let freq = Math.round((parseFloat(colorFreqs.substring(0, colorFreqs.indexOf("%"))).toFixed(2) - addedFreqs) * prevFreq) / 100;
-        switch (color) {
-            case "143, 0, 0), ": // Raise7
-                raise7Freqs.push(freq);
-                break;
-            case "171, 23, 23)": // Raise6
-                raise6Freqs.push(freq);
-                break;
-            case "180, 30, 30)": // Raise5
-                raise5Freqs.push(freq);
-                break;
-            case "194, 41, 41)": // Raise4
-                raise4Freqs.push(freq);
-                break;
-            case "205, 50, 50)": // Raise3
-                raise3Freqs.push(freq);
-                break;
-            case "216, 59, 59)": // Raise2
-                raise2Freqs.push(freq);
-                break;
-            case "230, 71, 71)": // Raise1
-                raise1Freqs.push(freq);
-                break;
-            case "245, 83, 83)": // Raise0
-                raise0Freqs.push(freq);
-                break;
-            case "90, 185, 102": // Call
-                callFreqs.push(freq);
-                break;
-            case "59, 128, 155": // Fold
-                foldFreqs.push(freq);
-                break;
-        }
-        addedFreqs += freq / prevFreq * 100;
-        colorFreqs = colorFreqs.substring(colorFreqs.indexOf(",") + 2);
-        colors = colors.substring(colors.indexOf(", linear-gradient") + 2);
-    }
-    // Push 0 to arrays if action is not taken
-    if (raise7Freqs.length !== i + 1) {
-        raise7Freqs.push(0);
-    }
-    if (raise6Freqs.length !== i + 1) {
-        raise6Freqs.push(0);
-    }
-    if (raise5Freqs.length !== i + 1) {
-        raise5Freqs.push(0);
-    }
-    if (raise4Freqs.length !== i + 1) {
-        raise4Freqs.push(0);
-    }
-    if (raise3Freqs.length !== i + 1) {
-        raise3Freqs.push(0);
-    }
-    if (raise2Freqs.length !== i + 1) {
-        raise2Freqs.push(0);
-    }
-    if (raise1Freqs.length !== i + 1) {
-        raise1Freqs.push(0);
-    }
-    if (raise0Freqs.length !== i + 1) {
-        raise0Freqs.push(0);
-    }
-    if (callFreqs.length !== i + 1) {
-        callFreqs.push(0);
-    }
-    if (foldFreqs.length !== i + 1) {
-        foldFreqs.push(0);
-    }
-}
-// Print GTO ranges for each action array
-for (let actionFreqs of [raise7Freqs, raise6Freqs, raise5Freqs, raise4Freqs, raise3Freqs, raise2Freqs, raise1Freqs, raise0Freqs, callFreqs, foldFreqs]) {
-    // Array of each unique freqency percentage
-    let actionUniqueFreqs = [0];
-    for (let i = 0; i < 169; i++) {
-        if (!actionUniqueFreqs.includes(actionFreqs[i])) {
-            actionUniqueFreqs.push(actionFreqs[i]);
-        }
-    }
-    // Sort descending
-    actionUniqueFreqs.sort(function(a, b) {return b - a});
-    let actionString = "";
-    for (let freq of actionUniqueFreqs) {
-        if (freq === 0) {
+    // -> ['#d83b3b', '#f55353', '#5ab966']
+    let colors = extractUniqueHexColors(style.backgroundImage);
+    
+    actionFreqs["Height"].push(colorFreqs[0]);
+    for (action of actionNames) {
+        if (colorFreqs.length === 0) {
+            actionFreqs[action].push(0);
             continue;
-        } else if (freq === 100) { // 100% frequency does not need [100]XX[/100]
-            for (let i = 0; i < 169; i++) {
-                if (actionFreqs[i] === freq) {
-                    actionString += indexToHand[i] + ",";
-                }
-            }
-            actionString = actionString.substring(0, actionString.length - 1);
-        } else { // 90% frequency -> [90]XX[/90]
-            actionString += "[" + freq + "]";
-            for (let i = 0; i < 169; i++) {
-                if (actionFreqs[i] === freq) {
-                    actionString += indexToHand[i] + ",";
-                }
-            }
-            actionString = actionString.substring(0, actionString.length - 1);
-            actionString += "[/" + freq + "]";
         }
-        actionString += ",";
-    }
-    actionString = actionString.substring(0, actionString.length - 1);
-    // Print GTO range
-    switch (actionFreqs) {
-        case raise7Freqs:
-            console.log("Raise7: " + actionString);
-            break;
-        case raise6Freqs:
-            console.log("Raise6: " + actionString);
-            break;
-        case raise5Freqs:
-            console.log("Raise5: " + actionString);
-            break;
-        case raise4Freqs:
-            console.log("Raise4: " + actionString);
-            break;
-        case raise3Freqs:
-            console.log("Raise3: " + actionString);
-            break;
-        case raise2Freqs:
-            console.log("Raise2: " + actionString);
-            break;
-        case raise1Freqs:
-            console.log("Raise1: " + actionString);
-            break;
-        case raise0Freqs:
-            console.log("Raise0: " + actionString);
-            break;
-        case callFreqs:
-            console.log("Call/Check: " + actionString);
-            break;
-        case foldFreqs:
-            console.log("Fold: " + actionString);
-            break;
+        if (colors.indexOf(actionColors[action]) === -1) {
+            actionFreqs[action].push(0);
+        } else {
+            actionFreqs[action].push(colorFreqs[colors.indexOf(actionColors[action]) + 1]);
+        }
     }
 }
+
+// Print GTO ranges for each action array
+function printGTO() {
+    for (const [name, freqs] of Object.entries(actionFreqs)) {
+        // Array of each unique freqency percentage
+        let actionUniqueFreqs = [0];
+        for (let i = 0; i < 169; i++) {
+            if (!actionUniqueFreqs.includes(freqs[i])) {
+                actionUniqueFreqs.push(freqs[i]);
+            }
+        }
+        // Sort descending
+        actionUniqueFreqs.sort(function(a, b) {return b - a});
+        let actionString = "";
+        for (let freq of actionUniqueFreqs) {
+            if (freq === 0) {
+                continue;
+            } else if (freq === 100) { // 100% frequency does not need [100]XX[/100]
+                for (let i = 0; i < 169; i++) {
+                    if (freqs[i] === freq) {
+                        actionString += indexToHand[i] + ",";
+                    }
+                }
+                actionString = actionString.substring(0, actionString.length - 1);
+            } else { // 90% frequency -> [90]XX[/90]
+                actionString += "[" + freq + "]";
+                for (let i = 0; i < 169; i++) {
+                    if (freqs[i] === freq) {
+                        actionString += indexToHand[i] + ",";
+                    }
+                }
+                actionString = actionString.substring(0, actionString.length - 1);
+                actionString += "[/" + freq + "]";
+            }
+            actionString += ",";
+        }
+        actionString = actionString.substring(0, actionString.length - 1);
+        // Only print if not empty
+        if (actionString !== "") {
+            console.log(name + ": " + actionString);
+        }
+    }
+}
+
+// Prints freqs from actionFreqs
+function printFreqs() {
+    for (const [name, freqs] of Object.entries(actionFreqs)) {
+        let actionString = "";
+        for (let i = 0; i < 169; i++) {
+            actionString += " ".repeat(5 - freqs[i].toString().length) + freqs[i] + (i % 13 === 12 ? "\n" : "");
+        }
+        actionString = actionString.substring(0, actionString.length - 1);
+        // Only print if not all 0s
+        if (!/^[0\s]*$/.test(actionString)) {
+            console.log(name + ":\n" + actionString);
+        }
+    }
+}
+
+const actions = ["A", "Y", "R", "C", "F"];
+// Converts freqs into buckets of 25% frequency and copies to clipboard for pasting in Google Sheets
+function printAndCopySimplifiedRange() {
+    let rangeString = "";
+    let handBuckets = [];
+    let actionToColorDict = {
+        "A": "R4",
+        "Y": "R2",
+        "R": "R1",
+        "C": "C",
+        "F": "F"
+    };
+
+    // Update actionToColorDict based on the non-zero keys in actionFreqs
+    let nonZeroKeys = Object.keys(actionFreqs).filter(key => actionFreqs[key].some(freq => freq !== 0));
+    // If R4, R3, R2, R1, C
+    if (nonZeroKeys.includes("R3")) {
+        actionToColorDict["F"] = "R3";
+    }
+    // If R2, R1, C, F
+    if (!nonZeroKeys.includes("R4") && !nonZeroKeys.includes("R3")) {
+        actionToColorDict["A"] = "R2";
+        actionToColorDict["Y"] = "R4";
+    }
+    // Convert actionFreqs to buckets
+    for (let i = 0; i < 169; i++) {
+        let bucket = "";
+        // Set A, Y, R, C, F to the correct actionFreqs
+        let A = actionFreqs[actionToColorDict["A"]][i];
+        let Y = actionFreqs[actionToColorDict["Y"]][i];
+        let R = actionFreqs[actionToColorDict["R"]][i];
+        let C = actionFreqs[actionToColorDict["C"]][i];
+        let F = actionFreqs[actionToColorDict["F"]][i];
+
+        // Create P90Q buckets
+        let found = false;
+        for (let P of actions) {
+            for (let Q of actions) {
+                if (P !== Q && actionFreqs[actionToColorDict[Q]][i] >= 5 && actionFreqs[actionToColorDict[Q]][i] < 15 && actionFreqs[actionToColorDict[P]][i] > 85) {
+                    bucket = Q + "90" + P;
+                    found = true;
+                    break;
+                }
+            }
+            if (found) break;
+        }
+
+        if (!found) {
+            if (A === 0 && Y === 0 && R === 0 && C === 0 && F === 0) {
+                bucket = "NIR"; // Not In Range
+            } else {
+                // 1. Put values of A, Y, R, C, F in a dictionary
+                let actionFreqDict = { A, Y, R, C, F };
+                // 2. If lowest frequency action is >= 12.5 and < 37.5, then bucket += action letter
+                // 3. If lowest frequency action is >= 37.5, then bucket += action letter * 2
+                // 4. Remove lowest frequency action dictionary
+                // 5. Repeat 2-4 until dictionary has one action left
+                while (Object.keys(actionFreqDict).length > 1) {
+                    let lowestAction = Object.keys(actionFreqDict).reduce((a, b) => actionFreqDict[a] < actionFreqDict[b] ? a : b);
+                    let lowestFreq = actionFreqDict[lowestAction];
+                    if (lowestFreq >= 12.5 && lowestFreq < 37.5) {
+                        bucket += lowestAction[0];
+                    } else if (lowestFreq >= 37.5) {
+                        bucket += lowestAction[0] + lowestAction[0];
+                    }
+                    delete actionFreqDict[lowestAction];
+                }
+                // 6. Fill bucket with the remaining action letter until it has a length of 4
+                let remainingAction = Object.keys(actionFreqDict)[0];
+                while (bucket.length < 4) {
+                    bucket += remainingAction[0];
+                }
+                // 7. Sort in correct action order
+                bucket = [...bucket].sort((a, b) => "AYRCF".indexOf(a) - "AYRCF".indexOf(b)).join("");
+            }
+        }
+
+        handBuckets.push(bucket);
+    }
+    console.log(handBuckets);
+    let readableString = "\n";
+    for (let i = 0; i < 169; i++) {
+        readableString += indexToHand[i] + (indexToHand[i].length === 3 ? " " : "  ") + handBuckets[i] + " / ";
+        if (i % 13 === 12) {
+            readableString = readableString.substring(0, readableString.length - 3);
+            readableString += "\n";
+        }
+    }
+    console.log(readableString);
+    // Convert handBuckets to rangeString
+    for (let i = 0; i < 169; i++) {
+        rangeString += "\"" + indexToHand[i] + "     " + handBuckets[i] + "\"" + (i % 13 === 12 ? "\n" : "	");
+    }
+    // Print and copy to clipboard
+    console.log(rangeString);
+    // 0.5s delay to press Tab so document is focused and you can copy to clipboard
+    setTimeout(async() => console.log(await window.navigator.clipboard.writeText(rangeString) === undefined ? "Copied to clipboard" : "Error"), 500);
+}
+
+printGTO();
+printFreqs();
+printAndCopySimplifiedRange();
+
+console.log("Remember to immediately press Tab to focus on the document and copy to clipboard");
