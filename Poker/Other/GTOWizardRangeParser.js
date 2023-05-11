@@ -200,8 +200,8 @@ function printAndCopySimplifiedRange() {
         let found = false;
         for (let P of actions) {
             for (let Q of actions) {
-                if (P !== Q && actionFreqs[actionToColorDict[Q]][i] >= 5 && actionFreqs[actionToColorDict[Q]][i] < 15 && actionFreqs[actionToColorDict[P]][i] > 85) {
-                    bucket = Q + "90" + P;
+                if (P !== Q && actionFreqs[actionToColorDict[P]][i] > 85 && actionFreqs[actionToColorDict[Q]][i] >= 5 && actionFreqs[actionToColorDict[Q]][i] < 15) {
+                    bucket = P + "90" + Q;
                     found = true;
                     break;
                 }
@@ -211,7 +211,7 @@ function printAndCopySimplifiedRange() {
 
         if (!found) {
             if (A === 0 && Y === 0 && R === 0 && C === 0 && F === 0) {
-                bucket = "NIR"; // Not In Range
+                bucket = "NONE"; // Not In Range
             } else {
                 // 1. Put values of A, Y, R, C, F in a dictionary
                 let actionFreqDict = { A, Y, R, C, F };
