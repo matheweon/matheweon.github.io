@@ -198,15 +198,19 @@ function printAndCopySimplifiedRange() {
 
         // Create P90Q buckets
         let found = false;
-        for (let P of actions) {
-            for (let Q of actions) {
-                if (P !== Q && actionFreqs[actionToColorDict[P]][i] > 85 && actionFreqs[actionToColorDict[Q]][i] >= 5 && actionFreqs[actionToColorDict[Q]][i] < 15) {
-                    bucket = P + "90" + Q;
-                    found = true;
-                    break;
-                }
-            }
-            if (found) break;
+
+        // Create an array of objects representing each action and its frequency
+        let actionFreqArray = actions.map(action => {
+            return {action: action, freq: actionFreqs[actionToColorDict[action]][i]}
+        });
+
+        // Sort the array by frequency in descending order
+        actionFreqArray.sort((a, b) => b.freq - a.freq);
+
+        // Check if Q is the second most frequent action and 5 <= Q < 15
+        if (actionFreqArray[1].freq >= 5 && actionFreqArray[1].freq < 15) {
+            bucket = actionFreqArray[0].action + "90" + actionFreqArray[1].action;
+            found = true;
         }
 
         if (!found) {
