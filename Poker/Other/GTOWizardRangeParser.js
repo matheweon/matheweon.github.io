@@ -6,6 +6,7 @@ INSTRUCTIONS:
 4. If you want to copy the range text so you can paste it in Google Sheets, immediately press Tab after running the code
 */
 // Defines array of index to hand pairs (Ex. 0: AA, 1: AKs, 13: AKo, 168: 22)
+let specialSpace = " ";
 let cards = ["A", "K", "Q", "J", "T", "9", "8", "7", "6", "5", "4", "3", "2"];
 let indexToHand = [];
 for (let i = 0; i < 13; i++) {
@@ -39,7 +40,7 @@ function extractUniqueHexColors(rgbs) {
   
     return uniqueHexValues;
 }
-// Extracts frequencies for each action
+// Extracts freqs for each action
 function extractNonCumulativePercentages(percents) {
     if (percents === "") {
         return [0];
@@ -79,7 +80,7 @@ actionFreqs["Height"] = [];
 for (act of actionNames) {
     actionFreqs[act] = [];
 }
-// Push every hand's frequencies for each action into their respective arrays
+// Push every hand's freqs for each action into their respective arrays
 for (let i = 0; i < 169; i++) {
     // Get CSS style from hand div
     let style = document.getElementsByClassName("ra_table")[0].children[i].style;
@@ -256,8 +257,14 @@ function printAndCopySimplifiedRange() {
     }
     console.log(readableString);
     // Convert handBuckets to rangeString
+    let freqsStrings = calcTotalActionFreqs();
     for (let i = 0; i < 169; i++) {
-        rangeString += "\"" + indexToHand[i] + "     " + handBuckets[i] + "\"" + (i % 13 === 12 ? "\n" : "	");
+        let actionFreqString = specialSpace;
+        if (Math.floor(i / 13) < freqsStrings.length) {
+            actionFreqString = freqsStrings[Math.floor(i / 13)];
+            console.log(actionFreqString)
+        }
+        rangeString += "\"" + indexToHand[i] + "     " + handBuckets[i] + "\"" + (i % 13 === 12 ? "	\"" + actionFreqString + "\"\n" : "	"); // Next cell unicode symbol
     }
     // Print and copy to clipboard
     console.log(rangeString);
@@ -265,8 +272,77 @@ function printAndCopySimplifiedRange() {
     setTimeout(async() => console.log(await window.navigator.clipboard.writeText(rangeString) === undefined ? "Copied to clipboard" : "Error"), 500);
 }
 
+function calcTotalActionFreqs(print = false) {
+    let totalActionFreqs = {};
+    let totalFrequency = 0;
+
+    for (const action in actionFreqs) {
+        if (action === "Height") continue; // Skip Height
+
+        let actionFrequency = 0;
+
+        for (let i = 0; i < actionFreqs[action].length; i++) {
+            let combos = indexToHand[i].substring(2) === "o" ? 12 : indexToHand[i].substring(2) === "s" ? 4 : 6;
+            // Multiply the individual hand's freqs by its height
+            actionFrequency += actionFreqs[action][i] * actionFreqs["Height"][i] * combos;
+        }
+
+        totalActionFreqs[action] = actionFrequency;
+        totalFrequency += actionFrequency;
+    }
+
+    for (const action in totalActionFreqs) {
+        let percentage = (totalActionFreqs[action] / totalFrequency) * 100;
+        // Round to the nearest tenth
+        percentage = Math.round(percentage * 10) / 10;
+        totalActionFreqs[action] = percentage;
+        if (print) {
+            console.log(action + ": " + percentage + "%");
+        }
+    }
+    const actionToKeyDict = {
+        "A": "R4",
+        "Y": "R2",
+        "R": "R1",
+        "C": "C",
+        "F": "F"
+    };
+    
+    if (totalActionFreqs["R3"] !== 0) {
+        actionToKeyDict["F"] = "R3";
+    }
+
+    if (totalActionFreqs["R4"] === 0 && totalActionFreqs["R3"] === 0) {
+        actionToKeyDict["A"] = "R2";
+        actionToKeyDict["Y"] = "R4";
+    }
+
+    let freqsArray = [];
+    for (let action of actions) {
+        freqsArray.push([action, totalActionFreqs[actionToKeyDict[action]]]);
+    }
+
+    if (totalActionFreqs["R3"] !== 0) {
+        freqsArray = [freqsArray[0], freqsArray[4], ...freqsArray.slice(1, 4), ...freqsArray.slice(5)];
+    }
+    freqsArray = freqsArray.filter(innerArray => innerArray[1] !== 0);
+
+    let freqsStrings = [];
+    for (let innerArray of freqsArray) {
+        freqsStrings.push(innerArray[1] + specialSpace.repeat(actions.indexOf(innerArray[0]) + 1));
+    }
+
+    if (print) {
+        console.log(totalActionFreqs);
+        console.log(freqsArray);
+        console.log(freqsStrings);
+    }
+    return freqsStrings;
+}
+
 printGTO();
 printFreqs();
 printAndCopySimplifiedRange();
+calcTotalActionFreqs(true);
 
 console.log("Remember to immediately press Tab to focus on the document and copy to clipboard");
