@@ -3,7 +3,7 @@ INSTRUCTIONS:
 1. Open range in GTOWizard
 2. Open the JavaScript console
 3. Paste this code there and press Enter
-4. If you want to copy the range text so you can paste it in Google Sheets, immediately press Tab after running the code
+4. If you want to copy the range text so you can paste it in Google Sheets, press Tab or click on GTOWizard
 */
 // Defines array of index to hand pairs (Ex. 0: AA, 1: AKs, 13: AKo, 168: 22)
 let specialSpace = " ";
@@ -24,20 +24,20 @@ for (let i = 0; i < 13; i++) {
 function extractUniqueHexColors(rgbs) {
     // Regular expression to match RGB color values
     const rgbRegExp = /rgb\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\)/g;
-  
+
     // Function to convert an RGB color value to a HEX color value
     function rgbToHex(r, g, b) {
         return "#" + [r, g, b].map(x => x.toString(16).padStart(2, "0")).join("");
     }
-  
+
     // Extract RGB color values from the rgbs string
     const rgbValues = [...rgbs.matchAll(rgbRegExp)].map(match => {
         return {r: parseInt(match[1]), g: parseInt(match[2]), b: parseInt(match[3])};
     });
-  
+
     // Convert RGB values to HEX values and filter out duplicates
     const uniqueHexValues = [...new Set(rgbValues.map(({r, g, b}) => rgbToHex(r, g, b)))];
-  
+
     return uniqueHexValues;
 }
 // Extracts freqs for each action
@@ -48,13 +48,13 @@ function extractNonCumulativePercentages(percents) {
 
     // Regular expression to match percentages
     const percentageRegExp = /(\d+(?:\.\d+)?)%/g;
-  
+
     // Extract percentage values from the percents string
     const percentageValues = [...percents.matchAll(percentageRegExp)].map(match => parseFloat(match[1]));
-  
+
     // Filter out only the first percentage of each group
     const cumulativePercentages = percentageValues.filter((_, index) => index % 2 === 0);
-  
+
     // Calculate the non-cumulative percentages
     const nonCumulativePercentages = cumulativePercentages.reduce((acc, percentage, index) => {
         if (index === 0) {
@@ -66,9 +66,10 @@ function extractNonCumulativePercentages(percents) {
     }, []);
     // Add the range height as the first percentage
     nonCumulativePercentages.unshift(percentageValues[1] > 99.5 ? 100 : Math.round(percentageValues[1] * 10) / 10);
-  
+
     return nonCumulativePercentages;
 }
+
 // Action names, colors, and freqs
 let actionNames = ["C", "F", "R1", "R1_2", "R2", "R2_2", "R3", "R3_2", "R4", "R4_2"];
 let actionColors = {};
@@ -76,31 +77,34 @@ for (act of actionNames) {
     actionColors[act] = getComputedStyle(document.documentElement).getPropertyValue("--clr-" + act).toLowerCase();
 }
 let actionFreqs = {};
-actionFreqs["Height"] = [];
-for (act of actionNames) {
-    actionFreqs[act] = [];
-}
-// Push every hand's freqs for each action into their respective arrays
-for (let i = 0; i < 169; i++) {
-    // Get CSS style from hand div
-    let style = document.getElementsByClassName("ra_table")[0].children[i].style;
-    // Format: '21.5% 100%, 86.5% 100%, 100% 100%'
-    // -> [100, 21.5, 65, 13.5]
-    let colorFreqs = extractNonCumulativePercentages(style.backgroundSize);
-    // Format: 'linear-gradient(to right, rgb(216, 59, 59), rgb(216, 59, 59)), linear-gradient(to right, rgb(245, 83, 83), rgb(245, 83, 83)), linear-gradient(to right, rgb(90, 185, 102), rgb(90, 185, 102))'
-    // -> ['#d83b3b', '#f55353', '#5ab966']
-    let colors = extractUniqueHexColors(style.backgroundImage);
-    
-    actionFreqs["Height"].push(colorFreqs[0]);
-    for (action of actionNames) {
-        if (colorFreqs.length === 0) {
-            actionFreqs[action].push(0);
-            continue;
-        }
-        if (colors.indexOf(actionColors[action]) === -1) {
-            actionFreqs[action].push(0);
-        } else {
-            actionFreqs[action].push(colorFreqs[colors.indexOf(actionColors[action]) + 1]);
+function getFreqs() {
+    actionFreqs = {};
+    actionFreqs["Height"] = [];
+    for (act of actionNames) {
+        actionFreqs[act] = [];
+    }
+    // Push every hand's freqs for each action into their respective arrays
+    for (let i = 0; i < 169; i++) {
+        // Get CSS style from hand div
+        let style = document.getElementsByClassName("ra_table")[0].children[i].style;
+        // Format: '21.5% 100%, 86.5% 100%, 100% 100%'
+        // -> [100, 21.5, 65, 13.5]
+        let colorFreqs = extractNonCumulativePercentages(style.backgroundSize);
+        // Format: 'linear-gradient(to right, rgb(216, 59, 59), rgb(216, 59, 59)), linear-gradient(to right, rgb(245, 83, 83), rgb(245, 83, 83)), linear-gradient(to right, rgb(90, 185, 102), rgb(90, 185, 102))'
+        // -> ['#d83b3b', '#f55353', '#5ab966']
+        let colors = extractUniqueHexColors(style.backgroundImage);
+        
+        actionFreqs["Height"].push(colorFreqs[0]);
+        for (action of actionNames) {
+            if (colorFreqs.length === 0) {
+                actionFreqs[action].push(0);
+                continue;
+            }
+            if (colors.indexOf(actionColors[action]) === -1) {
+                actionFreqs[action].push(0);
+            } else {
+                actionFreqs[action].push(colorFreqs[colors.indexOf(actionColors[action]) + 1]);
+            }
         }
     }
 }
@@ -163,10 +167,30 @@ function printFreqs() {
     }
 }
 
-const actions = ["A", "Y", "R", "C", "F"];
+let onlyInterval = null;
+function copyToClipboard(text) {
+    let copyInterval = setInterval(async function() {
+        try {
+            await window.navigator.clipboard.writeText(text);
+            console.log("Copied to clipboard");
+            clearInterval(copyInterval); // Clear interval if copy is successful
+        } catch (err) {
+            // If error, interval is not cleared and will try again
+            console.log("PRESS TAB OR CLICK GTOWIZARD TO COPY");
+            // Clear interval if new one is created
+            if (onlyInterval !== copyInterval) {
+                clearInterval(copyInterval);
+            }
+        }
+    }, 100); // Try every 0.1 seconds
+    onlyInterval = copyInterval;
+}  
+
+
 // Converts freqs into buckets of 25% frequency and copies to clipboard for pasting in Google Sheets
-function printAndCopySimplifiedRange() {
-    let rangeString = "";
+const actions = ["A", "Y", "R", "C", "F"];
+let includeTitle = true;
+function printAndCopySimplifiedRange(copy = true) {
     let handBuckets = [];
     let actionToColorDict = {
         "A": "R4",
@@ -258,18 +282,26 @@ function printAndCopySimplifiedRange() {
     console.log(readableString);
     // Convert handBuckets to rangeString
     let freqsStrings = calcTotalActionFreqs();
+    let rangeString = "";
+    // If dropdown is visible, add range title
+    if (includeTitle && document.getElementsByClassName("hspotscont_inner_maximized").length > 0) {
+        rangeString += "\t" + rangeTitle() + "\t".repeat(13) + "\n";
+    }
     for (let i = 0; i < 169; i++) {
-        let actionFreqString = specialSpace;
+        let actionFreqString = " ";
         if (Math.floor(i / 13) < freqsStrings.length) {
             actionFreqString = freqsStrings[Math.floor(i / 13)];
             console.log(actionFreqString)
         }
-        rangeString += "\"" + indexToHand[i] + "     " + handBuckets[i] + "\"" + (i % 13 === 12 ? "	\"" + actionFreqString + "\"\n" : "	"); // Next cell unicode symbol
+        rangeString += (i % 13 === 0 ? "\"" + actionFreqString + "\"" + "\t" : "") + "\"" + indexToHand[i] + "     " + handBuckets[i] + "\"" + (i % 13 === 12 ? "\t" + "\n" : "\t");
     }
     // Print and copy to clipboard
     console.log(rangeString);
     // 0.5s delay to press Tab so document is focused and you can copy to clipboard
-    setTimeout(async() => console.log(await window.navigator.clipboard.writeText(rangeString) === undefined ? "Copied to clipboard" : "Error"), 500);
+    if (copy) {
+        copyToClipboard(rangeString);
+    }
+    return rangeString;
 }
 
 function calcTotalActionFreqs(print = false) {
@@ -340,9 +372,212 @@ function calcTotalActionFreqs(print = false) {
     return freqsStrings;
 }
 
+const raiseNames = ["", "Open", "3b", "4b", "5b", "6b", "7b", "8b", "9b", "AI", "Iso", "Limp"];
+function convertActionName(actionString, raiseNum, i, addRaise = false) {
+    let action = actionString.split(" ").length <= 2 ? actionString.split(" ")[0] : actionString;
+    let size = actionString.split(" ")[1];
+    if (["Fold", "Check"].includes(action) || action.includes("AI") || (action === "Call" && i !== 0)) {
+        return action;
+    }
+    if (action === "Call") {
+        raiseNum = -1;
+    }
+    if (action === "Allin") {
+        raiseNum = -3;
+    }
+    if (action === "Raise") {
+        raiseNum += Math.sign(raiseNum + 0.5);
+        if (raiseNum === -3) {
+            raiseNum = 2;
+        }
+    }
+    return raiseNames.slice(raiseNum)[0] + (size === "" ? "" : " " + size);
+}
+
+let includePosition = true;
+function rangeTitle() {
+    // Maximize node selector bar
+    let nodeSelectorBar = document.getElementsByClassName("evecrd_minimized")[0]
+    if (nodeSelectorBar !== undefined) nodeSelectorBar.click();
+
+    let title = "";
+    let raiseNum = 0;
+    let depth = [...document.getElementById("hspotscont_inner").children].findIndex(element => element.classList.contains("evecrd_active"));
+    console.log(depth)
+    for (let i = 0; i <= depth; i++) {
+        let position = "";
+        if (includePosition) {
+            position = document.getElementById("hspotscont_inner").children[i].children[0].children[0].innerHTML.match(/(?<=\s).*?(?=\s)/)[0] + " ";
+        }
+        let actionElements = [...document.getElementsByClassName("evecrd_actions")[i].children].find(element => element.classList.contains("evecrd_action_active"))
+        let actionString = "? ";
+        // If last action
+        if (i === depth) {
+            actionString = [...document.getElementsByClassName("evecrd_actions")[i].children].map(element => convertActionName(element.children[0].innerHTML, raiseNum, null)).toString().replace(/,/g, " / ");
+            if (depth > 0) {
+                actionString = actionString.replace("Fold / Call", "?");
+                actionString = actionString.replace("? / ", "");
+                actionString = actionString.replace("Check / ", "");
+            } else {
+                actionString = actionString.replace("Fold / Call", "Limp");
+            }
+        } else {
+            actionString = actionElements.children[0].innerHTML;
+            actionString = convertActionName(actionString, raiseNum, i);
+        }
+        if (actionString === "Limp") {
+            raiseNum = -1;
+        } else if (actionString.includes("b") || actionString.includes("Open")) {
+            raiseNum++;
+        }
+        title += position + actionString;
+        if (i < depth) {
+            title += " > ";
+        }
+    }
+    console.log(title);
+    return title;
+}
+
+function joinRangesForSheets(str1, str2) {
+    let rows1 = str1.split("\n");
+    let rows2 = str2.split("\n");
+
+    let combinedRows = rows1.map((row, index) => row + (rows2[index] || ""));
+    let combinedStr = combinedRows.join("\n");
+
+    return combinedStr;
+}
+
+function copyAllRows() {
+    let whitespace = "\" \"\n".repeat((rowOfRanges[currentRow].match(/\n/g) || []).length);
+    copyToClipboard(rowOfRanges.map(row => joinRangesForSheets(row, whitespace)).join(""));
+}
+
+let rowOfRanges = [""];
+let rangeTitles = "";
+let currentRow = 0;
+function concatRange() {
+    try {
+        let title = rangeTitle();
+        getFreqs();
+        if (rowOfRanges[currentRow] === "") {
+            rowOfRanges[currentRow] = printAndCopySimplifiedRange(false);
+            rangeTitles = title;
+        } else {
+            rowOfRanges[currentRow] = joinRangesForSheets(rowOfRanges[currentRow], printAndCopySimplifiedRange(false));
+            rangeTitles += " --> " + title;
+        }
+        // Print and copy to clipboard
+        console.log(rangeTitles);
+        /* let whitespace = "\" \"\n".repeat((rowOfRanges[currentRow].match(/\n/g) || []).length);
+        copyToClipboard(joinRangesForSheets(rowOfRanges[currentRow], whitespace)); */
+        copyAllRows();
+    } catch (e) {
+        console.log("MAXIMIZE NODE SELECTOR BAR");
+    }
+}
+
+function resetConcat() {
+    rowOfRanges = [""];
+    rangeTitles = "";
+    currentRow = 0;
+}
+
+function emptyRange() {
+    let emptyRange = ("\" \"\t".repeat(14) + "\n").repeat((rowOfRanges[0].match(/\n/g) || []).length);
+    rowOfRanges[currentRow] = joinRangesForSheets(rowOfRanges[currentRow], emptyRange);
+    /* let whitespace = "\" \"\n".repeat((rowOfRanges[currentRow].match(/\n/g) || []).length);
+    copyToClipboard(joinRangesForSheets(rowOfRanges[currentRow], whitespace)); */
+    copyAllRows();
+    if (rowOfRanges[currentRow] === "\n".repeat((rowOfRanges[0].match(/\n/g) || []).length)) {
+        rangeTitles += " --> ";
+    }
+    rangeTitles += "EMPTY";
+}
+
+function newRow() {
+    rangeTitles += "\n";
+    currentRow++;
+    rowOfRanges.push("\n".repeat((rowOfRanges[0].match(/\n/g) || []).length));
+}
+
+let nodeNum = 0;
+function clickFirstNode() {
+    //document.getElementById("hspotscont_inner").children[0].click();
+    document.getElementsByClassName("mdi-restart")[0].click();
+    nodeNum = 0;
+}
+
+function previousNode() {
+    if (nodeNum !== 0) {
+        document.getElementById("hspotscont_inner").children[nodeNum - 1].click();
+        nodeNum--;
+    } else {
+        console.log("Already at first node");
+    }
+}
+
+function clickNthAction(n) {
+    document.getElementById("hspotscont_inner").children[nodeNum].children[0].children[1].children[n].click();
+    nodeNum++;
+}
+
+function readTape(tape) {
+    // Split tape into individual commands
+    let commands = tape.split("");
+
+    // Helper function to delay execution of function by 1s
+    function delay(fn) {
+        return new Promise(resolve => {
+            setTimeout(() => {
+                fn();
+                resolve();
+            }, 1000);
+        });
+    }
+
+    // Map of commands to functions
+    let commandMap = {
+        "f": clickFirstNode,
+        "<": previousNode,
+        "c": concatRange,
+        "n": newRow,
+        "e": emptyRange,
+        "r": resetConcat
+    };
+
+    // Iterate over each command in tape
+    (async () => {
+        for (let command of commands) {
+            // If the command is a number, pass it as an argument to clickNthAction
+            if (!isNaN(parseInt(command))) {
+                await delay(() => clickNthAction(parseInt(command)));
+            } else {
+                // Retrieve function from commandMap and call it
+                let fn = commandMap[command];
+                if (fn) {
+                    await delay(fn);
+                }
+            }
+        }
+        console.log("DONE");
+    })();
+}
+
+
+getFreqs();
 printGTO();
 printFreqs();
-printAndCopySimplifiedRange();
+//printAndCopySimplifiedRange();
 calcTotalActionFreqs(true);
+rangeTitle();
+concatRange();
 
-console.log("Remember to immediately press Tab to focus on the document and copy to clipboard");
+console.log("COMMANDS:");
+console.log("concatRange(): add the current range");
+console.log("emptyRange(): add an empty range");
+console.log("newRow(): add a new row");
+console.log("resetConcat(): reset the clipboard");
+console.log("includeTitle = true/false: include title above range");
+console.log("includePosition = true/false: include position in range title");
