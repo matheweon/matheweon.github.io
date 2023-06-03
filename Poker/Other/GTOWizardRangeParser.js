@@ -189,7 +189,6 @@ function copyToClipboard(text) {
 
 // Converts freqs into buckets of 25% frequency and copies to clipboard for pasting in Google Sheets
 const actions = ["A", "Y", "R", "C", "F"];
-let includeTitle = true;
 function printAndCopySimplifiedRange(copy = true) {
     let handBuckets = [];
     let actionToColorDict = {
@@ -394,7 +393,6 @@ function convertActionName(actionString, raiseNum, i, addRaise = false) {
     return raiseNames.slice(raiseNum)[0] + (size === "" ? "" : " " + size);
 }
 
-let includePosition = true;
 function rangeTitle() {
     // Maximize node selector bar
     let nodeSelectorBar = document.getElementsByClassName("evecrd_minimized")[0]
@@ -499,7 +497,7 @@ function emptyRange() {
 function newRow() {
     rangeTitles += "\n";
     currentRow++;
-    rowOfRanges.push("\n".repeat((rowOfRanges[0].match(/\n/g) || []).length));
+    rowOfRanges.push("\" \"\n".repeat((rowOfRanges[0].match(/\n/g) || []).length));
 }
 
 let nodeNum = 0;
@@ -509,10 +507,10 @@ function clickFirstNode() {
     nodeNum = 0;
 }
 
-function previousNode() {
+function clickPreviousNode(nodesBack = 1) {
     if (nodeNum !== 0) {
-        document.getElementById("hspotscont_inner").children[nodeNum - 1].click();
-        nodeNum--;
+        document.getElementById("hspotscont_inner").children[nodeNum - nodesBack].click();
+        nodeNum -= nodesBack;
     } else {
         console.log("Already at first node");
     }
@@ -523,28 +521,41 @@ function clickNthAction(n) {
     nodeNum++;
 }
 
+function clickSolutionSelector() {
+    document.getElementById("gmf_vertical").click();
+}
+
+function clickSolution(text) {
+    Array.from(document.getElementsByClassName("gmfslctr_center")[0].querySelectorAll(".checkbox-btn")).filter(el => el.innerText === text)[0].click();
+}
+
 function readTape(tape) {
+    // Maximize node selector bar
+    let nodeSelectorBar = document.getElementsByClassName("evecrd_minimized")[0]
+    if (nodeSelectorBar !== undefined) nodeSelectorBar.click();
+
     // Split tape into individual commands
-    let commands = tape.split("");
+    let commands = tape.match(/'[^']*'|<+|[^ ]/g);
+    console.log(commands)
 
     // Helper function to delay execution of function by 1s
-    function delay(fn) {
+    function delay(fn, delaySeconds = 1) {
         return new Promise(resolve => {
             setTimeout(() => {
                 fn();
                 resolve();
-            }, 1000);
+            }, delaySeconds * 1250);
         });
     }
 
     // Map of commands to functions
     let commandMap = {
-        "f": clickFirstNode,
-        "<": previousNode,
         "c": concatRange,
         "n": newRow,
         "e": emptyRange,
-        "r": resetConcat
+        "r": resetConcat,
+        "f": clickFirstNode,
+        "s": clickSolutionSelector,
     };
 
     // Iterate over each command in tape
@@ -553,10 +564,22 @@ function readTape(tape) {
             // If the command is a number, pass it as an argument to clickNthAction
             if (!isNaN(parseInt(command))) {
                 await delay(() => clickNthAction(parseInt(command)));
+            } else if (command.startsWith("'") && command.endsWith("'")) {
+                // If command is a string, call clickSolution with the string
+                let str = command.slice(1, -1);  // remove the enclosing quotes
+                await delay(() => clickSolution(str));
+            } else if (command.startsWith("<")) {
+                // If command is a series of '<', call clickPreviousNode with the count
+                let count = command.length;  // count the number of '<'
+                await delay(() => clickPreviousNode(count));
             } else {
                 // Retrieve function from commandMap and call it
                 let fn = commandMap[command];
-                if (fn) {
+                if (fn === clickSolutionSelector) {
+                    await delay(fn, 3);
+                } else if (fn === clickFirstNode) {
+                    await delay(fn, 2);
+                } else if (fn) {
                     await delay(fn);
                 }
             }
@@ -565,7 +588,8 @@ function readTape(tape) {
     })();
 }
 
-
+let includeTitle = true;
+let includePosition = false;
 getFreqs();
 printGTO();
 printFreqs();
@@ -575,9 +599,20 @@ rangeTitle();
 concatRange();
 
 console.log("COMMANDS:");
-console.log("concatRange(): add the current range");
-console.log("emptyRange(): add an empty range");
-console.log("newRow(): add a new row");
-console.log("resetConcat(): reset the clipboard");
-console.log("includeTitle = true/false: include title above range");
-console.log("includePosition = true/false: include position in range title");
+console.log("includeTitle = true/false: include title above range, default true");
+console.log("includePosition = true/false: include position in range title, default false");
+console.log("c - concatRange(): add the current range");
+console.log("e - emptyRange(): add an empty range");
+console.log("n - newRow(): add a new row");
+console.log("r - resetConcat(): reset the clipboard");
+console.log("f - clickFirstNode(): click the first node");
+console.log("< (n times) - clickPreviousNode(n): click the nth previous node");
+console.log("# - clickNthAction(n): click the nth action (index starts at 0))");
+console.log("s - clickSolutionSelector(): click the solution selector");
+console.log("'text' - clickSolution(text): click the solution button with the given text");
+console.log("readTape(tape): read a tape of commands");
+
+// Hu SnG 20BB
+// readTape("s'20'rfc2c2c2cn<<4c<3c2cnf1c1c2cn<<3cf3cf12c2c")
+// Hu SnG 20BB + 22BB
+// readTape("s'20'rfc2c2c2cn<<4c<3c2cnf1c1c2cn<<3cf3cf12c2cns'22'fc2c2c2cn<<4c<3c2cnf1c1c2cn<<3cf3cf12c2c")
