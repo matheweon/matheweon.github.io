@@ -5,6 +5,7 @@ INSTRUCTIONS:
 3. Paste this code there and press Enter
 4. If you want to copy the range text so you can paste it in Google Sheets, press Tab or click on GTOWizard
 */
+
 // Defines array of index to hand pairs (Ex. 0: AA, 1: AKs, 13: AKo, 168: 22)
 let specialSpace = " ";
 let cards = ["A", "K", "Q", "J", "T", "9", "8", "7", "6", "5", "4", "3", "2"];
@@ -484,9 +485,14 @@ function resetConcat() {
 
 function emptyRange() {
     let emptyRange = ("\" \"\t".repeat(14) + "\n").repeat((rowOfRanges[0].match(/\n/g) || []).length);
-    rowOfRanges[currentRow] = joinRangesForSheets(rowOfRanges[currentRow], emptyRange);
-    /* let whitespace = "\" \"\n".repeat((rowOfRanges[currentRow].match(/\n/g) || []).length);
-    copyToClipboard(joinRangesForSheets(rowOfRanges[currentRow], whitespace)); */
+    
+    // Check if the current row is empty
+    if (rowOfRanges[currentRow] === "") {
+        rowOfRanges[currentRow] = emptyRange;
+    } else {
+        rowOfRanges[currentRow] = joinRangesForSheets(rowOfRanges[currentRow], emptyRange);
+    }
+    
     copyAllRows();
     if (rowOfRanges[currentRow] === "\n".repeat((rowOfRanges[0].match(/\n/g) || []).length)) {
         rangeTitles += " --> ";
@@ -529,7 +535,7 @@ function clickSolution(text) {
     Array.from(document.getElementsByClassName("gmfslctr_center")[0].querySelectorAll(".checkbox-btn")).filter(el => el.innerText === text)[0].click();
 }
 
-function readTape(tape) {
+function tape(tape) {
     // Maximize node selector bar
     let nodeSelectorBar = document.getElementsByClassName("evecrd_minimized")[0]
     if (nodeSelectorBar !== undefined) nodeSelectorBar.click();
@@ -541,10 +547,10 @@ function readTape(tape) {
     // Helper function to delay execution of function by 1s
     function delay(fn, delaySeconds = 1) {
         return new Promise(resolve => {
+            fn();
             setTimeout(() => {
-                fn();
                 resolve();
-            }, delaySeconds * 1250);
+            }, delaySeconds * delayMs);
         });
     }
 
@@ -580,11 +586,16 @@ function readTape(tape) {
                 } else if (fn === clickFirstNode) {
                     await delay(fn, 2);
                 } else if (fn) {
-                    await delay(fn);
+                    // Set delay to 0 for 'c', 'n', 'e', and 'r' commands
+                    if (['c', 'n', 'e', 'r'].includes(command)) {
+                        await delay(fn, 0);
+                    } else {
+                        await delay(fn);
+                    }
                 }
             }
         }
-        console.log("DONE");
+        console.log("%cDONE", "color: red; font-size:20px; font-weight:bold");
     })();
 }
 
@@ -610,9 +621,29 @@ console.log("< (n times) - clickPreviousNode(n): click the nth previous node");
 console.log("# - clickNthAction(n): click the nth action (index starts at 0))");
 console.log("s - clickSolutionSelector(): click the solution selector");
 console.log("'text' - clickSolution(text): click the solution button with the given text");
-console.log("readTape(tape): read a tape of commands");
+console.log("tape(tape): read a tape of commands");
 
+// Example tapes:
 // Hu SnG 20BB
-// readTape("s'20'rfc2c2c2cn<<4c<3c2cnf1c1c2cn<<3cf3cf12c2c")
+// tape("s'20'rfc2c2c2cn<<4c<3c2cnf1c1c2cn<<3cf3cf12c2c")
 // Hu SnG 20BB + 22BB
-// readTape("s'20'rfc2c2c2cn<<4c<3c2cnf1c1c2cn<<3cf3cf12c2cns'22'fc2c2c2cn<<4c<3c2cnf1c1c2cn<<3cf3cf12c2c")
+// tape("s'20'rfc2c2c2cn<<4c<3c2cnf1c1c2cn<<3cf3cf12c2cns'22'fc2c2c2cn<<4c<3c2cnf1c1c2cn<<3cf3cf12c2c")
+
+/*
+INSTRUCTIONS:
+1. Open range in GTOWizard
+2. Open the JavaScript console
+3. Paste this code there and press Enter
+4. If you want to copy the range text so you can paste it in Google Sheets, press Tab or click on GTOWizard
+*/
+
+/*
+NOTES:
+1. GTOWizard doesn't need to be in focus for tape() to continue working
+2. There's a bug right now that doesn't allow you to create an empty range as the first range
+3. Most tapes should begin with 'rf' to reset the clipboard and select the first node
+4. Tape strings can include spaces, which is helpful for readability and debugging
+*/
+
+// Change to longer if ranges aren't loading fast enough
+const delayMs = 1000;

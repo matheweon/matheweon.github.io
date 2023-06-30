@@ -1,0 +1,1589 @@
+entry,at,order
+"-- ending hand #62 --",2023-06-20T21:59:39.874Z,168729837987402
+"""Jackson @ yXr_bmZ3u2"" collected 48.62 from pot with Pair, A's on the second run  (combination: A♦, A♠, 10♦, 8♥, 5♦)",2023-06-20T21:59:39.874Z,168729837987401
+"""Phil @ G71Wfb2gET"" collected 48.62 from pot with Three of a Kind, 6's (combination: 6♥, 6♠, 6♦, K♦, Q♥)",2023-06-20T21:59:39.874Z,168729837987400
+"River (second run): 5♦, 3♣, 10♦, 8♥ [A♠]",2023-06-20T21:59:35.866Z,168729837586600
+"Turn (second run): 5♦, 3♣, 10♦ [8♥]",2023-06-20T21:59:31.862Z,168729837186200
+"Flop (second run):  [5♦, 3♣, 10♦]",2023-06-20T21:59:27.858Z,168729836785800
+"River: K♦, Q♥, 6♦, 9♠ [J♣]",2023-06-20T21:59:23.850Z,168729836385000
+"Turn: K♦, Q♥, 6♦ [9♠]",2023-06-20T21:59:19.843Z,168729835984300
+"Flop:  [K♦, Q♥, 6♦]",2023-06-20T21:59:15.841Z,168729835584100
+"""Jackson @ yXr_bmZ3u2"" shows a 2♠, A♦.",2023-06-20T21:59:11.838Z,168729835183801
+"""Phil @ G71Wfb2gET"" shows a 6♥, 6♠.",2023-06-20T21:59:11.838Z,168729835183800
+"All players in hand choose to run it twice.",2023-06-20T21:59:11.006Z,168729835100601
+"""Jackson @ yXr_bmZ3u2"" chooses to  run it twice.",2023-06-20T21:59:11.006Z,168729835100600
+"""Phil @ G71Wfb2gET"" chooses to  run it twice.",2023-06-20T21:59:10.230Z,168729835023000
+"Remaining players decide whether to run it twice.",2023-06-20T21:59:09.555Z,168729834955501
+"""Phil @ G71Wfb2gET"" calls 47.87",2023-06-20T21:59:09.555Z,168729834955500
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:59:08.391Z,168729834839100
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:58:53.296Z,168729833329600
+"""Jackson @ yXr_bmZ3u2"" raises to 47.87 and go all in",2023-06-20T21:58:52.264Z,168729833226400
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:58:46.284Z,168729832628400
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T21:58:45.375Z,168729832537500
+"""Phil @ G71Wfb2gET"" raises to 7.00",2023-06-20T21:58:43.977Z,168729832397700
+"The admin ""mp @ -DkySTil6a"" enqueued the game stop on next hand.",2023-06-20T21:58:42.772Z,168729832277200
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:58:41.417Z,168729832141700
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:58:40.471Z,168729832047100
+"""brett @ eKDH2_sDqp"" posts a big blind of 1.00",2023-06-20T21:58:38.341Z,168729831834112
+"""Don @ 6T4espke1S"" posts a small blind of 0.50",2023-06-20T21:58:38.341Z,168729831834111
+"Player stacks: #2 ""brett @ eKDH2_sDqp"" (170.64) | #3 ""Allen @ owhH9xBTTE"" (233.25) | #4 ""dp @ fAO4FRQBI9"" (200.60) | #5 ""Phil @ G71Wfb2gET"" (172.90) | #6 ""Hari @ AbiA8gvle6"" (457.50) | #7 ""mp @ -DkySTil6a"" (179.13) | #8 ""Jackson @ yXr_bmZ3u2"" (47.87) | #9 ""Don @ 6T4espke1S"" (138.88)",2023-06-20T21:58:38.341Z,168729831834102
+"-- starting hand #62 (id: zdkukbzdrg5b)  (No Limit Texas Hold'em) (dealer: ""Jackson @ yXr_bmZ3u2"") --",2023-06-20T21:58:38.341Z,168729831834101
+"The player ""Brax @ Cgqw2xJL_L"" stand up with the stack of 216.99.",2023-06-20T21:58:38.341Z,168729831834100
+"-- ending hand #61 --",2023-06-20T21:58:32.335Z,168729831233502
+"""Jackson @ yXr_bmZ3u2"" collected 7.00 from pot",2023-06-20T21:58:32.335Z,168729831233501
+"Uncalled bet of 40.87 returned to ""Jackson @ yXr_bmZ3u2""",2023-06-20T21:58:32.335Z,168729831233500
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T21:58:31.530Z,168729831153000
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:58:29.234Z,168729830923400
+"""Jackson @ yXr_bmZ3u2"" raises to 43.87 and go all in",2023-06-20T21:58:28.222Z,168729830822200
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:58:05.789Z,168729828578900
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T21:58:03.427Z,168729828342700
+"""Phil @ G71Wfb2gET"" raises to 3.00",2023-06-20T21:57:59.839Z,168729827983900
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:57:53.469Z,168729827346900
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:57:52.584Z,168729827258400
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:57:51.372Z,168729827137200
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T21:57:50.434Z,168729827043400
+"""Don @ 6T4espke1S"" posts a big blind of 1.00",2023-06-20T21:57:38.884Z,168729825888413
+"""Jackson @ yXr_bmZ3u2"" posts a small blind of 0.50",2023-06-20T21:57:38.884Z,168729825888412
+"Player stacks: #2 ""brett @ eKDH2_sDqp"" (170.64) | #3 ""Allen @ owhH9xBTTE"" (233.25) | #4 ""dp @ fAO4FRQBI9"" (200.60) | #5 ""Phil @ G71Wfb2gET"" (175.90) | #6 ""Hari @ AbiA8gvle6"" (457.50) | #7 ""mp @ -DkySTil6a"" (179.13) | #8 ""Jackson @ yXr_bmZ3u2"" (43.87) | #9 ""Don @ 6T4espke1S"" (139.88) | #10 ""Brax @ Cgqw2xJL_L"" (216.99)",2023-06-20T21:57:38.884Z,168729825888402
+"-- starting hand #61 (id: kptlluvf2mwt)  (No Limit Texas Hold'em) (dealer: ""mp @ -DkySTil6a"") --",2023-06-20T21:57:38.884Z,168729825888401
+"The player ""Marv69 @ OCMtlCKqdV"" stand up with the stack of 379.00.",2023-06-20T21:57:38.884Z,168729825888400
+"""Allen @ owhH9xBTTE"" shows a 5♣, 10♦.",2023-06-20T21:57:36.570Z,168729825657000
+"""Phil @ G71Wfb2gET"" shows a 10♥, 5♥.",2023-06-20T21:57:32.110Z,168729825211000
+"-- ending hand #60 --",2023-06-20T21:57:31.520Z,168729825152002
+"""Phil @ G71Wfb2gET"" collected 2.50 from pot",2023-06-20T21:57:31.520Z,168729825152001
+"Uncalled bet of 2.00 returned to ""Phil @ G71Wfb2gET""",2023-06-20T21:57:31.520Z,168729825152000
+"""Jackson @ yXr_bmZ3u2"" folds",2023-06-20T21:57:30.699Z,168729825069900
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:57:29.508Z,168729824950800
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T21:57:26.110Z,168729824611000
+"""Phil @ G71Wfb2gET"" raises to 3.00",2023-06-20T21:57:24.822Z,168729824482200
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:57:22.167Z,168729824216700
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:57:21.221Z,168729824122100
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:57:20.272Z,168729824027200
+"""Marv69 @ OCMtlCKqdV"" folds",2023-06-20T21:57:15.643Z,168729823564300
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T21:57:10.737Z,168729823073700
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:57:09.714Z,168729822971400
+"""Jackson @ yXr_bmZ3u2"" posts a big blind of 1.00",2023-06-20T21:56:55.361Z,168729821536113
+"""mp @ -DkySTil6a"" posts a small blind of 0.50",2023-06-20T21:56:55.361Z,168729821536112
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (379.00) | #2 ""brett @ eKDH2_sDqp"" (170.64) | #3 ""Allen @ owhH9xBTTE"" (233.25) | #4 ""dp @ fAO4FRQBI9"" (200.60) | #5 ""Phil @ G71Wfb2gET"" (174.40) | #6 ""Hari @ AbiA8gvle6"" (457.50) | #7 ""mp @ -DkySTil6a"" (179.63) | #8 ""Jackson @ yXr_bmZ3u2"" (44.87) | #9 ""Don @ 6T4espke1S"" (139.88) | #10 ""Brax @ Cgqw2xJL_L"" (216.99)",2023-06-20T21:56:55.361Z,168729821536101
+"-- starting hand #60 (id: r5zgh3leuew9)  (No Limit Texas Hold'em) (dealer: ""Hari @ AbiA8gvle6"") --",2023-06-20T21:56:55.361Z,168729821536100
+"-- ending hand #59 --",2023-06-20T21:56:49.421Z,168729820942102
+"""Brax @ Cgqw2xJL_L"" collected 7.50 from pot",2023-06-20T21:56:49.421Z,168729820942101
+"Uncalled bet of 5.00 returned to ""Brax @ Cgqw2xJL_L""",2023-06-20T21:56:49.421Z,168729820942100
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:56:48.591Z,168729820859100
+"""Brax @ Cgqw2xJL_L"" bets 5.00",2023-06-20T21:56:45.180Z,168729820518000
+"Turn: J♦, 6♥, 8♣ [Q♥]",2023-06-20T21:56:36.801Z,168729819680100
+"""brett @ eKDH2_sDqp"" checks",2023-06-20T21:56:35.990Z,168729819599000
+"""Brax @ Cgqw2xJL_L"" checks",2023-06-20T21:56:31.609Z,168729819160900
+"Flop:  [J♦, 6♥, 8♣]",2023-06-20T21:56:25.780Z,168729818578000
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:56:24.935Z,168729818493500
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T21:56:09.065Z,168729816906500
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T21:56:08.170Z,168729816817000
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:56:07.198Z,168729816719800
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:56:06.207Z,168729816620700
+"""brett @ eKDH2_sDqp"" calls 3.00",2023-06-20T21:56:04.142Z,168729816414200
+"""Marv69 @ OCMtlCKqdV"" folds",2023-06-20T21:56:02.477Z,168729816247700
+"""Brax @ Cgqw2xJL_L"" raises to 3.00",2023-06-20T21:55:46.621Z,168729814662100
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:55:41.812Z,168729814181200
+"""Jackson @ yXr_bmZ3u2"" folds",2023-06-20T21:55:40.867Z,168729814086700
+"""mp @ -DkySTil6a"" posts a big blind of 1.00",2023-06-20T21:55:38.821Z,168729813882113
+"""Hari @ AbiA8gvle6"" posts a small blind of 0.50",2023-06-20T21:55:38.821Z,168729813882112
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (379.00) | #2 ""brett @ eKDH2_sDqp"" (173.64) | #3 ""Allen @ owhH9xBTTE"" (233.25) | #4 ""dp @ fAO4FRQBI9"" (200.60) | #5 ""Phil @ G71Wfb2gET"" (174.40) | #6 ""Hari @ AbiA8gvle6"" (458.00) | #7 ""mp @ -DkySTil6a"" (180.63) | #8 ""Jackson @ yXr_bmZ3u2"" (44.87) | #9 ""Don @ 6T4espke1S"" (139.88) | #10 ""Brax @ Cgqw2xJL_L"" (212.49)",2023-06-20T21:55:38.821Z,168729813882101
+"-- starting hand #59 (id: nrmylty5fvls)  (No Limit Texas Hold'em) (dealer: ""Phil @ G71Wfb2gET"") --",2023-06-20T21:55:38.821Z,168729813882100
+"-- ending hand #58 --",2023-06-20T21:55:35.822Z,168729813582202
+"""Hari @ AbiA8gvle6"" collected 1.00 from pot",2023-06-20T21:55:35.822Z,168729813582201
+"Uncalled bet of 0.50 returned to ""Hari @ AbiA8gvle6""",2023-06-20T21:55:35.822Z,168729813582200
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T21:55:34.987Z,168729813498700
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:55:34.037Z,168729813403700
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:55:33.038Z,168729813303800
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:55:32.033Z,168729813203300
+"""Marv69 @ OCMtlCKqdV"" folds",2023-06-20T21:55:26.483Z,168729812648300
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T21:55:10.615Z,168729811061500
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:55:09.622Z,168729810962200
+"""Jackson @ yXr_bmZ3u2"" folds",2023-06-20T21:55:06.082Z,168729810608200
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:55:04.218Z,168729810421800
+"""Hari @ AbiA8gvle6"" posts a big blind of 1.00",2023-06-20T21:55:01.869Z,168729810186913
+"""Phil @ G71Wfb2gET"" posts a small blind of 0.50",2023-06-20T21:55:01.869Z,168729810186912
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (379.00) | #2 ""brett @ eKDH2_sDqp"" (173.64) | #3 ""Allen @ owhH9xBTTE"" (233.25) | #4 ""dp @ fAO4FRQBI9"" (200.60) | #5 ""Phil @ G71Wfb2gET"" (174.90) | #6 ""Hari @ AbiA8gvle6"" (457.50) | #7 ""mp @ -DkySTil6a"" (180.63) | #8 ""Jackson @ yXr_bmZ3u2"" (44.87) | #9 ""Don @ 6T4espke1S"" (139.88) | #10 ""Brax @ Cgqw2xJL_L"" (212.49)",2023-06-20T21:55:01.869Z,168729810186901
+"-- starting hand #58 (id: ogbc6y50nwsq)  (No Limit Texas Hold'em) (dealer: ""dp @ fAO4FRQBI9"") --",2023-06-20T21:55:01.869Z,168729810186900
+"-- ending hand #57 --",2023-06-20T21:54:55.945Z,168729809594502
+"""Marv69 @ OCMtlCKqdV"" collected 7.50 from pot",2023-06-20T21:54:55.945Z,168729809594501
+"Uncalled bet of 8.00 returned to ""Marv69 @ OCMtlCKqdV""",2023-06-20T21:54:55.945Z,168729809594500
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T21:54:55.138Z,168729809513800
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T21:54:53.508Z,168729809350800
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:54:52.444Z,168729809244400
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:54:51.495Z,168729809149500
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:54:50.555Z,168729809055500
+"""Marv69 @ OCMtlCKqdV"" raises to 11.00",2023-06-20T21:54:49.523Z,168729808952300
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T21:54:44.623Z,168729808462300
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:54:43.637Z,168729808363700
+"""Jackson @ yXr_bmZ3u2"" folds",2023-06-20T21:54:42.661Z,168729808266100
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:54:41.650Z,168729808165000
+"""Hari @ AbiA8gvle6"" raises to 3.00",2023-06-20T21:54:40.709Z,168729808070900
+"""Phil @ G71Wfb2gET"" posts a big blind of 1.00",2023-06-20T21:54:36.119Z,168729807611913
+"""dp @ fAO4FRQBI9"" posts a small blind of 0.50",2023-06-20T21:54:36.119Z,168729807611912
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (374.50) | #2 ""brett @ eKDH2_sDqp"" (173.64) | #3 ""Allen @ owhH9xBTTE"" (233.25) | #4 ""dp @ fAO4FRQBI9"" (201.10) | #5 ""Phil @ G71Wfb2gET"" (175.90) | #6 ""Hari @ AbiA8gvle6"" (460.50) | #7 ""mp @ -DkySTil6a"" (180.63) | #8 ""Jackson @ yXr_bmZ3u2"" (44.87) | #9 ""Don @ 6T4espke1S"" (139.88) | #10 ""Brax @ Cgqw2xJL_L"" (212.49)",2023-06-20T21:54:36.119Z,168729807611901
+"-- starting hand #57 (id: lwodduw9npfa)  (No Limit Texas Hold'em) (dealer: ""Allen @ owhH9xBTTE"") --",2023-06-20T21:54:36.119Z,168729807611900
+"-- ending hand #56 --",2023-06-20T21:54:30.171Z,168729807017102
+"""brett @ eKDH2_sDqp"" collected 10.00 from pot",2023-06-20T21:54:30.171Z,168729807017101
+"Uncalled bet of 6.50 returned to ""brett @ eKDH2_sDqp""",2023-06-20T21:54:30.171Z,168729807017100
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T21:54:29.335Z,168729806933500
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:54:28.375Z,168729806837500
+"""brett @ eKDH2_sDqp"" bets 6.50",2023-06-20T21:54:24.089Z,168729806408900
+"""Brax @ Cgqw2xJL_L"" checks",2023-06-20T21:54:18.674Z,168729805867400
+"""Allen @ owhH9xBTTE"" checks",2023-06-20T21:54:14.771Z,168729805477100
+"Turn: A♦, 5♠, 2♥ [5♣]",2023-06-20T21:54:10.778Z,168729805077800
+"""brett @ eKDH2_sDqp"" checks",2023-06-20T21:54:09.926Z,168729804992600
+"""Brax @ Cgqw2xJL_L"" checks",2023-06-20T21:54:06.376Z,168729804637600
+"""Allen @ owhH9xBTTE"" checks",2023-06-20T21:53:59.351Z,168729803935100
+"Flop:  [A♦, 5♠, 2♥]",2023-06-20T21:53:56.686Z,168729803668600
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:53:55.821Z,168729803582100
+"""Allen @ owhH9xBTTE"" calls 3.00",2023-06-20T21:53:54.921Z,168729803492100
+"""brett @ eKDH2_sDqp"" calls 3.00",2023-06-20T21:53:53.199Z,168729803319900
+"""Marv69 @ OCMtlCKqdV"" folds",2023-06-20T21:53:51.209Z,168729803120900
+"""Brax @ Cgqw2xJL_L"" raises to 3.00",2023-06-20T21:53:50.276Z,168729803027600
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:53:45.187Z,168729802518700
+"""Jackson @ yXr_bmZ3u2"" folds",2023-06-20T21:52:29.336Z,168729794933600
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:52:28.372Z,168729794837200
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T21:52:27.504Z,168729794750400
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T21:52:25.564Z,168729794556400
+"""dp @ fAO4FRQBI9"" posts a big blind of 1.00",2023-06-20T21:52:22.700Z,168729794270013
+"""Allen @ owhH9xBTTE"" posts a small blind of 0.50",2023-06-20T21:52:22.700Z,168729794270012
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (374.50) | #2 ""brett @ eKDH2_sDqp"" (166.64) | #3 ""Allen @ owhH9xBTTE"" (236.25) | #4 ""dp @ fAO4FRQBI9"" (202.10) | #5 ""Phil @ G71Wfb2gET"" (175.90) | #6 ""Hari @ AbiA8gvle6"" (460.50) | #7 ""mp @ -DkySTil6a"" (180.63) | #8 ""Jackson @ yXr_bmZ3u2"" (44.87) | #9 ""Don @ 6T4espke1S"" (139.88) | #10 ""Brax @ Cgqw2xJL_L"" (215.49)",2023-06-20T21:52:22.700Z,168729794270001
+"-- starting hand #56 (id: 8t3dxy5dz0mz)  (No Limit Texas Hold'em) (dealer: ""brett @ eKDH2_sDqp"") --",2023-06-20T21:52:22.700Z,168729794270000
+"-- ending hand #55 --",2023-06-20T21:52:19.770Z,168729793977002
+"""Brax @ Cgqw2xJL_L"" collected 41.25 from pot",2023-06-20T21:52:19.770Z,168729793977001
+"Uncalled bet of 20.00 returned to ""Brax @ Cgqw2xJL_L""",2023-06-20T21:52:19.770Z,168729793977000
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:52:18.939Z,168729793893900
+"""Brax @ Cgqw2xJL_L"" bets 20.00",2023-06-20T21:52:13.419Z,168729793341900
+"""Allen @ owhH9xBTTE"" checks",2023-06-20T21:52:02.542Z,168729792254200
+"River: 9♦, 9♥, K♦, 3♥ [8♣]",2023-06-20T21:52:00.946Z,168729792094600
+"""Allen @ owhH9xBTTE"" calls 12.00",2023-06-20T21:52:00.124Z,168729792012400
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:51:57.953Z,168729791795300
+"""Brax @ Cgqw2xJL_L"" bets 12.00",2023-06-20T21:51:55.032Z,168729791503200
+"""Allen @ owhH9xBTTE"" checks",2023-06-20T21:51:44.751Z,168729790475100
+"""brett @ eKDH2_sDqp"" checks",2023-06-20T21:51:43.574Z,168729790357400
+"Turn: 9♦, 9♥, K♦ [3♥]",2023-06-20T21:51:42.025Z,168729790202500
+"""Allen @ owhH9xBTTE"" calls 2.75",2023-06-20T21:51:41.212Z,168729790121200
+"""brett @ eKDH2_sDqp"" calls 2.75",2023-06-20T21:51:39.700Z,168729789970000
+"""Brax @ Cgqw2xJL_L"" bets 2.75",2023-06-20T21:51:37.780Z,168729789778000
+"""Allen @ owhH9xBTTE"" checks",2023-06-20T21:51:31.202Z,168729789120200
+"""brett @ eKDH2_sDqp"" checks",2023-06-20T21:51:30.286Z,168729789028600
+"Flop:  [9♦, 9♥, K♦]",2023-06-20T21:51:28.456Z,168729788845600
+"""Allen @ owhH9xBTTE"" calls 3.00",2023-06-20T21:51:27.599Z,168729788759900
+"""brett @ eKDH2_sDqp"" calls 3.00",2023-06-20T21:51:20.804Z,168729788080400
+"""Marv69 @ OCMtlCKqdV"" folds",2023-06-20T21:51:18.111Z,168729787811100
+"""Brax @ Cgqw2xJL_L"" raises to 3.00",2023-06-20T21:51:17.141Z,168729787714100
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:51:13.409Z,168729787340900
+"""Jackson @ yXr_bmZ3u2"" folds",2023-06-20T21:51:12.535Z,168729787253500
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:51:11.448Z,168729787144800
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T21:51:10.541Z,168729787054100
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T21:51:07.803Z,168729786780300
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:50:51.952Z,168729785195200
+"""Allen @ owhH9xBTTE"" posts a big blind of 1.00",2023-06-20T21:50:50.317Z,168729785031713
+"""brett @ eKDH2_sDqp"" posts a small blind of 0.50",2023-06-20T21:50:50.317Z,168729785031712
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (374.50) | #2 ""brett @ eKDH2_sDqp"" (172.39) | #3 ""Allen @ owhH9xBTTE"" (254.00) | #4 ""dp @ fAO4FRQBI9"" (202.10) | #5 ""Phil @ G71Wfb2gET"" (175.90) | #6 ""Hari @ AbiA8gvle6"" (460.50) | #7 ""mp @ -DkySTil6a"" (180.63) | #8 ""Jackson @ yXr_bmZ3u2"" (44.87) | #9 ""Don @ 6T4espke1S"" (139.88) | #10 ""Brax @ Cgqw2xJL_L"" (191.99)",2023-06-20T21:50:50.317Z,168729785031701
+"-- starting hand #55 (id: ju1wwbjr6gkd)  (No Limit Texas Hold'em) (dealer: ""Marv69 @ OCMtlCKqdV"") --",2023-06-20T21:50:50.317Z,168729785031700
+"-- ending hand #54 --",2023-06-20T21:50:47.386Z,168729784738602
+"""brett @ eKDH2_sDqp"" collected 8.50 from pot",2023-06-20T21:50:47.386Z,168729784738601
+"Uncalled bet of 5.00 returned to ""brett @ eKDH2_sDqp""",2023-06-20T21:50:47.386Z,168729784738600
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T21:50:46.529Z,168729784652900
+"""brett @ eKDH2_sDqp"" bets 5.00",2023-06-20T21:50:45.651Z,168729784565100
+"River: 7♥, 8♥, 4♠, 8♣ [5♥]",2023-06-20T21:50:31.145Z,168729783114500
+"""Phil @ G71Wfb2gET"" checks",2023-06-20T21:50:30.312Z,168729783031200
+"""brett @ eKDH2_sDqp"" checks",2023-06-20T21:50:23.859Z,168729782385900
+"Turn: 7♥, 8♥, 4♠ [8♣]",2023-06-20T21:50:20.250Z,168729782025000
+"""brett @ eKDH2_sDqp"" calls 2.00",2023-06-20T21:50:19.375Z,168729781937500
+"""Phil @ G71Wfb2gET"" bets 2.00",2023-06-20T21:50:16.956Z,168729781695600
+"""brett @ eKDH2_sDqp"" checks",2023-06-20T21:50:14.544Z,168729781454400
+"Flop:  [7♥, 8♥, 4♠]",2023-06-20T21:50:13.037Z,168729781303700
+"""brett @ eKDH2_sDqp"" calls 2.00",2023-06-20T21:50:12.131Z,168729781213100
+"""Marv69 @ OCMtlCKqdV"" folds",2023-06-20T21:50:04.179Z,168729780417900
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T21:50:03.199Z,168729780319900
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:50:02.141Z,168729780214100
+"""Jackson @ yXr_bmZ3u2"" folds",2023-06-20T21:50:01.179Z,168729780117900
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:49:59.222Z,168729779922200
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T21:49:58.369Z,168729779836900
+"""Phil @ G71Wfb2gET"" raises to 2.00",2023-06-20T21:49:56.913Z,168729779691300
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:49:52.921Z,168729779292100
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:49:51.921Z,168729779192100
+"""brett @ eKDH2_sDqp"" posts a big blind of 1.00",2023-06-20T21:49:46.578Z,168729778657813
+"""Marv69 @ OCMtlCKqdV"" posts a small blind of 0.50",2023-06-20T21:49:46.578Z,168729778657812
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (375.00) | #2 ""brett @ eKDH2_sDqp"" (167.89) | #3 ""Allen @ owhH9xBTTE"" (254.00) | #4 ""dp @ fAO4FRQBI9"" (202.10) | #5 ""Phil @ G71Wfb2gET"" (179.90) | #6 ""Hari @ AbiA8gvle6"" (460.50) | #7 ""mp @ -DkySTil6a"" (180.63) | #8 ""Jackson @ yXr_bmZ3u2"" (44.87) | #9 ""Don @ 6T4espke1S"" (139.88) | #10 ""Brax @ Cgqw2xJL_L"" (191.99)",2023-06-20T21:49:46.578Z,168729778657801
+"-- starting hand #54 (id: 0p4owktgy9xt)  (No Limit Texas Hold'em) (dealer: ""Brax @ Cgqw2xJL_L"") --",2023-06-20T21:49:46.578Z,168729778657800
+"-- ending hand #53 --",2023-06-20T21:49:38.569Z,168729777856902
+"""Jackson @ yXr_bmZ3u2"" collected 44.87 from pot with Three of a Kind, A's on the second run  (combination: A♥, A♠, A♣, K♥, Q♠)",2023-06-20T21:49:38.569Z,168729777856901
+"""mp @ -DkySTil6a"" collected 44.87 from pot with Three of a Kind, 7's (combination: 7♣, 7♠, 7♦, K♦, 9♥)",2023-06-20T21:49:38.569Z,168729777856900
+"River (second run): A♠, 6♠, K♥, A♣ [8♦]",2023-06-20T21:49:34.516Z,168729777451600
+"Turn (second run): A♠, 6♠, K♥ [A♣]",2023-06-20T21:49:30.503Z,168729777050300
+"Flop (second run):  [A♠, 6♠, K♥]",2023-06-20T21:49:26.499Z,168729776649900
+"River: 4♠, 7♦, 9♥, 5♣ [K♦]",2023-06-20T21:49:22.495Z,168729776249500
+"Turn: 4♠, 7♦, 9♥ [5♣]",2023-06-20T21:49:18.417Z,168729775841700
+"Flop:  [4♠, 7♦, 9♥]",2023-06-20T21:49:14.413Z,168729775441300
+"""Jackson @ yXr_bmZ3u2"" shows a Q♠, A♥.",2023-06-20T21:49:10.409Z,168729775040901
+"""mp @ -DkySTil6a"" shows a 7♣, 7♠.",2023-06-20T21:49:10.409Z,168729775040900
+"All players in hand choose to run it twice.",2023-06-20T21:49:09.557Z,168729774955701
+"""Jackson @ yXr_bmZ3u2"" chooses to  run it twice.",2023-06-20T21:49:09.557Z,168729774955700
+"""mp @ -DkySTil6a"" chooses to  run it twice.",2023-06-20T21:49:08.951Z,168729774895100
+"Remaining players decide whether to run it twice.",2023-06-20T21:49:07.991Z,168729774799101
+"""mp @ -DkySTil6a"" calls 44.12",2023-06-20T21:49:07.991Z,168729774799100
+"""Marv69 @ OCMtlCKqdV"" folds",2023-06-20T21:49:04.048Z,168729774404800
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T21:49:02.947Z,168729774294700
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:49:02.024Z,168729774202400
+"""Jackson @ yXr_bmZ3u2"" raises to 44.12 and go all in",2023-06-20T21:49:01.107Z,168729774110700
+"""mp @ -DkySTil6a"" raises to 3.50",2023-06-20T21:48:44.520Z,168729772452000
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T21:48:42.707Z,168729772270700
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T21:48:39.765Z,168729771976500
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:48:36.812Z,168729771681200
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:48:35.879Z,168729771587900
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:48:34.897Z,168729771489700
+"""Marv69 @ OCMtlCKqdV"" posts a big blind of 1.00",2023-06-20T21:48:22.260Z,168729770226013
+"""Brax @ Cgqw2xJL_L"" posts a small blind of 0.50",2023-06-20T21:48:22.260Z,168729770226012
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (376.00) | #2 ""brett @ eKDH2_sDqp"" (167.89) | #3 ""Allen @ owhH9xBTTE"" (254.00) | #4 ""dp @ fAO4FRQBI9"" (202.10) | #5 ""Phil @ G71Wfb2gET"" (179.90) | #6 ""Hari @ AbiA8gvle6"" (460.50) | #7 ""mp @ -DkySTil6a"" (179.88) | #8 ""Jackson @ yXr_bmZ3u2"" (44.12) | #9 ""Don @ 6T4espke1S"" (139.88) | #10 ""Brax @ Cgqw2xJL_L"" (192.49)",2023-06-20T21:48:22.260Z,168729770226001
+"-- starting hand #53 (id: qgzqrx5a8vnv)  (No Limit Texas Hold'em) (dealer: ""Don @ 6T4espke1S"") --",2023-06-20T21:48:22.260Z,168729770226000
+"-- ending hand #52 --",2023-06-20T21:48:16.216Z,168729769621603
+"""Brax @ Cgqw2xJL_L"" shows a 3♠, 10♠.",2023-06-20T21:48:16.216Z,168729769621602
+"""Jackson @ yXr_bmZ3u2"" collected 14.50 from pot with Two Pair, Q's & 10's (combination: Q♠, Q♥, 10♥, 10♦, K♠)",2023-06-20T21:48:16.216Z,168729769621601
+"""Jackson @ yXr_bmZ3u2"" shows a K♠, 10♥.",2023-06-20T21:48:16.216Z,168729769621600
+"""Jackson @ yXr_bmZ3u2"" checks",2023-06-20T21:48:15.371Z,168729769537100
+"""Brax @ Cgqw2xJL_L"" checks",2023-06-20T21:48:12.741Z,168729769274100
+"River: 5♥, 8♥, 10♦, Q♠ [Q♥]",2023-06-20T21:48:10.522Z,168729769052200
+"""Jackson @ yXr_bmZ3u2"" calls 4.00",2023-06-20T21:48:09.688Z,168729768968800
+"""Brax @ Cgqw2xJL_L"" bets 4.00",2023-06-20T21:48:08.369Z,168729768836900
+"Turn: 5♥, 8♥, 10♦ [Q♠]",2023-06-20T21:47:56.308Z,168729767630800
+"""Jackson @ yXr_bmZ3u2"" calls 2.00",2023-06-20T21:47:55.468Z,168729767546800
+"""Brax @ Cgqw2xJL_L"" bets 2.00",2023-06-20T21:47:51.871Z,168729767187100
+"Flop:  [5♥, 8♥, 10♦]",2023-06-20T21:47:44.353Z,168729766435300
+"""Brax @ Cgqw2xJL_L"" checks",2023-06-20T21:47:43.516Z,168729766351600
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:47:30.272Z,168729765027200
+"""Jackson @ yXr_bmZ3u2"" calls 1.00",2023-06-20T21:47:29.360Z,168729764936000
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:47:26.181Z,168729764618100
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T21:47:25.304Z,168729764530400
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T21:47:24.383Z,168729764438300
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:47:23.204Z,168729764320400
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:47:22.291Z,168729764229100
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:47:21.317Z,168729764131700
+"""Marv69 @ OCMtlCKqdV"" folds",2023-06-20T21:47:20.370Z,168729764037000
+"""Brax @ Cgqw2xJL_L"" posts a big blind of 1.00",2023-06-20T21:47:09.748Z,168729762974813
+"""Don @ 6T4espke1S"" posts a small blind of 0.50",2023-06-20T21:47:09.748Z,168729762974812
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (376.00) | #2 ""brett @ eKDH2_sDqp"" (167.89) | #3 ""Allen @ owhH9xBTTE"" (254.00) | #4 ""dp @ fAO4FRQBI9"" (202.10) | #5 ""Phil @ G71Wfb2gET"" (179.90) | #6 ""Hari @ AbiA8gvle6"" (460.50) | #7 ""mp @ -DkySTil6a"" (179.88) | #8 ""Jackson @ yXr_bmZ3u2"" (36.62) | #9 ""Don @ 6T4espke1S"" (140.38) | #10 ""Brax @ Cgqw2xJL_L"" (199.49)",2023-06-20T21:47:09.748Z,168729762974801
+"-- starting hand #52 (id: 4gsukzdhweuf)  (No Limit Texas Hold'em) (dealer: ""Jackson @ yXr_bmZ3u2"") --",2023-06-20T21:47:09.748Z,168729762974800
+"-- ending hand #51 --",2023-06-20T21:47:03.739Z,168729762373902
+"""Phil @ G71Wfb2gET"" collected 39.00 from pot with Pair, A's (combination: A♣, A♥, K♦, 9♦, 8♦)",2023-06-20T21:47:03.739Z,168729762373901
+"""Phil @ G71Wfb2gET"" shows a 8♦, K♦.",2023-06-20T21:47:03.739Z,168729762373900
+"""Hari @ AbiA8gvle6"" checks",2023-06-20T21:47:02.934Z,168729762293400
+"""Phil @ G71Wfb2gET"" checks",2023-06-20T21:46:52.491Z,168729761249100
+"River: A♣, A♥, 9♦, 3♦ [2♠]",2023-06-20T21:46:51.450Z,168729761145000
+"""Phil @ G71Wfb2gET"" calls 9.75",2023-06-20T21:46:50.619Z,168729761061900
+"""Hari @ AbiA8gvle6"" bets 9.75",2023-06-20T21:46:48.877Z,168729760887700
+"""Phil @ G71Wfb2gET"" checks",2023-06-20T21:46:42.022Z,168729760202200
+"Turn: A♣, A♥, 9♦ [3♦]",2023-06-20T21:46:40.216Z,168729760021600
+"""Hari @ AbiA8gvle6"" checks",2023-06-20T21:46:39.361Z,168729759936100
+"""Phil @ G71Wfb2gET"" checks",2023-06-20T21:46:33.869Z,168729759386900
+"Flop:  [A♣, A♥, 9♦]",2023-06-20T21:46:32.614Z,168729759261400
+"""Phil @ G71Wfb2gET"" calls 9.00",2023-06-20T21:46:31.715Z,168729759171500
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:46:28.840Z,168729758884000
+"""Jackson @ yXr_bmZ3u2"" folds",2023-06-20T21:46:27.961Z,168729758796100
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:46:26.134Z,168729758613400
+"""Hari @ AbiA8gvle6"" raises to 9.00",2023-06-20T21:46:25.181Z,168729758518100
+"""Phil @ G71Wfb2gET"" raises to 3.00",2023-06-20T21:46:20.067Z,168729758006700
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:46:17.983Z,168729757798300
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:46:09.974Z,168729756997400
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:46:08.789Z,168729756878900
+"""Marv69 @ OCMtlCKqdV"" folds",2023-06-20T21:46:03.188Z,168729756318800
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T21:45:47.326Z,168729754732600
+"""Don @ 6T4espke1S"" posts a big blind of 1.00",2023-06-20T21:45:45.498Z,168729754549813
+"""Jackson @ yXr_bmZ3u2"" posts a small blind of 0.50",2023-06-20T21:45:45.498Z,168729754549812
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (376.00) | #2 ""brett @ eKDH2_sDqp"" (167.89) | #3 ""Allen @ owhH9xBTTE"" (254.00) | #4 ""dp @ fAO4FRQBI9"" (202.10) | #5 ""Phil @ G71Wfb2gET"" (159.65) | #6 ""Hari @ AbiA8gvle6"" (479.25) | #7 ""mp @ -DkySTil6a"" (179.88) | #8 ""Jackson @ yXr_bmZ3u2"" (37.12) | #9 ""Don @ 6T4espke1S"" (141.38) | #10 ""Brax @ Cgqw2xJL_L"" (199.49)",2023-06-20T21:45:45.498Z,168729754549801
+"-- starting hand #51 (id: 4mcgizg2u6rw)  (No Limit Texas Hold'em) (dealer: ""mp @ -DkySTil6a"") --",2023-06-20T21:45:45.498Z,168729754549800
+"""mp @ -DkySTil6a"" shows a 7♣, 10♣.",2023-06-20T21:45:40.300Z,168729754030000
+"""brett @ eKDH2_sDqp"" shows a 2♥, 3♠.",2023-06-20T21:45:39.827Z,168729753982700
+"""Marv69 @ OCMtlCKqdV"" shows a 5♣, 5♠.",2023-06-20T21:45:36.484Z,168729753648400
+"-- ending hand #50 --",2023-06-20T21:45:35.931Z,168729753593102
+"""Don @ 6T4espke1S"" collected 37.12 from pot with Three of a Kind, K's on the second run  (combination: K♥, K♠, K♦, Q♠, 8♥)",2023-06-20T21:45:35.931Z,168729753593101
+"""Jackson @ yXr_bmZ3u2"" collected 37.12 from pot with Three of a Kind, 9's (combination: 9♦, 9♥, 9♠, Q♥, 8♦)",2023-06-20T21:45:35.931Z,168729753593100
+"River (second run): K♠, 8♥, 5♥, 3♥ [K♦]",2023-06-20T21:45:31.927Z,168729753192700
+"Turn (second run): K♠, 8♥, 5♥ [3♥]",2023-06-20T21:45:27.889Z,168729752788900
+"Flop (second run):  [K♠, 8♥, 5♥]",2023-06-20T21:45:23.872Z,168729752387200
+"River: 6♦, 5♦, 8♦, 9♠ [Q♥]",2023-06-20T21:45:19.865Z,168729751986500
+"Turn: 6♦, 5♦, 8♦ [9♠]",2023-06-20T21:45:15.826Z,168729751582600
+"Flop:  [6♦, 5♦, 8♦]",2023-06-20T21:45:11.796Z,168729751179600
+"""Don @ 6T4espke1S"" shows a K♥, Q♠.",2023-06-20T21:45:07.785Z,168729750778501
+"""Jackson @ yXr_bmZ3u2"" shows a 9♦, 9♥.",2023-06-20T21:45:07.785Z,168729750778500
+"All players in hand choose to run it twice.",2023-06-20T21:45:06.976Z,168729750697601
+"""Don @ 6T4espke1S"" chooses to  run it twice.",2023-06-20T21:45:06.976Z,168729750697600
+"""Jackson @ yXr_bmZ3u2"" chooses to  run it twice.",2023-06-20T21:45:04.749Z,168729750474900
+"Remaining players decide whether to run it twice.",2023-06-20T21:45:03.764Z,168729750376401
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:45:03.764Z,168729750376400
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:45:02.901Z,168729750290100
+"""Marv69 @ OCMtlCKqdV"" folds",2023-06-20T21:45:00.653Z,168729750065300
+"""Don @ 6T4espke1S"" calls 32.62",2023-06-20T21:44:51.654Z,168729749165400
+"""Jackson @ yXr_bmZ3u2"" raises to 32.62 and go all in",2023-06-20T21:44:27.958Z,168729746795800
+"""mp @ -DkySTil6a"" calls 3.00",2023-06-20T21:44:16.822Z,168729745682200
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T21:44:15.690Z,168729745569000
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T21:44:12.284Z,168729745228400
+"""dp @ fAO4FRQBI9"" calls 3.00",2023-06-20T21:44:11.328Z,168729745132800
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:44:03.883Z,168729744388300
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:44:02.870Z,168729744287000
+"""Marv69 @ OCMtlCKqdV"" calls 3.00",2023-06-20T21:43:57.864Z,168729743786400
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T21:43:51.529Z,168729743152900
+"""Don @ 6T4espke1S"" raises to 3.00",2023-06-20T21:43:50.620Z,168729743062000
+"""Jackson @ yXr_bmZ3u2"" posts a big blind of 1.00",2023-06-20T21:43:44.552Z,168729742455213
+"""mp @ -DkySTil6a"" posts a small blind of 0.50",2023-06-20T21:43:44.552Z,168729742455212
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (379.00) | #2 ""brett @ eKDH2_sDqp"" (167.89) | #3 ""Allen @ owhH9xBTTE"" (254.00) | #4 ""dp @ fAO4FRQBI9"" (205.10) | #5 ""Phil @ G71Wfb2gET"" (159.65) | #6 ""Hari @ AbiA8gvle6"" (479.25) | #7 ""mp @ -DkySTil6a"" (182.88) | #8 ""Jackson @ yXr_bmZ3u2"" (32.62) | #9 ""Don @ 6T4espke1S"" (136.88) | #10 ""Brax @ Cgqw2xJL_L"" (199.49)",2023-06-20T21:43:44.552Z,168729742455201
+"-- starting hand #50 (id: a25dgkn509fd)  (No Limit Texas Hold'em) (dealer: ""Hari @ AbiA8gvle6"") --",2023-06-20T21:43:44.552Z,168729742455200
+"""brett @ eKDH2_sDqp"" shows a 4♣, 2♦.",2023-06-20T21:43:40.845Z,168729742084500
+"""Phil @ G71Wfb2gET"" shows a 9♣, 5♣.",2023-06-20T21:43:38.768Z,168729741876800
+"-- ending hand #49 --",2023-06-20T21:43:37.211Z,168729741721102
+"""Marv69 @ OCMtlCKqdV"" collected 69.50 from pot",2023-06-20T21:43:37.211Z,168729741721101
+"Uncalled bet of 20.00 returned to ""Marv69 @ OCMtlCKqdV""",2023-06-20T21:43:37.211Z,168729741721100
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T21:43:36.367Z,168729741636700
+"""Marv69 @ OCMtlCKqdV"" bets 20.00",2023-06-20T21:43:35.219Z,168729741521900
+"Flop:  [J♥, J♦, 2♣]",2023-06-20T21:43:24.625Z,168729740462500
+"""Phil @ G71Wfb2gET"" calls 34.00",2023-06-20T21:43:23.807Z,168729740380700
+"""Marv69 @ OCMtlCKqdV"" raises to 34.00",2023-06-20T21:43:21.637Z,168729740163700
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:43:10.783Z,168729739078300
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T21:43:09.918Z,168729738991800
+"""Phil @ G71Wfb2gET"" raises to 9.00",2023-06-20T21:43:07.251Z,168729738725100
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:43:04.341Z,168729738434100
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:43:03.384Z,168729738338400
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:43:02.236Z,168729738223600
+"""Marv69 @ OCMtlCKqdV"" raises to 3.00",2023-06-20T21:43:01.330Z,168729738133000
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T21:42:55.138Z,168729737513800
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:42:54.153Z,168729737415300
+"""Jackson @ yXr_bmZ3u2"" folds",2023-06-20T21:42:49.731Z,168729736973100
+"""mp @ -DkySTil6a"" posts a big blind of 1.00",2023-06-20T21:42:47.401Z,168729736740113
+"""Hari @ AbiA8gvle6"" posts a small blind of 0.50",2023-06-20T21:42:47.401Z,168729736740112
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (343.50) | #2 ""brett @ eKDH2_sDqp"" (167.89) | #3 ""Allen @ owhH9xBTTE"" (254.00) | #4 ""dp @ fAO4FRQBI9"" (205.10) | #5 ""Phil @ G71Wfb2gET"" (193.65) | #6 ""Hari @ AbiA8gvle6"" (479.75) | #7 ""mp @ -DkySTil6a"" (183.88) | #8 ""Jackson @ yXr_bmZ3u2"" (32.62) | #9 ""Don @ 6T4espke1S"" (136.88) | #10 ""Brax @ Cgqw2xJL_L"" (199.49)",2023-06-20T21:42:47.401Z,168729736740101
+"-- starting hand #49 (id: 2bmnssnesuz1)  (No Limit Texas Hold'em) (dealer: ""Phil @ G71Wfb2gET"") --",2023-06-20T21:42:47.401Z,168729736740100
+"-- ending hand #48 --",2023-06-20T21:42:41.371Z,168729736137103
+"""Allen @ owhH9xBTTE"" shows a 7♥, A♥.",2023-06-20T21:42:41.371Z,168729736137102
+"""mp @ -DkySTil6a"" collected 141.00 from pot with Two Pair, 10's & 8's (combination: 10♦, 10♣, 8♥, 8♠, K♣)",2023-06-20T21:42:41.371Z,168729736137101
+"""mp @ -DkySTil6a"" shows a 10♦, K♣.",2023-06-20T21:42:41.371Z,168729736137100
+"""mp @ -DkySTil6a"" calls 48.00",2023-06-20T21:42:40.499Z,168729736049900
+"""Allen @ owhH9xBTTE"" bets 48.00",2023-06-20T21:42:15.271Z,168729733527100
+"""mp @ -DkySTil6a"" checks",2023-06-20T21:42:07.302Z,168729732730200
+"River: 10♣, 9♦, 8♥, 4♣ [8♠]",2023-06-20T21:42:05.915Z,168729732591500
+"""Allen @ owhH9xBTTE"" calls 13.50",2023-06-20T21:42:05.092Z,168729732509200
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:42:01.852Z,168729732185200
+"""mp @ -DkySTil6a"" bets 13.50",2023-06-20T21:41:57.043Z,168729731704300
+"Turn: 10♣, 9♦, 8♥ [4♣]",2023-06-20T21:41:54.155Z,168729731415500
+"""Allen @ owhH9xBTTE"" checks",2023-06-20T21:41:53.322Z,168729731332200
+"""brett @ eKDH2_sDqp"" checks",2023-06-20T21:41:49.835Z,168729730983500
+"""mp @ -DkySTil6a"" checks",2023-06-20T21:41:47.622Z,168729730762200
+"Flop:  [10♣, 9♦, 8♥]",2023-06-20T21:41:46.247Z,168729730624700
+"""brett @ eKDH2_sDqp"" calls 5.50",2023-06-20T21:41:45.401Z,168729730540100
+"""mp @ -DkySTil6a"" calls 5.50",2023-06-20T21:41:44.038Z,168729730403800
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T21:41:42.431Z,168729730243100
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T21:41:41.447Z,168729730144700
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:41:40.492Z,168729730049200
+"""Allen @ owhH9xBTTE"" raises to 5.50",2023-06-20T21:41:38.292Z,168729729829200
+"""brett @ eKDH2_sDqp"" calls 1.00",2023-06-20T21:41:29.785Z,168729728978500
+"""Marv69 @ OCMtlCKqdV"" folds",2023-06-20T21:41:14.359Z,168729727435900
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T21:41:13.338Z,168729727333800
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:41:12.347Z,168729727234700
+"""Jackson @ yXr_bmZ3u2"" folds",2023-06-20T21:41:08.778Z,168729726877800
+"""mp @ -DkySTil6a"" calls 1.00",2023-06-20T21:41:07.670Z,168729726767000
+"""Hari @ AbiA8gvle6"" posts a big blind of 1.00",2023-06-20T21:41:05.280Z,168729726528013
+"""Phil @ G71Wfb2gET"" posts a small blind of 0.50",2023-06-20T21:41:05.280Z,168729726528012
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (343.50) | #2 ""brett @ eKDH2_sDqp"" (173.39) | #3 ""Allen @ owhH9xBTTE"" (321.00) | #4 ""dp @ fAO4FRQBI9"" (205.10) | #5 ""Phil @ G71Wfb2gET"" (194.15) | #6 ""Hari @ AbiA8gvle6"" (480.75) | #7 ""mp @ -DkySTil6a"" (109.88) | #8 ""Jackson @ yXr_bmZ3u2"" (32.62) | #9 ""Don @ 6T4espke1S"" (136.88) | #10 ""Brax @ Cgqw2xJL_L"" (199.49)",2023-06-20T21:41:05.280Z,168729726528001
+"-- starting hand #48 (id: ev5tzteupluz)  (No Limit Texas Hold'em) (dealer: ""dp @ fAO4FRQBI9"") --",2023-06-20T21:41:05.280Z,168729726528000
+"""brett @ eKDH2_sDqp"" shows a 9♦, 5♥.",2023-06-20T21:41:02.829Z,168729726282900
+"-- ending hand #47 --",2023-06-20T21:40:58.714Z,168729725871403
+"""Hari @ AbiA8gvle6"" shows a Q♣, A♠.",2023-06-20T21:40:58.714Z,168729725871402
+"""Marv69 @ OCMtlCKqdV"" collected 57.50 from pot with Three of a Kind, 5's (combination: 5♣, 5♦, 5♠, A♣, K♣)",2023-06-20T21:40:58.714Z,168729725871401
+"""Marv69 @ OCMtlCKqdV"" shows a A♣, 5♣.",2023-06-20T21:40:58.714Z,168729725871400
+"""Marv69 @ OCMtlCKqdV"" checks",2023-06-20T21:40:57.888Z,168729725788800
+"""Hari @ AbiA8gvle6"" checks",2023-06-20T21:40:40.072Z,168729724007200
+"River: 5♦, Q♦, 5♠, K♣ [10♦]",2023-06-20T21:40:36.572Z,168729723657200
+"""Hari @ AbiA8gvle6"" calls 16.00",2023-06-20T21:40:35.720Z,168729723572000
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:40:29.262Z,168729722926200
+"""Marv69 @ OCMtlCKqdV"" bets 16.00",2023-06-20T21:40:27.395Z,168729722739500
+"""Hari @ AbiA8gvle6"" checks",2023-06-20T21:40:13.740Z,168729721374000
+"Turn: 5♦, Q♦, 5♠ [K♣]",2023-06-20T21:40:10.755Z,168729721075500
+"""Hari @ AbiA8gvle6"" calls 5.00",2023-06-20T21:40:09.885Z,168729720988500
+"""Allen @ owhH9xBTTE"" calls 5.00",2023-06-20T21:40:03.810Z,168729720381000
+"""Marv69 @ OCMtlCKqdV"" bets 5.00",2023-06-20T21:39:57.175Z,168729719717500
+"""Hari @ AbiA8gvle6"" checks",2023-06-20T21:39:50.226Z,168729719022600
+"Flop:  [5♦, Q♦, 5♠]",2023-06-20T21:39:45.260Z,168729718526000
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T21:39:44.400Z,168729718440000
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:39:43.222Z,168729718322200
+"""Allen @ owhH9xBTTE"" calls 3.00",2023-06-20T21:39:31.339Z,168729717133900
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:39:29.783Z,168729716978300
+"""Marv69 @ OCMtlCKqdV"" calls 3.00",2023-06-20T21:39:21.603Z,168729716160300
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T21:39:17.979Z,168729715797900
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:39:17.001Z,168729715700100
+"""Jackson @ yXr_bmZ3u2"" folds",2023-06-20T21:39:16.062Z,168729715606200
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:39:15.148Z,168729715514800
+"""Hari @ AbiA8gvle6"" raises to 3.00",2023-06-20T21:39:14.251Z,168729715425100
+"""Phil @ G71Wfb2gET"" posts a big blind of 1.00",2023-06-20T21:39:10.412Z,168729715041213
+"""dp @ fAO4FRQBI9"" posts a small blind of 0.50",2023-06-20T21:39:10.412Z,168729715041212
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (310.00) | #2 ""brett @ eKDH2_sDqp"" (173.39) | #3 ""Allen @ owhH9xBTTE"" (329.00) | #4 ""dp @ fAO4FRQBI9"" (205.60) | #5 ""Phil @ G71Wfb2gET"" (195.15) | #6 ""Hari @ AbiA8gvle6"" (504.75) | #7 ""mp @ -DkySTil6a"" (109.88) | #8 ""Jackson @ yXr_bmZ3u2"" (32.62) | #9 ""Don @ 6T4espke1S"" (136.88) | #10 ""Brax @ Cgqw2xJL_L"" (199.49)",2023-06-20T21:39:10.412Z,168729715041201
+"-- starting hand #47 (id: vgwtev6vz1t4)  (No Limit Texas Hold'em) (dealer: ""Allen @ owhH9xBTTE"") --",2023-06-20T21:39:10.412Z,168729715041200
+"-- ending hand #46 --",2023-06-20T21:39:04.475Z,168729714447502
+"""Phil @ G71Wfb2gET"" collected 55.50 from pot",2023-06-20T21:39:04.475Z,168729714447501
+"Uncalled bet of 27.75 returned to ""Phil @ G71Wfb2gET""",2023-06-20T21:39:04.475Z,168729714447500
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T21:39:03.670Z,168729714367000
+"""Phil @ G71Wfb2gET"" bets 27.75",2023-06-20T21:38:58.921Z,168729713892100
+"Flop:  [4♥, 7♠, 3♠]",2023-06-20T21:38:54.263Z,168729713426300
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:38:53.455Z,168729713345500
+"""Hari @ AbiA8gvle6"" calls 25.00",2023-06-20T21:38:48.853Z,168729712885300
+"""Phil @ G71Wfb2gET"" raises to 25.00",2023-06-20T21:38:38.533Z,168729711853300
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:38:31.247Z,168729711124700
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:38:15.378Z,168729709537800
+"""brett @ eKDH2_sDqp"" calls 4.00",2023-06-20T21:38:04.296Z,168729708429600
+"""Marv69 @ OCMtlCKqdV"" folds",2023-06-20T21:38:01.671Z,168729708167100
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T21:38:00.699Z,168729708069900
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:37:54.976Z,168729707497600
+"""Jackson @ yXr_bmZ3u2"" folds",2023-06-20T21:37:54.009Z,168729707400900
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:37:53.106Z,168729707310600
+"""Hari @ AbiA8gvle6"" raises to 4.00",2023-06-20T21:37:52.180Z,168729707218000
+"""Phil @ G71Wfb2gET"" calls 1.00",2023-06-20T21:37:45.500Z,168729706550000
+"""dp @ fAO4FRQBI9"" posts a big blind of 1.00",2023-06-20T21:37:43.812Z,168729706381214
+"""Allen @ owhH9xBTTE"" posts a small blind of 0.50",2023-06-20T21:37:43.812Z,168729706381213
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (310.00) | #2 ""brett @ eKDH2_sDqp"" (177.39) | #3 ""Allen @ owhH9xBTTE"" (329.50) | #4 ""dp @ fAO4FRQBI9"" (206.60) | #5 ""Phil @ G71Wfb2gET"" (164.65) | #6 ""Hari @ AbiA8gvle6"" (529.75) | #7 ""mp @ -DkySTil6a"" (109.88) | #8 ""Jackson @ yXr_bmZ3u2"" (32.62) | #9 ""Don @ 6T4espke1S"" (136.88) | #10 ""Brax @ Cgqw2xJL_L"" (199.49)",2023-06-20T21:37:43.812Z,168729706381202
+"-- starting hand #46 (id: cnqk4yf4qnnw)  (No Limit Texas Hold'em) (dealer: ""brett @ eKDH2_sDqp"") --",2023-06-20T21:37:43.812Z,168729706381201
+"The admin updated the player ""mp @ -DkySTil6a"" stack from 79.88 to 109.88.",2023-06-20T21:37:43.812Z,168729706381200
+"""mp @ -DkySTil6a"" shows a 3♦, 4♥.",2023-06-20T21:37:38.736Z,168729705873600
+"-- ending hand #45 --",2023-06-20T21:37:37.310Z,168729705731001
+"""dp @ fAO4FRQBI9"" collected 206.60 from pot with Pair, A's (combination: A♣, A♥, 8♣, 7♣, 5♥)",2023-06-20T21:37:37.310Z,168729705731000
+"River: 8♣, 7♣, 3♥, 5♥ [4♦]",2023-06-20T21:37:33.305Z,168729705330500
+"Turn: 8♣, 7♣, 3♥ [5♥]",2023-06-20T21:37:29.291Z,168729704929100
+"Flop:  [8♣, 7♣, 3♥]",2023-06-20T21:37:25.199Z,168729704519900
+"""Jackson @ yXr_bmZ3u2"" shows a Q♣, Q♠.",2023-06-20T21:37:21.180Z,168729704118001
+"""dp @ fAO4FRQBI9"" shows a A♣, A♥.",2023-06-20T21:37:21.180Z,168729704118000
+"Some players choose to not run it twice.",2023-06-20T21:37:20.356Z,168729704035600
+"""Jackson @ yXr_bmZ3u2"" chooses to  run it twice.",2023-06-20T21:37:14.561Z,168729703456100
+"Remaining players decide whether to run it twice.",2023-06-20T21:37:12.797Z,168729703279701
+"""dp @ fAO4FRQBI9"" calls 100.00 and go all in",2023-06-20T21:37:12.797Z,168729703279700
+"""Jackson @ yXr_bmZ3u2"" raises to 100.00",2023-06-20T21:37:08.892Z,168729702889200
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T21:37:05.674Z,168729702567400
+"""dp @ fAO4FRQBI9"" raises to 55.95",2023-06-20T21:36:56.668Z,168729701666800
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:36:33.798Z,168729699379800
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:36:32.293Z,168729699229300
+"""Marv69 @ OCMtlCKqdV"" folds",2023-06-20T21:36:31.328Z,168729699132800
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T21:36:30.378Z,168729699037800
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:36:29.363Z,168729698936300
+"""Jackson @ yXr_bmZ3u2"" raises to 20.00",2023-06-20T21:36:28.447Z,168729698844700
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:36:18.588Z,168729697858800
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T21:36:17.643Z,168729697764300
+"""Phil @ G71Wfb2gET"" raises to 5.10",2023-06-20T21:36:16.780Z,168729697678000
+"""dp @ fAO4FRQBI9"" raises to 2.50",2023-06-20T21:36:13.193Z,168729697319300
+"WARNING: the admin queued the stack change for the player ""mp @ -DkySTil6a"" adding 30.00 chips in the next hand.",2023-06-20T21:36:05.721Z,168729696572100
+"""Allen @ owhH9xBTTE"" posts a big blind of 1.00",2023-06-20T21:36:00.375Z,168729696037513
+"""brett @ eKDH2_sDqp"" posts a small blind of 0.50",2023-06-20T21:36:00.375Z,168729696037512
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (310.00) | #2 ""brett @ eKDH2_sDqp"" (177.89) | #3 ""Allen @ owhH9xBTTE"" (330.50) | #4 ""dp @ fAO4FRQBI9"" (100.00) | #5 ""Phil @ G71Wfb2gET"" (169.75) | #6 ""Hari @ AbiA8gvle6"" (529.75) | #7 ""mp @ -DkySTil6a"" (79.88) | #8 ""Jackson @ yXr_bmZ3u2"" (132.62) | #9 ""Don @ 6T4espke1S"" (136.88) | #10 ""Brax @ Cgqw2xJL_L"" (199.49)",2023-06-20T21:36:00.375Z,168729696037501
+"-- starting hand #45 (id: dzawlnexte6y)  (No Limit Texas Hold'em) (dealer: ""Marv69 @ OCMtlCKqdV"") --",2023-06-20T21:36:00.375Z,168729696037500
+"-- ending hand #44 --",2023-06-20T21:35:57.460Z,168729695746002
+"""Jackson @ yXr_bmZ3u2"" collected 31.24 from pot",2023-06-20T21:35:57.460Z,168729695746001
+"Uncalled bet of 18.50 returned to ""Jackson @ yXr_bmZ3u2""",2023-06-20T21:35:57.460Z,168729695746000
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:35:56.584Z,168729695658400
+"""Jackson @ yXr_bmZ3u2"" bets 18.50",2023-06-20T21:35:54.711Z,168729695471100
+"""mp @ -DkySTil6a"" checks",2023-06-20T21:35:48.220Z,168729694822000
+"River: 3♠, 9♥, 2♥, Q♠ [9♣]",2023-06-20T21:35:46.527Z,168729694652700
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:35:45.665Z,168729694566500
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:35:44.471Z,168729694447100
+"""Jackson @ yXr_bmZ3u2"" calls 9.37",2023-06-20T21:35:43.570Z,168729694357000
+"""mp @ -DkySTil6a"" bets 9.37",2023-06-20T21:35:35.435Z,168729693543500
+"""Allen @ owhH9xBTTE"" checks",2023-06-20T21:35:32.307Z,168729693230700
+"""brett @ eKDH2_sDqp"" checks",2023-06-20T21:35:30.117Z,168729693011700
+"Turn: 3♠, 9♥, 2♥ [Q♠]",2023-06-20T21:35:26.192Z,168729692619200
+"""Jackson @ yXr_bmZ3u2"" checks",2023-06-20T21:35:25.332Z,168729692533200
+"""mp @ -DkySTil6a"" checks",2023-06-20T21:35:22.339Z,168729692233900
+"""Allen @ owhH9xBTTE"" checks",2023-06-20T21:35:20.384Z,168729692038400
+"""brett @ eKDH2_sDqp"" checks",2023-06-20T21:35:04.559Z,168729690455900
+"Flop:  [3♠, 9♥, 2♥]",2023-06-20T21:35:03.367Z,168729690336700
+"""brett @ eKDH2_sDqp"" calls 3.00",2023-06-20T21:35:02.509Z,168729690250900
+"""Marv69 @ OCMtlCKqdV"" folds",2023-06-20T21:35:00.536Z,168729690053600
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T21:34:58.110Z,168729689811000
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:34:57.140Z,168729689714000
+"""Jackson @ yXr_bmZ3u2"" calls 3.00",2023-06-20T21:34:56.244Z,168729689624400
+"""mp @ -DkySTil6a"" calls 3.00",2023-06-20T21:34:51.400Z,168729689140000
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T21:34:50.480Z,168729689048000
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T21:34:49.486Z,168729688948600
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:34:48.577Z,168729688857700
+"""Allen @ owhH9xBTTE"" raises to 3.00",2023-06-20T21:34:46.657Z,168729688665700
+"""brett @ eKDH2_sDqp"" posts a big blind of 1.00",2023-06-20T21:34:42.513Z,168729688251313
+"""Marv69 @ OCMtlCKqdV"" posts a small blind of 0.50",2023-06-20T21:34:42.513Z,168729688251312
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (310.50) | #2 ""brett @ eKDH2_sDqp"" (180.89) | #3 ""Allen @ owhH9xBTTE"" (333.50) | #4 ""dp @ fAO4FRQBI9"" (100.00) | #5 ""Phil @ G71Wfb2gET"" (169.75) | #6 ""Hari @ AbiA8gvle6"" (529.75) | #7 ""mp @ -DkySTil6a"" (92.25) | #8 ""Jackson @ yXr_bmZ3u2"" (113.75) | #9 ""Don @ 6T4espke1S"" (136.88) | #10 ""Brax @ Cgqw2xJL_L"" (199.49)",2023-06-20T21:34:42.513Z,168729688251301
+"-- starting hand #44 (id: bgpewknjgbph)  (No Limit Texas Hold'em) (dealer: ""Brax @ Cgqw2xJL_L"") --",2023-06-20T21:34:42.513Z,168729688251300
+"""Jackson @ yXr_bmZ3u2"" shows a 6♥, 6♠.",2023-06-20T21:34:38.555Z,168729687855500
+"-- ending hand #43 --",2023-06-20T21:34:35.978Z,168729687597802
+"""Allen @ owhH9xBTTE"" collected 31.25 from pot with Full House, K's over 7's (combination: K♠, K♦, K♥, 7♦, 7♣)",2023-06-20T21:34:35.978Z,168729687597801
+"""Allen @ owhH9xBTTE"" shows a K♠, 8♠.",2023-06-20T21:34:35.978Z,168729687597800
+"""Jackson @ yXr_bmZ3u2"" checks",2023-06-20T21:34:35.124Z,168729687512400
+"""Phil @ G71Wfb2gET"" checks",2023-06-20T21:34:28.086Z,168729686808600
+"""Allen @ owhH9xBTTE"" checks",2023-06-20T21:34:24.418Z,168729686441800
+"River: K♦, Q♦, K♥, 7♦ [7♣]",2023-06-20T21:34:21.253Z,168729686125300
+"""Jackson @ yXr_bmZ3u2"" checks",2023-06-20T21:34:20.424Z,168729686042400
+"""Phil @ G71Wfb2gET"" checks",2023-06-20T21:34:18.203Z,168729685820300
+"""Allen @ owhH9xBTTE"" checks",2023-06-20T21:34:17.290Z,168729685729000
+"Turn: K♦, Q♦, K♥ [7♦]",2023-06-20T21:34:11.549Z,168729685154900
+"""Marv69 @ OCMtlCKqdV"" folds",2023-06-20T21:34:10.654Z,168729685065400
+"""Jackson @ yXr_bmZ3u2"" calls 6.25",2023-06-20T21:34:04.606Z,168729684460600
+"""Phil @ G71Wfb2gET"" calls 6.25",2023-06-20T21:33:58.513Z,168729683851300
+"""Allen @ owhH9xBTTE"" bets 6.25",2023-06-20T21:33:56.970Z,168729683697000
+"""Marv69 @ OCMtlCKqdV"" checks",2023-06-20T21:33:51.785Z,168729683178500
+"Flop:  [K♦, Q♦, K♥]",2023-06-20T21:33:49.907Z,168729682990700
+"""Marv69 @ OCMtlCKqdV"" calls 3.00",2023-06-20T21:33:49.015Z,168729682901500
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T21:33:48.070Z,168729682807000
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:33:47.165Z,168729682716500
+"""Jackson @ yXr_bmZ3u2"" calls 3.00",2023-06-20T21:33:46.288Z,168729682628800
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:33:42.221Z,168729682222100
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T21:33:41.229Z,168729682122900
+"""Phil @ G71Wfb2gET"" calls 3.00",2023-06-20T21:33:40.302Z,168729682030200
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:33:36.205Z,168729681620500
+"""Allen @ owhH9xBTTE"" raises to 3.00",2023-06-20T21:33:35.214Z,168729681521400
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:33:28.045Z,168729680804500
+"""Marv69 @ OCMtlCKqdV"" posts a big blind of 1.00",2023-06-20T21:33:22.785Z,168729680278514
+"""Brax @ Cgqw2xJL_L"" posts a small blind of 0.50",2023-06-20T21:33:22.785Z,168729680278513
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (313.50) | #2 ""brett @ eKDH2_sDqp"" (180.89) | #3 ""Allen @ owhH9xBTTE"" (311.50) | #4 ""dp @ fAO4FRQBI9"" (100.00) | #5 ""Phil @ G71Wfb2gET"" (179.00) | #6 ""Hari @ AbiA8gvle6"" (529.75) | #7 ""mp @ -DkySTil6a"" (92.25) | #8 ""Jackson @ yXr_bmZ3u2"" (123.00) | #9 ""Don @ 6T4espke1S"" (136.88) | #10 ""Brax @ Cgqw2xJL_L"" (199.99)",2023-06-20T21:33:22.785Z,168729680278502
+"-- starting hand #43 (id: q9dqqdcrzb4f)  (No Limit Texas Hold'em) (dealer: ""Don @ 6T4espke1S"") --",2023-06-20T21:33:22.785Z,168729680278501
+"The player ""dp @ fAO4FRQBI9"" joined the game with a stack of 100.00.",2023-06-20T21:33:22.785Z,168729680278500
+"-- ending hand #42 --",2023-06-20T21:33:19.874Z,168729679987402
+"""Jackson @ yXr_bmZ3u2"" collected 14.50 from pot",2023-06-20T21:33:19.874Z,168729679987401
+"Uncalled bet of 7.00 returned to ""Jackson @ yXr_bmZ3u2""",2023-06-20T21:33:19.874Z,168729679987400
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:33:19.010Z,168729679901000
+"The admin approved the player ""dp @ fAO4FRQBI9"" participation with a stack of 100.00.",2023-06-20T21:33:15.036Z,168729679503600
+"""Jackson @ yXr_bmZ3u2"" bets 7.00",2023-06-20T21:33:10.673Z,168729679067300
+"The player ""dp @ fAO4FRQBI9"" requested a seat.",2023-06-20T21:33:02.432Z,168729678243200
+"""brett @ eKDH2_sDqp"" checks",2023-06-20T21:33:02.269Z,168729678226900
+"River: 6♦, Q♠, 9♦, 8♦ [Q♣]",2023-06-20T21:33:00.459Z,168729678045900
+"""brett @ eKDH2_sDqp"" calls 3.50",2023-06-20T21:32:59.637Z,168729677963700
+"""Jackson @ yXr_bmZ3u2"" bets 3.50",2023-06-20T21:32:57.515Z,168729677751500
+"""brett @ eKDH2_sDqp"" checks",2023-06-20T21:32:54.446Z,168729677444600
+"Turn: 6♦, Q♠, 9♦ [8♦]",2023-06-20T21:32:52.113Z,168729677211300
+"""Jackson @ yXr_bmZ3u2"" checks",2023-06-20T21:32:51.302Z,168729677130200
+"""brett @ eKDH2_sDqp"" checks",2023-06-20T21:32:48.229Z,168729676822900
+"Flop:  [6♦, Q♠, 9♦]",2023-06-20T21:32:47.096Z,168729676709600
+"""brett @ eKDH2_sDqp"" calls 3.00",2023-06-20T21:32:46.270Z,168729676627000
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T21:32:44.580Z,168729676458000
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:32:43.580Z,168729676358000
+"""Jackson @ yXr_bmZ3u2"" raises to 3.00",2023-06-20T21:32:42.547Z,168729676254700
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:32:38.120Z,168729675812000
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T21:32:37.215Z,168729675721500
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T21:32:35.955Z,168729675595500
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:32:34.813Z,168729675481300
+"""brett @ eKDH2_sDqp"" calls 1.00",2023-06-20T21:32:29.814Z,168729674981400
+"""Marv69 @ OCMtlCKqdV"" folds",2023-06-20T21:32:26.812Z,168729674681200
+"""Brax @ Cgqw2xJL_L"" posts a big blind of 1.00",2023-06-20T21:32:11.803Z,168729673180313
+"""Don @ 6T4espke1S"" posts a small blind of 0.50",2023-06-20T21:32:11.803Z,168729673180312
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (313.50) | #2 ""brett @ eKDH2_sDqp"" (187.39) | #3 ""Allen @ owhH9xBTTE"" (311.50) | #5 ""Phil @ G71Wfb2gET"" (179.00) | #6 ""Hari @ AbiA8gvle6"" (529.75) | #7 ""mp @ -DkySTil6a"" (92.25) | #8 ""Jackson @ yXr_bmZ3u2"" (115.00) | #9 ""Don @ 6T4espke1S"" (137.38) | #10 ""Brax @ Cgqw2xJL_L"" (200.99)",2023-06-20T21:32:11.803Z,168729673180302
+"-- starting hand #42 (id: pnzzxccadcvn)  (No Limit Texas Hold'em) (dealer: ""Jackson @ yXr_bmZ3u2"") --",2023-06-20T21:32:11.803Z,168729673180301
+"The player ""dp @ fAO4FRQBI9"" quits the game with a stack of 0.00.",2023-06-20T21:32:11.803Z,168729673180300
+"-- ending hand #41 --",2023-06-20T21:32:05.788Z,168729672578801
+"""Allen @ owhH9xBTTE"" collected 109.50 from pot with Straight, A High (combination: A♣, K♥, Q♣, J♦, 10♦)",2023-06-20T21:32:05.788Z,168729672578800
+"River: 10♦, K♥, 3♥, A♣ [2♥]",2023-06-20T21:32:01.769Z,168729672176900
+"Turn: 10♦, K♥, 3♥ [A♣]",2023-06-20T21:31:57.764Z,168729671776400
+"""dp @ fAO4FRQBI9"" shows a Q♥, K♦.",2023-06-20T21:31:53.761Z,168729671376101
+"""Allen @ owhH9xBTTE"" shows a Q♣, J♦.",2023-06-20T21:31:53.761Z,168729671376100
+"Some players choose to not run it twice.",2023-06-20T21:31:52.958Z,168729671295800
+"""Allen @ owhH9xBTTE"" chooses to  run it twice.",2023-06-20T21:31:46.747Z,168729670674700
+"Remaining players decide whether to run it twice.",2023-06-20T21:31:45.417Z,168729670541701
+"""Allen @ owhH9xBTTE"" calls 44.25",2023-06-20T21:31:45.417Z,168729670541700
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:31:40.808Z,168729670080800
+"""dp @ fAO4FRQBI9"" raises to 44.25 and go all in",2023-06-20T21:31:26.962Z,168729668696200
+"""Allen @ owhH9xBTTE"" calls 6.00",2023-06-20T21:31:24.298Z,168729668429800
+"""brett @ eKDH2_sDqp"" bets 6.00",2023-06-20T21:31:20.675Z,168729668067500
+"Flop:  [10♦, K♥, 3♥]",2023-06-20T21:31:13.691Z,168729667369100
+"""Marv69 @ OCMtlCKqdV"" folds",2023-06-20T21:31:12.856Z,168729667285600
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:31:11.832Z,168729667183200
+"""Jackson @ yXr_bmZ3u2"" folds",2023-06-20T21:31:10.969Z,168729667096900
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:31:04.321Z,168729666432100
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T21:31:03.395Z,168729666339500
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T21:31:00.724Z,168729666072400
+"""dp @ fAO4FRQBI9"" calls 4.00",2023-06-20T21:30:59.695Z,168729665969500
+"""Allen @ owhH9xBTTE"" calls 4.00",2023-06-20T21:30:57.351Z,168729665735100
+"""brett @ eKDH2_sDqp"" raises to 4.00",2023-06-20T21:30:55.690Z,168729665569000
+"""Marv69 @ OCMtlCKqdV"" checks",2023-06-20T21:30:50.890Z,168729665089000
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T21:30:45.440Z,168729664544000
+"""Marv69 @ OCMtlCKqdV"" posts a missed big blind of 1.00",2023-06-20T21:30:44.070Z,168729664407016
+"""Marv69 @ OCMtlCKqdV"" posts a missing small blind of 0.50",2023-06-20T21:30:44.070Z,168729664407015
+"""Don @ 6T4espke1S"" posts a big blind of 1.00",2023-06-20T21:30:44.070Z,168729664407014
+"""Jackson @ yXr_bmZ3u2"" posts a small blind of 0.50",2023-06-20T21:30:44.070Z,168729664407013
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (315.00) | #2 ""brett @ eKDH2_sDqp"" (197.39) | #3 ""Allen @ owhH9xBTTE"" (250.25) | #4 ""dp @ fAO4FRQBI9"" (48.25) | #5 ""Phil @ G71Wfb2gET"" (179.00) | #6 ""Hari @ AbiA8gvle6"" (529.75) | #7 ""mp @ -DkySTil6a"" (92.25) | #8 ""Jackson @ yXr_bmZ3u2"" (115.50) | #9 ""Don @ 6T4espke1S"" (138.38) | #10 ""Brax @ Cgqw2xJL_L"" (200.99)",2023-06-20T21:30:44.070Z,168729664407002
+"-- starting hand #41 (id: jinrgoikbsma)  (No Limit Texas Hold'em) (dealer: ""mp @ -DkySTil6a"") --",2023-06-20T21:30:44.070Z,168729664407001
+"The player ""Marv69 @ OCMtlCKqdV"" joined the game with a stack of 315.00.",2023-06-20T21:30:44.070Z,168729664407000
+"-- ending hand #40 --",2023-06-20T21:30:38.071Z,168729663807102
+"""Brax @ Cgqw2xJL_L"" collected 6.50 from pot",2023-06-20T21:30:38.071Z,168729663807101
+"Uncalled bet of 4.50 returned to ""Brax @ Cgqw2xJL_L""",2023-06-20T21:30:38.071Z,168729663807100
+"""Jackson @ yXr_bmZ3u2"" folds",2023-06-20T21:30:37.225Z,168729663722500
+"""Brax @ Cgqw2xJL_L"" bets 4.50",2023-06-20T21:30:33.978Z,168729663397800
+"The player ""Marv69 @ OCMtlCKqdV"" sit back with the stack of 315.00.",2023-06-20T21:30:33.714Z,168729663371400
+"""Jackson @ yXr_bmZ3u2"" checks",2023-06-20T21:30:26.336Z,168729662633600
+"Flop:  [3♣, 6♥, 10♦]",2023-06-20T21:30:24.495Z,168729662449500
+"""Jackson @ yXr_bmZ3u2"" calls 3.00",2023-06-20T21:30:23.684Z,168729662368400
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:30:21.723Z,168729662172300
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T21:30:20.809Z,168729662080900
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T21:30:19.867Z,168729661986700
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:30:18.852Z,168729661885200
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:30:03.009Z,168729660300900
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:30:01.974Z,168729660197400
+"""Brax @ Cgqw2xJL_L"" raises to 3.00",2023-06-20T21:29:57.556Z,168729659755600
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:29:53.356Z,168729659335600
+"""Jackson @ yXr_bmZ3u2"" posts a big blind of 1.00",2023-06-20T21:29:52.223Z,168729659222312
+"""mp @ -DkySTil6a"" posts a small blind of 0.50",2023-06-20T21:29:52.223Z,168729659222311
+"Player stacks: #2 ""brett @ eKDH2_sDqp"" (197.39) | #3 ""Allen @ owhH9xBTTE"" (250.25) | #4 ""dp @ fAO4FRQBI9"" (48.25) | #5 ""Phil @ G71Wfb2gET"" (179.00) | #6 ""Hari @ AbiA8gvle6"" (529.75) | #7 ""mp @ -DkySTil6a"" (92.75) | #8 ""Jackson @ yXr_bmZ3u2"" (118.50) | #9 ""Don @ 6T4espke1S"" (138.38) | #10 ""Brax @ Cgqw2xJL_L"" (197.49)",2023-06-20T21:29:52.223Z,168729659222301
+"-- starting hand #40 (id: k4f5oml5ipag)  (No Limit Texas Hold'em) (dealer: ""Hari @ AbiA8gvle6"") --",2023-06-20T21:29:52.223Z,168729659222300
+"-- ending hand #39 --",2023-06-20T21:29:46.211Z,168729658621102
+"""Hari @ AbiA8gvle6"" collected 120.00 from pot with Three of a Kind, 2's (combination: 2♦, 2♣, 2♥, A♦, 6♦)",2023-06-20T21:29:46.211Z,168729658621101
+"""Hari @ AbiA8gvle6"" shows a A♦, 2♦.",2023-06-20T21:29:46.211Z,168729658621100
+"""Don @ 6T4espke1S"" checks",2023-06-20T21:29:45.342Z,168729658534200
+"""Hari @ AbiA8gvle6"" checks",2023-06-20T21:29:42.615Z,168729658261500
+"River: 2♣, 6♦, 2♥, 3♦ [4♠]",2023-06-20T21:29:32.688Z,168729657268800
+"""Don @ 6T4espke1S"" calls 36.00",2023-06-20T21:29:31.856Z,168729657185600
+"""Hari @ AbiA8gvle6"" bets 36.00",2023-06-20T21:29:26.281Z,168729656628100
+"Turn: 2♣, 6♦, 2♥ [3♦]",2023-06-20T21:29:11.651Z,168729655165100
+"""Don @ 6T4espke1S"" calls 17.50",2023-06-20T21:29:10.806Z,168729655080600
+"""Jackson @ yXr_bmZ3u2"" folds",2023-06-20T21:29:06.017Z,168729654601700
+"""Hari @ AbiA8gvle6"" raises to 17.50",2023-06-20T21:29:03.336Z,168729654333600
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:28:55.691Z,168729653569100
+"""Don @ 6T4espke1S"" bets 5.50",2023-06-20T21:28:54.772Z,168729653477200
+"""Jackson @ yXr_bmZ3u2"" checks",2023-06-20T21:28:47.152Z,168729652715200
+"""Hari @ AbiA8gvle6"" checks",2023-06-20T21:28:41.900Z,168729652190000
+"Flop:  [2♣, 6♦, 2♥]",2023-06-20T21:28:38.297Z,168729651829700
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:28:37.438Z,168729651743800
+"""Hari @ AbiA8gvle6"" calls 3.00",2023-06-20T21:28:35.311Z,168729651531100
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T21:28:33.447Z,168729651344700
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:28:32.581Z,168729651258100
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:28:31.664Z,168729651166400
+"""brett @ eKDH2_sDqp"" calls 3.00",2023-06-20T21:28:30.516Z,168729651051600
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T21:28:27.348Z,168729650734800
+"""Don @ 6T4espke1S"" calls 3.00",2023-06-20T21:28:26.423Z,168729650642300
+"""Jackson @ yXr_bmZ3u2"" raises to 3.00",2023-06-20T21:28:23.499Z,168729650349900
+"""mp @ -DkySTil6a"" posts a big blind of 1.00",2023-06-20T21:28:19.527Z,168729649952712
+"""Hari @ AbiA8gvle6"" posts a small blind of 0.50",2023-06-20T21:28:19.527Z,168729649952711
+"Player stacks: #2 ""brett @ eKDH2_sDqp"" (200.39) | #3 ""Allen @ owhH9xBTTE"" (250.25) | #4 ""dp @ fAO4FRQBI9"" (48.25) | #5 ""Phil @ G71Wfb2gET"" (179.00) | #6 ""Hari @ AbiA8gvle6"" (466.25) | #7 ""mp @ -DkySTil6a"" (93.75) | #8 ""Jackson @ yXr_bmZ3u2"" (121.50) | #9 ""Don @ 6T4espke1S"" (194.88) | #10 ""Brax @ Cgqw2xJL_L"" (197.49)",2023-06-20T21:28:19.527Z,168729649952701
+"-- starting hand #39 (id: manhvhb4hwr7)  (No Limit Texas Hold'em) (dealer: ""Phil @ G71Wfb2gET"") --",2023-06-20T21:28:19.527Z,168729649952700
+"""Phil @ G71Wfb2gET"" shows a 10♣, A♠.",2023-06-20T21:28:16.511Z,168729649651100
+"-- ending hand #38 --",2023-06-20T21:28:15.881Z,168729649588102
+"""Phil @ G71Wfb2gET"" collected 35.00 from pot",2023-06-20T21:28:15.881Z,168729649588101
+"Uncalled bet of 28.50 returned to ""Phil @ G71Wfb2gET""",2023-06-20T21:28:15.881Z,168729649588100
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:28:15.035Z,168729649503500
+"""Phil @ G71Wfb2gET"" raises to 40.00",2023-06-20T21:28:08.620Z,168729648862000
+"""mp @ -DkySTil6a"" raises to 11.50",2023-06-20T21:28:00.042Z,168729648004200
+"""Phil @ G71Wfb2gET"" bets 1.00",2023-06-20T21:27:57.569Z,168729647756900
+"River: 4♦, 4♠, 7♠, 9♠ [Q♣]",2023-06-20T21:27:56.263Z,168729647626300
+"""mp @ -DkySTil6a"" calls 1.00",2023-06-20T21:27:55.455Z,168729647545500
+"""Phil @ G71Wfb2gET"" bets 1.00",2023-06-20T21:27:53.520Z,168729647352000
+"Turn: 4♦, 4♠, 7♠ [9♠]",2023-06-20T21:27:52.061Z,168729647206100
+"""mp @ -DkySTil6a"" calls 1.00",2023-06-20T21:27:51.252Z,168729647125200
+"""Phil @ G71Wfb2gET"" bets 1.00",2023-06-20T21:27:49.194Z,168729646919400
+"Flop:  [4♦, 4♠, 7♠]",2023-06-20T21:27:48.750Z,168729646875000
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T21:27:47.870Z,168729646787000
+"""Phil @ G71Wfb2gET"" calls 3.50",2023-06-20T21:27:46.267Z,168729646626700
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:27:45.197Z,168729646519700
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:27:44.274Z,168729646427400
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:27:39.710Z,168729645971000
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T21:27:38.797Z,168729645879700
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:27:37.794Z,168729645779400
+"""Jackson @ yXr_bmZ3u2"" folds",2023-06-20T21:27:36.836Z,168729645683600
+"""mp @ -DkySTil6a"" raises to 3.50",2023-06-20T21:27:35.883Z,168729645588300
+"""Hari @ AbiA8gvle6"" posts a big blind of 1.00",2023-06-20T21:27:32.200Z,168729645220012
+"""Phil @ G71Wfb2gET"" posts a small blind of 0.50",2023-06-20T21:27:32.200Z,168729645220011
+"Player stacks: #2 ""brett @ eKDH2_sDqp"" (200.39) | #3 ""Allen @ owhH9xBTTE"" (250.25) | #4 ""dp @ fAO4FRQBI9"" (48.25) | #5 ""Phil @ G71Wfb2gET"" (161.00) | #6 ""Hari @ AbiA8gvle6"" (467.25) | #7 ""mp @ -DkySTil6a"" (110.75) | #8 ""Jackson @ yXr_bmZ3u2"" (121.50) | #9 ""Don @ 6T4espke1S"" (194.88) | #10 ""Brax @ Cgqw2xJL_L"" (197.49)",2023-06-20T21:27:32.200Z,168729645220001
+"-- starting hand #38 (id: fbdirfyd9vca)  (No Limit Texas Hold'em) (dealer: ""dp @ fAO4FRQBI9"") --",2023-06-20T21:27:32.200Z,168729645220000
+"""Phil @ G71Wfb2gET"" shows a 6♣, Q♥.",2023-06-20T21:27:26.457Z,168729644645700
+"-- ending hand #37 --",2023-06-20T21:27:25.592Z,168729644559202
+"""Phil @ G71Wfb2gET"" collected 1.00 from pot",2023-06-20T21:27:25.592Z,168729644559201
+"Uncalled bet of 0.50 returned to ""Phil @ G71Wfb2gET""",2023-06-20T21:27:25.592Z,168729644559200
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:27:24.774Z,168729644477400
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:27:23.853Z,168729644385300
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:27:22.855Z,168729644285500
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T21:27:13.805Z,168729643380500
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:27:12.813Z,168729643281300
+"""Jackson @ yXr_bmZ3u2"" folds",2023-06-20T21:27:11.851Z,168729643185100
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:27:10.644Z,168729643064400
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T21:27:09.710Z,168729642971000
+"""Phil @ G71Wfb2gET"" posts a big blind of 1.00",2023-06-20T21:27:07.165Z,168729642716512
+"""dp @ fAO4FRQBI9"" posts a small blind of 0.50",2023-06-20T21:27:07.165Z,168729642716511
+"Player stacks: #2 ""brett @ eKDH2_sDqp"" (200.39) | #3 ""Allen @ owhH9xBTTE"" (250.25) | #4 ""dp @ fAO4FRQBI9"" (48.75) | #5 ""Phil @ G71Wfb2gET"" (160.50) | #6 ""Hari @ AbiA8gvle6"" (467.25) | #7 ""mp @ -DkySTil6a"" (110.75) | #8 ""Jackson @ yXr_bmZ3u2"" (121.50) | #9 ""Don @ 6T4espke1S"" (194.88) | #10 ""Brax @ Cgqw2xJL_L"" (197.49)",2023-06-20T21:27:07.165Z,168729642716501
+"-- starting hand #37 (id: nnsjkdjviqtn)  (No Limit Texas Hold'em) (dealer: ""Allen @ owhH9xBTTE"") --",2023-06-20T21:27:07.165Z,168729642716500
+"-- ending hand #36 --",2023-06-20T21:27:04.226Z,168729642422602
+"""Allen @ owhH9xBTTE"" collected 17.00 from pot",2023-06-20T21:27:04.226Z,168729642422601
+"Uncalled bet of 17.00 returned to ""Allen @ owhH9xBTTE""",2023-06-20T21:27:04.226Z,168729642422600
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:27:03.392Z,168729642339200
+"""Allen @ owhH9xBTTE"" bets 17.00",2023-06-20T21:27:01.872Z,168729642187200
+"River: 5♠, 9♦, 10♦, 7♣ [8♦]",2023-06-20T21:26:54.073Z,168729641407300
+"""brett @ eKDH2_sDqp"" checks",2023-06-20T21:26:53.235Z,168729641323500
+"""Allen @ owhH9xBTTE"" checks",2023-06-20T21:26:46.182Z,168729640618200
+"Turn: 5♠, 9♦, 10♦ [7♣]",2023-06-20T21:26:38.151Z,168729639815100
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:26:37.272Z,168729639727200
+"""Allen @ owhH9xBTTE"" calls 4.00",2023-06-20T21:26:31.458Z,168729639145800
+"""brett @ eKDH2_sDqp"" bets 4.00",2023-06-20T21:26:26.707Z,168729638670700
+"""dp @ fAO4FRQBI9"" checks",2023-06-20T21:26:18.949Z,168729637894900
+"""Allen @ owhH9xBTTE"" checks",2023-06-20T21:26:17.961Z,168729637796100
+"Flop:  [5♠, 9♦, 10♦]",2023-06-20T21:26:02.935Z,168729636293500
+"""dp @ fAO4FRQBI9"" calls 3.00",2023-06-20T21:26:02.124Z,168729636212400
+"""Allen @ owhH9xBTTE"" calls 3.00",2023-06-20T21:25:51.345Z,168729635134500
+"""brett @ eKDH2_sDqp"" raises to 3.00",2023-06-20T21:25:49.118Z,168729634911800
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T21:25:42.800Z,168729634280000
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:25:41.781Z,168729634178100
+"""Jackson @ yXr_bmZ3u2"" folds",2023-06-20T21:25:31.392Z,168729633139200
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:25:30.297Z,168729633029700
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T21:25:14.363Z,168729631436300
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T21:25:12.723Z,168729631272300
+"""dp @ fAO4FRQBI9"" posts a big blind of 1.00",2023-06-20T21:25:10.462Z,168729631046212
+"""Allen @ owhH9xBTTE"" posts a small blind of 0.50",2023-06-20T21:25:10.462Z,168729631046211
+"Player stacks: #2 ""brett @ eKDH2_sDqp"" (207.39) | #3 ""Allen @ owhH9xBTTE"" (240.25) | #4 ""dp @ fAO4FRQBI9"" (51.75) | #5 ""Phil @ G71Wfb2gET"" (160.50) | #6 ""Hari @ AbiA8gvle6"" (467.25) | #7 ""mp @ -DkySTil6a"" (110.75) | #8 ""Jackson @ yXr_bmZ3u2"" (121.50) | #9 ""Don @ 6T4espke1S"" (194.88) | #10 ""Brax @ Cgqw2xJL_L"" (197.49)",2023-06-20T21:25:10.462Z,168729631046201
+"-- starting hand #36 (id: a88w74yhgwxz)  (No Limit Texas Hold'em) (dealer: ""brett @ eKDH2_sDqp"") --",2023-06-20T21:25:10.462Z,168729631046200
+"""brett @ eKDH2_sDqp"" shows a 3♠, 9♠.",2023-06-20T21:25:07.544Z,168729630754400
+"""Allen @ owhH9xBTTE"" shows a 9♦, 3♥.",2023-06-20T21:25:05.592Z,168729630559200
+"-- ending hand #35 --",2023-06-20T21:25:03.147Z,168729630314702
+"""Allen @ owhH9xBTTE"" collected 1.00 from pot",2023-06-20T21:25:03.147Z,168729630314701
+"Uncalled bet of 0.50 returned to ""Allen @ owhH9xBTTE""",2023-06-20T21:25:03.147Z,168729630314700
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:25:02.332Z,168729630233200
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T21:24:53.608Z,168729629360800
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:24:52.651Z,168729629265100
+"""Jackson @ yXr_bmZ3u2"" folds",2023-06-20T21:24:51.759Z,168729629175900
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:24:50.867Z,168729629086700
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T21:24:49.933Z,168729628993300
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T21:24:47.783Z,168729628778300
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:24:46.878Z,168729628687800
+"""Allen @ owhH9xBTTE"" posts a big blind of 1.00",2023-06-20T21:24:42.789Z,168729628278912
+"""brett @ eKDH2_sDqp"" posts a small blind of 0.50",2023-06-20T21:24:42.789Z,168729628278911
+"Player stacks: #2 ""brett @ eKDH2_sDqp"" (207.89) | #3 ""Allen @ owhH9xBTTE"" (239.75) | #4 ""dp @ fAO4FRQBI9"" (51.75) | #5 ""Phil @ G71Wfb2gET"" (160.50) | #6 ""Hari @ AbiA8gvle6"" (467.25) | #7 ""mp @ -DkySTil6a"" (110.75) | #8 ""Jackson @ yXr_bmZ3u2"" (121.50) | #9 ""Don @ 6T4espke1S"" (194.88) | #10 ""Brax @ Cgqw2xJL_L"" (197.49)",2023-06-20T21:24:42.789Z,168729628278901
+"-- starting hand #35 (id: kw2lcyfwtdom)  (No Limit Texas Hold'em) (dealer: ""Brax @ Cgqw2xJL_L"") --",2023-06-20T21:24:42.789Z,168729628278900
+"""brett @ eKDH2_sDqp"" shows a 4♥, 6♦.",2023-06-20T21:24:38.736Z,168729627873600
+"""Phil @ G71Wfb2gET"" shows a A♥, K♠.",2023-06-20T21:24:36.125Z,168729627612500
+"-- ending hand #34 --",2023-06-20T21:24:35.481Z,168729627548102
+"""Phil @ G71Wfb2gET"" collected 9.03 from pot",2023-06-20T21:24:35.481Z,168729627548101
+"Uncalled bet of 2.09 returned to ""Phil @ G71Wfb2gET""",2023-06-20T21:24:35.481Z,168729627548100
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:24:34.669Z,168729627466900
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T21:24:33.742Z,168729627374200
+"""Phil @ G71Wfb2gET"" bets 2.09",2023-06-20T21:24:26.151Z,168729626615100
+"""brett @ eKDH2_sDqp"" checks",2023-06-20T21:24:23.505Z,168729626350500
+"""Brax @ Cgqw2xJL_L"" checks",2023-06-20T21:24:22.406Z,168729626240600
+"Flop:  [J♣, 2♦, 9♥]",2023-06-20T21:24:20.561Z,168729626056100
+"""brett @ eKDH2_sDqp"" calls 3.01",2023-06-20T21:24:19.644Z,168729625964400
+"""Brax @ Cgqw2xJL_L"" calls 3.01",2023-06-20T21:24:17.493Z,168729625749300
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:24:12.173Z,168729625217300
+"""Jackson @ yXr_bmZ3u2"" folds",2023-06-20T21:24:11.167Z,168729625116700
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:24:07.756Z,168729624775600
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T21:24:06.784Z,168729624678400
+"""Phil @ G71Wfb2gET"" raises to 3.01",2023-06-20T21:24:05.798Z,168729624579800
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:24:02.742Z,168729624274200
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:23:55.638Z,168729623563800
+"""brett @ eKDH2_sDqp"" posts a big blind of 1.00",2023-06-20T21:23:45.202Z,168729622520212
+"""Brax @ Cgqw2xJL_L"" posts a small blind of 0.50",2023-06-20T21:23:45.202Z,168729622520211
+"Player stacks: #2 ""brett @ eKDH2_sDqp"" (210.90) | #3 ""Allen @ owhH9xBTTE"" (239.75) | #4 ""dp @ fAO4FRQBI9"" (51.75) | #5 ""Phil @ G71Wfb2gET"" (154.48) | #6 ""Hari @ AbiA8gvle6"" (467.25) | #7 ""mp @ -DkySTil6a"" (110.75) | #8 ""Jackson @ yXr_bmZ3u2"" (121.50) | #9 ""Don @ 6T4espke1S"" (194.88) | #10 ""Brax @ Cgqw2xJL_L"" (200.50)",2023-06-20T21:23:45.202Z,168729622520201
+"-- starting hand #34 (id: y3wqlisd0sdw)  (No Limit Texas Hold'em) (dealer: ""Don @ 6T4espke1S"") --",2023-06-20T21:23:45.202Z,168729622520200
+"-- ending hand #33 --",2023-06-20T21:23:42.262Z,168729622226202
+"""Brax @ Cgqw2xJL_L"" collected 1.00 from pot",2023-06-20T21:23:42.262Z,168729622226201
+"Uncalled bet of 0.50 returned to ""Brax @ Cgqw2xJL_L""",2023-06-20T21:23:42.262Z,168729622226200
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:23:41.437Z,168729622143700
+"""Jackson @ yXr_bmZ3u2"" folds",2023-06-20T21:23:40.508Z,168729622050800
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:23:39.390Z,168729621939000
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T21:23:38.521Z,168729621852100
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T21:23:37.643Z,168729621764300
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:23:36.509Z,168729621650900
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:23:35.633Z,168729621563300
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:23:34.401Z,168729621440100
+"""Brax @ Cgqw2xJL_L"" posts a big blind of 1.00",2023-06-20T21:23:33.053Z,168729621305312
+"""Don @ 6T4espke1S"" posts a small blind of 0.50",2023-06-20T21:23:33.053Z,168729621305311
+"Player stacks: #2 ""brett @ eKDH2_sDqp"" (210.90) | #3 ""Allen @ owhH9xBTTE"" (239.75) | #4 ""dp @ fAO4FRQBI9"" (51.75) | #5 ""Phil @ G71Wfb2gET"" (154.48) | #6 ""Hari @ AbiA8gvle6"" (467.25) | #7 ""mp @ -DkySTil6a"" (110.75) | #8 ""Jackson @ yXr_bmZ3u2"" (121.50) | #9 ""Don @ 6T4espke1S"" (195.38) | #10 ""Brax @ Cgqw2xJL_L"" (200.00)",2023-06-20T21:23:33.053Z,168729621305301
+"-- starting hand #33 (id: cecrdwefkivu)  (No Limit Texas Hold'em) (dealer: ""Jackson @ yXr_bmZ3u2"") --",2023-06-20T21:23:33.053Z,168729621305300
+"-- ending hand #32 --",2023-06-20T21:23:27.123Z,168729620712302
+"""mp @ -DkySTil6a"" collected 22.50 from pot",2023-06-20T21:23:27.123Z,168729620712301
+"Uncalled bet of 22.50 returned to ""mp @ -DkySTil6a""",2023-06-20T21:23:27.123Z,168729620712300
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T21:23:26.280Z,168729620628000
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:23:25.376Z,168729620537600
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:23:22.820Z,168729620282000
+"""Jackson @ yXr_bmZ3u2"" folds",2023-06-20T21:23:21.815Z,168729620181500
+"""mp @ -DkySTil6a"" raises to 31.50",2023-06-20T21:23:17.198Z,168729619719800
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T21:23:15.105Z,168729619510500
+"""Phil @ G71Wfb2gET"" raises to 9.00",2023-06-20T21:23:13.938Z,168729619393800
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:23:11.508Z,168729619150800
+"""Allen @ owhH9xBTTE"" raises to 3.00",2023-06-20T21:23:05.875Z,168729618587500
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:23:01.385Z,168729618138500
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T21:23:00.501Z,168729618050100
+"""Don @ 6T4espke1S"" posts a big blind of 1.00",2023-06-20T21:22:34.417Z,168729615441712
+"""Jackson @ yXr_bmZ3u2"" posts a small blind of 0.50",2023-06-20T21:22:34.417Z,168729615441711
+"Player stacks: #2 ""brett @ eKDH2_sDqp"" (210.90) | #3 ""Allen @ owhH9xBTTE"" (242.75) | #4 ""dp @ fAO4FRQBI9"" (51.75) | #5 ""Phil @ G71Wfb2gET"" (163.48) | #6 ""Hari @ AbiA8gvle6"" (467.25) | #7 ""mp @ -DkySTil6a"" (97.25) | #8 ""Jackson @ yXr_bmZ3u2"" (122.00) | #9 ""Don @ 6T4espke1S"" (196.38) | #10 ""Brax @ Cgqw2xJL_L"" (200.00)",2023-06-20T21:22:34.417Z,168729615441701
+"-- starting hand #32 (id: dserc5dbdl8j)  (No Limit Texas Hold'em) (dealer: ""mp @ -DkySTil6a"") --",2023-06-20T21:22:34.417Z,168729615441700
+"-- ending hand #31 --",2023-06-20T21:22:28.475Z,168729614847502
+"""mp @ -DkySTil6a"" collected 15.00 from pot",2023-06-20T21:22:28.475Z,168729614847501
+"Uncalled bet of 15.00 returned to ""mp @ -DkySTil6a""",2023-06-20T21:22:28.475Z,168729614847500
+"""Jackson @ yXr_bmZ3u2"" folds",2023-06-20T21:22:27.630Z,168729614763000
+"""mp @ -DkySTil6a"" bets 15.00",2023-06-20T21:22:24.293Z,168729614429300
+"Turn: 4♦, 7♠, 8♥ [9♦]",2023-06-20T21:22:21.732Z,168729614173200
+"""Jackson @ yXr_bmZ3u2"" calls 4.50",2023-06-20T21:22:20.892Z,168729614089200
+"""mp @ -DkySTil6a"" bets 4.50",2023-06-20T21:22:18.657Z,168729613865700
+"Flop:  [4♦, 7♠, 8♥]",2023-06-20T21:22:15.862Z,168729613586200
+"""Jackson @ yXr_bmZ3u2"" calls 3.00",2023-06-20T21:22:15.041Z,168729613504100
+"""mp @ -DkySTil6a"" raises to 3.00",2023-06-20T21:22:11.470Z,168729613147000
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T21:22:08.100Z,168729612810000
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T21:22:07.012Z,168729612701200
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:22:06.117Z,168729612611700
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:22:05.229Z,168729612522900
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:22:01.921Z,168729612192100
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T21:21:58.917Z,168729611891700
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:21:57.920Z,168729611792000
+"""Jackson @ yXr_bmZ3u2"" posts a big blind of 1.00",2023-06-20T21:21:56.299Z,168729611629912
+"""mp @ -DkySTil6a"" posts a small blind of 0.50",2023-06-20T21:21:56.299Z,168729611629911
+"Player stacks: #2 ""brett @ eKDH2_sDqp"" (210.90) | #3 ""Allen @ owhH9xBTTE"" (242.75) | #4 ""dp @ fAO4FRQBI9"" (51.75) | #5 ""Phil @ G71Wfb2gET"" (163.48) | #6 ""Hari @ AbiA8gvle6"" (467.25) | #7 ""mp @ -DkySTil6a"" (89.75) | #8 ""Jackson @ yXr_bmZ3u2"" (129.50) | #9 ""Don @ 6T4espke1S"" (196.38) | #10 ""Brax @ Cgqw2xJL_L"" (200.00)",2023-06-20T21:21:56.299Z,168729611629901
+"-- starting hand #31 (id: 9u3mv5au3yae)  (No Limit Texas Hold'em) (dealer: ""Hari @ AbiA8gvle6"") --",2023-06-20T21:21:56.299Z,168729611629900
+"-- ending hand #30 --",2023-06-20T21:21:50.370Z,168729611037002
+"""Hari @ AbiA8gvle6"" collected 56.00 from pot",2023-06-20T21:21:50.370Z,168729611037001
+"Uncalled bet of 20.00 returned to ""Hari @ AbiA8gvle6""",2023-06-20T21:21:50.370Z,168729611037000
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T21:21:49.503Z,168729610950300
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:21:48.501Z,168729610850100
+"""Hari @ AbiA8gvle6"" bets 20.00",2023-06-20T21:21:43.973Z,168729610397300
+"Flop:  [10♣, 10♠, Q♣]",2023-06-20T21:21:33.759Z,168729609375900
+"""Phil @ G71Wfb2gET"" calls 18.00",2023-06-20T21:21:32.912Z,168729609291200
+"""brett @ eKDH2_sDqp"" calls 18.00",2023-06-20T21:21:31.655Z,168729609165500
+"""Jackson @ yXr_bmZ3u2"" folds",2023-06-20T21:21:27.383Z,168729608738300
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:21:23.197Z,168729608319700
+"""Hari @ AbiA8gvle6"" raises to 18.00",2023-06-20T21:21:22.315Z,168729608231500
+"""Phil @ G71Wfb2gET"" calls 4.00",2023-06-20T21:21:15.399Z,168729607539900
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:21:14.471Z,168729607447100
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:20:58.581Z,168729605858100
+"""brett @ eKDH2_sDqp"" raises to 4.00",2023-06-20T21:20:57.630Z,168729605763000
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T21:20:51.075Z,168729605107500
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:20:41.642Z,168729604164200
+"""Jackson @ yXr_bmZ3u2"" calls 1.00",2023-06-20T21:20:36.855Z,168729603685500
+"""mp @ -DkySTil6a"" posts a big blind of 1.00",2023-06-20T21:20:35.024Z,168729603502412
+"""Hari @ AbiA8gvle6"" posts a small blind of 0.50",2023-06-20T21:20:35.024Z,168729603502411
+"Player stacks: #2 ""brett @ eKDH2_sDqp"" (228.90) | #3 ""Allen @ owhH9xBTTE"" (242.75) | #4 ""dp @ fAO4FRQBI9"" (51.75) | #5 ""Phil @ G71Wfb2gET"" (181.48) | #6 ""Hari @ AbiA8gvle6"" (429.25) | #7 ""mp @ -DkySTil6a"" (90.75) | #8 ""Jackson @ yXr_bmZ3u2"" (130.50) | #9 ""Don @ 6T4espke1S"" (196.38) | #10 ""Brax @ Cgqw2xJL_L"" (200.00)",2023-06-20T21:20:35.024Z,168729603502401
+"-- starting hand #30 (id: gnbcyjjqro5u)  (No Limit Texas Hold'em) (dealer: ""Phil @ G71Wfb2gET"") --",2023-06-20T21:20:35.024Z,168729603502400
+"-- ending hand #29 --",2023-06-20T21:20:29.112Z,168729602911202
+"""Phil @ G71Wfb2gET"" collected 32.00 from pot",2023-06-20T21:20:29.112Z,168729602911201
+"Uncalled bet of 14.00 returned to ""Phil @ G71Wfb2gET""",2023-06-20T21:20:29.112Z,168729602911200
+"""Jackson @ yXr_bmZ3u2"" folds",2023-06-20T21:20:28.267Z,168729602826700
+"""Phil @ G71Wfb2gET"" bets 14.00",2023-06-20T21:20:25.403Z,168729602540300
+"Flop:  [6♥, J♣, 7♦]",2023-06-20T21:20:19.642Z,168729601964200
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:20:18.837Z,168729601883700
+"""Jackson @ yXr_bmZ3u2"" calls 14.00",2023-06-20T21:20:15.717Z,168729601571700
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T21:20:06.873Z,168729600687300
+"""Phil @ G71Wfb2gET"" raises to 14.00",2023-06-20T21:20:05.835Z,168729600583500
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:20:00.169Z,168729600016900
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:19:59.115Z,168729599911500
+"""brett @ eKDH2_sDqp"" calls 3.00",2023-06-20T21:19:58.180Z,168729599818000
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T21:19:57.061Z,168729599706100
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:19:56.078Z,168729599607800
+"""Jackson @ yXr_bmZ3u2"" raises to 3.00",2023-06-20T21:19:46.442Z,168729598644200
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:19:42.968Z,168729598296800
+"""Hari @ AbiA8gvle6"" posts a big blind of 1.00",2023-06-20T21:19:40.626Z,168729598062613
+"""Phil @ G71Wfb2gET"" posts a small blind of 0.50",2023-06-20T21:19:40.626Z,168729598062612
+"Player stacks: #2 ""brett @ eKDH2_sDqp"" (231.90) | #3 ""Allen @ owhH9xBTTE"" (242.75) | #4 ""dp @ fAO4FRQBI9"" (51.75) | #5 ""Phil @ G71Wfb2gET"" (163.48) | #6 ""Hari @ AbiA8gvle6"" (430.25) | #7 ""mp @ -DkySTil6a"" (90.75) | #8 ""Jackson @ yXr_bmZ3u2"" (144.50) | #9 ""Don @ 6T4espke1S"" (196.38) | #10 ""Brax @ Cgqw2xJL_L"" (200.00)",2023-06-20T21:19:40.626Z,168729598062602
+"-- starting hand #29 (id: t2wrbu99uaqq)  (No Limit Texas Hold'em) (dealer: ""dp @ fAO4FRQBI9"") --",2023-06-20T21:19:40.626Z,168729598062601
+"The player ""Brax @ Cgqw2xJL_L"" joined the game with a stack of 200.00.",2023-06-20T21:19:40.626Z,168729598062600
+"-- ending hand #28 --",2023-06-20T21:19:34.614Z,168729597461402
+"""Jackson @ yXr_bmZ3u2"" collected 20.50 from pot with Pair, 7's (combination: 7♣, 7♦, A♥, 10♣, 8♥)",2023-06-20T21:19:34.614Z,168729597461401
+"""Jackson @ yXr_bmZ3u2"" shows a 10♣, 7♣.",2023-06-20T21:19:34.614Z,168729597461400
+"""brett @ eKDH2_sDqp"" checks",2023-06-20T21:19:33.798Z,168729597379800
+"""Jackson @ yXr_bmZ3u2"" checks",2023-06-20T21:19:26.627Z,168729596662700
+"River: A♥, 8♥, 2♣, 3♦ [7♦]",2023-06-20T21:19:20.744Z,168729596074400
+"""brett @ eKDH2_sDqp"" checks",2023-06-20T21:19:19.940Z,168729595994000
+"The admin approved the player ""Brax @ Cgqw2xJL_L"" participation with a stack of 200.00.",2023-06-20T21:19:17.937Z,168729595793700
+"""Jackson @ yXr_bmZ3u2"" checks",2023-06-20T21:19:12.398Z,168729595239800
+"Turn: A♥, 8♥, 2♣ [3♦]",2023-06-20T21:19:08.786Z,168729594878600
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:19:07.934Z,168729594793400
+"""brett @ eKDH2_sDqp"" calls 5.00",2023-06-20T21:19:02.001Z,168729594200100
+"""Jackson @ yXr_bmZ3u2"" bets 5.00",2023-06-20T21:18:54.891Z,168729593489100
+"""mp @ -DkySTil6a"" checks",2023-06-20T21:18:46.184Z,168729592618400
+"Flop:  [A♥, 8♥, 2♣]",2023-06-20T21:18:40.443Z,168729592044300
+"""mp @ -DkySTil6a"" calls 3.00",2023-06-20T21:18:39.635Z,168729591963500
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T21:18:37.875Z,168729591787500
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:18:34.552Z,168729591455200
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:18:33.585Z,168729591358500
+"""brett @ eKDH2_sDqp"" calls 3.00",2023-06-20T21:18:32.689Z,168729591268900
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:18:29.400Z,168729590940000
+"""Jackson @ yXr_bmZ3u2"" raises to 3.00",2023-06-20T21:18:11.218Z,168729589121800
+"""mp @ -DkySTil6a"" calls 1.00",2023-06-20T21:18:06.569Z,168729588656900
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T21:18:00.174Z,168729588017400
+"""Phil @ G71Wfb2gET"" posts a big blind of 1.00",2023-06-20T21:17:57.995Z,168729587799511
+"""dp @ fAO4FRQBI9"" posts a small blind of 0.50",2023-06-20T21:17:57.995Z,168729587799510
+"Player stacks: #2 ""brett @ eKDH2_sDqp"" (239.90) | #3 ""Allen @ owhH9xBTTE"" (242.75) | #4 ""dp @ fAO4FRQBI9"" (52.25) | #5 ""Phil @ G71Wfb2gET"" (164.48) | #6 ""Hari @ AbiA8gvle6"" (430.25) | #7 ""mp @ -DkySTil6a"" (93.75) | #8 ""Jackson @ yXr_bmZ3u2"" (132.00) | #9 ""Don @ 6T4espke1S"" (196.38)",2023-06-20T21:17:57.995Z,168729587799501
+"-- starting hand #28 (id: cioxzash2gwl)  (No Limit Texas Hold'em) (dealer: ""Allen @ owhH9xBTTE"") --",2023-06-20T21:17:57.995Z,168729587799500
+"""Phil @ G71Wfb2gET"" shows a 4♥, 3♠.",2023-06-20T21:17:53.390Z,168729587339000
+"-- ending hand #27 --",2023-06-20T21:17:51.356Z,168729587135602
+"""Hari @ AbiA8gvle6"" collected 14.00 from pot",2023-06-20T21:17:51.356Z,168729587135601
+"Uncalled bet of 10.00 returned to ""Hari @ AbiA8gvle6""",2023-06-20T21:17:51.356Z,168729587135600
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:17:50.531Z,168729587053100
+"""Hari @ AbiA8gvle6"" bets 10.00",2023-06-20T21:17:48.885Z,168729586888500
+"""Allen @ owhH9xBTTE"" checks",2023-06-20T21:17:38.815Z,168729585881500
+"Turn: 5♦, 6♠, K♠ [7♣]",2023-06-20T21:17:32.273Z,168729585227300
+"""Allen @ owhH9xBTTE"" calls 3.50",2023-06-20T21:17:31.464Z,168729585146400
+"""Hari @ AbiA8gvle6"" bets 3.50",2023-06-20T21:17:26.775Z,168729584677500
+"""Allen @ owhH9xBTTE"" checks",2023-06-20T21:17:19.554Z,168729583955400
+"Flop:  [5♦, 6♠, K♠]",2023-06-20T21:17:15.897Z,168729583589700
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:17:15.088Z,168729583508800
+"""Allen @ owhH9xBTTE"" calls 3.00",2023-06-20T21:17:13.645Z,168729583364500
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:17:09.961Z,168729582996100
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:17:08.964Z,168729582896400
+"""Jackson @ yXr_bmZ3u2"" folds",2023-06-20T21:16:43.934Z,168729580393400
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:16:42.826Z,168729580282600
+"""Hari @ AbiA8gvle6"" raises to 3.00",2023-06-20T21:16:41.875Z,168729580187500
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T21:16:37.369Z,168729579736900
+"""dp @ fAO4FRQBI9"" posts a big blind of 1.00",2023-06-20T21:16:34.810Z,168729579481011
+"""Allen @ owhH9xBTTE"" posts a small blind of 0.50",2023-06-20T21:16:34.810Z,168729579481010
+"Player stacks: #2 ""brett @ eKDH2_sDqp"" (239.90) | #3 ""Allen @ owhH9xBTTE"" (249.25) | #4 ""dp @ fAO4FRQBI9"" (53.25) | #5 ""Phil @ G71Wfb2gET"" (164.48) | #6 ""Hari @ AbiA8gvle6"" (422.75) | #7 ""mp @ -DkySTil6a"" (93.75) | #8 ""Jackson @ yXr_bmZ3u2"" (132.00) | #9 ""Don @ 6T4espke1S"" (196.38)",2023-06-20T21:16:34.810Z,168729579481001
+"-- starting hand #27 (id: er2va8tzojxv)  (No Limit Texas Hold'em) (dealer: ""brett @ eKDH2_sDqp"") --",2023-06-20T21:16:34.810Z,168729579481000
+"-- ending hand #26 --",2023-06-20T21:16:28.780Z,168729578878002
+"""brett @ eKDH2_sDqp"" collected 4.00 from pot",2023-06-20T21:16:28.780Z,168729578878001
+"Uncalled bet of 2.00 returned to ""brett @ eKDH2_sDqp""",2023-06-20T21:16:28.780Z,168729578878000
+"""Jackson @ yXr_bmZ3u2"" folds",2023-06-20T21:16:27.950Z,168729578795000
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:16:26.809Z,168729578680900
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:16:10.949Z,168729577094900
+"""brett @ eKDH2_sDqp"" bets 2.00",2023-06-20T21:16:09.699Z,168729576969900
+"Turn: 5♣, 7♠, 2♣ [9♠]",2023-06-20T21:16:05.135Z,168729576513500
+"""Jackson @ yXr_bmZ3u2"" checks",2023-06-20T21:16:04.301Z,168729576430100
+"""mp @ -DkySTil6a"" checks",2023-06-20T21:16:03.333Z,168729576333300
+"""Allen @ owhH9xBTTE"" checks",2023-06-20T21:15:47.490Z,168729574749000
+"""brett @ eKDH2_sDqp"" checks",2023-06-20T21:15:45.847Z,168729574584700
+"Flop:  [5♣, 7♠, 2♣]",2023-06-20T21:15:43.691Z,168729574369100
+"""Allen @ owhH9xBTTE"" checks",2023-06-20T21:15:42.793Z,168729574279300
+"""brett @ eKDH2_sDqp"" calls 1.00",2023-06-20T21:15:26.934Z,168729572693400
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:15:26.030Z,168729572603000
+"""Jackson @ yXr_bmZ3u2"" calls 1.00",2023-06-20T21:15:25.079Z,168729572507900
+"""mp @ -DkySTil6a"" calls 1.00",2023-06-20T21:15:22.116Z,168729572211600
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T21:15:21.254Z,168729572125400
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T21:15:19.356Z,168729571935600
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:15:18.480Z,168729571848000
+"""Allen @ owhH9xBTTE"" posts a big blind of 1.00",2023-06-20T21:15:16.477Z,168729571647711
+"""brett @ eKDH2_sDqp"" posts a small blind of 0.50",2023-06-20T21:15:16.477Z,168729571647710
+"Player stacks: #2 ""brett @ eKDH2_sDqp"" (236.90) | #3 ""Allen @ owhH9xBTTE"" (250.25) | #4 ""dp @ fAO4FRQBI9"" (53.25) | #5 ""Phil @ G71Wfb2gET"" (164.48) | #6 ""Hari @ AbiA8gvle6"" (422.75) | #7 ""mp @ -DkySTil6a"" (94.75) | #8 ""Jackson @ yXr_bmZ3u2"" (133.00) | #9 ""Don @ 6T4espke1S"" (196.38)",2023-06-20T21:15:16.477Z,168729571647701
+"-- starting hand #26 (id: hcbxsfqgdcjx)  (No Limit Texas Hold'em) (dead button) --",2023-06-20T21:15:16.477Z,168729571647700
+"-- ending hand #25 --",2023-06-20T21:15:10.560Z,168729571056002
+"""brett @ eKDH2_sDqp"" collected 0.00 from pot",2023-06-20T21:15:10.560Z,168729571056001
+"Uncalled bet of 1.00 returned to ""brett @ eKDH2_sDqp""",2023-06-20T21:15:10.560Z,168729571056000
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:15:09.681Z,168729570968100
+"""Jackson @ yXr_bmZ3u2"" folds",2023-06-20T21:15:07.160Z,168729570716000
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:15:05.959Z,168729570595900
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T21:15:04.959Z,168729570495900
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T21:15:03.401Z,168729570340100
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:15:02.535Z,168729570253500
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:14:57.235Z,168729569723500
+"The player ""Brax @ Cgqw2xJL_L"" requested a seat.",2023-06-20T21:14:55.715Z,168729569571500
+"""brett @ eKDH2_sDqp"" posts a big blind of 1.00",2023-06-20T21:14:49.011Z,168729568901113
+"Dead Small Blind",2023-06-20T21:14:49.011Z,168729568901112
+"Player stacks: #2 ""brett @ eKDH2_sDqp"" (236.90) | #3 ""Allen @ owhH9xBTTE"" (250.25) | #4 ""dp @ fAO4FRQBI9"" (53.25) | #5 ""Phil @ G71Wfb2gET"" (164.48) | #6 ""Hari @ AbiA8gvle6"" (422.75) | #7 ""mp @ -DkySTil6a"" (94.75) | #8 ""Jackson @ yXr_bmZ3u2"" (133.00) | #9 ""Don @ 6T4espke1S"" (196.38)",2023-06-20T21:14:49.011Z,168729568901103
+"-- starting hand #25 (id: pftvslcuayag)  (No Limit Texas Hold'em) (dealer: ""Don @ 6T4espke1S"") --",2023-06-20T21:14:49.011Z,168729568901102
+"The player ""Brax @ Cgqw2xJL_L"" quits the game with a stack of 0.00.",2023-06-20T21:14:49.011Z,168729568901101
+"The player ""Marv69 @ OCMtlCKqdV"" stand up with the stack of 315.00.",2023-06-20T21:14:49.011Z,168729568901100
+"""brett @ eKDH2_sDqp"" shows a J♠, A♦.",2023-06-20T21:14:44.955Z,168729568495500
+"""Phil @ G71Wfb2gET"" shows a 7♥, 2♥.",2023-06-20T21:14:44.099Z,168729568409900
+"-- ending hand #24 --",2023-06-20T21:14:41.996Z,168729568199603
+"""Brax @ Cgqw2xJL_L"" shows a 9♥, J♥.",2023-06-20T21:14:41.996Z,168729568199602
+"""Hari @ AbiA8gvle6"" collected 417.50 from pot with Flush, Ah High (combination: A♥, K♥, 10♥, 6♥, 4♥)",2023-06-20T21:14:41.996Z,168729568199601
+"""Hari @ AbiA8gvle6"" shows a K♥, 10♥.",2023-06-20T21:14:41.996Z,168729568199600
+"""Hari @ AbiA8gvle6"" calls 133.50",2023-06-20T21:14:41.112Z,168729568111200
+"""Brax @ Cgqw2xJL_L"" bets 133.50 and go all in",2023-06-20T21:14:38.944Z,168729567894400
+"River: 4♥, A♥, 6♥, Q♦ [8♠]",2023-06-20T21:14:20.620Z,168729566062000
+"""Hari @ AbiA8gvle6"" calls 45.00",2023-06-20T21:14:19.792Z,168729565979200
+"""Brax @ Cgqw2xJL_L"" bets 45.00",2023-06-20T21:14:06.500Z,168729564650000
+"Turn: 4♥, A♥, 6♥ [Q♦]",2023-06-20T21:13:52.261Z,168729563226100
+"""Hari @ AbiA8gvle6"" calls 24.00",2023-06-20T21:13:51.440Z,168729563144000
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:13:47.209Z,168729562720900
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:13:46.030Z,168729562603000
+"""Brax @ Cgqw2xJL_L"" raises to 24.00",2023-06-20T21:13:43.381Z,168729562338100
+"""Hari @ AbiA8gvle6"" bets 6.25",2023-06-20T21:13:33.836Z,168729561383600
+"""Allen @ owhH9xBTTE"" checks",2023-06-20T21:13:22.677Z,168729560267700
+"""brett @ eKDH2_sDqp"" checks",2023-06-20T21:13:06.839Z,168729558683900
+"""Brax @ Cgqw2xJL_L"" checks",2023-06-20T21:13:05.979Z,168729558597900
+"Flop:  [4♥, A♥, 6♥]",2023-06-20T21:12:52.843Z,168729557284300
+"""brett @ eKDH2_sDqp"" calls 3.00",2023-06-20T21:12:52.031Z,168729557203100
+"""Brax @ Cgqw2xJL_L"" calls 3.00",2023-06-20T21:12:48.541Z,168729556854100
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:12:44.950Z,168729556495000
+"""Jackson @ yXr_bmZ3u2"" folds",2023-06-20T21:12:44.011Z,168729556401100
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:12:42.913Z,168729556291300
+"""Hari @ AbiA8gvle6"" calls 3.00",2023-06-20T21:12:41.925Z,168729556192500
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T21:12:38.171Z,168729555817100
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:12:37.073Z,168729555707300
+"""Allen @ owhH9xBTTE"" raises to 3.00",2023-06-20T21:12:36.182Z,168729555618200
+"""brett @ eKDH2_sDqp"" calls 1.00",2023-06-20T21:12:23.352Z,168729554335200
+"""Marv69 @ OCMtlCKqdV"" folds",2023-06-20T21:12:21.618Z,168729554161800
+"""Brax @ Cgqw2xJL_L"" posts a big blind of 1.00",2023-06-20T21:12:20.612Z,168729554061213
+"""Don @ 6T4espke1S"" posts a small blind of 0.50",2023-06-20T21:12:20.612Z,168729554061212
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (315.00) | #2 ""brett @ eKDH2_sDqp"" (239.90) | #3 ""Allen @ owhH9xBTTE"" (253.25) | #4 ""dp @ fAO4FRQBI9"" (53.25) | #5 ""Phil @ G71Wfb2gET"" (164.48) | #6 ""Hari @ AbiA8gvle6"" (210.75) | #7 ""mp @ -DkySTil6a"" (94.75) | #8 ""Jackson @ yXr_bmZ3u2"" (133.00) | #9 ""Don @ 6T4espke1S"" (196.88) | #10 ""Brax @ Cgqw2xJL_L"" (205.50)",2023-06-20T21:12:20.612Z,168729554061201
+"-- starting hand #24 (id: bhg8toffwp1q)  (No Limit Texas Hold'em) (dealer: ""Jackson @ yXr_bmZ3u2"") --",2023-06-20T21:12:20.612Z,168729554061200
+"-- ending hand #23 --",2023-06-20T21:12:14.665Z,168729553466502
+"""Hari @ AbiA8gvle6"" collected 11.50 from pot",2023-06-20T21:12:14.665Z,168729553466501
+"Uncalled bet of 6.00 returned to ""Hari @ AbiA8gvle6""",2023-06-20T21:12:14.665Z,168729553466500
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:12:13.835Z,168729553383500
+"""Hari @ AbiA8gvle6"" bets 6.00",2023-06-20T21:12:10.293Z,168729553029300
+"""brett @ eKDH2_sDqp"" checks",2023-06-20T21:12:02.137Z,168729552213700
+"Flop:  [2♥, Q♠, 9♠]",2023-06-20T21:12:00.581Z,168729552058100
+"""brett @ eKDH2_sDqp"" calls 5.00",2023-06-20T21:11:59.730Z,168729551973000
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:11:56.923Z,168729551692300
+"""Jackson @ yXr_bmZ3u2"" folds",2023-06-20T21:11:55.987Z,168729551598700
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:11:52.525Z,168729551252500
+"""Hari @ AbiA8gvle6"" raises to 5.00",2023-06-20T21:11:51.581Z,168729551158100
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T21:11:47.185Z,168729550718500
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:11:46.114Z,168729550611400
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:11:39.695Z,168729549969500
+"""brett @ eKDH2_sDqp"" calls 1.00",2023-06-20T21:11:23.868Z,168729548386800
+"""Marv69 @ OCMtlCKqdV"" folds",2023-06-20T21:11:21.732Z,168729548173200
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T21:11:20.846Z,168729548084600
+"""Don @ 6T4espke1S"" posts a big blind of 1.00",2023-06-20T21:11:17.988Z,168729547798813
+"""Jackson @ yXr_bmZ3u2"" posts a small blind of 0.50",2023-06-20T21:11:17.988Z,168729547798812
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (315.00) | #2 ""brett @ eKDH2_sDqp"" (244.90) | #3 ""Allen @ owhH9xBTTE"" (253.25) | #4 ""dp @ fAO4FRQBI9"" (53.25) | #5 ""Phil @ G71Wfb2gET"" (164.48) | #6 ""Hari @ AbiA8gvle6"" (204.25) | #7 ""mp @ -DkySTil6a"" (94.75) | #8 ""Jackson @ yXr_bmZ3u2"" (133.50) | #9 ""Don @ 6T4espke1S"" (197.88) | #10 ""Brax @ Cgqw2xJL_L"" (205.50)",2023-06-20T21:11:17.988Z,168729547798801
+"-- starting hand #23 (id: 9rnpujvng7ug)  (No Limit Texas Hold'em) (dealer: ""mp @ -DkySTil6a"") --",2023-06-20T21:11:17.988Z,168729547798800
+"""Phil @ G71Wfb2gET"" shows a 3♠, 8♥.",2023-06-20T21:11:13.671Z,168729547367100
+"-- ending hand #22 --",2023-06-20T21:11:11.476Z,168729547147602
+"""brett @ eKDH2_sDqp"" collected 113.00 from pot with Straight, K High (combination: K♥, Q♣, J♥, 10♠, 9♥)",2023-06-20T21:11:11.476Z,168729547147601
+"""brett @ eKDH2_sDqp"" shows a 9♥, J♥.",2023-06-20T21:11:11.476Z,168729547147600
+"""Marv69 @ OCMtlCKqdV"" calls 45.00",2023-06-20T21:11:10.650Z,168729547065000
+"""brett @ eKDH2_sDqp"" raises to 45.00",2023-06-20T21:10:51.204Z,168729545120400
+"""Marv69 @ OCMtlCKqdV"" bets 16.00",2023-06-20T21:10:42.246Z,168729544224600
+"River: 10♠, 10♦, Q♣, 5♦ [K♥]",2023-06-20T21:10:32.593Z,168729543259300
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:10:31.728Z,168729543172800
+"""brett @ eKDH2_sDqp"" calls 6.25",2023-06-20T21:10:28.744Z,168729542874400
+"""Marv69 @ OCMtlCKqdV"" bets 6.25",2023-06-20T21:10:26.384Z,168729542638400
+"Turn: 10♠, 10♦, Q♣ [5♦]",2023-06-20T21:10:21.839Z,168729542183900
+"""dp @ fAO4FRQBI9"" checks",2023-06-20T21:10:21.022Z,168729542102200
+"""brett @ eKDH2_sDqp"" checks",2023-06-20T21:10:18.404Z,168729541840400
+"""Marv69 @ OCMtlCKqdV"" checks",2023-06-20T21:10:16.202Z,168729541620200
+"Flop:  [10♠, 10♦, Q♣]",2023-06-20T21:10:09.728Z,168729540972800
+"""Jackson @ yXr_bmZ3u2"" folds",2023-06-20T21:10:08.862Z,168729540886200
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:10:07.662Z,168729540766200
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T21:10:06.629Z,168729540662900
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T21:10:05.196Z,168729540519600
+"""dp @ fAO4FRQBI9"" calls 3.00",2023-06-20T21:10:04.270Z,168729540427000
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:10:02.881Z,168729540288100
+"""brett @ eKDH2_sDqp"" calls 3.00",2023-06-20T21:10:01.915Z,168729540191500
+"""Marv69 @ OCMtlCKqdV"" raises to 3.00",2023-06-20T21:10:01.000Z,168729540100000
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T21:09:59.043Z,168729539904300
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:09:58.025Z,168729539802500
+"""Jackson @ yXr_bmZ3u2"" posts a big blind of 1.00",2023-06-20T21:09:50.805Z,168729539080513
+"""mp @ -DkySTil6a"" posts a small blind of 0.50",2023-06-20T21:09:50.805Z,168729539080512
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (369.25) | #2 ""brett @ eKDH2_sDqp"" (186.15) | #3 ""Allen @ owhH9xBTTE"" (253.25) | #4 ""dp @ fAO4FRQBI9"" (56.25) | #5 ""Phil @ G71Wfb2gET"" (164.48) | #6 ""Hari @ AbiA8gvle6"" (204.25) | #7 ""mp @ -DkySTil6a"" (95.25) | #8 ""Jackson @ yXr_bmZ3u2"" (134.50) | #9 ""Don @ 6T4espke1S"" (197.88) | #10 ""Brax @ Cgqw2xJL_L"" (205.50)",2023-06-20T21:09:50.805Z,168729539080501
+"-- starting hand #22 (id: efoofa4sg5u0)  (No Limit Texas Hold'em) (dealer: ""Hari @ AbiA8gvle6"") --",2023-06-20T21:09:50.805Z,168729539080500
+"""Jackson @ yXr_bmZ3u2"" shows a 10♦, 8♣.",2023-06-20T21:09:47.371Z,168729538737100
+"-- ending hand #21 --",2023-06-20T21:09:44.178Z,168729538417802
+"""mp @ -DkySTil6a"" collected 1.00 from pot",2023-06-20T21:09:44.178Z,168729538417801
+"Uncalled bet of 0.50 returned to ""mp @ -DkySTil6a""",2023-06-20T21:09:44.178Z,168729538417800
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T21:09:43.371Z,168729538337100
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T21:09:41.637Z,168729538163700
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:09:40.731Z,168729538073100
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:09:39.861Z,168729537986100
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:09:24.028Z,168729536402800
+"""Marv69 @ OCMtlCKqdV"" folds",2023-06-20T21:09:23.124Z,168729536312400
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T21:09:22.158Z,168729536215800
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:09:21.189Z,168729536118900
+"""Jackson @ yXr_bmZ3u2"" folds",2023-06-20T21:09:19.179Z,168729535917900
+"""mp @ -DkySTil6a"" posts a big blind of 1.00",2023-06-20T21:09:17.451Z,168729535745113
+"""Hari @ AbiA8gvle6"" posts a small blind of 0.50",2023-06-20T21:09:17.451Z,168729535745112
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (369.25) | #2 ""brett @ eKDH2_sDqp"" (186.15) | #3 ""Allen @ owhH9xBTTE"" (253.25) | #4 ""dp @ fAO4FRQBI9"" (56.25) | #5 ""Phil @ G71Wfb2gET"" (164.48) | #6 ""Hari @ AbiA8gvle6"" (204.75) | #7 ""mp @ -DkySTil6a"" (94.75) | #8 ""Jackson @ yXr_bmZ3u2"" (134.50) | #9 ""Don @ 6T4espke1S"" (197.88) | #10 ""Brax @ Cgqw2xJL_L"" (205.50)",2023-06-20T21:09:17.451Z,168729535745101
+"-- starting hand #21 (id: ctxnqvhl0iq5)  (No Limit Texas Hold'em) (dealer: ""Phil @ G71Wfb2gET"") --",2023-06-20T21:09:17.451Z,168729535745100
+"-- ending hand #20 --",2023-06-20T21:09:11.440Z,168729535144002
+"""Phil @ G71Wfb2gET"" collected 7.00 from pot",2023-06-20T21:09:11.440Z,168729535144001
+"Uncalled bet of 9.00 returned to ""Phil @ G71Wfb2gET""",2023-06-20T21:09:11.440Z,168729535144000
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:09:10.598Z,168729535059800
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T21:09:02.920Z,168729534292000
+"""Phil @ G71Wfb2gET"" raises to 12.00",2023-06-20T21:08:59.828Z,168729533982800
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:08:56.019Z,168729533601900
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:08:52.120Z,168729533212000
+"""brett @ eKDH2_sDqp"" raises to 3.00",2023-06-20T21:08:51.203Z,168729533120300
+"""Marv69 @ OCMtlCKqdV"" folds",2023-06-20T21:08:48.409Z,168729532840900
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T21:08:47.491Z,168729532749100
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:08:36.647Z,168729531664700
+"""Jackson @ yXr_bmZ3u2"" folds",2023-06-20T21:08:34.916Z,168729531491600
+"The player ""dp @ fAO4FRQBI9"" passed the room ownership to ""mp @ -DkySTil6a"".",2023-06-20T21:08:34.289Z,168729531428900
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:08:34.000Z,168729531400000
+"""Hari @ AbiA8gvle6"" posts a big blind of 1.00",2023-06-20T21:08:32.578Z,168729531257813
+"""Phil @ G71Wfb2gET"" posts a small blind of 0.50",2023-06-20T21:08:32.578Z,168729531257812
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (369.25) | #2 ""brett @ eKDH2_sDqp"" (189.15) | #3 ""Allen @ owhH9xBTTE"" (253.25) | #4 ""dp @ fAO4FRQBI9"" (56.25) | #5 ""Phil @ G71Wfb2gET"" (160.48) | #6 ""Hari @ AbiA8gvle6"" (205.75) | #7 ""mp @ -DkySTil6a"" (94.75) | #8 ""Jackson @ yXr_bmZ3u2"" (134.50) | #9 ""Don @ 6T4espke1S"" (197.88) | #10 ""Brax @ Cgqw2xJL_L"" (205.50)",2023-06-20T21:08:32.578Z,168729531257801
+"-- starting hand #20 (id: afgi454yjyti)  (No Limit Texas Hold'em) (dealer: ""dp @ fAO4FRQBI9"") --",2023-06-20T21:08:32.578Z,168729531257800
+"-- ending hand #19 --",2023-06-20T21:08:26.578Z,168729530657802
+"""Jackson @ yXr_bmZ3u2"" collected 24.50 from pot",2023-06-20T21:08:26.578Z,168729530657801
+"Uncalled bet of 20.00 returned to ""Jackson @ yXr_bmZ3u2""",2023-06-20T21:08:26.578Z,168729530657800
+"""Marv69 @ OCMtlCKqdV"" folds",2023-06-20T21:08:25.723Z,168729530572300
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:08:22.596Z,168729530259600
+"""Jackson @ yXr_bmZ3u2"" raises to 30.00",2023-06-20T21:08:17.730Z,168729529773000
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T21:08:04.736Z,168729528473600
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:07:58.026Z,168729527802600
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:07:57.124Z,168729527712400
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:07:56.169Z,168729527616900
+"""Marv69 @ OCMtlCKqdV"" raises to 10.00",2023-06-20T21:07:54.898Z,168729527489800
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T21:07:50.191Z,168729527019100
+"""Don @ 6T4espke1S"" calls 3.00",2023-06-20T21:07:49.044Z,168729526904400
+"The player ""mp @ -DkySTil6a"" passed the room ownership to ""dp @ fAO4FRQBI9"".",2023-06-20T21:07:39.160Z,168729525916000
+"""Jackson @ yXr_bmZ3u2"" raises to 3.00",2023-06-20T21:07:35.052Z,168729525505200
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:07:29.343Z,168729524934300
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T21:07:28.480Z,168729524848000
+"""Phil @ G71Wfb2gET"" posts a big blind of 1.00",2023-06-20T21:07:26.514Z,168729524651414
+"""dp @ fAO4FRQBI9"" posts a small blind of 0.50",2023-06-20T21:07:26.514Z,168729524651413
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (379.25) | #2 ""brett @ eKDH2_sDqp"" (189.15) | #3 ""Allen @ owhH9xBTTE"" (253.25) | #4 ""dp @ fAO4FRQBI9"" (56.75) | #5 ""Phil @ G71Wfb2gET"" (161.48) | #6 ""Hari @ AbiA8gvle6"" (205.75) | #7 ""mp @ -DkySTil6a"" (94.75) | #8 ""Jackson @ yXr_bmZ3u2"" (120.00) | #9 ""Don @ 6T4espke1S"" (200.88) | #10 ""Brax @ Cgqw2xJL_L"" (205.50)",2023-06-20T21:07:26.514Z,168729524651402
+"-- starting hand #19 (id: 5sihywwsirjn)  (No Limit Texas Hold'em) (dealer: ""Allen @ owhH9xBTTE"") --",2023-06-20T21:07:26.514Z,168729524651401
+"The player ""Jackson @ yXr_bmZ3u2"" joined the game with a stack of 120.00.",2023-06-20T21:07:26.514Z,168729524651400
+"-- ending hand #18 --",2023-06-20T21:07:23.603Z,168729524360302
+"""Hari @ AbiA8gvle6"" collected 35.50 from pot",2023-06-20T21:07:23.603Z,168729524360301
+"Uncalled bet of 15.00 returned to ""Hari @ AbiA8gvle6""",2023-06-20T21:07:23.603Z,168729524360300
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T21:07:22.771Z,168729524277100
+"""Hari @ AbiA8gvle6"" bets 15.00",2023-06-20T21:07:17.295Z,168729523729500
+"The player ""dp @ fAO4FRQBI9"" passed the room ownership to ""mp @ -DkySTil6a"".",2023-06-20T21:07:06.974Z,168729522697400
+"River: 4♥, J♦, 3♥, 2♦ [3♠]",2023-06-20T21:07:03.788Z,168729522378800
+"""Brax @ Cgqw2xJL_L"" checks",2023-06-20T21:07:02.927Z,168729522292700
+"""Hari @ AbiA8gvle6"" checks",2023-06-20T21:06:51.925Z,168729521192500
+"Turn: 4♥, J♦, 3♥ [2♦]",2023-06-20T21:06:48.459Z,168729520845900
+"The admin approved the player ""Jackson @ yXr_bmZ3u2"" participation with a stack of 120.00.",2023-06-20T21:06:48.195Z,168729520819500
+"""Hari @ AbiA8gvle6"" calls 7.00",2023-06-20T21:06:47.585Z,168729520758500
+"""Brax @ Cgqw2xJL_L"" bets 7.00",2023-06-20T21:06:41.292Z,168729520129200
+"""Hari @ AbiA8gvle6"" checks",2023-06-20T21:06:28.000Z,168729518800000
+"Flop:  [4♥, J♦, 3♥]",2023-06-20T21:06:24.807Z,168729518480700
+"""Hari @ AbiA8gvle6"" calls 10.00",2023-06-20T21:06:23.999Z,168729518399900
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:06:16.311Z,168729517631100
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:06:15.399Z,168729517539900
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:06:14.488Z,168729517448800
+"""Marv69 @ OCMtlCKqdV"" folds",2023-06-20T21:06:13.517Z,168729517351700
+"""Brax @ Cgqw2xJL_L"" raises to 10.00",2023-06-20T21:06:11.162Z,168729517116200
+"The player ""Jackson @ yXr_bmZ3u2"" requested a seat.",2023-06-20T21:06:10.765Z,168729517076500
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:06:01.382Z,168729516138200
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:06:00.465Z,168729516046500
+"""Hari @ AbiA8gvle6"" raises to 3.00",2023-06-20T21:05:57.269Z,168729515726900
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T21:05:53.450Z,168729515345000
+"""dp @ fAO4FRQBI9"" posts a big blind of 1.00",2023-06-20T21:05:45.613Z,168729514561312
+"""Allen @ owhH9xBTTE"" posts a small blind of 0.50",2023-06-20T21:05:45.613Z,168729514561311
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (379.25) | #2 ""brett @ eKDH2_sDqp"" (189.15) | #3 ""Allen @ owhH9xBTTE"" (253.75) | #4 ""dp @ fAO4FRQBI9"" (57.75) | #5 ""Phil @ G71Wfb2gET"" (161.48) | #6 ""Hari @ AbiA8gvle6"" (187.25) | #7 ""mp @ -DkySTil6a"" (94.75) | #9 ""Don @ 6T4espke1S"" (200.88) | #10 ""Brax @ Cgqw2xJL_L"" (222.50)",2023-06-20T21:05:45.613Z,168729514561301
+"-- starting hand #18 (id: s1fwrexhrgeh)  (No Limit Texas Hold'em) (dealer: ""brett @ eKDH2_sDqp"") --",2023-06-20T21:05:45.613Z,168729514561300
+"-- ending hand #17 --",2023-06-20T21:05:39.676Z,168729513967602
+"""Phil @ G71Wfb2gET"" collected 19.00 from pot",2023-06-20T21:05:39.676Z,168729513967601
+"Uncalled bet of 9.50 returned to ""Phil @ G71Wfb2gET""",2023-06-20T21:05:39.676Z,168729513967600
+"""mp @ -DkySTil6a"" folds",2023-06-20T21:05:38.861Z,168729513886100
+"""Phil @ G71Wfb2gET"" bets 9.50",2023-06-20T21:05:37.907Z,168729513790700
+"Turn: 5♠, K♦, 2♥ [3♥]",2023-06-20T21:05:32.189Z,168729513218900
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:05:31.334Z,168729513133400
+"""mp @ -DkySTil6a"" calls 4.50",2023-06-20T21:05:29.150Z,168729512915000
+"""Phil @ G71Wfb2gET"" bets 4.50",2023-06-20T21:05:28.060Z,168729512806000
+"""brett @ eKDH2_sDqp"" checks",2023-06-20T21:05:24.006Z,168729512400600
+"Flop:  [5♠, K♦, 2♥]",2023-06-20T21:05:22.382Z,168729512238200
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:05:21.568Z,168729512156800
+"""brett @ eKDH2_sDqp"" calls 3.00",2023-06-20T21:05:20.612Z,168729512061200
+"""Marv69 @ OCMtlCKqdV"" folds",2023-06-20T21:05:13.751Z,168729511375100
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T21:05:12.302Z,168729511230200
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:05:11.315Z,168729511131500
+"""mp @ -DkySTil6a"" calls 3.00",2023-06-20T21:05:10.429Z,168729511042900
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T21:05:08.998Z,168729510899800
+"""Phil @ G71Wfb2gET"" raises to 3.00",2023-06-20T21:05:04.165Z,168729510416500
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:05:01.991Z,168729510199100
+"""Allen @ owhH9xBTTE"" posts a big blind of 1.00",2023-06-20T21:04:57.963Z,168729509796314
+"""brett @ eKDH2_sDqp"" posts a small blind of 0.50",2023-06-20T21:04:57.963Z,168729509796313
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (379.25) | #2 ""brett @ eKDH2_sDqp"" (192.15) | #3 ""Allen @ owhH9xBTTE"" (254.75) | #4 ""dp @ fAO4FRQBI9"" (57.75) | #5 ""Phil @ G71Wfb2gET"" (149.98) | #6 ""Hari @ AbiA8gvle6"" (187.25) | #7 ""mp @ -DkySTil6a"" (102.25) | #9 ""Don @ 6T4espke1S"" (200.88) | #10 ""Brax @ Cgqw2xJL_L"" (222.50)",2023-06-20T21:04:57.963Z,168729509796303
+"-- starting hand #17 (id: jkdrq4wfgt4j)  (No Limit Texas Hold'em) (dealer: ""Marv69 @ OCMtlCKqdV"") --",2023-06-20T21:04:57.963Z,168729509796302
+"The player ""mp @ -DkySTil6a"" joined the game with a stack of 102.25.",2023-06-20T21:04:57.963Z,168729509796301
+"The player ""rj @ yDF1COkEoC"" quits the game with a stack of 106.24.",2023-06-20T21:04:57.963Z,168729509796300
+"-- ending hand #16 --",2023-06-20T21:04:51.956Z,168729509195604
+"""Phil @ G71Wfb2gET"" collected 149.98 from pot with Three of a Kind, K's (combination: K♣, K♦, K♠, Q♦, 10♠)",2023-06-20T21:04:51.956Z,168729509195603
+"""Phil @ G71Wfb2gET"" shows a Q♦, K♣.",2023-06-20T21:04:51.956Z,168729509195602
+"""Marv69 @ OCMtlCKqdV"" collected 149.98 from pot with Three of a Kind, K's (combination: K♥, K♦, K♠, Q♥, 10♠)",2023-06-20T21:04:51.956Z,168729509195601
+"""Marv69 @ OCMtlCKqdV"" shows a K♥, Q♥.",2023-06-20T21:04:51.956Z,168729509195600
+"""Marv69 @ OCMtlCKqdV"" calls 99.48",2023-06-20T21:04:51.086Z,168729509108600
+"""Phil @ G71Wfb2gET"" bets 99.48 and go all in",2023-06-20T21:04:49.247Z,168729508924700
+"The player ""mp @ -DkySTil6a"" sit back with the stack of 102.25.",2023-06-20T21:04:35.979Z,168729507597900
+"The player ""mp @ -DkySTil6a"" changed the ID from uLCwm9NZLI to -DkySTil6a because authenticated login.",2023-06-20T21:04:30.315Z,168729507031500
+"""Marv69 @ OCMtlCKqdV"" checks",2023-06-20T21:04:26.855Z,168729506685500
+"River: 4♣, K♦, K♠, 10♠ [7♠]",2023-06-20T21:04:19.640Z,168729505964000
+"""Phil @ G71Wfb2gET"" checks",2023-06-20T21:04:18.810Z,168729505881000
+"""Marv69 @ OCMtlCKqdV"" checks",2023-06-20T21:04:12.494Z,168729505249400
+"Turn: 4♣, K♦, K♠ [10♠]",2023-06-20T21:04:09.099Z,168729504909900
+"""Marv69 @ OCMtlCKqdV"" calls 35.75",2023-06-20T21:04:08.275Z,168729504827500
+"The player ""mp @ uLCwm9NZLI"" passed the room ownership to ""dp @ fAO4FRQBI9"".",2023-06-20T21:04:06.934Z,168729504693400
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:03:57.024Z,168729503702400
+"""Phil @ G71Wfb2gET"" raises to 35.75",2023-06-20T21:03:34.582Z,168729501458200
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T21:03:24.580Z,168729500458000
+"""Marv69 @ OCMtlCKqdV"" calls 8.50",2023-06-20T21:03:21.529Z,168729500152900
+"""Don @ 6T4espke1S"" bets 8.50",2023-06-20T21:03:17.707Z,168729499770700
+"""Phil @ G71Wfb2gET"" checks",2023-06-20T21:03:12.979Z,168729499297900
+"""dp @ fAO4FRQBI9"" checks",2023-06-20T21:03:07.660Z,168729498766000
+"""Marv69 @ OCMtlCKqdV"" checks",2023-06-20T21:03:05.229Z,168729498522900
+"Flop:  [4♣, K♦, K♠]",2023-06-20T21:03:03.533Z,168729498353300
+"""dp @ fAO4FRQBI9"" calls 5.00",2023-06-20T21:03:02.688Z,168729498268800
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:03:01.770Z,168729498177000
+"""Marv69 @ OCMtlCKqdV"" calls 5.00",2023-06-20T21:03:00.882Z,168729498088200
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T21:02:56.559Z,168729497655900
+"""Don @ 6T4espke1S"" calls 5.00",2023-06-20T21:02:55.591Z,168729497559100
+"""rj @ yDF1COkEoC"" folds",2023-06-20T21:02:53.778Z,168729497377800
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T21:02:49.835Z,168729496983500
+"""Phil @ G71Wfb2gET"" raises to 5.00",2023-06-20T21:02:48.967Z,168729496896700
+"""dp @ fAO4FRQBI9"" calls 1.00",2023-06-20T21:02:40.598Z,168729496059800
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:02:32.844Z,168729495284400
+"""brett @ eKDH2_sDqp"" posts a big blind of 1.00",2023-06-20T21:02:17.828Z,168729493782813
+"""Marv69 @ OCMtlCKqdV"" posts a small blind of 0.50",2023-06-20T21:02:17.828Z,168729493782812
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (369.50) | #2 ""brett @ eKDH2_sDqp"" (193.15) | #3 ""Allen @ owhH9xBTTE"" (254.75) | #4 ""dp @ fAO4FRQBI9"" (62.75) | #5 ""Phil @ G71Wfb2gET"" (140.23) | #6 ""Hari @ AbiA8gvle6"" (187.25) | #8 ""rj @ yDF1COkEoC"" (106.24) | #9 ""Don @ 6T4espke1S"" (214.38) | #10 ""Brax @ Cgqw2xJL_L"" (222.50)",2023-06-20T21:02:17.828Z,168729493782802
+"-- starting hand #16 (id: q5a67nyg9m8q)  (No Limit Texas Hold'em) (dealer: ""Brax @ Cgqw2xJL_L"") --",2023-06-20T21:02:17.828Z,168729493782801
+"The player ""mp @ uLCwm9NZLI"" stand up with the stack of 102.25.",2023-06-20T21:02:17.828Z,168729493782800
+"""dp @ fAO4FRQBI9"" shows a 7♥, 7♦.",2023-06-20T21:02:16.264Z,168729493626400
+"-- ending hand #15 --",2023-06-20T21:02:11.225Z,168729493122502
+"""brett @ eKDH2_sDqp"" collected 27.00 from pot with Three of a Kind, K's (combination: K♥, K♣, K♠, A♥, Q♥)",2023-06-20T21:02:11.225Z,168729493122501
+"""brett @ eKDH2_sDqp"" shows a K♥, K♣.",2023-06-20T21:02:11.225Z,168729493122500
+"""dp @ fAO4FRQBI9"" checks",2023-06-20T21:02:10.380Z,168729493038000
+"""brett @ eKDH2_sDqp"" checks",2023-06-20T21:02:08.549Z,168729492854900
+"River: A♥, Q♥, 7♠, 10♥ [K♠]",2023-06-20T21:01:53.299Z,168729491329900
+"""dp @ fAO4FRQBI9"" checks",2023-06-20T21:01:52.442Z,168729491244200
+"""brett @ eKDH2_sDqp"" checks",2023-06-20T21:01:45.779Z,168729490577900
+"Turn: A♥, Q♥, 7♠ [10♥]",2023-06-20T21:01:43.889Z,168729490388900
+"""brett @ eKDH2_sDqp"" calls 6.75",2023-06-20T21:01:43.004Z,168729490300400
+"""Don @ 6T4espke1S"" folds",2023-06-20T21:01:41.385Z,168729490138500
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T21:01:40.460Z,168729490046000
+"""dp @ fAO4FRQBI9"" bets 6.75",2023-06-20T21:01:37.762Z,168729489776200
+"""brett @ eKDH2_sDqp"" checks",2023-06-20T21:01:32.344Z,168729489234400
+"Flop:  [A♥, Q♥, 7♠]",2023-06-20T21:01:26.360Z,168729488636000
+"""Marv69 @ OCMtlCKqdV"" folds",2023-06-20T21:01:25.526Z,168729488552600
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T21:01:24.546Z,168729488454600
+"""Don @ 6T4espke1S"" calls 3.00",2023-06-20T21:01:23.708Z,168729488370800
+"""rj @ yDF1COkEoC"" folds",2023-06-20T21:01:21.355Z,168729488135500
+"""mp @ uLCwm9NZLI"" folds",2023-06-20T21:01:20.338Z,168729488033800
+"""Hari @ AbiA8gvle6"" calls 3.00",2023-06-20T21:01:19.504Z,168729487950400
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T21:01:17.208Z,168729487720800
+"""dp @ fAO4FRQBI9"" calls 3.00",2023-06-20T21:01:16.097Z,168729487609700
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T21:01:14.488Z,168729487448800
+"""brett @ eKDH2_sDqp"" raises to 3.00",2023-06-20T21:00:59.934Z,168729485993400
+"""Marv69 @ OCMtlCKqdV"" posts a big blind of 1.00",2023-06-20T21:00:56.107Z,168729485610713
+"""Brax @ Cgqw2xJL_L"" posts a small blind of 0.50",2023-06-20T21:00:56.107Z,168729485610712
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (370.50) | #2 ""brett @ eKDH2_sDqp"" (175.90) | #3 ""Allen @ owhH9xBTTE"" (254.75) | #4 ""dp @ fAO4FRQBI9"" (72.50) | #5 ""Phil @ G71Wfb2gET"" (140.23) | #6 ""Hari @ AbiA8gvle6"" (190.25) | #7 ""mp @ uLCwm9NZLI"" (102.25) | #8 ""rj @ yDF1COkEoC"" (106.24) | #9 ""Don @ 6T4espke1S"" (217.38) | #10 ""Brax @ Cgqw2xJL_L"" (223.00)",2023-06-20T21:00:56.107Z,168729485610701
+"-- starting hand #15 (id: qz0bt92cg46t)  (No Limit Texas Hold'em) (dealer: ""Don @ 6T4espke1S"") --",2023-06-20T21:00:56.107Z,168729485610700
+"-- ending hand #14 --",2023-06-20T21:00:50.173Z,168729485017302
+"""Phil @ G71Wfb2gET"" collected 14.00 from pot",2023-06-20T21:00:50.173Z,168729485017301
+"Uncalled bet of 6.00 returned to ""Phil @ G71Wfb2gET""",2023-06-20T21:00:50.173Z,168729485017300
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T21:00:49.334Z,168729484933400
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T21:00:39.855Z,168729483985500
+"""Phil @ G71Wfb2gET"" bets 6.00",2023-06-20T21:00:16.506Z,168729481650600
+"""brett @ eKDH2_sDqp"" checks",2023-06-20T21:00:13.468Z,168729481346800
+"""Brax @ Cgqw2xJL_L"" checks",2023-06-20T21:00:09.130Z,168729480913000
+"Flop:  [5♦, K♥, 5♠]",2023-06-20T21:00:04.504Z,168729480450400
+"""brett @ eKDH2_sDqp"" calls 4.50",2023-06-20T21:00:03.610Z,168729480361000
+"""Brax @ Cgqw2xJL_L"" calls 4.50",2023-06-20T20:59:54.333Z,168729479433300
+"""Don @ 6T4espke1S"" folds",2023-06-20T20:59:52.732Z,168729479273200
+"""rj @ yDF1COkEoC"" folds",2023-06-20T20:59:51.776Z,168729479177600
+"""mp @ uLCwm9NZLI"" folds",2023-06-20T20:59:49.665Z,168729478966500
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T20:59:48.783Z,168729478878300
+"""Phil @ G71Wfb2gET"" raises to 4.50",2023-06-20T20:59:46.166Z,168729478616600
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T20:59:42.138Z,168729478213800
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T20:59:34.224Z,168729477422400
+"""brett @ eKDH2_sDqp"" calls 1.00",2023-06-20T20:59:33.270Z,168729477327000
+"""Marv69 @ OCMtlCKqdV"" folds",2023-06-20T20:59:31.141Z,168729477114100
+"""Brax @ Cgqw2xJL_L"" posts a big blind of 1.00",2023-06-20T20:59:30.041Z,168729477004113
+"""Don @ 6T4espke1S"" posts a small blind of 0.50",2023-06-20T20:59:30.041Z,168729477004112
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (370.50) | #2 ""brett @ eKDH2_sDqp"" (180.40) | #3 ""Allen @ owhH9xBTTE"" (254.75) | #4 ""dp @ fAO4FRQBI9"" (72.50) | #5 ""Phil @ G71Wfb2gET"" (130.73) | #6 ""Hari @ AbiA8gvle6"" (190.25) | #7 ""mp @ uLCwm9NZLI"" (102.25) | #8 ""rj @ yDF1COkEoC"" (106.24) | #9 ""Don @ 6T4espke1S"" (217.88) | #10 ""Brax @ Cgqw2xJL_L"" (227.50)",2023-06-20T20:59:30.041Z,168729477004101
+"-- starting hand #14 (id: otzbgrzpgfjx)  (No Limit Texas Hold'em) (dealer: ""rj @ yDF1COkEoC"") --",2023-06-20T20:59:30.041Z,168729477004100
+"""dp @ fAO4FRQBI9"" shows a 8♥, 8♣.",2023-06-20T20:59:27.032Z,168729476703200
+"-- ending hand #13 --",2023-06-20T20:59:23.484Z,168729476348402
+"""Brax @ Cgqw2xJL_L"" collected 56.50 from pot with Two Pair, 10's & 7's (combination: 10♣, 10♦, 7♠, 7♣, A♣)",2023-06-20T20:59:23.484Z,168729476348401
+"""Brax @ Cgqw2xJL_L"" shows a A♣, 10♣.",2023-06-20T20:59:23.484Z,168729476348400
+"""dp @ fAO4FRQBI9"" checks",2023-06-20T20:59:22.672Z,168729476267200
+"""Brax @ Cgqw2xJL_L"" checks",2023-06-20T20:59:20.377Z,168729476037700
+"River: 2♣, J♥, 7♠, 7♣ [10♦]",2023-06-20T20:59:09.257Z,168729474925700
+"""dp @ fAO4FRQBI9"" calls 20.00",2023-06-20T20:59:08.423Z,168729474842300
+"""Brax @ Cgqw2xJL_L"" bets 20.00",2023-06-20T20:58:38.264Z,168729471826400
+"Turn: 2♣, J♥, 7♠ [7♣]",2023-06-20T20:58:27.585Z,168729470758500
+"""dp @ fAO4FRQBI9"" calls 4.50",2023-06-20T20:58:26.759Z,168729470675900
+"""Brax @ Cgqw2xJL_L"" bets 4.50",2023-06-20T20:58:24.481Z,168729470448100
+"Flop:  [2♣, J♥, 7♠]",2023-06-20T20:58:09.309Z,168729468930900
+"""Don @ 6T4espke1S"" folds",2023-06-20T20:58:08.460Z,168729468846000
+"""rj @ yDF1COkEoC"" folds",2023-06-20T20:58:07.558Z,168729468755800
+"""mp @ uLCwm9NZLI"" folds",2023-06-20T20:58:06.654Z,168729468665400
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T20:58:05.787Z,168729468578700
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T20:58:04.876Z,168729468487600
+"""dp @ fAO4FRQBI9"" calls 3.00",2023-06-20T20:57:56.708Z,168729467670800
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T20:57:54.903Z,168729467490300
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T20:57:53.949Z,168729467394900
+"""Marv69 @ OCMtlCKqdV"" folds",2023-06-20T20:57:52.995Z,168729467299500
+"""Brax @ Cgqw2xJL_L"" raises to 3.00",2023-06-20T20:57:51.996Z,168729467199600
+"""Don @ 6T4espke1S"" posts a big blind of 1.00",2023-06-20T20:57:40.076Z,168729466007613
+"""rj @ yDF1COkEoC"" posts a small blind of 0.50",2023-06-20T20:57:40.076Z,168729466007612
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (370.50) | #2 ""brett @ eKDH2_sDqp"" (180.40) | #3 ""Allen @ owhH9xBTTE"" (254.75) | #4 ""dp @ fAO4FRQBI9"" (100.00) | #5 ""Phil @ G71Wfb2gET"" (130.73) | #6 ""Hari @ AbiA8gvle6"" (190.25) | #7 ""mp @ uLCwm9NZLI"" (102.25) | #8 ""rj @ yDF1COkEoC"" (106.74) | #9 ""Don @ 6T4espke1S"" (218.88) | #10 ""Brax @ Cgqw2xJL_L"" (198.50)",2023-06-20T20:57:40.076Z,168729466007601
+"-- starting hand #13 (id: xecvcpdjtn8s)  (No Limit Texas Hold'em) (dealer: ""mp @ uLCwm9NZLI"") --",2023-06-20T20:57:40.076Z,168729466007600
+"-- ending hand #12 --",2023-06-20T20:57:34.117Z,168729465411702
+"""rj @ yDF1COkEoC"" collected 1.00 from pot",2023-06-20T20:57:34.117Z,168729465411701
+"Uncalled bet of 0.50 returned to ""rj @ yDF1COkEoC""",2023-06-20T20:57:34.117Z,168729465411700
+"""mp @ uLCwm9NZLI"" folds",2023-06-20T20:57:33.307Z,168729465330700
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T20:57:32.403Z,168729465240300
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T20:57:31.414Z,168729465141400
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T20:57:30.503Z,168729465050300
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T20:57:29.556Z,168729464955600
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T20:57:28.629Z,168729464862900
+"""Marv69 @ OCMtlCKqdV"" folds",2023-06-20T20:57:25.087Z,168729464508700
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T20:57:24.147Z,168729464414700
+"""Don @ 6T4espke1S"" folds",2023-06-20T20:57:10.496Z,168729463049600
+"""rj @ yDF1COkEoC"" posts a big blind of 1.00",2023-06-20T20:57:08.951Z,168729462895113
+"""mp @ uLCwm9NZLI"" posts a small blind of 0.50",2023-06-20T20:57:08.951Z,168729462895112
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (370.50) | #2 ""brett @ eKDH2_sDqp"" (180.40) | #3 ""Allen @ owhH9xBTTE"" (254.75) | #4 ""dp @ fAO4FRQBI9"" (100.00) | #5 ""Phil @ G71Wfb2gET"" (130.73) | #6 ""Hari @ AbiA8gvle6"" (190.25) | #7 ""mp @ uLCwm9NZLI"" (102.75) | #8 ""rj @ yDF1COkEoC"" (106.24) | #9 ""Don @ 6T4espke1S"" (218.88) | #10 ""Brax @ Cgqw2xJL_L"" (198.50)",2023-06-20T20:57:08.951Z,168729462895101
+"-- starting hand #12 (id: xrwu1yhwv5re)  (No Limit Texas Hold'em) (dealer: ""Hari @ AbiA8gvle6"") --",2023-06-20T20:57:08.951Z,168729462895100
+"-- ending hand #11 --",2023-06-20T20:57:03.036Z,168729462303602
+"""Hari @ AbiA8gvle6"" collected 2.00 from pot",2023-06-20T20:57:03.036Z,168729462303601
+"Uncalled bet of 3.00 returned to ""Hari @ AbiA8gvle6""",2023-06-20T20:57:03.036Z,168729462303600
+"""mp @ uLCwm9NZLI"" folds",2023-06-20T20:57:02.167Z,168729462216700
+"""Hari @ AbiA8gvle6"" raises to 4.00",2023-06-20T20:57:01.289Z,168729462128900
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T20:56:56.480Z,168729461648000
+"""dp @ fAO4FRQBI9"" folds",2023-06-20T20:56:50.560Z,168729461056000
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T20:56:49.520Z,168729460952000
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T20:56:48.424Z,168729460842400
+"""Marv69 @ OCMtlCKqdV"" folds",2023-06-20T20:56:47.501Z,168729460750100
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T20:56:46.511Z,168729460651100
+"""Don @ 6T4espke1S"" folds",2023-06-20T20:56:30.665Z,168729459066500
+"""rj @ yDF1COkEoC"" folds",2023-06-20T20:56:07.762Z,168729456776200
+"""mp @ uLCwm9NZLI"" posts a big blind of 1.00",2023-06-20T20:56:05.557Z,168729456555714
+"""Hari @ AbiA8gvle6"" posts a small blind of 0.50",2023-06-20T20:56:05.557Z,168729456555713
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (370.50) | #2 ""brett @ eKDH2_sDqp"" (180.40) | #3 ""Allen @ owhH9xBTTE"" (254.75) | #4 ""dp @ fAO4FRQBI9"" (100.00) | #5 ""Phil @ G71Wfb2gET"" (130.73) | #6 ""Hari @ AbiA8gvle6"" (189.25) | #7 ""mp @ uLCwm9NZLI"" (103.75) | #8 ""rj @ yDF1COkEoC"" (106.24) | #9 ""Don @ 6T4espke1S"" (218.88) | #10 ""Brax @ Cgqw2xJL_L"" (198.50)",2023-06-20T20:56:05.557Z,168729456555702
+"-- starting hand #11 (id: 2nvcdrmlrllj)  (No Limit Texas Hold'em) (dealer: ""Phil @ G71Wfb2gET"") --",2023-06-20T20:56:05.557Z,168729456555701
+"The player ""dp @ fAO4FRQBI9"" joined the game with a stack of 100.00.",2023-06-20T20:56:05.557Z,168729456555700
+"The admin approved the player ""dp @ fAO4FRQBI9"" participation with a stack of 100.00.",2023-06-20T20:56:00.683Z,168729456068300
+"-- ending hand #10 --",2023-06-20T20:55:59.552Z,168729455955202
+"""Hari @ AbiA8gvle6"" collected 1.00 from pot",2023-06-20T20:55:59.552Z,168729455955201
+"Uncalled bet of 0.50 returned to ""Hari @ AbiA8gvle6""",2023-06-20T20:55:59.552Z,168729455955200
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T20:55:58.631Z,168729455863100
+"The player ""dp @ fAO4FRQBI9"" requested a seat.",2023-06-20T20:55:57.799Z,168729455779900
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T20:55:42.745Z,168729454274500
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T20:55:26.911Z,168729452691100
+"""Marv69 @ OCMtlCKqdV"" folds",2023-06-20T20:55:25.994Z,168729452599400
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T20:55:25.052Z,168729452505200
+"""Don @ 6T4espke1S"" folds",2023-06-20T20:55:24.067Z,168729452406700
+"""rj @ yDF1COkEoC"" folds",2023-06-20T20:55:23.133Z,168729452313300
+"""mp @ uLCwm9NZLI"" folds",2023-06-20T20:55:20.412Z,168729452041200
+"""Hari @ AbiA8gvle6"" posts a big blind of 1.00",2023-06-20T20:55:19.395Z,168729451939512
+"""Phil @ G71Wfb2gET"" posts a small blind of 0.50",2023-06-20T20:55:19.395Z,168729451939511
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (370.50) | #2 ""brett @ eKDH2_sDqp"" (180.40) | #3 ""Allen @ owhH9xBTTE"" (254.75) | #5 ""Phil @ G71Wfb2gET"" (131.23) | #6 ""Hari @ AbiA8gvle6"" (188.75) | #7 ""mp @ uLCwm9NZLI"" (103.75) | #8 ""rj @ yDF1COkEoC"" (106.24) | #9 ""Don @ 6T4espke1S"" (218.88) | #10 ""Brax @ Cgqw2xJL_L"" (198.50)",2023-06-20T20:55:19.395Z,168729451939501
+"-- starting hand #10 (id: db6h5stusglg)  (No Limit Texas Hold'em) (dealer: ""Allen @ owhH9xBTTE"") --",2023-06-20T20:55:19.395Z,168729451939500
+"-- ending hand #9 --",2023-06-20T20:55:13.483Z,168729451348302
+"""Marv69 @ OCMtlCKqdV"" collected 19.50 from pot",2023-06-20T20:55:13.483Z,168729451348301
+"Uncalled bet of 9.50 returned to ""Marv69 @ OCMtlCKqdV""",2023-06-20T20:55:13.483Z,168729451348300
+"""rj @ yDF1COkEoC"" folds",2023-06-20T20:55:12.623Z,168729451262300
+"""Marv69 @ OCMtlCKqdV"" bets 9.50",2023-06-20T20:54:59.012Z,168729449901200
+"""rj @ yDF1COkEoC"" checks",2023-06-20T20:54:54.513Z,168729449451300
+"Flop:  [2♦, 3♠, 9♥]",2023-06-20T20:54:47.983Z,168729448798300
+"""rj @ yDF1COkEoC"" calls 9.00",2023-06-20T20:54:47.118Z,168729448711800
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T20:54:45.373Z,168729448537300
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T20:54:41.472Z,168729448147200
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T20:54:39.757Z,168729447975700
+"""Marv69 @ OCMtlCKqdV"" raises to 9.00",2023-06-20T20:54:37.038Z,168729447703800
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T20:54:27.215Z,168729446721500
+"""Don @ 6T4espke1S"" folds",2023-06-20T20:54:26.148Z,168729446614800
+"""rj @ yDF1COkEoC"" raises to 3.00",2023-06-20T20:54:25.191Z,168729446519100
+"""mp @ uLCwm9NZLI"" folds",2023-06-20T20:54:20.475Z,168729446047500
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T20:54:19.555Z,168729445955500
+"""Phil @ G71Wfb2gET"" posts a big blind of 1.00",2023-06-20T20:54:17.938Z,168729445793812
+"""Allen @ owhH9xBTTE"" posts a small blind of 0.50",2023-06-20T20:54:17.938Z,168729445793811
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (360.00) | #2 ""brett @ eKDH2_sDqp"" (180.40) | #3 ""Allen @ owhH9xBTTE"" (255.25) | #5 ""Phil @ G71Wfb2gET"" (132.23) | #6 ""Hari @ AbiA8gvle6"" (188.75) | #7 ""mp @ uLCwm9NZLI"" (103.75) | #8 ""rj @ yDF1COkEoC"" (115.24) | #9 ""Don @ 6T4espke1S"" (218.88) | #10 ""Brax @ Cgqw2xJL_L"" (198.50)",2023-06-20T20:54:17.938Z,168729445793801
+"-- starting hand #9 (id: belhmk3n5mvw)  (No Limit Texas Hold'em) (dealer: ""brett @ eKDH2_sDqp"") --",2023-06-20T20:54:17.938Z,168729445793800
+"""Allen @ owhH9xBTTE"" shows a 9♦, 2♥.",2023-06-20T20:54:12.299Z,168729445229900
+"-- ending hand #8 --",2023-06-20T20:54:11.318Z,168729445131802
+"""brett @ eKDH2_sDqp"" collected 2.00 from pot",2023-06-20T20:54:11.318Z,168729445131801
+"Uncalled bet of 2.00 returned to ""brett @ eKDH2_sDqp""",2023-06-20T20:54:11.318Z,168729445131800
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T20:54:10.469Z,168729445046900
+"""brett @ eKDH2_sDqp"" raises to 3.00",2023-06-20T20:54:08.519Z,168729444851900
+"""Marv69 @ OCMtlCKqdV"" folds",2023-06-20T20:53:58.496Z,168729443849600
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T20:53:57.607Z,168729443760700
+"""Don @ 6T4espke1S"" folds",2023-06-20T20:53:56.588Z,168729443658800
+"""rj @ yDF1COkEoC"" folds",2023-06-20T20:53:55.709Z,168729443570900
+"""mp @ uLCwm9NZLI"" folds",2023-06-20T20:53:54.821Z,168729443482100
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T20:53:51.627Z,168729443162700
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T20:53:48.706Z,168729442870600
+"""Allen @ owhH9xBTTE"" posts a big blind of 1.00",2023-06-20T20:53:43.631Z,168729442363113
+"""brett @ eKDH2_sDqp"" posts a small blind of 0.50",2023-06-20T20:53:43.631Z,168729442363112
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (360.00) | #2 ""brett @ eKDH2_sDqp"" (179.40) | #3 ""Allen @ owhH9xBTTE"" (256.25) | #5 ""Phil @ G71Wfb2gET"" (132.23) | #6 ""Hari @ AbiA8gvle6"" (188.75) | #7 ""mp @ uLCwm9NZLI"" (103.75) | #8 ""rj @ yDF1COkEoC"" (115.24) | #9 ""Don @ 6T4espke1S"" (218.88) | #10 ""Brax @ Cgqw2xJL_L"" (198.50)",2023-06-20T20:53:43.631Z,168729442363102
+"-- starting hand #8 (id: cj7obogtinsm)  (No Limit Texas Hold'em) (dealer: ""Marv69 @ OCMtlCKqdV"") --",2023-06-20T20:53:43.631Z,168729442363101
+"The player ""Pat McAfee @ UZZ05k8aJ-"" quits the game with a stack of 345.25.",2023-06-20T20:53:43.631Z,168729442363100
+"-- ending hand #7 --",2023-06-20T20:53:37.628Z,168729441762802
+"""rj @ yDF1COkEoC"" collected 4.00 from pot",2023-06-20T20:53:37.628Z,168729441762801
+"Uncalled bet of 2.00 returned to ""rj @ yDF1COkEoC""",2023-06-20T20:53:37.628Z,168729441762800
+"""mp @ uLCwm9NZLI"" folds",2023-06-20T20:53:36.789Z,168729441678900
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T20:53:33.769Z,168729441376900
+"""Marv69 @ OCMtlCKqdV"" folds",2023-06-20T20:53:32.126Z,168729441212600
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T20:53:31.138Z,168729441113800
+"""Don @ 6T4espke1S"" folds",2023-06-20T20:52:59.589Z,168729437958900
+"""rj @ yDF1COkEoC"" raises to 3.00",2023-06-20T20:52:58.623Z,168729437862300
+"""mp @ uLCwm9NZLI"" checks",2023-06-20T20:52:53.977Z,168729437397700
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T20:52:53.104Z,168729437310400
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T20:52:49.799Z,168729436979900
+"""Pat McAfee @ UZZ05k8aJ-"" folds",2023-06-20T20:52:33.923Z,168729435392300
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T20:52:32.964Z,168729435296400
+"""mp @ uLCwm9NZLI"" posts a missed big blind of 1.00",2023-06-20T20:52:30.418Z,168729435041816
+"""mp @ uLCwm9NZLI"" posts a missing small blind of 0.50",2023-06-20T20:52:30.418Z,168729435041815
+"""brett @ eKDH2_sDqp"" posts a big blind of 1.00",2023-06-20T20:52:30.418Z,168729435041814
+"""Marv69 @ OCMtlCKqdV"" posts a small blind of 0.50",2023-06-20T20:52:30.418Z,168729435041813
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (360.50) | #2 ""brett @ eKDH2_sDqp"" (180.40) | #3 ""Allen @ owhH9xBTTE"" (256.25) | #4 ""Pat McAfee @ UZZ05k8aJ-"" (345.25) | #5 ""Phil @ G71Wfb2gET"" (132.23) | #6 ""Hari @ AbiA8gvle6"" (188.75) | #7 ""mp @ uLCwm9NZLI"" (105.25) | #8 ""rj @ yDF1COkEoC"" (112.24) | #9 ""Don @ 6T4espke1S"" (218.88) | #10 ""Brax @ Cgqw2xJL_L"" (198.50)",2023-06-20T20:52:30.418Z,168729435041802
+"-- starting hand #7 (id: lj4hbdrk4xoi)  (No Limit Texas Hold'em) (dealer: ""Brax @ Cgqw2xJL_L"") --",2023-06-20T20:52:30.418Z,168729435041801
+"The player ""mp @ uLCwm9NZLI"" joined the game with a stack of 105.25.",2023-06-20T20:52:30.418Z,168729435041800
+"-- ending hand #6 --",2023-06-20T20:52:24.410Z,168729434441003
+"""Pat McAfee @ UZZ05k8aJ-"" shows a 10♣, Q♦.",2023-06-20T20:52:24.410Z,168729434441002
+"""Allen @ owhH9xBTTE"" collected 81.00 from pot with Two Pair, A's & Q's (combination: A♠, A♣, Q♣, Q♠, 10♥)",2023-06-20T20:52:24.410Z,168729434441001
+"""Allen @ owhH9xBTTE"" shows a A♠, Q♣.",2023-06-20T20:52:24.410Z,168729434441000
+"""Allen @ owhH9xBTTE"" calls 20.00",2023-06-20T20:52:23.594Z,168729434359400
+"""Pat McAfee @ UZZ05k8aJ-"" bets 20.00",2023-06-20T20:52:19.711Z,168729433971100
+"""Allen @ owhH9xBTTE"" checks",2023-06-20T20:52:12.921Z,168729433292100
+"The player ""mp @ uLCwm9NZLI"" sit back with the stack of 105.25.",2023-06-20T20:52:09.434Z,168729432943400
+"River: 9♦, 10♥, Q♠, 4♣ [A♣]",2023-06-20T20:52:05.379Z,168729432537900
+"""Allen @ owhH9xBTTE"" calls 10.00",2023-06-20T20:52:04.524Z,168729432452400
+"""Pat McAfee @ UZZ05k8aJ-"" bets 10.00",2023-06-20T20:52:00.961Z,168729432096100
+"""Allen @ owhH9xBTTE"" checks",2023-06-20T20:51:55.775Z,168729431577500
+"Turn: 9♦, 10♥, Q♠ [4♣]",2023-06-20T20:51:40.761Z,168729430076100
+"""Don @ 6T4espke1S"" folds",2023-06-20T20:51:39.878Z,168729429987800
+"""Pat McAfee @ UZZ05k8aJ-"" calls 5.25",2023-06-20T20:51:38.012Z,168729429801200
+"""Allen @ owhH9xBTTE"" bets 5.25",2023-06-20T20:51:34.933Z,168729429493300
+"Flop:  [9♦, 10♥, Q♠]",2023-06-20T20:51:28.627Z,168729428862700
+"""Marv69 @ OCMtlCKqdV"" folds",2023-06-20T20:51:27.778Z,168729428777800
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T20:51:22.611Z,168729428261100
+"""Don @ 6T4espke1S"" calls 3.00",2023-06-20T20:51:21.668Z,168729428166800
+"""rj @ yDF1COkEoC"" folds",2023-06-20T20:51:18.430Z,168729427843000
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T20:51:17.515Z,168729427751500
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T20:51:16.633Z,168729427663300
+"""Pat McAfee @ UZZ05k8aJ-"" calls 3.00",2023-06-20T20:51:15.727Z,168729427572700
+"""Allen @ owhH9xBTTE"" raises to 3.00",2023-06-20T20:51:13.772Z,168729427377200
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T20:51:10.944Z,168729427094400
+"""Marv69 @ OCMtlCKqdV"" posts a big blind of 1.00",2023-06-20T20:51:06.629Z,168729426662912
+"""Brax @ Cgqw2xJL_L"" posts a small blind of 0.50",2023-06-20T20:51:06.629Z,168729426662911
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (361.50) | #2 ""brett @ eKDH2_sDqp"" (180.40) | #3 ""Allen @ owhH9xBTTE"" (213.50) | #4 ""Pat McAfee @ UZZ05k8aJ-"" (383.50) | #5 ""Phil @ G71Wfb2gET"" (132.23) | #6 ""Hari @ AbiA8gvle6"" (188.75) | #8 ""rj @ yDF1COkEoC"" (112.24) | #9 ""Don @ 6T4espke1S"" (221.88) | #10 ""Brax @ Cgqw2xJL_L"" (199.00)",2023-06-20T20:51:06.629Z,168729426662901
+"-- starting hand #6 (id: sewxsnj574vy)  (No Limit Texas Hold'em) (dealer: ""Don @ 6T4espke1S"") --",2023-06-20T20:51:06.629Z,168729426662900
+"-- ending hand #5 --",2023-06-20T20:51:00.576Z,168729426057603
+"""Don @ 6T4espke1S"" shows a K♠, Q♥.",2023-06-20T20:51:00.576Z,168729426057602
+"""Marv69 @ OCMtlCKqdV"" collected 7.00 from pot with Pair, 4's (combination: 4♥, 4♠, J♦, 10♥, 6♦)",2023-06-20T20:51:00.576Z,168729426057601
+"""Marv69 @ OCMtlCKqdV"" shows a 5♥, 4♥.",2023-06-20T20:51:00.576Z,168729426057600
+"""Marv69 @ OCMtlCKqdV"" checks",2023-06-20T20:50:59.764Z,168729425976400
+"""Don @ 6T4espke1S"" checks",2023-06-20T20:50:56.438Z,168729425643800
+"River: 10♥, 4♠, 6♦, J♦ [3♠]",2023-06-20T20:50:52.681Z,168729425268100
+"""Marv69 @ OCMtlCKqdV"" checks",2023-06-20T20:50:51.871Z,168729425187100
+"""Don @ 6T4espke1S"" checks",2023-06-20T20:50:47.894Z,168729424789400
+"Turn: 10♥, 4♠, 6♦ [J♦]",2023-06-20T20:50:39.933Z,168729423993300
+"""Marv69 @ OCMtlCKqdV"" checks",2023-06-20T20:50:39.059Z,168729423905900
+"""Don @ 6T4espke1S"" checks",2023-06-20T20:50:34.938Z,168729423493800
+"Flop:  [10♥, 4♠, 6♦]",2023-06-20T20:50:32.837Z,168729423283700
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T20:50:31.979Z,168729423197900
+"""Don @ 6T4espke1S"" calls 3.00",2023-06-20T20:50:31.098Z,168729423109800
+"""rj @ yDF1COkEoC"" folds",2023-06-20T20:50:29.480Z,168729422948000
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T20:50:28.529Z,168729422852900
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T20:50:26.559Z,168729422655900
+"""Pat McAfee @ UZZ05k8aJ-"" folds",2023-06-20T20:50:25.473Z,168729422547300
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T20:50:24.578Z,168729422457800
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T20:50:23.559Z,168729422355900
+"""Marv69 @ OCMtlCKqdV"" raises to 3.00",2023-06-20T20:50:16.182Z,168729421618200
+"""Brax @ Cgqw2xJL_L"" posts a big blind of 1.00",2023-06-20T20:50:13.622Z,168729421362212
+"""Don @ 6T4espke1S"" posts a small blind of 0.50",2023-06-20T20:50:13.622Z,168729421362211
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (357.50) | #2 ""brett @ eKDH2_sDqp"" (180.40) | #3 ""Allen @ owhH9xBTTE"" (213.50) | #4 ""Pat McAfee @ UZZ05k8aJ-"" (383.50) | #5 ""Phil @ G71Wfb2gET"" (132.23) | #6 ""Hari @ AbiA8gvle6"" (188.75) | #8 ""rj @ yDF1COkEoC"" (112.24) | #9 ""Don @ 6T4espke1S"" (224.88) | #10 ""Brax @ Cgqw2xJL_L"" (200.00)",2023-06-20T20:50:13.622Z,168729421362201
+"-- starting hand #5 (id: 4aqbmu6iifpv)  (No Limit Texas Hold'em) (dealer: ""rj @ yDF1COkEoC"") --",2023-06-20T20:50:13.622Z,168729421362200
+"-- ending hand #4 --",2023-06-20T20:50:07.617Z,168729420761702
+"""Hari @ AbiA8gvle6"" collected 63.50 from pot with Pair, K's (combination: K♦, K♠, A♦, Q♦, 10♥)",2023-06-20T20:50:07.617Z,168729420761701
+"""Hari @ AbiA8gvle6"" shows a K♦, A♦.",2023-06-20T20:50:07.617Z,168729420761700
+"""Pat McAfee @ UZZ05k8aJ-"" calls 15.00",2023-06-20T20:50:06.815Z,168729420681500
+"""Hari @ AbiA8gvle6"" bets 15.00",2023-06-20T20:50:01.794Z,168729420179400
+"""Pat McAfee @ UZZ05k8aJ-"" checks",2023-06-20T20:49:54.201Z,168729419420100
+"River: K♠, 2♥, Q♦, 10♥ [4♥]",2023-06-20T20:49:52.160Z,168729419216000
+"""Hari @ AbiA8gvle6"" checks",2023-06-20T20:49:51.354Z,168729419135400
+"""Pat McAfee @ UZZ05k8aJ-"" checks",2023-06-20T20:49:47.153Z,168729418715300
+"Turn: K♠, 2♥, Q♦ [10♥]",2023-06-20T20:49:45.850Z,168729418585000
+"""Pat McAfee @ UZZ05k8aJ-"" calls 7.00",2023-06-20T20:49:44.968Z,168729418496800
+"""Hari @ AbiA8gvle6"" bets 7.00",2023-06-20T20:49:43.047Z,168729418304700
+"""Pat McAfee @ UZZ05k8aJ-"" checks",2023-06-20T20:49:35.609Z,168729417560900
+"Flop:  [K♠, 2♥, Q♦]",2023-06-20T20:49:33.499Z,168729417349900
+"""Pat McAfee @ UZZ05k8aJ-"" calls 9.00",2023-06-20T20:49:32.654Z,168729417265400
+"""Don @ 6T4espke1S"" folds",2023-06-20T20:49:30.405Z,168729417040500
+"""rj @ yDF1COkEoC"" folds",2023-06-20T20:49:29.473Z,168729416947300
+"""Hari @ AbiA8gvle6"" raises to 9.00",2023-06-20T20:49:28.434Z,168729416843400
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T20:49:23.065Z,168729416306500
+"""Pat McAfee @ UZZ05k8aJ-"" raises to 3.00",2023-06-20T20:49:22.129Z,168729416212900
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T20:49:14.176Z,168729415417600
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T20:49:13.099Z,168729415309900
+"""Marv69 @ OCMtlCKqdV"" folds",2023-06-20T20:49:12.214Z,168729415221400
+"""Brax @ Cgqw2xJL_L"" folds",2023-06-20T20:49:11.343Z,168729415134300
+"""Don @ 6T4espke1S"" posts a big blind of 1.00",2023-06-20T20:49:07.859Z,168729414785913
+"""rj @ yDF1COkEoC"" posts a small blind of 0.50",2023-06-20T20:49:07.859Z,168729414785912
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (357.50) | #2 ""brett @ eKDH2_sDqp"" (180.40) | #3 ""Allen @ owhH9xBTTE"" (213.50) | #4 ""Pat McAfee @ UZZ05k8aJ-"" (414.50) | #5 ""Phil @ G71Wfb2gET"" (132.23) | #6 ""Hari @ AbiA8gvle6"" (156.25) | #8 ""rj @ yDF1COkEoC"" (112.74) | #9 ""Don @ 6T4espke1S"" (225.88) | #10 ""Brax @ Cgqw2xJL_L"" (200.00)",2023-06-20T20:49:07.859Z,168729414785902
+"-- starting hand #4 (id: w6hctechx50b)  (No Limit Texas Hold'em) (dealer: ""Hari @ AbiA8gvle6"") --",2023-06-20T20:49:07.859Z,168729414785901
+"The player ""Brax @ Cgqw2xJL_L"" joined the game with a stack of 200.00.",2023-06-20T20:49:07.859Z,168729414785900
+"-- ending hand #3 --",2023-06-20T20:49:01.956Z,168729414195602
+"""Allen @ owhH9xBTTE"" collected 22.50 from pot",2023-06-20T20:49:01.956Z,168729414195601
+"Uncalled bet of 11.25 returned to ""Allen @ owhH9xBTTE""",2023-06-20T20:49:01.956Z,168729414195600
+"""Pat McAfee @ UZZ05k8aJ-"" folds",2023-06-20T20:49:01.096Z,168729414109600
+"""Allen @ owhH9xBTTE"" bets 11.25",2023-06-20T20:48:58.679Z,168729413867900
+"Turn: J♣, 10♦, 3♦ [9♦]",2023-06-20T20:48:45.119Z,168729412511900
+"""Pat McAfee @ UZZ05k8aJ-"" checks",2023-06-20T20:48:44.286Z,168729412428600
+"""Allen @ owhH9xBTTE"" checks",2023-06-20T20:48:41.668Z,168729412166800
+"Flop:  [J♣, 10♦, 3♦]",2023-06-20T20:48:39.242Z,168729411924200
+"""Allen @ owhH9xBTTE"" calls 10.00",2023-06-20T20:48:38.417Z,168729411841700
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T20:48:35.462Z,168729411546200
+"""rj @ yDF1COkEoC"" folds",2023-06-20T20:48:34.545Z,168729411454500
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T20:48:30.851Z,168729411085100
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T20:48:28.896Z,168729410889600
+"""Pat McAfee @ UZZ05k8aJ-"" raises to 10.00",2023-06-20T20:48:27.853Z,168729410785300
+"""Allen @ owhH9xBTTE"" raises to 3.00",2023-06-20T20:48:19.146Z,168729409914600
+"The admin approved the player ""Brax @ Cgqw2xJL_L"" participation with a stack of 200.00.",2023-06-20T20:48:06.797Z,168729408679700
+"""brett @ eKDH2_sDqp"" calls 1.00",2023-06-20T20:48:05.930Z,168729408593000
+"The admin ""mp @ uLCwm9NZLI"" rejected the seat request from the player ""Jackson @ yXr_bmZ3u2"".",2023-06-20T20:48:04.866Z,168729408486600
+"""Marv69 @ OCMtlCKqdV"" folds",2023-06-20T20:48:04.715Z,168729408471500
+"""Don @ 6T4espke1S"" folds",2023-06-20T20:48:02.497Z,168729408249700
+"""rj @ yDF1COkEoC"" posts a big blind of 1.00",2023-06-20T20:48:01.312Z,168729408131211
+"""Hari @ AbiA8gvle6"" posts a small blind of 0.50",2023-06-20T20:48:01.312Z,168729408131210
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (357.50) | #2 ""brett @ eKDH2_sDqp"" (181.40) | #3 ""Allen @ owhH9xBTTE"" (201.00) | #4 ""Pat McAfee @ UZZ05k8aJ-"" (424.50) | #5 ""Phil @ G71Wfb2gET"" (132.23) | #6 ""Hari @ AbiA8gvle6"" (156.75) | #8 ""rj @ yDF1COkEoC"" (113.74) | #9 ""Don @ 6T4espke1S"" (225.88)",2023-06-20T20:48:01.312Z,168729408131201
+"-- starting hand #3 (id: lbcbruxwtyno)  (No Limit Texas Hold'em) (dealer: ""Phil @ G71Wfb2gET"") --",2023-06-20T20:48:01.312Z,168729408131200
+"-- ending hand #2 --",2023-06-20T20:47:55.354Z,168729407535402
+"""Hari @ AbiA8gvle6"" collected 19.00 from pot",2023-06-20T20:47:55.354Z,168729407535401
+"Uncalled bet of 7.00 returned to ""Hari @ AbiA8gvle6""",2023-06-20T20:47:55.354Z,168729407535400
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T20:47:54.498Z,168729407449800
+"""brett @ eKDH2_sDqp"" folds",2023-06-20T20:47:51.894Z,168729407189400
+"""Hari @ AbiA8gvle6"" bets 7.00",2023-06-20T20:47:49.134Z,168729406913400
+"""Phil @ G71Wfb2gET"" checks",2023-06-20T20:47:42.155Z,168729406215500
+"Flop:  [A♦, 2♣, A♥]",2023-06-20T20:47:40.937Z,168729406093700
+"""Phil @ G71Wfb2gET"" calls 6.00",2023-06-20T20:47:40.065Z,168729406006500
+"""brett @ eKDH2_sDqp"" calls 6.00",2023-06-20T20:47:38.839Z,168729405883900
+"""Don @ 6T4espke1S"" folds",2023-06-20T20:47:37.938Z,168729405793800
+"The player ""Brax @ Cgqw2xJL_L"" requested a seat.",2023-06-20T20:47:34.667Z,168729405466700
+"""Hari @ AbiA8gvle6"" raises to 6.00",2023-06-20T20:47:33.273Z,168729405327300
+"The player ""Lou @ zd41TAZvP-"" canceled the seat request.",2023-06-20T20:47:32.184Z,168729405218400
+"""Phil @ G71Wfb2gET"" calls 1.00",2023-06-20T20:47:27.762Z,168729404776200
+"""Pat McAfee @ UZZ05k8aJ-"" folds",2023-06-20T20:47:26.627Z,168729404662700
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T20:47:25.636Z,168729404563600
+"""brett @ eKDH2_sDqp"" calls 1.00",2023-06-20T20:47:23.675Z,168729404367500
+"""Marv69 @ OCMtlCKqdV"" folds",2023-06-20T20:47:18.876Z,168729403887600
+"""Don @ 6T4espke1S"" calls 1.00",2023-06-20T20:47:17.939Z,168729403793900
+"""rj @ yDF1COkEoC"" folds",2023-06-20T20:47:13.974Z,168729403397400
+"""Hari @ AbiA8gvle6"" posts a big blind of 1.00",2023-06-20T20:47:10.986Z,168729403098612
+"""Phil @ G71Wfb2gET"" posts a small blind of 0.50",2023-06-20T20:47:10.986Z,168729403098611
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (357.50) | #2 ""brett @ eKDH2_sDqp"" (187.40) | #3 ""Allen @ owhH9xBTTE"" (201.00) | #4 ""Pat McAfee @ UZZ05k8aJ-"" (424.50) | #5 ""Phil @ G71Wfb2gET"" (138.23) | #6 ""Hari @ AbiA8gvle6"" (143.75) | #8 ""rj @ yDF1COkEoC"" (113.74) | #9 ""Don @ 6T4espke1S"" (226.88)",2023-06-20T20:47:10.986Z,168729403098602
+"-- starting hand #2 (id: 6qzjift2pbmz)  (No Limit Texas Hold'em) (dealer: ""Pat McAfee @ UZZ05k8aJ-"") --",2023-06-20T20:47:10.986Z,168729403098601
+"The player ""mp @ uLCwm9NZLI"" stand up with the stack of 105.25.",2023-06-20T20:47:10.986Z,168729403098600
+"-- ending hand #1 --",2023-06-20T20:47:04.976Z,168729402497602
+"""brett @ eKDH2_sDqp"" collected 6.50 from pot",2023-06-20T20:47:04.976Z,168729402497601
+"Uncalled bet of 3.00 returned to ""brett @ eKDH2_sDqp""",2023-06-20T20:47:04.976Z,168729402497600
+"""Phil @ G71Wfb2gET"" folds",2023-06-20T20:47:04.089Z,168729402408900
+"""brett @ eKDH2_sDqp"" bets 3.00",2023-06-20T20:47:02.293Z,168729402229300
+"""Phil @ G71Wfb2gET"" checks",2023-06-20T20:46:55.402Z,168729401540200
+"Flop:  [9♣, 4♥, Q♣]",2023-06-20T20:46:53.592Z,168729401359200
+"""Phil @ G71Wfb2gET"" calls 3.00",2023-06-20T20:46:52.680Z,168729401268000
+"""Pat McAfee @ UZZ05k8aJ-"" folds",2023-06-20T20:46:50.769Z,168729401076900
+"The player ""Jackson @ yXr_bmZ3u2"" requested a seat.",2023-06-20T20:46:47.325Z,168729400732500
+"""Allen @ owhH9xBTTE"" folds",2023-06-20T20:46:39.315Z,168729399931500
+"""brett @ eKDH2_sDqp"" raises to 3.00",2023-06-20T20:46:38.376Z,168729399837600
+"""Marv69 @ OCMtlCKqdV"" folds",2023-06-20T20:46:35.251Z,168729399525100
+"""Don @ 6T4espke1S"" folds",2023-06-20T20:46:34.194Z,168729399419400
+"""rj @ yDF1COkEoC"" folds",2023-06-20T20:46:32.728Z,168729399272800
+"""mp @ uLCwm9NZLI"" folds",2023-06-20T20:46:31.428Z,168729399142800
+"""Hari @ AbiA8gvle6"" folds",2023-06-20T20:46:30.488Z,168729399048800
+"""Phil @ G71Wfb2gET"" posts a big blind of 1.00",2023-06-20T20:46:27.442Z,168729398744221
+"""Pat McAfee @ UZZ05k8aJ-"" posts a small blind of 0.50",2023-06-20T20:46:27.442Z,168729398744220
+"Player stacks: #1 ""Marv69 @ OCMtlCKqdV"" (357.50) | #2 ""brett @ eKDH2_sDqp"" (183.90) | #3 ""Allen @ owhH9xBTTE"" (201.00) | #4 ""Pat McAfee @ UZZ05k8aJ-"" (425.00) | #5 ""Phil @ G71Wfb2gET"" (141.23) | #6 ""Hari @ AbiA8gvle6"" (143.75) | #7 ""mp @ uLCwm9NZLI"" (105.25) | #8 ""rj @ yDF1COkEoC"" (113.74) | #9 ""Don @ 6T4espke1S"" (226.88)",2023-06-20T20:46:27.442Z,168729398744210
+"The player ""Don @ 6T4espke1S"" joined the game with a stack of 226.88.",2023-06-20T20:46:27.442Z,168729398744209
+"The player ""rj @ yDF1COkEoC"" joined the game with a stack of 113.74.",2023-06-20T20:46:27.442Z,168729398744208
+"The player ""mp @ uLCwm9NZLI"" joined the game with a stack of 105.25.",2023-06-20T20:46:27.442Z,168729398744207
+"The player ""Hari @ AbiA8gvle6"" joined the game with a stack of 143.75.",2023-06-20T20:46:27.442Z,168729398744206
+"The player ""Phil @ G71Wfb2gET"" joined the game with a stack of 141.23.",2023-06-20T20:46:27.442Z,168729398744205
+"The player ""Pat McAfee @ UZZ05k8aJ-"" joined the game with a stack of 425.00.",2023-06-20T20:46:27.442Z,168729398744204
+"The player ""Allen @ owhH9xBTTE"" joined the game with a stack of 201.00.",2023-06-20T20:46:27.442Z,168729398744203
+"The player ""brett @ eKDH2_sDqp"" joined the game with a stack of 183.90.",2023-06-20T20:46:27.442Z,168729398744202
+"The player ""Marv69 @ OCMtlCKqdV"" joined the game with a stack of 357.50.",2023-06-20T20:46:27.442Z,168729398744201
+"-- starting hand #1 (id: qqdyy83qlj8d)  (No Limit Texas Hold'em) (dealer: ""Allen @ owhH9xBTTE"") --",2023-06-20T20:46:27.442Z,168729398744200
+"The admin approved the player ""Hari @ AbiA8gvle6"" participation with a stack of 143.75.",2023-06-20T20:45:51.516Z,168729395151600
+"The player ""Lou @ zd41TAZvP-"" requested a seat.",2023-06-20T20:45:43.917Z,168729394391700
+"The player ""Hari @ AbiA8gvle6"" requested a seat.",2023-06-20T20:45:38.537Z,168729393853700
+"The admin approved the player ""Allen @ owhH9xBTTE"" participation with a stack of 201.00.",2023-06-20T20:44:36.654Z,168729387665400
+"The admin approved the player ""Marv69 @ OCMtlCKqdV"" participation with a stack of 357.50.",2023-06-20T20:44:23.583Z,168729386358300
+"The admin approved the player ""Phil @ G71Wfb2gET"" participation with a stack of 141.23.",2023-06-20T20:44:13.815Z,168729385381500
+"The player ""Allen @ owhH9xBTTE"" requested a seat.",2023-06-20T20:44:06.573Z,168729384657300
+"The admin approved the player ""rj @ yDF1COkEoC"" participation with a stack of 113.74.",2023-06-20T20:44:04.956Z,168729384495600
+"The player ""Marv69 @ OCMtlCKqdV"" requested a seat.",2023-06-20T20:44:04.300Z,168729384430000
+"The player ""Phil @ G71Wfb2gET"" requested a seat.",2023-06-20T20:44:03.598Z,168729384359800
+"The player ""rj @ yDF1COkEoC"" requested a seat.",2023-06-20T20:43:55.234Z,168729383523400
+"The admin approved the player ""Pat McAfee @ UZZ05k8aJ-"" participation with a stack of 425.00.",2023-06-20T20:43:52.505Z,168729383250500
+"The player ""Pat McAfee @ UZZ05k8aJ-"" requested a seat.",2023-06-20T20:43:50.538Z,168729383053800
+"The admin approved the player ""Don @ 6T4espke1S"" participation with a stack of 226.88.",2023-06-20T20:43:41.163Z,168729382116300
+"The admin ""mp @ uLCwm9NZLI"" rejected the seat request from the player ""Pat McAfee @ UZZ05k8aJ-"".",2023-06-20T20:43:39.054Z,168729381905400
+"The player ""Don @ 6T4espke1S"" requested a seat.",2023-06-20T20:43:38.832Z,168729381883200
+"The player ""Pat McAfee @ UZZ05k8aJ-"" requested a seat.",2023-06-20T20:43:35.013Z,168729381501300
+"The admin ""mp @ uLCwm9NZLI"" rejected the seat request from the player ""Gomlmanavpunte @ 47cYOI07GM"".",2023-06-20T20:43:29.011Z,168729380901100
+"The admin approved the player ""brett @ eKDH2_sDqp"" participation with a stack of 183.90.",2023-06-20T20:43:17.266Z,168729379726600
+"The player ""Gomlmanavpunte @ 47cYOI07GM"" requested a seat.",2023-06-20T20:43:17.180Z,168729379718000
+"The player ""brett @ eKDH2_sDqp"" requested a seat.",2023-06-20T20:43:13.938Z,168729379393800
+"The game's ante was changed from 0.00 to 0.00.",2023-06-20T20:42:07.613Z,168729372761302
+"The game's big blind was changed from 0.20 to 1.00.",2023-06-20T20:42:07.613Z,168729372761301
+"The game's small blind was changed from 0.10 to 0.50.",2023-06-20T20:42:07.613Z,168729372761300
+"The admin approved the player ""mp @ uLCwm9NZLI"" participation with a stack of 10525.",2023-06-20T20:41:46.853Z,168729370685301
+"The player ""mp @ uLCwm9NZLI"" requested a seat.",2023-06-20T20:41:46.853Z,168729370685300
