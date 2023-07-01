@@ -1,10 +1,4 @@
-/*
-INSTRUCTIONS:
-1. Open range in GTOWizard
-2. Open the JavaScript console
-3. Paste this code there and press Enter
-4. If you want to copy the range text so you can paste it in Google Sheets, press Tab or click on GTOWizard
-*/
+// Go to bottom for instructions and notes
 
 // Defines array of index to hand pairs (Ex. 0: AA, 1: AKs, 13: AKo, 168: 22)
 let specialSpace = " ";
@@ -601,6 +595,7 @@ function tape(tape) {
 
 let includeTitle = true;
 let includePosition = false;
+/*
 getFreqs();
 printGTO();
 printFreqs();
@@ -608,6 +603,7 @@ printFreqs();
 calcTotalActionFreqs(true);
 rangeTitle();
 concatRange();
+*/
 
 console.log("COMMANDS:");
 console.log("includeTitle = true/false: include title above range, default true");
@@ -634,16 +630,17 @@ INSTRUCTIONS:
 1. Open range in GTOWizard
 2. Open the JavaScript console
 3. Paste this code there and press Enter
-4. If you want to copy the range text so you can paste it in Google Sheets, press Tab or click on GTOWizard
+4. Use tape("rc") to reset the clipboard and copy the current range
+5. Press Tab or click on GTOWizard to copy to clipboard so you can paste it in Google Sheets
 */
 
 /*
 NOTES:
-1. GTOWizard doesn't need to be in focus for tape() to continue working
+1. GTOWizard needs to be in focus for tape() to continue working
 2. There's a bug right now that doesn't allow you to create an empty range as the first range
 3. Most tapes should begin with 'rf' to reset the clipboard and select the first node
 4. Tape strings can include spaces, which is helpful for readability and debugging
 */
 
 // Change to longer if ranges aren't loading fast enough
-const delayMs = 1000;
+const delayMs = 1200;
