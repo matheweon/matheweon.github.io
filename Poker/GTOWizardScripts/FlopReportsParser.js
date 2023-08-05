@@ -123,11 +123,31 @@ async function filter(bucket, mode = 1, num, totalNum) {
     while (document.getElementsByClassName('lds-ring').length !== 0) {
         await delay(50);
     }
-    await delay(400);
+    await delay(500);
     let actions = getActions(mode);
-    console.log('(' + num + '/' + totalNum + ') ' + bucket + ': ' + actions);
+    if (num === undefined) {
+        console.log(bucket + ': ' + actions);
+    } else {
+        console.log('(' + num + '/' + totalNum + ') ' + bucket + ': ' + actions);
+    }
     return actions;
 }
+
+const sizes = [125, 75, 50, 33, 25, 20, 10];
+// returns closest size to num
+function getClosestSize(num) {
+    if (num > 133) {
+        return num;
+    }
+    let closest = sizes[0];
+    for (let i = 1; i < sizes.length; i++) {
+        if (Math.abs(num - sizes[i]) < Math.abs(num - closest)) {
+            closest = sizes[i];
+        }
+    }
+    return closest;
+}
+
 
 // modes: 'array', 'all', 1, or 2
 function getActions(mode = 1) {
@@ -139,7 +159,8 @@ function getActions(mode = 1) {
         if (actionsDiv.children[i].children[1].children[0].children[0].children.length === 0) {
             action = 'X';
         } else {
-            action = parseFloat(actionsDiv.children[i].children[1].children[0].children[0].children[0].innerHTML.replace(/\(/g, ''));
+            //action = parseFloat(actionsDiv.children[i].children[1].children[0].children[0].children[0].innerHTML.replace(/\(/g, ''));
+            action = getClosestSize(parseFloat(actionsDiv.children[i].children[1].children[0].children[0].children[0].innerHTML.replace(/\(/g, '')));
         }
         let actionFreq = parseFloat(document.getElementsByClassName('sab')[0].children[i].children[1].children[0].children[1].innerHTML);
         actions.push([action, actionFreq]);
@@ -162,7 +183,6 @@ function getActions(mode = 1) {
     return simpleSize(actions, mode);
 }
 
-const threshold = 0.5;
 
 function combine(actions, size) {
   let totalFreq = 0;
@@ -173,6 +193,7 @@ function combine(actions, size) {
   return Math.min(Math.round(totalFreq / 5) * 5, 100);
 }
 
+const threshold = 0.5;
 function simpleSize(actions, numSizes = 1) {
     actions.pop();
     let bestSize = actions[0][0];
@@ -183,10 +204,15 @@ function simpleSize(actions, numSizes = 1) {
             highestFreq = actions[i][1];
         }
     }
+    let bestFreq = combine(actions, bestSize);
+    if (bestFreq < 5) {
+        return '100% x';
+    }
     const sizes = actions.filter(action => action[1] >= threshold * highestFreq).map(action => action[0]);
+    // if 1 size
     if (numSizes === 1 || sizes.length === 1) {
-        return combine(actions, bestSize) + '% b' + bestSize;
-    } else {
+        return bestFreq + '% b' + bestSize;
+    } else { // if 2 size
         const minSize = Math.min(...sizes);
         const maxSize = Math.max(...sizes);
         function minMaxActions(actions, sizeOne, sizeTwo) {
@@ -336,16 +362,18 @@ function copyToClipboard(text) {
 
 /*
 INSTRUCTIONS:
-1. Open Flop Aggregate Reports in GTOWizard
-2. Open the JavaScript console
-3. Paste this code there and press Enter
-4. Make sure flop action percentages are visible
-5. Use all() to get all simplified freqs for AHML buckets
-5a. Use all(true) to get AKQBX buckets
-5b. Use all(false/true, 2) to get 2 size freqs
+1. Ctrl/Cmd + A + C to select all and copy code
+2. Open Flop Aggregate Reports in GTOWizard
+3. Open the JavaScript console (Ctrl/Cmd + Shift/Option + J)
+4. Paste this code there and press Enter
+5. Make sure flop action percentages are visible
+6. Use all() to get all simplified freqs for AHML buckets
+6a. Use all(true) to get AKQBX buckets
+6b. Use all(false/true, 2) to get 2 size freqs
+6c. Should take around 1.5-3 mins depending on loading times
 */
 
 /*
 NOTES:
-1. 
+1. Use filter() to get simplified freqs for a specific bucket
 */

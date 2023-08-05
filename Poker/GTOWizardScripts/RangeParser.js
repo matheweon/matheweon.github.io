@@ -442,7 +442,7 @@ function joinRangesForSheets(str1, str2) {
     return combinedStr;
 }
 
-function copyAllRows() {
+function copy() {
     let whitespace = "\" \"\n".repeat((rowOfRanges[currentRow].match(/\n/g) || []).length);
     copyToClipboard(rowOfRanges.map(row => joinRangesForSheets(row, whitespace)).join(""));
 }
@@ -463,9 +463,7 @@ function concatRange() {
         }
         // Print and copy to clipboard
         console.log(rangeTitles);
-        /* let whitespace = "\" \"\n".repeat((rowOfRanges[currentRow].match(/\n/g) || []).length);
-        copyToClipboard(joinRangesForSheets(rowOfRanges[currentRow], whitespace)); */
-        copyAllRows();
+        copy();
     } catch (e) {
         console.log("MAXIMIZE NODE SELECTOR BAR");
     }
@@ -487,7 +485,7 @@ function emptyRange() {
         rowOfRanges[currentRow] = joinRangesForSheets(rowOfRanges[currentRow], emptyRange);
     }
     
-    copyAllRows();
+    copy();
     if (rowOfRanges[currentRow] === "\n".repeat((rowOfRanges[0].match(/\n/g) || []).length)) {
         rangeTitles += " --> ";
     }
@@ -627,11 +625,14 @@ console.log("tape(tape): read a tape of commands");
 
 /*
 INSTRUCTIONS:
-1. Open range in GTOWizard
-2. Open the JavaScript console
-3. Paste this code there and press Enter
-4. Use tape("rc") to reset the clipboard and copy the current range
-5. Press Tab or click on GTOWizard to copy to clipboard so you can paste it in Google Sheets
+1. Ctrl/Cmd + A + C to select all and copy code
+2. Open range in GTOWizard
+3. Open the JavaScript console (Ctrl/Cmd + Shift/Option + J)
+4. Paste this code there and press Enter
+5. Use tape('rc') to reset the clipboard and copy the current range
+    5a. Make sure the node selector bar at the top is open, or 'r' will return to the first node
+    5b. Create a custom tape to get the nodes you want
+6. Press Tab or click on GTOWizard to copy to clipboard so you can paste it in Google Sheets
 */
 
 /*
@@ -644,3 +645,8 @@ NOTES:
 
 // Change to longer if ranges aren't loading fast enough
 const delayMs = 1200;
+
+/*
+TODO:
+1. Have simplified range freqs under GTO freqs
+*/

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simplified Ranges to GTO Format</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+        }
+        input[type="text"] {
+            width: 100%;
+            height: 30px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            resize: none;
+            text-align: left;
+            vertical-align: top;
+        }
+        .copy-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .copy-btn {
+            margin-right: 10px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <input type="text" id="input" placeholder="Paste simplified range copied from Google Sheets...">
+    </div>
+    <div class="container">
+        <div class="copy-container">
+            <button class="copy-btn">Copy</button>
+            <p>All In:</p>
+        </div>
+        <div id="allIn"></div>
+        <div class="copy-container">
+            <button class="copy-btn">Copy</button>
+            <p>Yellow:</p>
+        </div>
+        <div id="yellow"></div>
+        <div class="copy-container">
+            <button class="copy-btn">Copy</button>
+            <p>Raise:</p>
+        </div>
+        <div id="raise"></div>
+        <div class="copy-container">
+            <button class="copy-btn">Copy</button>
+            <p>Call:</p>
+        </div>
+        <div id="call"></div>
+        <div class="copy-container">
+            <button class="copy-btn">Copy</button>
+            <p>Fold:</p>
+        </div>
+        <div id="fold"></div>
+    </div>
+    <script>
+        const input = document.getElementById('input');
+        const allInDiv = document.getElementById('allIn');
+        const yellowDiv = document.getElementById('yellow');
+        const raiseDiv = document.getElementById('raise');
+        const callDiv = document.getElementById('call');
+        const foldDiv = document.getElementById('fold');
+        input.addEventListener('input', () => {
+            var convertedArray = input.value.replace(/     /g, '-').split(/[\t ]+/);
+            var allInDict = {};
+            var yellowDict = {};
+            var raiseDict = {};
+            var callDict = {};
+            var foldDict = {};
+            const letterToDict = {
+                'A': allInDict,
+                'Y': yellowDict,
+                'R': raiseDict,
+                'C': callDict,
+                'F': foldDict
+            };
+            function addToDict(letter, freq, hand) {
+                if (freq in letterToDict[letter]) {
+                    letterToDict[letter][freq].push(hand);
+                } else {
+                    letterToDict[letter][freq] = [hand];
+                }
+            }
+            convertedArray.forEach(el => {
+                var hand = el.split('-')[0];
+                var code = el.split('-')[1];
+                if (code === 'NONE') {
+                    // skip
+                } else if (code.includes('90')) {
+                    addToDict(code[0], 90, hand);
+                    addToDict(code[3], 10, hand);
+                } else {
+                    const counts = {};
+                    for (let i = 0; i < code.length; i++) {
+                    const letter = code[i];
+                    if (counts[letter]) {
+                        counts[letter]++;
+                    } else {
+                        counts[letter] = 1;
+                    }
+                    }
+                    const result = {};
+                    for (const letter in counts) {
+                        result[letter] = counts[letter] * 25;
+                    }
+                    for (const letter in result) {
+                        addToDict(letter, result[letter], hand);
+                    }
+                }
+            });
+            const letterToString = {
+                'A' : '',
+                'Y' : '',
+                'R' : '',
+                'C' : '',
+                'F' : ''
+            };
+            for (const letter of Object.keys(letterToDict)) {
+                var dict = letterToDict[letter];
+                if (dict !== {}) {
+                    var string = '';
+                    for (const freq of Object.keys(dict).reverse()) {
+                        string += '[' + freq + ']' + dict[freq].sort().join(',') + '[/' + freq + '],';
+                    }
+                    string = string.replace('[100]', '');
+                    string = string.replace('[/100]', '');
+                    string = string.replace(/,\s*$/, '');
+                    letterToString[letter] += string;
+                }
+            }
+            allInDiv.textContent = letterToString['A'];
+            yellowDiv.textContent = letterToString['Y'];
+            raiseDiv.textContent = letterToString['R'];
+            callDiv.textContent = letterToString['C'];
+            foldDiv.textContent = letterToString['F'];
+        });
+        const copyBtns = document.querySelectorAll('.copy-btn');
+        copyBtns.forEach(btn => {
+            const targetDiv = btn.parentNode.nextElementSibling;
+            btn.addEventListener('click', () => {
+                const range = document.createRange();
+                range.selectNode(targetDiv);
+                window.getSelection().removeAllRanges();
+                window.getSelection().addRange(range);
+                document.execCommand('copy');
+                window.getSelection().removeAllRanges();
+            });
+        });
+    </script>
+  </body>
+</html>
