@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -10,7 +11,9 @@
       -ms-touch-action: manipulation;
     }
 
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
@@ -154,9 +157,17 @@
       table-layout: fixed;
     }
 
-    .weight-table colgroup .col-name { width: 40%; }
-    .weight-table colgroup .col-weight { width: 36%; }
-    .weight-table colgroup .col-pct { width: 24%; }
+    .weight-table colgroup .col-name {
+      width: 40%;
+    }
+
+    .weight-table colgroup .col-weight {
+      width: 36%;
+    }
+
+    .weight-table colgroup .col-pct {
+      width: 24%;
+    }
 
     .weight-table th {
       text-align: left;
@@ -460,6 +471,7 @@
     }
   </style>
 </head>
+
 <body>
   <div class="container">
     <h1>Bank Discrepancy Allocator</h1>
@@ -480,9 +492,13 @@
         <div class="collapsible-body" id="vote-instructions">
           <div class="instructions">
             <ol>
-              <li>Assign a <strong>weight</strong> to each player based on how likely you think the $525 discrepancy was caused by them. Higher weight = more likely. Use any numbers you want &mdash; they'll be converted to percentages automatically.</li>
+              <li>Assign a <strong>weight</strong> to each player based on how likely you think the $525 discrepancy was
+                caused by them. Higher weight = more likely. Use any numbers you want &mdash; they'll be converted to
+                percentages automatically.</li>
               <li>When you're done, click <strong>Generate Code</strong>. A code will be copied to your clipboard.</li>
-              <li><strong>DM the code to Matt.</strong> Your weights are encoded so he can't see individual responses &mdash; only the group average will be computed.</li>
+              <li><strong>DM the code to @matheweon</strong> (@VariantVillain on the GT Card Players Discord). Your
+                weights are encoded so he can't see individual responses &mdash; only the group average will be
+                computed.</li>
             </ol>
           </div>
         </div>
@@ -523,7 +539,8 @@
           <div class="instructions">
             <ol>
               <li>Paste all the codes you received below, <strong>one code per line</strong>.</li>
-              <li>Click <strong>Calculate Average</strong> to see the group's averaged allocation of the $525 discrepancy.</li>
+              <li>Click <strong>Calculate Average</strong> to see the group's averaged allocation of the $525
+                discrepancy.</li>
               <li>Each submission carries equal weight in the average.</li>
             </ol>
           </div>
@@ -627,10 +644,10 @@
       const minColor = { r: 180, g: 160, b: 100 }; // Light warm yellow/beige
       const maxYellow = { r: 232, g: 197, b: 71 }; // Bright yellow
       const maxRed = { r: 255, g: 70, b: 50 };     // Bright red
-      
+
       // Clamp to a useful range: treat anything above 50% as max intensity
       const t = Math.min(pct / 50, 1);
-      
+
       if (t <= 0.5) {
         // Light yellow -> bright yellow (any % > 0 -> 25%)
         // Even the smallest % gets the minimum warm color
@@ -812,4 +829,5 @@
     buildTable();
   </script>
 </body>
+
 </html>
